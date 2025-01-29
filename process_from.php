@@ -1,38 +1,41 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 // URL do Webhook no n8n
-$webhook_url = "https://n8n.mpitemporario.com.br/webhook-test/a6e95088-60de-4f91-8085-58839802ecb6";
+$webhook_url = "https://seu-n8n.com/webhook/receber-formulario";
 
 // Capturar os dados do formulário
-$nome = $_POST['nome'];
-$email = $_POST['email'];
-$dominio = $_POST['dominio'];
+$nome = $_POST['nome'] ?? 'Não informado';
+$email = $_POST['email'] ?? 'Não informado';
+$dominio = $_POST['dominio'] ?? 'Não informado';
 
-// Lógica de cálculo de pontos
-$pontos = 0;
-
-// Exemplo de cálculo de pontos (modifique conforme necessário)
-if (!empty($nome)) { $pontos += 10; }
-if (!empty($email)) { $pontos += 20; }
-if (!empty($dominio)) { $pontos += 30; }
-
-// Montar o array de dados
+// Criar array de dados
 $data = [
     "nome" => $nome,
     "email" => $email,
     "dominio" => $dominio,
-    "pontuacao" => $pontos
+    "pontuacao" => 50
 ];
 
-// Enviar os dados para o n8n via cURL
+// Configuração do cURL
 $ch = curl_init($webhook_url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_POST, true);
 curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
 curl_setopt($ch, CURLOPT_HTTPHEADER, ["Content-Type: application/json"]);
 
+// Executa o envio e captura a resposta
 $response = curl_exec($ch);
+$httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+$error = curl_error($ch);
 curl_close($ch);
 
-// Redirecionar ou exibir mensagem
-echo "Dados enviados com sucesso!";
+// Exibir informações úteis para debugging
+echo "<pre>";
+echo "Resposta do n8n: " . htmlspecialchars($response) . "\n";
+echo "Código HTTP: " . $httpCode . "\n";
+echo "Erro cURL: " . $error . "\n";
+echo "JSON Enviado: " . json_encode($data, JSON_PRETTY_PRINT);
+echo "</pre>";
 ?>
