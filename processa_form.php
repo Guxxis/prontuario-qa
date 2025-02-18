@@ -10,6 +10,11 @@ $nome = $_POST['nome'] ?? 'Não informado';
 $email = $_POST['email'] ?? 'Não informado';
 $dominio = $_POST['dominio'] ?? 'Não informado';
 
+// Exibe os dados no navegador
+echo "<h1>Dados Enviados</h1>";
+echo "<p><strong>Nome:</strong> $nome</p>";
+echo "<p><strong>E-mail:</strong> $email</p>";
+
 // Criar array de dados
 $data = [
     "nome" => $nome,
@@ -38,4 +43,3 @@ echo "Código HTTP: " . $httpCode . "\n";
 echo "Erro cURL: " . $error . "\n";
 echo "JSON Enviado: " . json_encode($data, JSON_PRETTY_PRINT);
 echo "</pre>";
-?>
