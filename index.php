@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Validação de QA</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <?php include('validationItensKey.php')?>
+    <?php include('validationItensKey.php') ?>
 </head>
 
 <body class="container mt-5">
@@ -24,8 +24,8 @@
 
             <div class="col-md-3">
                 <label class="form-label"><?= $value['label'] ?></label><br>
-                <input type="radio" name="<?= $value['item'] ?>" cat="<?= $value['cat'] ?>" value="sim" required> Aprovado
-                <input type="radio" name="<?= $value['item'] ?>" cat="<?= $value['cat'] ?>" value="nao" required> Reprovado
+                <input type="radio" name="<?= $valur['cat'] . $value['item'] ?>" value="sim" required> Aprovado
+                <input type="radio" name="<?= $valur['cat'] . $value['item'] ?>" value="nao" required> Reprovado
             </div>
         <?php
         }

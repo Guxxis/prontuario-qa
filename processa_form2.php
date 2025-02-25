@@ -14,19 +14,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $pontuacao = 0;
     $erros = [];
 
-    // Processando cada item
-    foreach ($pesos as $item => $peso) {
-        if (isset($_POST[$peso])) {
-            $aprovado = $_POST[$peso] === "sim" ? 1 : 0;
-            $pontuacao += $aprovado * $peso;
-            if (!$aprovado) {
-                $erros[] = ucfirst($item) . " não aprovado.";
+    // Contando os itens por categoria
+    foreach ($_POST as $key => $value) {
+        foreach ($pesos as $categoria => $peso) {
+            if (strpos($key, $categoria) === 0) {
+                $itens_por_categoria[$categoria] = ($itens_por_categoria[$categoria] ?? 0) + 1;
             }
         }
+        var_dump($value);
+        var_dump($peso);
     }
-    var_dump($_POST);
-    echo ($peso); 
-    print_r($peso);
+
+    // Processando cada categoria
+    foreach ($pesos as $categoria => $peso) {
+        $itens_aprovados = 0;
+        $total_itens = $itens_por_categoria[$categoria] ?? 1; // Evitar divisão por zero
+
+        foreach ($_POST as $key => $value) {
+            if (strpos($key, $categoria) === 0 && $value === "sim") {
+                $itens_aprovados++;
+            }
+        }
+
+        // Calcula a pontuação por item dentro da categoria
+        $peso_por_item = $peso / $total_itens;
+        $pontuacao += $itens_aprovados * $peso_por_item;
+
+        if ($itens_aprovados < $total_itens) {
+            $erros[] = ucfirst(str_replace('_', ' ', $categoria)) . " contém itens reprovados.";
+        }
+    }
+
     $pontuacao_final_porcento = round(($pontuacao / $total_peso) * 100, 2);
     $pontuacao_final_inteiro = $pontuacao;
 }
