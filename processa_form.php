@@ -3,7 +3,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 // URL do Webhook no n8n
-$webhook_url = "https://seu-n8n.com/webhook/receber-formulario";
+//$webhook_url = "https://seu-n8n.com/webhook/receber-formulario";
 
 // Capturar os dados do formulário
 $nome = $_POST['nome'] ?? 'Não informado';

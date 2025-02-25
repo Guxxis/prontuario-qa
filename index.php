@@ -1,29 +1,40 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário PHP</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Validação de QA</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <?php include('validationItensKey.php')?>
 </head>
 
-<body>
-    <div class="form-container">
-        <h2>Formulario de Validação</h2>
-        <form action="processa_form.php" method="post">
-            <label for="nome">Nome:</label>
-            <input type="text" name="nome" required>
+<body class="container mt-5">
+    <h2>Formulário de Validação de QA</h2>
+    <form action="processa_form2.php" method="post" class="mt-3">
+        <div class="col-md-4">
 
-            <label for="email">Email:</label>
-            <input type="email" name="email" required>
+            <label class="form-label" for="nome">Nome:</label>
+            <input class="form-control" type="text" id="nome" name="nome">
+            <label class="form-label" for="email">Email</label>
+            <input class="form-control" type="text" id="email" name="email">
+        </div>
+        <?php
+        foreach ($itens as $key => $value) { ?>
 
-            <label for="dominio">Domínio:</label>
-            <input type="text" name="dominio" required>
+            <div class="col-md-3">
+                <label class="form-label"><?= $value['label'] ?></label><br>
+                <input type="radio" name="<?= $value['item'] ?>" cat="<?= $value['cat'] ?>" value="sim" required> Aprovado
+                <input type="radio" name="<?= $value['item'] ?>" cat="<?= $value['cat'] ?>" value="nao" required> Reprovado
+            </div>
+        <?php
+        }
+        ?>
 
-            <button type="submit">Enviar</button>
-        </form>
-    </div>
+        <button type="submit" class="btn btn-primary mt-3">Calcular Pontuação</button>
+    </form>
+
+
 </body>
 
 </html>
