@@ -3,11 +3,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     //Pesos dos itens
     $pesos = [
-        "estrutura_semantica" => 2,
-        "urls" => 3,
-        "validacao_de_codigo" => 4,
-        "performance" => 2,
-        "metadados_e_seo" => 1
+        "metadados_e_seo" => 5,
+        "performance" => 5,
+        "validacao_de_codigo" => 5,
+        "urls" => 4,
+        "estrutura_semantica" => 4,
+        "fluxo" => 4,
+        "imagens" => 3,
+        "conteudo" => 3,
+        "layout_e_usabilidade" => 3,
+        "contato" => 2,
+        "formularios" => 2,
+        "resposta_do_servidor" => 1,
+        "seguranca" => 1,
+        "publicacao" => 1
     ];
 
     $total_peso = array_sum($pesos);
