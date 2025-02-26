@@ -12,40 +12,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $total_peso = array_sum($pesos);
     $pontuacao = 0;
+    $pontuacao_maxima = 0;
     $erros = [];
-
-    // Contando os itens por categoria
+    include('validationItensKey.php');
+    // Calculo dos itens aprovados
     foreach ($_POST as $key => $value) {
+        $catItem = explode(";", $key, 2);
+
+        // var_dump($catItem[0]);
+        // var_dump($value);
         foreach ($pesos as $categoria => $peso) {
-            if (strpos($key, $categoria) === 0) {
-                $itens_por_categoria[$categoria] = ($itens_por_categoria[$categoria] ?? 0) + 1;
+            if ($categoria == $catItem[0]) {
+                $pontuacao_maxima += $peso;
+                if ($value == "sim") {
+
+                    // var_dump($categoria);
+                    $pontuacao += $peso;
+                } else {
+                    foreach ($itens as $item){
+                        if($catItem[0] == $item['cat'] && $catItem[1] == $item['item']){
+
+                            array_push($erros,$item['label']);
+                        }
+                    }
+                }
             }
         }
-        var_dump($value);
-        var_dump($peso);
     }
+    // var_dump($itens);
+    // var_dump($pontuacao_maxima);
 
-    // Processando cada categoria
-    foreach ($pesos as $categoria => $peso) {
-        $itens_aprovados = 0;
-        $total_itens = $itens_por_categoria[$categoria] ?? 1; // Evitar divisão por zero
-
-        foreach ($_POST as $key => $value) {
-            if (strpos($key, $categoria) === 0 && $value === "sim") {
-                $itens_aprovados++;
-            }
-        }
-
-        // Calcula a pontuação por item dentro da categoria
-        $peso_por_item = $peso / $total_itens;
-        $pontuacao += $itens_aprovados * $peso_por_item;
-
-        if ($itens_aprovados < $total_itens) {
-            $erros[] = ucfirst(str_replace('_', ' ', $categoria)) . " contém itens reprovados.";
-        }
-    }
-
-    $pontuacao_final_porcento = round(($pontuacao / $total_peso) * 100, 2);
+    $pontuacao_final_porcento = round(($pontuacao / $pontuacao_maxima) * 100, 2);
     $pontuacao_final_inteiro = $pontuacao;
 }
 ?>

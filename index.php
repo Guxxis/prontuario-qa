@@ -24,8 +24,8 @@
 
             <div class="col-md-3">
                 <label class="form-label"><?= $value['label'] ?></label><br>
-                <input type="radio" name="<?= $valur['cat'] . $value['item'] ?>" value="sim" required> Aprovado
-                <input type="radio" name="<?= $valur['cat'] . $value['item'] ?>" value="nao" required> Reprovado
+                <input type="radio" name="<?= $value['cat'] . ";" . $value['item'] ?>" value="sim" required> Aprovado
+                <input type="radio" name="<?= $value['cat'] . ";" . $value['item'] ?>" value="nao" required> Reprovado
             </div>
         <?php
         }
