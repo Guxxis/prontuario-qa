@@ -37,17 +37,23 @@
                 <input class="form-control" type="text" id="dominio" name="dominio">
             </div>
             <div class="col-6">
-                <?php
-                foreach ($itens as $key => $value) { ?>
+                <ul class="list-group list-group-flush">
+                    <?php
+                    foreach ($itens as $key => $value) { ?>
 
-                    <div>
-                        <label class="form-label"><?= $value['label'] ?></label><br>
-                        <input type="radio" name="<?= $value['cat'] . ";" . $value['item'] ?>" value="sim" required> Aprovado
-                        <input type="radio" name="<?= $value['cat'] . ";" . $value['item'] ?>" value="nao" required> Reprovado
-                    </div>
-                <?php
-                }
-                ?>
+                        <li class="list-group-item">
+                            <div>
+                                <label class="form-label"><?= $value['label'] ?></label><br>
+                                <input type="radio" class="btn-check" id="<?= "success-" . $value['item'] ?>" name="<?= $value['cat'] . ";" . $value['item'] ?>" value="sim" autocomplete="off">
+                                <label class="btn btn-outline-success" for="<?= "success-" . $value['item'] ?>">Aprovado</label>
+                                <input type="radio" class="btn-check" id="<?= "danger-" . $value['item'] ?>" name="<?= $value['cat'] . ";" . $value['item'] ?>" value="nao" autocomplete="off">
+                                <label class="btn btn-outline-danger" for="<?= "danger-" . $value['item'] ?>">Reprovado</label><br>
+                            </div>
+                        </li>
+                    <?php
+                    }
+                    ?>
+                </ul>
             </div>
         </div>
 
