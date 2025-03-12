@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <?php include('validationItensKey.php') ?>
     <script>
         function gerarPdf() {
@@ -26,7 +28,7 @@
     </div>
     <div class="container">
 
-        <form class="mt-3">
+        <form class="mt-3" id="formValidacao">
             <div class="row container-scroll">
                 <div class="col-4 left-panel">
 
@@ -50,7 +52,8 @@
 
                     <label class="form-label" for="dominio">ID Cliente</label>
                     <input class="form-control" type="text" id="dominio" name="dominio">
-                    <button type="submit" onclick="gerarPdf()" class="btn btn-primary mt-3 col-12">Calcular Pontuação</button>
+                    <button type="submit" class="btn btn-primary mt-3 col-12">Calcular Pontuação</button>
+                    <!-- <button type="submit" onclick="gerarPdf()" class="btn btn-primary mt-3 col-12">Calcular Pontuação</button> -->
                 </div>
                 <div class="col-8 right-panel">
                     <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
@@ -108,7 +111,7 @@
     </div>
 
     <!-- Modal Bootstrap para exibir o resultado -->
-    <!-- <div class="modal fade" id="resultadoModal" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="resultadoModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -120,35 +123,35 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- <script>
-        const scrollSpy = new bootstrap.ScrollSpy(document.body, {
-            target: '#navbar-example'
-        })
-    </script> -->
-    <!-- <script>
+    <script>
         $(document).ready(function() {
             $("#formValidacao").submit(function(event) {
-                event.preventDefault(); // Impede o redirecionamento da página
+                event.preventDefault(); // Impede o redirecionamento
 
                 $.ajax({
-                    url: "processa_form2.php", // Seu arquivo PHP que processa os dados
+                    url: "processa_form2.php", // Caminho do seu arquivo PHP
                     type: "POST",
-                    data: $(this).serialize(), // Envia os dados do formulário
+                    data: $(this).serialize(),
                     success: function(response) {
-                        $("#resultadoTexto").html(response); // Insere o resultado no modal
-                        $("#resultadoModal").modal("show"); // Abre o modal com o resultado
+                        $("#resultadoTexto").html(response); // Exibe o resultado no modal
+
+                        // Exibir o modal corretamente no Bootstrap 5
+                        var modal = new bootstrap.Modal(document.getElementById("resultadoModal"));
+                        modal.show();
                     },
                     error: function() {
-                        $("#resultadoTexto").html("Ocorreu um erro ao calcular a pontuação.");
-                        $("#resultadoModal").modal("show");
+                        $("#resultadoTexto").html("Erro ao calcular a pontuação.");
+                        var modal = new bootstrap.Modal(document.getElementById("resultadoModal"));
+                        modal.show();
                     }
                 });
             });
         });
-    </script> -->
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
