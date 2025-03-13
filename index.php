@@ -67,7 +67,8 @@
                 <div class="col-8 right-panel">
                     <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
                         <div class="accordion accordion-flush" id="accordionFlushExample">
-                            <?php
+                            <div id="form-container"></div>
+                            <!-- <?php
 
                             $beforeCat = "";
                             foreach ($itens as $key => $valueCat):
@@ -103,12 +104,12 @@
                                                                     <div class="row">
 
                                                                         <div class="col-4">
-                                                                            
+
                                                                             <input type="radio" class="btn-check" id="<?= "success-" . $item ?>" name="<?= $cat . ";" . $item ?>" value="sim" autocomplete="off">
                                                                             <label class="btn btn-outline-success" for="<?= "success-" . $item ?>">Aprovado</label>
                                                                             <input type="radio" class="btn-check" id="<?= "danger-" . $item ?>" name="<?= $cat . ";" . $item ?>" value="nao" autocomplete="off">
                                                                             <label class="btn btn-outline-danger" for="<?= "danger-" . $item ?>">Reprovado</label>
-                                                                            
+
                                                                         </div>
                                                                         <div class="col-1">
 
@@ -135,7 +136,7 @@
                                     $beforeCat = $cat;
                                 endif;
                             endforeach;
-                            ?>
+                            ?> -->
                         </div>
                     </div>
                 </div>
@@ -183,6 +184,12 @@
             });
         });
     </script>
+
+
+
+    <script src="js/items-list.js"></script>
+
+    <script src="js/form-inputs.js"></script>
 
     <script src="js/progress-bar.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
