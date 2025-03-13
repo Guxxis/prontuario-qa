@@ -143,7 +143,7 @@
                 event.preventDefault(); // Impede o redirecionamento
 
                 $.ajax({
-                    url: "processa_form2.php", // Caminho do seu arquivo PHP
+                    url: "processa-form2.php", // Caminho do seu arquivo PHP
                     type: "POST",
                     data: $(this).serialize(),
                     success: function(response) {
