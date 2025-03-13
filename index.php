@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt">
-    <?php include('inc/validationItensKey.php') ?>
+<?php include('inc/validationItensKey.php') ?>
 
 <head>
     <meta charset="UTF-8">
@@ -8,11 +8,13 @@
     <title>Validação de QA</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    
+
     <!-- <script>
         function gerarPdf() {
 
@@ -76,7 +78,7 @@
                                     <div class="accordion-item form-section">
                                         <div class="row">
                                             <div class=" col-2">
-                                            <p class="contadorProgresso">0 / 0</p>
+                                                <p class="contadorProgresso">0 / 0</p>
                                             </div>
                                             <div class="col-10">
                                                 <h2 class="accordion-header">
@@ -98,12 +100,27 @@
 
                                                                 <div>
                                                                     <label class="form-label"><?= $valueIten['label'] ?></label><br>
-                                                                    <input type="radio" class="btn-check" id="<?= "success-" . $item ?>" name="<?= $cat . ";" . $item ?>" value="sim" autocomplete="off">
-                                                                    <label class="btn btn-outline-success" for="<?= "success-" . $item ?>">Aprovado</label>
-                                                                    <input type="radio" class="btn-check" id="<?= "danger-" . $item ?>" name="<?= $cat . ";" . $item ?>" value="nao" autocomplete="off">
-                                                                    <label class="btn btn-outline-danger" for="<?= "danger-" . $item ?>">Reprovado</label>
-                                                                    <label for="<?= $item?>-file">Anexos: </label>
-                                                                    <input type="file" name="<?= $item?>-file">
+                                                                    <div class="row">
+
+                                                                        <div class="col-4">
+                                                                            
+                                                                            <input type="radio" class="btn-check" id="<?= "success-" . $item ?>" name="<?= $cat . ";" . $item ?>" value="sim" autocomplete="off">
+                                                                            <label class="btn btn-outline-success" for="<?= "success-" . $item ?>">Aprovado</label>
+                                                                            <input type="radio" class="btn-check" id="<?= "danger-" . $item ?>" name="<?= $cat . ";" . $item ?>" value="nao" autocomplete="off">
+                                                                            <label class="btn btn-outline-danger" for="<?= "danger-" . $item ?>">Reprovado</label>
+                                                                            
+                                                                        </div>
+                                                                        <div class="col-1">
+
+                                                                            <label for="file-<?= $item ?>" class="custom-file-label"><i class="fa-solid fa-paperclip"></i></label>
+                                                                            <input type="file" id="file-<?= $item ?>" class="input-file">
+                                                                        </div>
+                                                                        <div class="col">
+
+                                                                            <label for="text-<?= $item ?>">observações: </label>
+                                                                            <input type="textarea" id="text-<?= $item ?>">
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                             </li>
                                                     <?php
@@ -166,7 +183,7 @@
             });
         });
     </script>
-    
+
     <script src="js/progress-bar.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
