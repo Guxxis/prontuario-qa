@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt">
+    <?php include('inc/validationItensKey.php') ?>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Validação de QA</title>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <?php include('validationItensKey.php') ?>
-    <script>
+    
+    <!-- <script>
         function gerarPdf() {
 
             var doc = new jsPDF()
@@ -19,7 +21,7 @@
             doc.text('Hello world!', 10, 10)
             doc.save('a4.pdf')
         }
-    </script>
+    </script> -->
 </head>
 
 <body class="mt-5">
@@ -99,7 +101,9 @@
                                                                     <input type="radio" class="btn-check" id="<?= "success-" . $item ?>" name="<?= $cat . ";" . $item ?>" value="sim" autocomplete="off">
                                                                     <label class="btn btn-outline-success" for="<?= "success-" . $item ?>">Aprovado</label>
                                                                     <input type="radio" class="btn-check" id="<?= "danger-" . $item ?>" name="<?= $cat . ";" . $item ?>" value="nao" autocomplete="off">
-                                                                    <label class="btn btn-outline-danger" for="<?= "danger-" . $item ?>">Reprovado</label><br>
+                                                                    <label class="btn btn-outline-danger" for="<?= "danger-" . $item ?>">Reprovado</label>
+                                                                    <label for="<?= $item?>-file">Anexos: </label>
+                                                                    <input type="file" name="<?= $item?>-file">
                                                                 </div>
                                                             </li>
                                                     <?php
@@ -143,7 +147,7 @@
                 event.preventDefault(); // Impede o redirecionamento
 
                 $.ajax({
-                    url: "processa-form2.php", // Caminho do seu arquivo PHP
+                    url: "inc/processa-form2.php", // Caminho do seu arquivo PHP
                     type: "POST",
                     data: $(this).serialize(),
                     success: function(response) {
@@ -162,65 +166,8 @@
             });
         });
     </script>
-
-    <script>
-        $(document).ready(function() {
-            function atualizarProgresso() {
-                var totalGrupos = new Set();
-                var preenchidos = new Set();
-
-                // Percorre todos os inputs do tipo radio
-                $("input[type='radio']").each(function() {
-                    totalGrupos.add($(this).attr("name"));
-
-                    if ($(this).is(":checked")) {
-                        preenchidos.add($(this).attr("name"));
-                    }
-                });
-
-                var progresso = Math.round((preenchidos.size / totalGrupos.size) * 100);
-
-                $("#barraProgresso").css("width", progresso + "%").attr("aria-valuenow", progresso).text(progresso + "%");
-            }
-
-            // Dispara a função quando um radio for selecionado
-            $("input[type='radio']").on("change", atualizarProgresso);
-        });
-    </script>
-
-    <script>
-        $(document).ready(function() {
-            function atualizarContador(secao) {
-                var totalGrupos = new Set();
-                var preenchidos = new Set();
-
-                // Conta os grupos (cada conjunto de radio buttons com o mesmo "name")
-                $(secao).find("input[type='radio']").each(function() {
-                    totalGrupos.add($(this).attr("name"));
-
-                    if ($(this).is(":checked")) {
-                        preenchidos.add($(this).attr("name"));
-                    }
-                });
-
-                // Atualiza o contador de preenchimento da seção
-                var contador = preenchidos.size + " / " + totalGrupos.size;
-                $(secao).find(".contadorProgresso").text(contador);
-            }
-
-            // Atualiza o contador quando o usuário seleciona uma opção
-            $(".form-section").each(function() {
-                var secao = $(this);
-                secao.find("input[type='radio']").on("change", function() {
-                    atualizarContador(secao);
-                });
-
-                // Inicializa os contadores corretamente ao carregar a página
-                atualizarContador(secao);
-            });
-        });
-    </script>
-
+    
+    <script src="js/progress-bar.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
