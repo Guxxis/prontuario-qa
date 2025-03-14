@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-
     const formContainer = document.getElementById("form-container");
 
     // Agrupar os itens por categoria
@@ -13,64 +12,75 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     Object.keys(categorias).forEach(categoria => {
-
-        //accordion-item
-        //accordion-header
-        //accordion-body
-
         // Criar um container para cada categoria
-        const accordionItem = document.createElement("div");
-        accordionItem.classList.add("accordion-item");
-        accordionItem.classList.add("form-section");
+        const categoryDiv = document.createElement("div");
+        categoryDiv.classList.add("accordio-item");
+        categoryDiv.classList.add("form-section");
 
-        const accordionHeader = document.createElement("div");
-        accordionHeader.classList.add("row");
-        accordionHeader.innerHTML = `
-            <div class=" col-2">
-                <p class="contadorProgresso">0 / 0</p>
-            </div>
-            <div class="col-10">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#<?= $cat ?>" aria-expanded="true" aria-controls="<?= $cat ?>">
-                        ${categoria}
-                    </button>
-                </h2>
-            </div>
-        `
+        // Criar div do Cabeçalho
+        const divRowCat = document.createElement("div");
+        divRowCat.classList.add("row");
+
+
+        // Progresso da Categoria
+        const progressDiv = document.createElement("div");
+        progressDiv.classList.add("col-2");
+        progressDiv.innerHTML = `<p class="contadorProgresso">0 / 0</p>`
+
 
         // Cabeçalho da categoria (com opção de recolher/expandir)
-        const header = document.createElement("div");
-        header.classList.add("category-header");
-        header.innerHTML = `<strong>${categoria}</strong>`;
+        const headerDiv = document.createElement("div");
+        headerDiv.classList.add("col-10");
+        headerDiv.innerHTML = `
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#${categoria}" aria-expanded="true" aria-controls="${categoria}">
+                    ${categorias[categoria][0].catLabel}
+                </button>
+            </h2>
+        `;
 
+        divRowCat.appendChild(progressDiv);
+        divRowCat.appendChild(headerDiv);
+        categoryDiv.appendChild(divRowCat);
+
+        // 
+        const accordionCollapse = document.createElement('div');
+        accordionCollapse.id = categoria;
+        accordionCollapse.classList.add("accordion-collapse", "collapse");
+        accordionCollapse.setAttribute("data-bs-parent", "#accordionFlushExample");
+
+        const accordionBody = document.createElement('div');
+        accordionBody.classList.add("accordion-body");
+
+
+        accordionCollapse.appendChild(accordionBody);
+        
         // Lista de itens da categoria
         const itemList = document.createElement("ul");
         itemList.classList.add("list-group");
-        itemList.style.display = "block"; // Default: visível
 
         categorias[categoria].forEach(valueIten => {
             const li = document.createElement("li");
             li.classList.add("list-group-item");
 
-            const divRow = document.createElement("div");
-            divRow.classList.add("row");
+            const divRowItem = document.createElement("div");
+            divRowItem.classList.add("row");
 
             // Texto do item
-            const colText = document.createElement("div");
-            colText.classList.add("col-4");
-            colText.innerHTML = `<label>${valueIten.item_label}</label>`;
-            divRow.appendChild(colText);
+            const colText = document.createElement("label");
+            colText.classList.add("form-label");
+            colText.innerText = `${valueIten.itemLabel}`;
 
             // Botões de Aprovação
             const colRadio = document.createElement("div");
-            colRadio.classList.add("col-3");
+            colRadio.classList.add("col-4");
             colRadio.innerHTML = `
                 <input type="radio" class="btn-check" id="success-${valueIten.item}" name="${valueIten.cat};${valueIten.item}" value="sim">
                 <label class="btn btn-outline-success" for="success-${valueIten.item}">Aprovado</label>
                 <input type="radio" class="btn-check" id="danger-${valueIten.item}" name="${valueIten.cat};${valueIten.item}" value="nao">
                 <label class="btn btn-outline-danger" for="danger-${valueIten.item}">Reprovado</label>
             `;
-            divRow.appendChild(colRadio);
+            divRowItem.appendChild(colRadio);
 
             // Botão de upload
             const colFile = document.createElement("div");
@@ -79,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <label for="file-${valueIten.item}" class="custom-file-label"><i class="fa-solid fa-paperclip"></i></label>
                 <input type="file" id="file-${valueIten.item}" class="input-file">
             `;
-            divRow.appendChild(colFile);
+            divRowItem.appendChild(colFile);
 
             // Campo de observações
             const colObs = document.createElement("div");
@@ -88,19 +98,20 @@ document.addEventListener("DOMContentLoaded", function () {
                 <label for="text-${valueIten.item}">observações: </label>
                 <input type="textarea" id="text-${valueIten.item}">
             `;
-            divRow.appendChild(colObs);
+            divRowItem.appendChild(colObs);
 
-            li.appendChild(divRow);
+            li.appendChild(colText);
+            li.appendChild(divRowItem);
             itemList.appendChild(li);
         });
 
         // Adiciona um evento de clique para expandir/recolher a categoria
-        header.addEventListener("click", () => {
-            itemList.style.display = itemList.style.display === "none" ? "block" : "none";
-        });
+        // header.addEventListener("click", () => {
+        //     itemList.style.display = itemList.style.display === "none" ? "block" : "none";
+        // });
 
-        categoryDiv.appendChild(header);
-        categoryDiv.appendChild(itemList);
+        accordionCollapse.appendChild(itemList);
+        categoryDiv.appendChild(accordionCollapse);
         formContainer.appendChild(categoryDiv);
     });
 });

@@ -77,6 +77,7 @@
 
                                 if ($beforeCat != $cat): ?>
                                     <div class="accordion-item form-section">
+                                        //header
                                         <div class="row">
                                             <div class=" col-2">
                                                 <p class="contadorProgresso">0 / 0</p>
@@ -91,6 +92,8 @@
                                         </div>
                                         <div id="<?= $cat ?>" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                                             <div class="accordion-body">
+                                            //fim header
+                                                //list item
                                                 <ul class="list-group">
                                                     <?php foreach ($itens as $key => $valueIten):
                                                         $catItem = $valueIten['cat'];
