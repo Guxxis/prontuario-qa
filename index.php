@@ -68,78 +68,6 @@
                     <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
                         <div class="accordion accordion-flush" id="accordionFlushExample">
                             <div id="form-container"></div>
-                            <!-- <?php
-
-                            $beforeCat = "";
-                            foreach ($itens as $key => $valueCat):
-                                $cat = $valueCat['cat'];
-                                $catLabel = $valueCat['cat-label'];
-
-                                if ($beforeCat != $cat): ?>
-                                    <div class="accordion-item form-section">
-                                        //header
-                                        <div class="row">
-                                            <div class=" col-2">
-                                                <p class="contadorProgresso">0 / 0</p>
-                                            </div>
-                                            <div class="col-10">
-                                                <h2 class="accordion-header">
-                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#<?= $cat ?>" aria-expanded="true" aria-controls="<?= $cat ?>">
-                                                        <?= $catLabel ?>
-                                                    </button>
-                                                </h2>
-                                            </div>
-                                        </div>
-                                        <div id="<?= $cat ?>" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                                            <div class="accordion-body">
-                                            //fim header
-                                                //list item
-                                                <ul class="list-group">
-                                                    <?php foreach ($itens as $key => $valueIten):
-                                                        $catItem = $valueIten['cat'];
-                                                        $item = $valueIten['item'];
-                                                        $itemLabel = $valueIten['label'];
-                                                        if ($cat == $catItem): ?>
-                                                            <li class="list-group-item">
-
-                                                                <div>
-                                                                    <label class="form-label"><?= $valueIten['label'] ?></label><br>
-                                                                    <div class="row">
-
-                                                                        <div class="col-4">
-
-                                                                            <input type="radio" class="btn-check" id="<?= "success-" . $item ?>" name="<?= $cat . ";" . $item ?>" value="sim" autocomplete="off">
-                                                                            <label class="btn btn-outline-success" for="<?= "success-" . $item ?>">Aprovado</label>
-                                                                            <input type="radio" class="btn-check" id="<?= "danger-" . $item ?>" name="<?= $cat . ";" . $item ?>" value="nao" autocomplete="off">
-                                                                            <label class="btn btn-outline-danger" for="<?= "danger-" . $item ?>">Reprovado</label>
-
-                                                                        </div>
-                                                                        <div class="col-1">
-
-                                                                            <label for="file-<?= $item ?>" class="custom-file-label"><i class="fa-solid fa-paperclip"></i></label>
-                                                                            <input type="file" id="file-<?= $item ?>" class="input-file">
-                                                                        </div>
-                                                                        <div class="col">
-
-                                                                            <label for="text-<?= $item ?>">observações: </label>
-                                                                            <input type="textarea" id="text-<?= $item ?>">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </li>
-                                                    <?php
-                                                        endif;
-                                                    endforeach;
-                                                    ?>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                            <?php
-                                    $beforeCat = $cat;
-                                endif;
-                            endforeach;
-                            ?> -->
                         </div>
                     </div>
                 </div>
@@ -188,12 +116,8 @@
         });
     </script>
 
-
-
     <script src="js/items-list.js"></script>
-
     <script src="js/form-inputs.js"></script>
-
     <script src="js/progress-bar.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
