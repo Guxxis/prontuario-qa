@@ -15,15 +15,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <!-- <script>
-        function gerarPdf() {
 
-            var doc = new jsPDF()
-
-            doc.text('Hello world!', 10, 10)
-            doc.save('a4.pdf')
-        }
-    </script> -->
 </head>
 
 <body class="mt-5">
@@ -61,7 +53,15 @@
                         <div id="barraProgresso" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
                     </div>
 
-                    <button type="submit" class="btn btn-primary mt-3 col-12">Calcular Pontuação</button>
+                    <button type="button" id="btnCalcular" class="btn btn-primary mt-3 col-12">Calcular Pontuação</button>
+
+                    <input type="hidden" name="pontuacao" id="pontuacao" value="">
+                    <input type="hidden" name="pontuacao-porcento" id="pontuacaoPorcento" value="">
+                    <input type="hidden" name="pontuacao-status" id="pontuacaoStatus" value="">
+
+                    <div id="formResult"></div>
+
+                    <button type="submit" id="btnGerarPDF" class="btn btn-danger mt-3" style="display:none;">Gerar PDF</button>
                     <!-- <button type="submit" onclick="gerarPdf()" class="btn btn-primary mt-3 col-12">Calcular Pontuação</button> -->
                 </div>
                 <div class="col-8 right-panel">
@@ -75,45 +75,40 @@
         </form>
     </div>
 
-    <!-- Modal Bootstrap para exibir o resultado -->
-    <div class="modal fade" id="resultadoModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Resultado da Validação</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <p id="resultadoTexto">Carregando...</p>
-                </div>
-            </div>
-        </div>
-    </div>
+    <script>
+        document.getElementById("btnCalcular").addEventListener("click", function() {
+            let formData = new FormData(document.getElementById("formValidacao"));
+
+            fetch("inc/calcular-pontuacao.php", {
+                    method: "POST",
+                    body: formData
+                })
+                .then(response => response.json()) // Retorna JSON do PHP
+                .then(data => {
+                    if (data.sucesso) {
+                        // Atualizar campo oculto com a pontuação
+                        document.getElementById("pontuacao").value = data.pontuacao;
+                        document.getElementById("pontuacaoPorcento").value = data.pontuacaoPorcento;
+                        document.getElementById("pontuacaoStatus").value = data.pontuacaoStatus;
+
+                        const formResultDiv = document.getElementById("formResult");
+                        formResultDiv.innerHTML = `
+                            <p>Pontuação: ${data.pontuacao}</p>
+                            <p>Porcentagem: ${data.pontuacaoPorcento}</p>
+                            <p>Situação: ${data.pontuacaoStatus}</p>
+                        `;
+
+                        document.getElementById("btnGerarPDF").style.display = "inline-block";
+
+
+                    }
+                })
+                .catch(error => console.error("Erro ao calcular pontuação:", error));
+        });
+    </script>
 
     <script>
-        $(document).ready(function() {
-            $("#formValidacao").submit(function(event) {
-                event.preventDefault(); // Impede o redirecionamento
-
-                $.ajax({
-                    url: "inc/processa-form2.php", // Caminho do seu arquivo PHP
-                    type: "POST",
-                    data: $(this).serialize(),
-                    success: function(response) {
-                        $("#resultadoTexto").html(response); // Exibe o resultado no modal
-
-                        // Exibir o modal corretamente no Bootstrap 5
-                        var modal = new bootstrap.Modal(document.getElementById("resultadoModal"));
-                        modal.show();
-                    },
-                    error: function() {
-                        $("#resultadoTexto").html("Erro ao calcular a pontuação.");
-                        var modal = new bootstrap.Modal(document.getElementById("resultadoModal"));
-                        modal.show();
-                    }
-                });
-            });
-        });
+        <?php include("js/pdf-generator.js");?>
     </script>
 
     <script src="js/items-list.js"></script>

@@ -69,10 +69,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <?php endforeach; ?>
             </ul>
         <?php endif; ?>
-        <form action="inc/gerar-pdf.php" method="post">
+        <form method="post">
             <input type="hidden" name="pontuacao" value="<?php echo $pontuacao_final_porcento; ?>">
             <input type="hidden" name="erros" value="<?php echo implode(', ', $erros); ?>">
-            <button type="submit" class="btn btn-danger mt-3">Baixar PDF</button>
+            <button type="submit" onclick="gerarPdf();" class="btn btn-danger mt-3">Baixar PDF</button>
         </form>
     </div>
 <?php endif; ?>
