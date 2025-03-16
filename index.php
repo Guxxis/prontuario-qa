@@ -61,7 +61,7 @@
 
                     <div id="formResult"></div>
 
-                    <button type="submit" id="btnGerarPDF" class="btn btn-danger mt-3" style="display:none;">Gerar PDF</button>
+                    <button type="button" id="btnGerarPDF" class="btn btn-danger mt-3" style="display:none;">Gerar PDF</button>
                     <!-- <button type="submit" onclick="gerarPdf()" class="btn btn-primary mt-3 col-12">Calcular Pontuação</button> -->
                 </div>
                 <div class="col-8 right-panel">
