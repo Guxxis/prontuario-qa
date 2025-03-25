@@ -41,8 +41,8 @@ async function generatePDF() {
     y += 10;
 
     const inputItems = document.querySelectorAll("input.btn-check");
-    const reprovedItems = [];
-    inputItems.forEach(async inputItem => {
+    let reprovedItems = new Array();
+    for (const inputItem of inputItems) {
         if (inputItem.checked === true && inputItem.value === "nao") {
             const itenKey = inputItem.name.split(";", 2);
 
@@ -50,63 +50,71 @@ async function generatePDF() {
             const itenArray = itens.find(elemento => elemento.item === itenKey[1]);
             const itemName = itenArray.itemLabel;
             const itemCat = itenArray.catLabel;
-            
+
             // doc.text(`${itenArray.catLabel} - ${itenArray.itemLabel}`, 10, y);
             // y += 10;
             //Tratando campo anexo
             const fileInput = document.getElementById(`file-${itenKey[1]}`);
             const file = fileInput.files[0]; // Pega o primeiro arquivo carregado
             const itemImage = await loadImage(file);
-            
+
             //Tratando campo comentario
             const itemComment = document.getElementById(`text-${itenKey[1]}`).value;
 
 
             reprovedItems.push({
-                "categoria": itemCat,
+                "category": itemCat,
                 "item": itemName,
+                "comment": itemComment,
                 "image": itemImage,
-                "comment": itemComment
             });
         }
 
+    };
+
+
+    const reprovedCat = {};
+    reprovedItems.forEach(reprovedItem => {
+        if (!reprovedCat[reprovedItem["category"]]) {
+            reprovedCat[reprovedItem["category"]] = [];
+        }
+        reprovedCat[reprovedItem["category"]].push(reprovedItem);
+    });
+
+    if (reprovedCat != "") {
+
+        doc.text(`Categorias com erros: `, 10, y);
+        y += 10;
+        Object.keys(reprovedCat).forEach(categoria => {
+            doc.text(`- ${categoria}`, 15, y);
+            y += 10;
+        });
+    }else{
+        doc.text(`Site sem erros `, 10, y);
+        y += 10;
+    }
+
+    Object.keys(reprovedCat).forEach(categoria => {
+        doc.addPage('a4');
+        py = 10
+        doc.text(`${categoria}: `, 10, py);
+        py += 10;
+
+        reprovedCat[categoria].forEach(reprovedItem => {
+            doc.text(`- ${reprovedItem["item"]}`, 15, py);
+            py += 10;
+            if (reprovedItem["comment"]) {
+                doc.text(`Comentario - ${reprovedItem["comment"]}`, 20, py);
+                py += 10;
+            }
+            if (reprovedItem["image"]) {
+                doc.addImage(reprovedItem["image"], "jpeg", 20, py, 50, 50); // Adiciona ao PDF
+                py += 60;
+            }
+        })
     });
 
 
-    console.log(reprovedItems);
-
-    reprovedItems.forEach( reprovedItem => {
-        
-    })
-    //itens validação formulario
-    itens.forEach(iten => {
-        //se tiver como reprovado
-
-        //grava categoria
-        //grava iten
-        //verificar se tem imagem e observação
-        //grava imagem
-        //grava observacao
-
-    });
-
-    //loop para criar as paginas
-    //para cada categoria gravada com erro cria uma pagina
-    //insere nome da pagina categoria
-    //insere item com erro
-    //se tiver image, insere
-    //se tiver observacao, insere
-    //vai pra proxima pagina
-
-    // let itenComment = document.getElementById("text-multiple_page_titles").value;
-    // doc.text(`Comentario: ${itenComment}`, 10, 60);
-
-    // let fileInput = document.getElementById("file-multiple_page_titles");
-    // let file = fileInput.files[0]; // Pega o primeiro arquivo carregado
-    // let imgData = await loadImage(file);
-    // if (imgData) {
-    //     doc.addImage(imgData, "jpeg", 10, 70, 50, 50); // Adiciona ao PDF
-    // }
 
     // Salva o PDF
     doc.save("validacao.pdf");
