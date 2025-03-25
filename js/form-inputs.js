@@ -91,11 +91,11 @@ document.addEventListener("DOMContentLoaded", function () {
             `;
             divRowItem.appendChild(colFile);
 
-            // Campo de observações
+            // Campo de comentario
             const colObs = document.createElement("div");
             colObs.classList.add("col");
             colObs.innerHTML = `
-                <label for="text-${valueIten.item}">observações: </label>
+                <label for="text-${valueIten.item}">obs: </label>
                 <input type="textarea" id="text-${valueIten.item}">
             `;
             divRowItem.appendChild(colObs);

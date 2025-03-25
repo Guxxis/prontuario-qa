@@ -40,27 +40,44 @@ async function generatePDF() {
     doc.text(`Nome: ${formName}`, 10, y);
     y += 10;
 
-    const inputItens = document.querySelectorAll("input.btn-check");
-    inputItens.forEach(inputIten => {
-        if (inputIten.checked === true && inputIten.value === "nao") {
-            let itenKey = inputIten.name.split(";", 2);
-            let itenName = itenKey[1];
-            let itemCat = itenKey[0];
+    const inputItems = document.querySelectorAll("input.btn-check");
+    const reprovedItems = [];
+    inputItems.forEach(async inputItem => {
+        if (inputItem.checked === true && inputItem.value === "nao") {
+            const itenKey = inputItem.name.split(";", 2);
 
-            const itenArray = itens.find(elemento => elemento.item === itenName);
+            //Tratando o nome do Item e Categoria
+            const itenArray = itens.find(elemento => elemento.item === itenKey[1]);
+            const itemName = itenArray.itemLabel;
+            const itemCat = itenArray.catLabel;
+            
+            // doc.text(`${itenArray.catLabel} - ${itenArray.itemLabel}`, 10, y);
+            // y += 10;
+            //Tratando campo anexo
+            const fileInput = document.getElementById(`file-${itenKey[1]}`);
+            const file = fileInput.files[0]; // Pega o primeiro arquivo carregado
+            const itemImage = await loadImage(file);
+            
+            //Tratando campo comentario
+            const itemComment = document.getElementById(`text-${itenKey[1]}`).value;
 
-            doc.text(`${itenArray.catLabel} - ${itenArray.itemLabel}`, 10, y);
-            y += 10;
 
-            console.log(itenName);
-
-            // itens.forEach(valueIten => {
-
-            // });
+            reprovedItems.push({
+                "categoria": itemCat,
+                "item": itemName,
+                "image": itemImage,
+                "comment": itemComment
+            });
         }
+
     });
 
 
+    console.log(reprovedItems);
+
+    reprovedItems.forEach( reprovedItem => {
+        
+    })
     //itens validação formulario
     itens.forEach(iten => {
         //se tiver como reprovado
