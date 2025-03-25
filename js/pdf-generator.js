@@ -19,8 +19,6 @@ async function generatePDF() {
     let y = 10;
 
     // Adiciona texto ao PDF
-    doc.text("Resultado da Validação", 10, y);
-    y += 10;
 
     // Pega a pontuação gerada pelo PHP
     let pontuacaoFinal = document.getElementById("pontuacao").value;
@@ -28,6 +26,10 @@ async function generatePDF() {
     let pontuacaoStatus = document.getElementById("pontuacaoStatus").value;
     let formName = document.getElementById("nome").value;
 
+    doc.setFontSize(18);
+    doc.text(`Prontuario de Validação`, 10, y);
+    y += 10;
+    doc.setFontSize(12);
     doc.text(`Pontuação: ${pontuacaoFinal}`, 10, y);
     y += 10;
 
@@ -81,10 +83,11 @@ async function generatePDF() {
         reprovedCat[reprovedItem["category"]].push(reprovedItem);
     });
 
+    doc.setFontSize(16);
     if (reprovedCat != "") {
-
         doc.text(`Categorias com erros: `, 10, y);
         y += 10;
+        doc.setFontSize(12);
         Object.keys(reprovedCat).forEach(categoria => {
             doc.text(`- ${categoria}`, 15, y);
             y += 10;
@@ -97,10 +100,12 @@ async function generatePDF() {
     Object.keys(reprovedCat).forEach(categoria => {
         doc.addPage('a4');
         py = 10
+        doc.setFontSize(18);
         doc.text(`${categoria}: `, 10, py);
         py += 10;
 
         reprovedCat[categoria].forEach(reprovedItem => {
+            doc.setFontSize(12);
             doc.text(`- ${reprovedItem["item"]}`, 15, py);
             py += 10;
             if (reprovedItem["comment"]) {
