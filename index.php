@@ -1,25 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt">
+<?php include('inc/validationItensKey.php') ?>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Validação de QA</title>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <?php include('validationItensKey.php') ?>
-    <script>
-        function gerarPdf() {
 
-            var doc = new jsPDF()
 
-            doc.text('Hello world!', 10, 10)
-            doc.save('a4.pdf')
-        }
-    </script>
 </head>
 
 <body class="mt-5">
@@ -57,170 +53,68 @@
                         <div id="barraProgresso" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
                     </div>
 
-                    <button type="submit" class="btn btn-primary mt-3 col-12">Calcular Pontuação</button>
+                    <button type="button" id="btnCalcular" class="btn btn-primary mt-3 col-12">Calcular Pontuação</button>
+
+                    <input type="hidden" name="pontuacao" id="pontuacao" value="">
+                    <input type="hidden" name="pontuacao-porcento" id="pontuacaoPorcento" value="">
+                    <input type="hidden" name="pontuacao-status" id="pontuacaoStatus" value="">
+
+                    <div id="formResult"></div>
+
+                    <button type="button" id="btnGerarPDF" class="btn btn-danger mt-3" style="display:none;">Gerar PDF</button>
                     <!-- <button type="submit" onclick="gerarPdf()" class="btn btn-primary mt-3 col-12">Calcular Pontuação</button> -->
                 </div>
                 <div class="col-8 right-panel">
                     <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
                         <div class="accordion accordion-flush" id="accordionFlushExample">
-                            <?php
-
-                            $beforeCat = "";
-                            foreach ($itens as $key => $valueCat):
-                                $cat = $valueCat['cat'];
-                                $catLabel = $valueCat['cat-label'];
-
-                                if ($beforeCat != $cat): ?>
-                                    <div class="accordion-item form-section">
-                                        <div class="row">
-                                            <div class=" col-2">
-                                            <p class="contadorProgresso">0 / 0</p>
-                                            </div>
-                                            <div class="col-10">
-                                                <h2 class="accordion-header">
-                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#<?= $cat ?>" aria-expanded="true" aria-controls="<?= $cat ?>">
-                                                        <?= $catLabel ?>
-                                                    </button>
-                                                </h2>
-                                            </div>
-                                        </div>
-                                        <div id="<?= $cat ?>" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                                            <div class="accordion-body">
-                                                <ul class="list-group">
-                                                    <?php foreach ($itens as $key => $valueIten):
-                                                        $catItem = $valueIten['cat'];
-                                                        $item = $valueIten['item'];
-                                                        $itemLabel = $valueIten['label'];
-                                                        if ($cat == $catItem): ?>
-                                                            <li class="list-group-item">
-
-                                                                <div>
-                                                                    <label class="form-label"><?= $valueIten['label'] ?></label><br>
-                                                                    <input type="radio" class="btn-check" id="<?= "success-" . $item ?>" name="<?= $cat . ";" . $item ?>" value="sim" autocomplete="off">
-                                                                    <label class="btn btn-outline-success" for="<?= "success-" . $item ?>">Aprovado</label>
-                                                                    <input type="radio" class="btn-check" id="<?= "danger-" . $item ?>" name="<?= $cat . ";" . $item ?>" value="nao" autocomplete="off">
-                                                                    <label class="btn btn-outline-danger" for="<?= "danger-" . $item ?>">Reprovado</label><br>
-                                                                </div>
-                                                            </li>
-                                                    <?php
-                                                        endif;
-                                                    endforeach;
-                                                    ?>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                            <?php
-                                    $beforeCat = $cat;
-                                endif;
-                            endforeach;
-                            ?>
+                            <div id="form-container"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </form>
     </div>
-
-    <!-- Modal Bootstrap para exibir o resultado -->
-    <div class="modal fade" id="resultadoModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Resultado da Validação</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <p id="resultadoTexto">Carregando...</p>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 
     <script>
-        $(document).ready(function() {
-            $("#formValidacao").submit(function(event) {
-                event.preventDefault(); // Impede o redirecionamento
+        document.getElementById("btnCalcular").addEventListener("click", function() {
+            let formData = new FormData(document.getElementById("formValidacao"));
 
-                $.ajax({
-                    url: "processa_form2.php", // Caminho do seu arquivo PHP
-                    type: "POST",
-                    data: $(this).serialize(),
-                    success: function(response) {
-                        $("#resultadoTexto").html(response); // Exibe o resultado no modal
+            fetch("inc/calcular-pontuacao.php", {
+                    method: "POST",
+                    body: formData
+                })
+                .then(response => response.json()) // Retorna JSON do PHP
+                .then(data => {
+                    if (data.sucesso) {
+                        // Atualizar campo oculto com a pontuação
+                        document.getElementById("pontuacao").value = data.pontuacao;
+                        document.getElementById("pontuacaoPorcento").value = data.pontuacaoPorcento;
+                        document.getElementById("pontuacaoStatus").value = data.pontuacaoStatus;
 
-                        // Exibir o modal corretamente no Bootstrap 5
-                        var modal = new bootstrap.Modal(document.getElementById("resultadoModal"));
-                        modal.show();
-                    },
-                    error: function() {
-                        $("#resultadoTexto").html("Erro ao calcular a pontuação.");
-                        var modal = new bootstrap.Modal(document.getElementById("resultadoModal"));
-                        modal.show();
+                        const formResultDiv = document.getElementById("formResult");
+                        formResultDiv.innerHTML = `
+                            <p>Pontuação: ${data.pontuacao}</p>
+                            <p>Porcentagem: ${data.pontuacaoPorcento}</p>
+                            <p>Situação: ${data.pontuacaoStatus}</p>
+                        `;
+
+                        document.getElementById("btnGerarPDF").style.display = "inline-block";
+
+
                     }
-                });
-            });
+                })
+                .catch(error => console.error("Erro ao calcular pontuação:", error));
         });
     </script>
 
     <script>
-        $(document).ready(function() {
-            function atualizarProgresso() {
-                var totalGrupos = new Set();
-                var preenchidos = new Set();
-
-                // Percorre todos os inputs do tipo radio
-                $("input[type='radio']").each(function() {
-                    totalGrupos.add($(this).attr("name"));
-
-                    if ($(this).is(":checked")) {
-                        preenchidos.add($(this).attr("name"));
-                    }
-                });
-
-                var progresso = Math.round((preenchidos.size / totalGrupos.size) * 100);
-
-                $("#barraProgresso").css("width", progresso + "%").attr("aria-valuenow", progresso).text(progresso + "%");
-            }
-
-            // Dispara a função quando um radio for selecionado
-            $("input[type='radio']").on("change", atualizarProgresso);
-        });
+        <?php include("js/pdf-generator.js");?>
     </script>
 
-    <script>
-        $(document).ready(function() {
-            function atualizarContador(secao) {
-                var totalGrupos = new Set();
-                var preenchidos = new Set();
-
-                // Conta os grupos (cada conjunto de radio buttons com o mesmo "name")
-                $(secao).find("input[type='radio']").each(function() {
-                    totalGrupos.add($(this).attr("name"));
-
-                    if ($(this).is(":checked")) {
-                        preenchidos.add($(this).attr("name"));
-                    }
-                });
-
-                // Atualiza o contador de preenchimento da seção
-                var contador = preenchidos.size + " / " + totalGrupos.size;
-                $(secao).find(".contadorProgresso").text(contador);
-            }
-
-            // Atualiza o contador quando o usuário seleciona uma opção
-            $(".form-section").each(function() {
-                var secao = $(this);
-                secao.find("input[type='radio']").on("change", function() {
-                    atualizarContador(secao);
-                });
-
-                // Inicializa os contadores corretamente ao carregar a página
-                atualizarContador(secao);
-            });
-        });
-    </script>
-
+    <script src="js/items-list.js"></script>
+    <script src="js/form-inputs.js"></script>
+    <script src="js/progress-bar.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
