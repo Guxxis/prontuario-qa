@@ -1,3 +1,7 @@
+addImages("Imagens do CTA", "ctaSugestoesn", function () {
+    doc.save("formulario_seo.pdf");
+});
+
 function addImages(title, sectionId, callback) {
     let section = document.getElementById(sectionId);
     let containers = section.querySelectorAll("div");
