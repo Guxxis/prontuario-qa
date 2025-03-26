@@ -1,53 +1,59 @@
-$(document).ready(function () {
-    function atualizarProgresso() {
-        var totalGrupos = new Set();
-        var preenchidos = new Set();
+export function progressBar() {
 
-        // Percorre todos os inputs do tipo radio
-        $("input[type='radio']").each(function () {
-            totalGrupos.add($(this).attr("name"));
+    $(document).ready(function () {
+        function atualizarProgresso() {
+            var totalGrupos = new Set();
+            var preenchidos = new Set();
 
-            if ($(this).is(":checked")) {
-                preenchidos.add($(this).attr("name"));
-            }
-        });
+            // Percorre todos os inputs do tipo radio
+            $("input[type='radio']").each(function () {
+                totalGrupos.add($(this).attr("name"));
 
-        var progresso = Math.round((preenchidos.size / totalGrupos.size) * 100);
+                if ($(this).is(":checked")) {
+                    preenchidos.add($(this).attr("name"));
+                }
+            });
 
-        $("#barraProgresso").css("width", progresso + "%").attr("aria-valuenow", progresso).text(progresso + "%");
-    }
+            var progresso = Math.round((preenchidos.size / totalGrupos.size) * 100);
 
-    // Dispara a função quando um radio for selecionado
-    $("input[type='radio']").on("change", atualizarProgresso);
-});
+            $("#barraProgresso").css("width", progresso + "%").attr("aria-valuenow", progresso).text(progresso + "%");
+        }
 
-$(document).ready(function () {
-    function atualizarContador(secao) {
-        var totalGrupos = new Set();
-        var preenchidos = new Set();
+        // Dispara a função quando um radio for selecionado
+        $("input[type='radio']").on("change", atualizarProgresso);
+    });
+}
 
-        // Conta os grupos (cada conjunto de radio buttons com o mesmo "name")
-        $(secao).find("input[type='radio']").each(function () {
-            totalGrupos.add($(this).attr("name"));
+export function countItens() {
 
-            if ($(this).is(":checked")) {
-                preenchidos.add($(this).attr("name"));
-            }
-        });
+    $(document).ready(function () {
+        function atualizarContador(secao) {
+            var totalGrupos = new Set();
+            var preenchidos = new Set();
 
-        // Atualiza o contador de preenchimento da seção
-        var contador = preenchidos.size + " / " + totalGrupos.size;
-        $(secao).find(".contadorProgresso").text(contador);
-    }
+            // Conta os grupos (cada conjunto de radio buttons com o mesmo "name")
+            $(secao).find("input[type='radio']").each(function () {
+                totalGrupos.add($(this).attr("name"));
 
-    // Atualiza o contador quando o usuário seleciona uma opção
-    $(".form-section").each(function () {
-        var secao = $(this);
-        secao.find("input[type='radio']").on("change", function () {
+                if ($(this).is(":checked")) {
+                    preenchidos.add($(this).attr("name"));
+                }
+            });
+
+            // Atualiza o contador de preenchimento da seção
+            var contador = preenchidos.size + " / " + totalGrupos.size;
+            $(secao).find(".contadorProgresso").text(contador);
+        }
+
+        // Atualiza o contador quando o usuário seleciona uma opção
+        $(".form-section").each(function () {
+            var secao = $(this);
+            secao.find("input[type='radio']").on("change", function () {
+                atualizarContador(secao);
+            });
+
+            // Inicializa os contadores corretamente ao carregar a página
             atualizarContador(secao);
         });
-
-        // Inicializa os contadores corretamente ao carregar a página
-        atualizarContador(secao);
     });
-});
+}

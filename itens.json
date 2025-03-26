@@ -24,21 +24,15 @@
     {"cat": "seguranca", "catLabel": "Segurança", "item": "mixed_content_0", "itemLabel": "Mixed Content (0%)", "tool": "screamingfrog", "toolLabel": "ScreamingFrog"},
     {"cat": "seguranca", "catLabel": "Segurança", "item": "links_externos_outlinks_target_blank_rel_nofollow", "itemLabel": "Links Externos - Outlinks (target=”_blank” rel=”nofollow”)", "tool": "screamingfrog", "toolLabel": "ScreamingFrog"},
     {"cat": "seguranca", "catLabel": "Segurança", "item": "sem_self_redirect_quem_somos_home", "itemLabel": "Sem Self redirect (Quem somos) Home", "tool": "screamingfrog", "toolLabel": "ScreamingFrog"},
-
     {"cat": "validacao_de_codigo", "catLabel": "Validação de Código", "item": "w3c_html_home_e_mpi", "itemLabel": "W3C HTML Home e MPI", "tool": "checkbot", "toolLabel": "CheckBot"},
     {"cat": "validacao_de_codigo", "catLabel": "Validação de Código", "item": "w3c_css_home_e_mpi", "itemLabel": "W3C CSS Home e MPI", "tool": "checkbot", "toolLabel": "CheckBot"},
-
     {"cat": "estrutura_semantica", "catLabel": "Estrutura Semântica", "item": "font_awesome_todas_as_paginas", "itemLabel": "Font Awesome Todas as páginas", "tool": "stackcrawler", "toolLabel": "StackCrawler"},
-
     {"cat": "conteudo", "catLabel": "Conteúdo", "item": "readability_very_difficult_0_content", "itemLabel": "Readability very difficult (0%) Content", "tool": "webfx", "toolLabel": "WebFX"},
-
     {"cat": "estrutura_semantica", "catLabel": "Estrutura Semântica", "item": "favicon_todas_as_paginas", "itemLabel": "Favicon Todas as páginas", "tool": "favicon_detector", "toolLabel": "Favicon Detector"},
-
     {"cat": "metadados_e_seo", "catLabel": "Metadados e SEO", "item": "seo_100", "itemLabel": "SEO 100 Home e MPI", "tool": "lighthouse", "toolLabel": "Extensão LightHouse"},
     {"cat": "performance", "catLabel": "Performance", "item": "performance_60_home_e_mpi", "itemLabel": "Performance > 60 Home e MPI", "tool": "lighthouse", "toolLabel": "Extensão LightHouse"},
     {"cat": "performance", "catLabel": "Performance", "item": "accessibility_90_home_e_mpi", "itemLabel": "Accessibility > 90 Home e MPI", "tool": "lighthouse", "toolLabel": "Extensão LightHouse"},
     {"cat": "performance", "catLabel": "Performance", "item": "best_practices_90_home_e_mpi", "itemLabel": "Best Pratices > 90 Home e MPI", "tool": "lighthouse", "toolLabel": "Extensão LightHouse"},
-    
     {"cat": "performance", "catLabel": "Performance", "item": "footer_lazy_load_todas_as_paginas", "itemLabel": "Footer Lazy Load Todas as páginas", "tool": "manual", "toolLabel": "Manual"},
     {"cat": "metadados_e_seo", "catLabel": "Metadados e SEO", "item": "banners_links_mpi", "itemLabel": "Banners - links para MPI Home", "tool": "manual", "toolLabel": "Manual"},
     {"cat": "metadados_e_seo", "catLabel": "Metadados e SEO", "item": "produtos_em_destaque", "itemLabel": "Produtos em destaque Home", "tool": "manual", "toolLabel": "Manual"},

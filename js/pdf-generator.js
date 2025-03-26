@@ -40,6 +40,8 @@ function loadImage(file) {
 }
 
 async function generatePDF() {
+
+    console.log('teste: '+jsonItens);
     const doc = new jsPDF();
     let y = 10;
 
@@ -67,14 +69,17 @@ async function generatePDF() {
     doc.text(`Nome: ${formName}`, 10, y);
     y += 10;
 
+    let jsonItens = await getJson('itens.json');
+
+    
     const inputItems = document.querySelectorAll("input.btn-check");
     let reprovedItems = new Array();
     for (const inputItem of inputItems) {
         if (inputItem.checked === true && inputItem.value === "nao") {
             const itenKey = inputItem.name.split(";", 2);
-
+            
             //Tratando o nome do Item e Categoria
-            const itenArray = itens.find(elemento => elemento.item === itenKey[1]);
+            const itenArray = jsonItens.find(elemento => elemento.item === itenKey[1]);
             const itemName = itenArray.itemLabel;
             const itemCat = itenArray.catLabel;
 
