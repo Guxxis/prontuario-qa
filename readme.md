@@ -1,3 +1,11 @@
+# Separarção das Validação por Ferramenta
+* Transformar o arquivo de itens de validação pra JSON
+* Inserir Ferramentas que cada item usa para validar
+* Categorizar os campos de formulario pela ferramenta de validação
+* Colocar a opção de organizar os itens de validação por categoria ou ferramenta
+* Ajustar PDF para orgnaizar extração por categoria
+* ajustar o texto do PDF para trazer a ferramenta que foi utilziada na validação do item com erro
+
 # Campo de anexo de Imagens
 * Campo para adicionar anexos aparecer apenas com item reprovados
 * Botao para adicionar mais anexos ou campo que comporte varios anexos
