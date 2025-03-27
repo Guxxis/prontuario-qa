@@ -1,10 +1,8 @@
-document.addEventListener("DOMContentLoaded", function () {
-
+export function construcInputForm(jsonItens) {
     const formContainer = document.getElementById("form-container");
-
     // Agrupar os itens por categoria
     const categorias = {};
-    itens.forEach(valueIten => {
+    jsonItens.forEach(valueIten => {
         if (!categorias[valueIten.cat]) {
             categorias[valueIten.cat] = [];
         }
@@ -54,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         accordionCollapse.appendChild(accordionBody);
-        
+
         // Lista de itens da categoria
         const itemList = document.createElement("ul");
         itemList.classList.add("list-group");
@@ -114,4 +112,4 @@ document.addEventListener("DOMContentLoaded", function () {
         categoryDiv.appendChild(accordionCollapse);
         formContainer.appendChild(categoryDiv);
     });
-});
+}

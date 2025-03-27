@@ -7,14 +7,41 @@ function loadImage(file) {
 
         let reader = new FileReader();
         reader.readAsDataURL(file);
-        reader.onload = function () {
-            resolve(reader.result); // Retorna a imagem em Base64
+        reader.onload = function (event) {
+            let img = new Image();
+            img.src = event.target.result;
+            img.onload = function () {
+
+                let maxWidth = 150;
+                let maxHeight = 150;
+                let imgWidth = img.width;
+                let imgHeight = img.height;
+
+                if (imgWidth > imgHeight) {
+                    let scale = maxWidth / imgWidth;
+                    imgWidth = maxWidth;
+                    imgHeight *= scale;
+                } else {
+                    let scale = maxHeight / imgHeight;
+                    imgHeight = maxHeight;
+                    imgWidth *= scale;
+                }
+
+                doc.addImage(event.target.result, 'JPEG', 10, y, imgWidth, imgHeight);
+                y += imgHeight + 5;
+
+                processFile(index + 1); // Processa a próxima imagem
+                resolve(reader.result); // Retorna a imagem em Base64
+            };
+
         };
         reader.onerror = reject; // Rejeita se der erro
     });
 }
 
 async function generatePDF() {
+
+    console.log('teste: '+jsonItens);
     const doc = new jsPDF();
     let y = 10;
 
@@ -42,14 +69,17 @@ async function generatePDF() {
     doc.text(`Nome: ${formName}`, 10, y);
     y += 10;
 
+    let jsonItens = await getJson('itens.json');
+
+    
     const inputItems = document.querySelectorAll("input.btn-check");
     let reprovedItems = new Array();
     for (const inputItem of inputItems) {
         if (inputItem.checked === true && inputItem.value === "nao") {
             const itenKey = inputItem.name.split(";", 2);
-
+            
             //Tratando o nome do Item e Categoria
-            const itenArray = itens.find(elemento => elemento.item === itenKey[1]);
+            const itenArray = jsonItens.find(elemento => elemento.item === itenKey[1]);
             const itemName = itenArray.itemLabel;
             const itemCat = itenArray.catLabel;
 
@@ -58,6 +88,7 @@ async function generatePDF() {
             //Tratando campo anexo
             const fileInput = document.getElementById(`file-${itenKey[1]}`);
             const file = fileInput.files[0]; // Pega o primeiro arquivo carregado
+            console.log(file);
             const itemImage = await loadImage(file);
 
             //Tratando campo comentario
@@ -92,7 +123,7 @@ async function generatePDF() {
             doc.text(`- ${categoria}`, 15, y);
             y += 10;
         });
-    }else{
+    } else {
         doc.text(`Site sem erros `, 10, y);
         y += 10;
     }
