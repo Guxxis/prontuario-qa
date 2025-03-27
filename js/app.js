@@ -1,6 +1,5 @@
-import { construcInputForm } from "./form-inputs.js";
-import { progressBar } from "./progress-bar.js";
-import { countItens } from "./progress-bar.js";
+import { construcInputForm } from "./module/form-inputs.js";
+import { progressBar, countItens } from "./module/progress-bar.js";
 
 async function getJson(url) {
     const response = await fetch(url);
@@ -10,15 +9,14 @@ async function getJson(url) {
     return await response.json();
 }
 
-
 document.addEventListener("DOMContentLoaded", async function () {
 
-    let jsonItens = await getJson('itens.json');
+    let jsonItens = await getJson('./data/itens.json');
 
     construcInputForm(jsonItens);
 
     progressBar();
 
     countItens();
-    
+
 });
