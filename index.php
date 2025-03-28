@@ -23,6 +23,11 @@
         <h2 class="col-12 text-center">Formulário de Validação de QA</h2>
     </div>
     <div class="container">
+    <label for="orderSelect">Organizar por:</label>
+    <select id="orderSelect">
+        <option value="cat">Categoria</option>
+        <option value="tool">Ferramenta</option>
+    </select>
 
         <form class="mt-3" id="formValidacao">
             <div class="row container-scroll">
