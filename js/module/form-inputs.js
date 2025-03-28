@@ -1,13 +1,43 @@
-export function construcInputForm(jsonItens) {
+function groupBy(items, key) {
+    return items.reduce((acc, item) => {
+        const group = item[key];
+        if (!acc[group]) acc[group] = [];
+        acc[group].push(item);
+        return acc;
+    }, {});
+}
+
+export function construcInputForm(jsonItens, orderBy) {
     const formContainer = document.getElementById("form-container");
     // Agrupar os itens por categoria
-    const categorias = {};
-    jsonItens.forEach(valueIten => {
-        if (!categorias[valueIten.cat]) {
-            categorias[valueIten.cat] = [];
-        }
-        categorias[valueIten.cat].push(valueIten);
-    });
+    // const categorias = {};
+    // jsonItens.forEach(valueIten => {
+    //     if (!categorias[valueIten.tool]) {
+    //         categorias[valueIten.tool] = [];
+    //     }
+    //     categorias[valueIten.tool].push(valueIten);
+    // });
+
+    let category = '';
+    let subCategory = '';
+
+    switch (orderBy) {
+        case "cat":
+            category = 'catLabel';
+            subCategory = 'toolLabel';
+            break;
+        case "tool":
+            category = 'toolLabel';
+            subCategory = 'catLabel';
+            break;
+        default:
+            console.log("Opção de organização não aceita!");
+
+    }
+
+
+
+    const categorias = groupBy(jsonItens, orderBy);
 
     Object.keys(categorias).forEach(categoria => {
         // Criar um container para cada categoria
@@ -32,7 +62,7 @@ export function construcInputForm(jsonItens) {
         headerDiv.innerHTML = `
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#${categoria}" aria-expanded="true" aria-controls="${categoria}">
-                    ${categorias[categoria][0].catLabel}
+                    ${categorias[categoria][0][category]}
                 </button>
             </h2>
         `;
@@ -67,7 +97,7 @@ export function construcInputForm(jsonItens) {
             // Texto do item
             const colText = document.createElement("label");
             colText.classList.add("form-label");
-            colText.innerText = `${valueIten.itemLabel}`;
+            colText.innerText = `${valueIten[subCategory]} > ${valueIten.itemLabel}`;
 
             // Botões de Aprovação
             const colRadio = document.createElement("div");

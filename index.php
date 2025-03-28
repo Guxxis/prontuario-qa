@@ -23,6 +23,11 @@
         <h2 class="col-12 text-center">Formulário de Validação de QA</h2>
     </div>
     <div class="container">
+    <label for="orderSelect">Organizar por:</label>
+    <select id="orderSelect">
+        <option value="cat">Categoria</option>
+        <option value="tool">Ferramenta</option>
+    </select>
 
         <form class="mt-3" id="formValidacao">
             <div class="row container-scroll">
@@ -108,15 +113,7 @@
         });
     </script>
 
-    <!-- <script>
-        <?php //include("js/pdf-generator.js");?>
-        </script> -->
-
-    <!-- <script src="js/items-list.js"></script> -->
-    <script type="module" src="js/index.js"></script>
-    <!-- <script src="js/form-inputs.js"></script> -->
-    <!-- <script src="js/progress-bar.js"></script> -->
-    <!-- <script src="js/pdf-generator.js"></script> -->
+    <script type="module" src="js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
