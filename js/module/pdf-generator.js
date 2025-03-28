@@ -1,3 +1,5 @@
+import { getJson } from "../app.js";
+
 function loadImage(file) {
     return new Promise((resolve, reject) => {
         if (!file) {
@@ -39,9 +41,8 @@ function loadImage(file) {
     });
 }
 
-async function generatePDF() {
+export async function generatePDF(jsonItens) {
 
-    console.log('teste: '+jsonItens);
     const doc = new jsPDF();
     let y = 10;
 
@@ -69,7 +70,7 @@ async function generatePDF() {
     doc.text(`Nome: ${formName}`, 10, y);
     y += 10;
 
-    let jsonItens = await getJson('itens.json');
+    // let jsonItens = await getJson('../../data/itens.json');
 
     
     const inputItems = document.querySelectorAll("input.btn-check");
@@ -130,7 +131,7 @@ async function generatePDF() {
 
     Object.keys(reprovedCat).forEach(categoria => {
         doc.addPage('a4');
-        py = 10
+        let py = 10
         doc.setFontSize(18);
         doc.text(`${categoria}: `, 10, py);
         py += 10;
@@ -156,4 +157,3 @@ async function generatePDF() {
     doc.save("validacao.pdf");
 }
 
-document.getElementById("btnGerarPDF").addEventListener("click", generatePDF);
