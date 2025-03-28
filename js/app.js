@@ -10,15 +10,6 @@ export async function getJson(url) {
     return await response.json();
 }
 
-// function groupBy(items, key) {
-//     return items.reduce((acc, item) => {
-//         const group = item[key];
-//         if (!acc[group]) acc[group] = [];
-//         acc[group].push(item);
-//         return acc;
-//     }, {});
-// }
-
 // Função para salvar os valores preenchidos
 function saveFormData() {
     const inputs = document.querySelectorAll("input, textarea");
@@ -50,9 +41,9 @@ function restoreFormData(formData) {
 }
 
 // Função principal para renderizar o formulário
-async function renderForm(orderBy = 'cat') {
+async function renderForm(jsonItens, orderBy = 'cat') {
     try {
-        const jsonItens = await getJson('./data/itens.json');
+        // const jsonItens = await getJson('./data/itens.json');
 
         // Salvar os dados preenchidos antes de limpar
         const savedData = saveFormData();
@@ -62,7 +53,6 @@ async function renderForm(orderBy = 'cat') {
         formContainer.innerHTML = "";
 
         // Organiza o formulário com base na opção (categoria ou ferramenta)
-        // const groupedData = groupBy(jsonItens, orderBy);
         construcInputForm(jsonItens, orderBy);
 
         // Restaurar os dados preenchidos
@@ -72,38 +62,47 @@ async function renderForm(orderBy = 'cat') {
         progressBar();
         countItens();
 
-        document.getElementById("btnGerarPDF").addEventListener("click", () => {
-            generatePDF(jsonItens)
-        });
+        
     } catch (error) {
         console.error("Erro ao carregar JSON:", error);
     }
 }
 
 // Evento para atualizar o formulário com base na seleção
-document.addEventListener("DOMContentLoaded", async () => {
-    await renderForm();
+// document.addEventListener("DOMContentLoaded", async () => {
 
-    // Captura a mudança no dropdown
-    const orderSelect = document.getElementById("orderSelect");
-    orderSelect.addEventListener("change", (e) => {
-        renderForm(e.target.value);
-    });
-});
 
-// async function init (){
-//     let jsonItens = await getJson('./data/itens.json');
+//     await renderForm();
 
-//     construcInputForm(jsonItens);
-
-//     progressBar();
-
-//     countItens();
+//     // Captura a mudança no dropdown
+//     const orderSelect = document.getElementById("orderSelect");
+//     orderSelect.addEventListener("change", (e) => {
+//         renderForm(e.target.value);
+//     });
 
 //     document.getElementById("btnGerarPDF").addEventListener("click", () => {
 //         generatePDF(jsonItens)
 //     });
 
-// }
+// });
 
-// init();
+async function init (){
+    
+    let jsonItens = await getJson('./data/itens.json');
+
+    await renderForm(jsonItens);
+    // construcInputForm(jsonItens);
+
+    const orderSelect = document.getElementById("orderSelect");
+    orderSelect.addEventListener("change", (e) => {
+        renderForm(jsonItens, e.target.value);
+    });
+
+
+    document.getElementById("btnGerarPDF").addEventListener("click", () => {
+        generatePDF(jsonItens)
+    });
+
+}
+
+init();
