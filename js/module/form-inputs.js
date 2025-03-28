@@ -3,10 +3,10 @@ export function construcInputForm(jsonItens) {
     // Agrupar os itens por categoria
     const categorias = {};
     jsonItens.forEach(valueIten => {
-        if (!categorias[valueIten.cat]) {
-            categorias[valueIten.cat] = [];
+        if (!categorias[valueIten.tool]) {
+            categorias[valueIten.tool] = [];
         }
-        categorias[valueIten.cat].push(valueIten);
+        categorias[valueIten.tool].push(valueIten);
     });
 
     Object.keys(categorias).forEach(categoria => {
@@ -32,7 +32,7 @@ export function construcInputForm(jsonItens) {
         headerDiv.innerHTML = `
             <h2 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#${categoria}" aria-expanded="true" aria-controls="${categoria}">
-                    ${categorias[categoria][0].catLabel}
+                    ${categorias[categoria][0].toolLabel}
                 </button>
             </h2>
         `;
@@ -67,7 +67,7 @@ export function construcInputForm(jsonItens) {
             // Texto do item
             const colText = document.createElement("label");
             colText.classList.add("form-label");
-            colText.innerText = `${valueIten.itemLabel}`;
+            colText.innerText = `${valueIten.catLabel} > ${valueIten.itemLabel}`;
 
             // Botões de Aprovação
             const colRadio = document.createElement("div");
