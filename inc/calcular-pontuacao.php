@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    //Pesos dos itens
+    //Pesos dos jsonItens
     $pesos = [
         "metadados_e_seo" => 5,
         "performance" => 5,
@@ -37,13 +37,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     // var_dump($categoria);
                     $pontuacao += $peso;
-                } else {
-                    foreach ($itens as $item){
-                        if($catItem[0] == $item['cat'] && $catItem[1] == $item['item']){
-
-                            array_push($erros,$item['label']);
-                        }
-                    }
                 }
             }
         }
