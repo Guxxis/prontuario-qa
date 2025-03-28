@@ -71,6 +71,10 @@ async function renderForm(orderBy = 'cat') {
         // Atualiza a barra de progresso
         progressBar();
         countItens();
+
+        document.getElementById("btnGerarPDF").addEventListener("click", () => {
+            generatePDF(jsonItens)
+        });
     } catch (error) {
         console.error("Erro ao carregar JSON:", error);
     }
