@@ -115,11 +115,18 @@
             const fileList = e.dataTransfer.files;
             for (let i = 0; i < fileList.length; i++) {
 
+                if (fileListSanitizer.length >= 5) {
+
+                    alert("Limite de imagens atingido");
+                    break;
+                }
+                
                 let urlBase64 = await handleFiles(fileList[i]);
                 fileListSanitizer.push({
                     "name": fileList[i].name,
                     "base64": urlBase64
                 });
+
             }
 
             updatePreview(fileListSanitizer);
@@ -141,8 +148,8 @@
                 deleteButton.innerText = "X";
                 deleteButton.classList = "delete-button";
 
-                deleteButton.addEventListener("click", ()=>{
-                    fileListSanitizer.splice(index,1);
+                deleteButton.addEventListener("click", () => {
+                    fileListSanitizer.splice(index, 1);
                     updatePreview(fileListSanitizer);
                 });
 
