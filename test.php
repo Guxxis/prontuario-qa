@@ -106,7 +106,9 @@
 
 
         let fileListSanitizer = new Array();
-        //adciona imagem na lista
+        const fileListLimit = 5;
+
+        //Evento para adicionar uma imagem arrastando
         dropArea.addEventListener("drop", async (e) => {
 
             e.preventDefault();
@@ -115,18 +117,43 @@
             const fileList = e.dataTransfer.files;
             for (let i = 0; i < fileList.length; i++) {
 
-                if (fileListSanitizer.length >= 5) {
+                if (fileListSanitizer.length >= fileListLimit) {
 
                     alert("Limite de imagens atingido");
                     break;
                 }
-                
+
                 let urlBase64 = await handleFiles(fileList[i]);
                 fileListSanitizer.push({
                     "name": fileList[i].name,
                     "base64": urlBase64
                 });
 
+            }
+
+            updatePreview(fileListSanitizer);
+
+        });
+
+        // Evento para colar imagem do clipboard
+        document.addEventListener("paste", async (e) => {
+            const items = e.clipboardData.items;
+
+            for (const item of items) {
+
+                if (item.type.startsWith("image/")) {
+                    if (fileListSanitizer.length >= fileListLimit) {
+
+                        alert("Limite de imagens atingido");
+                        break;
+                    }
+                    const file = item.getAsFile();
+                    let urlBase64 = await handleFiles(file);
+                    fileListSanitizer.push({
+                        "name": "Imagem",
+                        "base64": urlBase64
+                    });
+                }
             }
 
             updatePreview(fileListSanitizer);
@@ -161,18 +188,6 @@
                 preview.appendChild(divPreview);
             });
         }
-
-
-        // Evento para colar imagem do clipboard (Ctrl+V)
-        document.addEventListener("paste", (e) => {
-            const items = e.clipboardData.items;
-            for (const item of items) {
-                if (item.type.startsWith("image/")) {
-                    const file = item.getAsFile();
-                    handleFiles(file);
-                }
-            }
-        });
     </script>
 </body>
 
