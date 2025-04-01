@@ -26,9 +26,36 @@
             background-color: #e0e0e0;
         }
 
-        #preview {
-            margin-top: 15px;
-            max-width: 100%;
+        #preview-area {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .preview {
+            position: relative;
+            display: inline-block;
+        }
+
+        .preview>img {
+            height: 100px;
+            width: 100px;
+            object-fit: cover;
+        }
+
+        .preview>button {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-color: rgba(255, 0, 0, 0.6);
+            color: white;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        .preview>button:hover {
+            background-color: red;
         }
     </style>
 </head>
@@ -39,26 +66,31 @@
     <div id="drop-area">
         <p>Arraste um arquivo aqui ou pressione Ctrl+V para colar</p>
         <input type="file" id="fileInput" style="display: none;">
-        <img id="preview" style="display: none;">
+        <div id="preview-area"></div>
     </div>
 
     <script>
         const dropArea = document.getElementById('drop-area');
         const fileInput = document.getElementById('fileInput');
-        const preview = document.getElementById('preview');
+        const preview = document.getElementById('preview-area');
 
         // Função para lidar com arquivos
         function handleFiles(file) {
-            if (file && file.type.startsWith("image/")) {
-                const reader = new FileReader();
-                reader.onload = function(event) {
-                    preview.src = event.target.result;
-                    preview.style.display = "block";
-                };
-                reader.readAsDataURL(file);
-            } else {
-                alert("Apenas imagens são permitidas!");
-            }
+            return new Promise((resolve, reject) => {
+
+                if (file && file.type.startsWith("image/")) {
+                    const reader = new FileReader();
+                    reader.onload = function(event) {
+                        resolve(event.target.result);
+                    };
+                    reader.onerror = function(error) {
+                        reject(error);
+                    }
+                    reader.readAsDataURL(file);
+                } else {
+                    reject("Apenas imagens são permitidas!");
+                }
+            });
         }
 
         // Evento para arrastar e soltar
@@ -71,12 +103,58 @@
             dropArea.classList.remove("highlight");
         });
 
-        dropArea.addEventListener("drop", (e) => {
+
+
+        let fileListSanitizer = new Array();
+        //adciona imagem na lista
+        dropArea.addEventListener("drop", async (e) => {
+
             e.preventDefault();
             dropArea.classList.remove("highlight");
-            const file = e.dataTransfer.files[0];
-            handleFiles(file);
+
+            const fileList = e.dataTransfer.files;
+            for (let i = 0; i < fileList.length; i++) {
+
+                let urlBase64 = await handleFiles(fileList[i]);
+                fileListSanitizer.push({
+                    "name": fileList[i].name,
+                    "base64": urlBase64
+                });
+            }
+
+            updatePreview(fileListSanitizer);
+
         });
+
+        //remove imagem da lista
+
+        function updatePreview(fileListSanitizer) {
+            preview.innerHTML = "";
+            fileListSanitizer.forEach((file, index) => {
+
+                const imgPreview = document.createElement("img");
+                imgPreview.src = file.base64;
+                imgPreview.alt = file.name;
+                imgPreview.title = file.name;
+
+                const deleteButton = document.createElement("button");
+                deleteButton.innerText = "X";
+                deleteButton.classList = "delete-button";
+
+                deleteButton.addEventListener("click", ()=>{
+                    fileListSanitizer.splice(index,1);
+                    updatePreview(fileListSanitizer);
+                });
+
+                const divPreview = document.createElement("div");
+                divPreview.classList = "preview";
+
+                divPreview.appendChild(imgPreview);
+                divPreview.appendChild(deleteButton);
+                preview.appendChild(divPreview);
+            });
+        }
+
 
         // Evento para colar imagem do clipboard (Ctrl+V)
         document.addEventListener("paste", (e) => {
