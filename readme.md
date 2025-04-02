@@ -1,6 +1,11 @@
 # Campo de anexo de Imagens
 * Adicionar opção de escolher anexo
 
+# Campo de Comentario
+* Ajustar campo de comentario para aparecer apenas quando item reprovado
+* salvar valor do comentario na troca de categoria
+* campo ativo na hora que trocar de categoria e o item é reprovado
+
 # Campo de comentarios Gerais
 * Adicionar campo de comentarios gerais do projeto
 * Adicionar campo de imagens gerais para comportar varias imagens
