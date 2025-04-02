@@ -25,6 +25,11 @@ function restoreFormData(formData) {
         if (input.type === "radio") {
             if (formData[input.name] === input.value) {
                 input.checked = true; // Restaura o radio selecionado
+                if(input.value ==="nao"){
+                    const itemKey = input.name.split(";")[1]
+                    const attachContainer = document.getElementById(`image-container-${itemKey}`);
+                    attachContainer.style.display="block";
+                }
             }
         } else if (formData[input.name]) {
             input.value = formData[input.name]; // Restaura os outros campos

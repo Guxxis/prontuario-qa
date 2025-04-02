@@ -13,10 +13,8 @@
 # Estilização do PDF
 * Criar capa do prontuario com as principais infomarções do projeto validado
 * Resultado da validação
-* Adicionar indice de categoria de erros encontrados
 * Configurar para campo de comentarios ser a primeira pagina do protuario depois da capa
 * Pagina de comentario, com observações e imagens gerais
-* Cada cegoria com erro tera sua pagina com os detalhes
 * Cada pagina tera um cabeçario com as informações principais do prontuario
 * Definir tamanho das imagens de anexo (imagens apenas informativas, nao precisam de qualidade ou tamanho bom)
 

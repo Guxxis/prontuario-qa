@@ -90,5 +90,32 @@ export function attachField(imageList) {
 
             updateAttachPreview(imageList);
         });
+
+        // Evento para colar imagem do clipboard
+        document.addEventListener("paste", async (e) => {
+            const files = e.clipboardData.items;
+
+            if (!imageList[itemId]) {
+                imageList[itemId] = []; // Cria a chave se não existir
+            }
+
+            for (const file of files) {
+
+                if (imageList[itemId].length >= 5) {
+
+                    alert("Limite de imagens atingido");
+                    break;
+                }
+
+                let imageUrl64 = await handleFiles(file.getAsFile());
+                imageList[itemId].push({
+                    "name": file.name,
+                    "base64": imageUrl64
+                });
+            }
+
+            updateAttachPreview(imageList);
+
+        });
     });
 }
