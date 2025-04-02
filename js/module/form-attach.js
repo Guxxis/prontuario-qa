@@ -43,7 +43,7 @@ export function attachField(imageList) {
         updateAttachPreview(imageList);
     }
     const dropAreas = document.querySelectorAll(".drop-area");
-    // const imageList = {};
+    let activeField = null;
 
     dropAreas.forEach((dropArea) => {
         const itemId = dropArea.id.split("-")[2]; // Pega o ID do item correspondente
@@ -91,15 +91,23 @@ export function attachField(imageList) {
             updateAttachPreview(imageList);
         });
 
+
+
+        document.querySelectorAll(".drop-area").forEach(campo => {
+            campo.addEventListener("click", () => {
+                activeField = campo;  // Define qual campo está ativo
+            });
+        });
+
         // Evento para colar imagem do clipboard
-        document.addEventListener("paste", async (e) => {
+        dropArea.addEventListener("paste", async (e) => {
+            if (!activeField) return;
             const files = e.clipboardData.items;
 
-            if (!imageList[itemId]) {
-                imageList[itemId] = []; // Cria a chave se não existir
-            }
-
             for (const file of files) {
+                if (!imageList[itemId]) {
+                    imageList[itemId] = []; // Cria a chave se não existir
+                }
 
                 if (imageList[itemId].length >= 5) {
 

@@ -111,6 +111,11 @@ export function construcInputForm(jsonItens, orderBy) {
             imageContainer.style.display = "none";
             imageContainer.id = (`image-container-${valueIten.item}`);
 
+            imageContainer.addEventListener("click", ()=>{
+                activeField = `image-container-${valueIten.item}`;
+            });
+
+
             const imageAttach = document.createElement("input");
             imageAttach.type = "file";
             imageAttach.style.display = "none";
