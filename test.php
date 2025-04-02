@@ -65,7 +65,7 @@
     <h2>Arraste e solte ou cole uma imagem</h2>
     <div id="drop-area">
         <p>Arraste um arquivo aqui ou pressione Ctrl+V para colar</p>
-        <input type="file" id="fileInput" style="display: none;">
+        <!-- <input type="file" id="fileInput" style="display: none;"> -->
         <div id="preview-area"></div>
     </div>
 

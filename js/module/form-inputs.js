@@ -9,14 +9,6 @@ function groupBy(items, key) {
 
 export function construcInputForm(jsonItens, orderBy) {
     const formContainer = document.getElementById("form-container");
-    // Agrupar os itens por categoria
-    // const categorias = {};
-    // jsonItens.forEach(valueIten => {
-    //     if (!categorias[valueIten.tool]) {
-    //         categorias[valueIten.tool] = [];
-    //     }
-    //     categorias[valueIten.tool].push(valueIten);
-    // });
 
     let category = '';
     let subCategory = '';
@@ -95,48 +87,53 @@ export function construcInputForm(jsonItens, orderBy) {
             divRowItem.classList.add("row");
 
             // Texto do item
-            const colText = document.createElement("label");
-            colText.classList.add("form-label");
-            colText.innerText = `${valueIten[subCategory]} > ${valueIten.itemLabel}`;
+            const textContainer = document.createElement("label");
+            textContainer.classList.add("form-label");
+            textContainer.innerText = `${valueIten[subCategory]} > ${valueIten.itemLabel}`;
 
             // Botões de Aprovação
-            const colRadio = document.createElement("div");
-            colRadio.classList.add("col-4");
-            colRadio.innerHTML = `
+            const radioContainer = document.createElement("div");
+            radioContainer.classList.add("col-4");
+            radioContainer.innerHTML = `
                 <input type="radio" class="btn-check" id="success-${valueIten.item}" name="${valueIten.cat};${valueIten.item}" value="sim">
                 <label class="btn btn-outline-success" for="success-${valueIten.item}">Aprovado</label>
                 <input type="radio" class="btn-check" id="danger-${valueIten.item}" name="${valueIten.cat};${valueIten.item}" value="nao">
                 <label class="btn btn-outline-danger" for="danger-${valueIten.item}">Reprovado</label>
             `;
-            divRowItem.appendChild(colRadio);
 
-            // Botão de upload
-            const colFile = document.createElement("div");
-            colFile.classList.add("col-1");
-            colFile.innerHTML = `
-                <label for="file-${valueIten.item}" class="custom-file-label"><i class="fa-solid fa-paperclip"></i></label>
-                <input type="file" id="file-${valueIten.item}" class="input-file">
-            `;
-            divRowItem.appendChild(colFile);
+            divRowItem.appendChild(radioContainer);
 
+            // Area Drag and Drop
+            const imageContainer = document.createElement("div");
+            imageContainer.classList.add("col-1");
+            imageContainer.classList.add("drop-area");
+            imageContainer.style.display = "none";
+            imageContainer.id = (`image-${valueIten.item}`);
+
+            const imageAttach = document.createElement("input");
+            imageAttach.type = "file";
+            imageAttach.style.display = "none";
+            
+            const imagePreview = document.createElement("div");
+            imagePreview.classList.add("preview-area")
+            
+
+            imageContainer.appendChild(imageAttach);
+            imageContainer.appendChild(imagePreview);
+            divRowItem.appendChild(imageContainer);
             // Campo de comentario
-            const colObs = document.createElement("div");
-            colObs.classList.add("col");
-            colObs.innerHTML = `
-                <label for="text-${valueIten.item}">obs: </label>
-                <input type="textarea" id="text-${valueIten.item}">
-            `;
-            divRowItem.appendChild(colObs);
+            // const colObs = document.createElement("div");
+            // colObs.classList.add("col");
+            // colObs.innerHTML = `
+            //     <label for="text-${valueIten.item}">obs: </label>
+            //     <input type="textarea" id="text-${valueIten.item}">
+            // `;
+            // divRowItem.appendChild(colObs);
 
-            li.appendChild(colText);
+            li.appendChild(textContainer);
             li.appendChild(divRowItem);
             itemList.appendChild(li);
         });
-
-        // Adiciona um evento de clique para expandir/recolher a categoria
-        // header.addEventListener("click", () => {
-        //     itemList.style.display = itemList.style.display === "none" ? "block" : "none";
-        // });
 
         accordionCollapse.appendChild(itemList);
         categoryDiv.appendChild(accordionCollapse);

@@ -53,3 +53,48 @@
 .custom-file-label:hover {
     background: #0056b3; /* Cor ao passar o mouse */
 }
+
+.drop-area {
+    border: 2px dashed #007bff;
+    padding: 30px;
+    width: 80%;
+    max-width: 400px;
+    margin: auto;
+    background-color: #f8f9fa;
+}
+
+.drop-area.highlight {
+    background-color: #e0e0e0;
+}
+
+.preview-area {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.preview {
+    position: relative;
+    display: inline-block;
+}
+
+.preview>img {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+}
+
+.preview>button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: rgba(255, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.preview>button:hover {
+    background-color: red;
+}

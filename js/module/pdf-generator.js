@@ -1,5 +1,3 @@
-import { getJson } from "../app.js";
-
 function loadImage(file) {
     return new Promise((resolve, reject) => {
         if (!file) {
