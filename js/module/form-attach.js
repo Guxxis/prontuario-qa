@@ -1,56 +1,90 @@
-const dropAreas = document.querySelectorAll(".drop-area");
-const anexosPorItem = {}; // Armazena imagens separadas por item
+import { handleFiles } from "./handle-file.js";
 
-dropAreas.forEach((dropArea) => {
-    const itemId = dropArea.dataset.item; // Pega o ID do item correspondente
+function updateAttachPreview(categorys) {
+    // preview.innerHTML = "";
 
-    // Prevenir comportamentos padrões
-    ["dragenter", "dragover", "dragleave", "drop"].forEach((eventName) => {
-        dropArea.addEventListener(eventName, (e) => e.preventDefault(), false);
-    });
+    // console.log(fileListSanitizer);
+    Object.keys(categorys).forEach(key => {
+        const preview = document.getElementById(`image-preview-${key}`)
+        preview.innerHTML = "";
+        //imagens itens
+        categorys[key].forEach((image, index) => {
 
-    // Adiciona uma borda ao passar por cima
-    dropArea.addEventListener("dragover", () => {
-        dropArea.classList.add("highlight");
-    });
+            const imgPreview = document.createElement("img");
+            imgPreview.src = image.base64;
+            imgPreview.alt = image.name;
+            imgPreview.title = image.name;
 
-    // Remove a borda quando sai
-    dropArea.addEventListener("dragleave", () => {
-        dropArea.classList.remove("highlight");
-    });
+            const deleteButton = document.createElement("button");
+            deleteButton.innerText = "X";
+            deleteButton.classList = "delete-button";
 
-    // Manipula o drop
-    dropArea.addEventListener("drop", (e) => {
-        dropArea.classList.remove("highlight");
-        const files = e.dataTransfer.files;
+            deleteButton.addEventListener("click", () => {
+                categorys[key].splice(index, 1);
+                updateAttachPreview(categorys);
+            });
 
-        if (!anexosPorItem[itemId]) {
-            anexosPorItem[itemId] = []; // Cria a chave se não existir
-        }
+            const divPreview = document.createElement("div");
+            divPreview.classList = "preview";
 
-        for (let file of files) {
-            if (file.type.startsWith("image/")) {
-                const reader = new FileReader();
-                reader.onload = function (event) {
-                    anexosPorItem[itemId].push({
-                        name: file.name,
-                        base64: event.target.result
-                    });
+            divPreview.appendChild(imgPreview);
+            divPreview.appendChild(deleteButton);
+            preview.appendChild(divPreview);
+        })
+    })
 
-                    // Criar um preview da imagem na área correta
-                    const previewContainer = document.querySelector(
-                        `.preview-container[data-item="${itemId}"]`
-                    );
-                    const img = document.createElement("img");
-                    img.src = event.target.result;
-                    img.style.width = "100px";
-                    img.style.margin = "5px";
-                    previewContainer.appendChild(img);
-                };
-                reader.readAsDataURL(file);
-            } else {
-                alert("Apenas imagens são permitidas!");
+}
+
+
+
+export function attachField() {
+    const dropAreas = document.querySelectorAll(".drop-area");
+    const imageList = {};
+
+    dropAreas.forEach((dropArea) => {
+        const itemId = dropArea.id.split("-")[2]; // Pega o ID do item correspondente
+
+        // Prevenir comportamentos padrões
+        ["dragenter", "dragover", "dragleave", "drop"].forEach((eventName) => {
+            dropArea.addEventListener(eventName, (e) => e.preventDefault(), false);
+        });
+
+        // Adiciona uma borda ao passar por cima
+        dropArea.addEventListener("dragover", () => {
+            dropArea.classList.add("highlight");
+        });
+
+        // Remove a borda quando sai
+        dropArea.addEventListener("dragleave", () => {
+            dropArea.classList.remove("highlight");
+        });
+
+        // Manipula o drop
+        dropArea.addEventListener("drop", async (e) => {
+
+            dropArea.classList.remove("highlight");
+
+            const files = e.dataTransfer.files;
+
+            if (!imageList[itemId]) {
+                imageList[itemId] = []; // Cria a chave se não existir
             }
-        }
+
+            for (let file of files) {
+
+                if (imageList[itemId].length >= 5) {
+                    alert("Limite de imagens atingido");
+                    break;
+                }
+
+                let imageUrl64 = await handleFiles(file);
+                imageList[itemId].push({
+                    "name": file.name,
+                    "base64": imageUrl64
+                });
+            }
+
+            updateAttachPreview(imageList);
+        });
     });
-});
+}
