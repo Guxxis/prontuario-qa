@@ -83,13 +83,6 @@
     <script type="module" src="js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script>
-
-
-        // Adicionar evento para os botões de rádio criados dinamicamente
-
-
-    </script>
 </body>
 
 </html>

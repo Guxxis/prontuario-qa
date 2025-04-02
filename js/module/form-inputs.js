@@ -30,6 +30,7 @@ export function construcInputForm(jsonItens, orderBy) {
 
 
     const categorias = groupBy(jsonItens, orderBy);
+    // console.log(categorias);
 
     Object.keys(categorias).forEach(categoria => {
         // Criar um container para cada categoria
@@ -108,7 +109,7 @@ export function construcInputForm(jsonItens, orderBy) {
             imageContainer.classList.add("col-1");
             imageContainer.classList.add("drop-area");
             imageContainer.style.display = "none";
-            imageContainer.id = (`image-${valueIten.item}`);
+            imageContainer.id = (`image-container-${valueIten.item}`);
 
             const imageAttach = document.createElement("input");
             imageAttach.type = "file";
@@ -116,6 +117,7 @@ export function construcInputForm(jsonItens, orderBy) {
             
             const imagePreview = document.createElement("div");
             imagePreview.classList.add("preview-area")
+            imagePreview.id = (`image-preview-${valueIten.item}`);
             
 
             imageContainer.appendChild(imageAttach);

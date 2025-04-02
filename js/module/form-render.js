@@ -61,7 +61,7 @@ export async function renderForm(jsonItens, orderBy = 'tool') {
 
 export function toggleAttach(event) {
     const itemId = event.target.id.split("-")[1]; // Pega o ID do item
-    const anexoContainer = document.getElementById(`image-${itemId}`);
+    const anexoContainer = document.getElementById(`image-container-${itemId}`);
 
     if (event.target.value === "nao") {
         anexoContainer.style.display = "block"; // Mostra o campo de anexo
