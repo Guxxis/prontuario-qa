@@ -37,9 +37,13 @@ function updateAttachPreview(categorys) {
 
 
 
-export function attachField() {
+export function attachField(imageList) {
+    if (imageList != "") {
+
+        updateAttachPreview(imageList);
+    }
     const dropAreas = document.querySelectorAll(".drop-area");
-    const imageList = {};
+    // const imageList = {};
 
     dropAreas.forEach((dropArea) => {
         const itemId = dropArea.id.split("-")[2]; // Pega o ID do item correspondente

@@ -1,5 +1,6 @@
 import { construcInputForm } from "./form-inputs.js";
 import { progressBar, countItens } from "./progress-bar.js";
+import { attachField } from "./form-attach.js";
 
 // Função para salvar os valores preenchidos
 function saveFormData() {
@@ -32,7 +33,7 @@ function restoreFormData(formData) {
 }
 
 // Função principal para renderizar o formulário
-export async function renderForm(jsonItens, orderBy = 'tool') {
+export async function renderForm(jsonItens, imageList, orderBy = 'tool') {
     try {
         // const jsonItens = await getJson('./data/itens.json');
 
@@ -52,8 +53,9 @@ export async function renderForm(jsonItens, orderBy = 'tool') {
         // Atualiza a barra de progresso
         progressBar();
         countItens();
+        attachField(imageList);
 
-        
+
     } catch (error) {
         console.error("Erro ao carregar JSON:", error);
     }
