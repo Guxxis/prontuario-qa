@@ -3,7 +3,6 @@ import { handleFiles } from "./handle-file.js";
 function updateAttachPreview(categorys) {
     // preview.innerHTML = "";
 
-    // console.log(fileListSanitizer);
     Object.keys(categorys).forEach(key => {
         const preview = document.getElementById(`image-preview-${key}`)
         preview.innerHTML = "";

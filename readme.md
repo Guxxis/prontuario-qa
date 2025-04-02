@@ -1,10 +1,5 @@
-# Separarção das Validação por Ferramenta
-* ajustar o texto do PDF para trazer a ferramenta que foi utilziada na validação do item com erro
-
 # Campo de anexo de Imagens
-* Ajustar codigo para ler todos os anexos
 * Adicionar opção de escolher anexo
-* Adicionar a opão de colar o print
 
 # Campo de comentarios Gerais
 * Adicionar campo de comentarios gerais do projeto

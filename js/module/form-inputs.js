@@ -30,7 +30,6 @@ export function construcInputForm(jsonItens, orderBy) {
 
 
     const categorias = groupBy(jsonItens, orderBy);
-    // console.log(categorias);
 
     Object.keys(categorias).forEach(categoria => {
         // Criar um container para cada categoria

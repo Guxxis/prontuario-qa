@@ -149,11 +149,8 @@ export async function generatePDF(jsonItens, imageList) {
                 py += 10;
             }
             if (reprovedItem["image"]) {
-                console.log(reprovedItem["image"]);
                 let px = 20
                 for (let i = 0; i < reprovedItem["image"].length; i++) {
-                    console.log(reprovedItem["image"][i].name)
-
                     doc.addImage(reprovedItem["image"][i].base64, "jpeg", px, py, 70, 70); // Adiciona ao PDF
                     px += 75;
                 }
