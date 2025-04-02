@@ -39,9 +39,13 @@ function loadImage(file) {
     });
 }
 
-export async function generatePDF(jsonItens) {
+export async function generatePDF(jsonItens, imageList) {
 
-    const doc = new jsPDF();
+    const doc = new jsPDF({
+        orientation: 'p',
+        unit: 'px',
+        format: 'a4',
+    });
     let y = 10;
 
     // Adiciona texto ao PDF
@@ -70,13 +74,13 @@ export async function generatePDF(jsonItens) {
 
     // let jsonItens = await getJson('../../data/itens.json');
 
-    
+
     const inputItems = document.querySelectorAll("input.btn-check");
     let reprovedItems = new Array();
     for (const inputItem of inputItems) {
         if (inputItem.checked === true && inputItem.value === "nao") {
             const itenKey = inputItem.name.split(";", 2);
-            
+
             //Tratando o nome do Item e Categoria
             const itenArray = jsonItens.find(elemento => elemento.item === itenKey[1]);
             const itemName = itenArray.itemLabel;
@@ -84,26 +88,27 @@ export async function generatePDF(jsonItens) {
 
             // doc.text(`${itenArray.catLabel} - ${itenArray.itemLabel}`, 10, y);
             // y += 10;
+
+            const imageItemList = imageList[itenKey[1]];
+
             //Tratando campo anexo
-            const fileInput = document.getElementById(`file-${itenKey[1]}`);
-            const file = fileInput.files[0]; // Pega o primeiro arquivo carregado
-            console.log(file);
-            const itemImage = await loadImage(file);
+            // const fileInput = document.getElementById(`file-${itenKey[1]}`);
+            // const file = fileInput.files[0]; // Pega o primeiro arquivo carregado
+            // const itemImage = await loadImage(file);
 
             //Tratando campo comentario
-            const itemComment = document.getElementById(`text-${itenKey[1]}`).value;
+            // const itemComment = document.getElementById(`text-${itenKey[1]}`).value;
 
 
             reprovedItems.push({
                 "category": itemCat,
                 "item": itemName,
-                "comment": itemComment,
-                "image": itemImage,
+                // "comment": itemComment,
+                "image": imageItemList,
             });
         }
 
     };
-
 
     const reprovedCat = {};
     reprovedItems.forEach(reprovedItem => {
@@ -112,6 +117,7 @@ export async function generatePDF(jsonItens) {
         }
         reprovedCat[reprovedItem["category"]].push(reprovedItem);
     });
+
 
     doc.setFontSize(16);
     if (reprovedCat != "") {
@@ -143,8 +149,15 @@ export async function generatePDF(jsonItens) {
                 py += 10;
             }
             if (reprovedItem["image"]) {
-                doc.addImage(reprovedItem["image"], "jpeg", 20, py, 50, 50); // Adiciona ao PDF
-                py += 60;
+                console.log(reprovedItem["image"]);
+                let px = 20
+                for (let i = 0; i < reprovedItem["image"].length; i++) {
+                    console.log(reprovedItem["image"][i].name)
+
+                    doc.addImage(reprovedItem["image"][i].base64, "jpeg", px, py, 70, 70); // Adiciona ao PDF
+                    px += 75;
+                }
+                py += 75;
             }
         })
     });
