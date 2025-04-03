@@ -39,42 +39,46 @@ function loadImage(file) {
     });
 }
 
+function marginPdf(doc) {
+    //margin x
+    let mx = 0;
+    let xLine = 5
+    for (let i = 0; i < xLine; i++) {
+        doc.setLineWidth(0.5);
+        doc.line(mx, 10, (mx += 99), 10);
+        // mx += 99;
+        doc.setLineWidth(3);
+        doc.line(mx, 10, (mx += 1), 10);
+    }
+    //margin y
+    let my = 0;
+    let yLine = 7
+    for (let i = 0; i < yLine; i++) {
+        doc.setLineWidth(0.5);
+        doc.line(10, my, 10, my += 99);
+        // my += 99;
+        doc.setLineWidth(3);
+        doc.line(10, my, 10, my += 1);
+    }
+}
+
 export async function generatePDF(jsonItens, imageList) {
 
-    const doc = new jsPDF({
-        orientation: 'p',
-        unit: 'px',
-        format: 'a4',
-    });
-    let y = 10;
+    // Pega campos do formulario
+    let formDomain = document.getElementById("dominio").value;
+    let formIdClient = document.getElementById("id-cliente").value;
+    let formIdRunrunit = document.getElementById("id-card-runrunit").value;
+    let formNameQa = document.getElementById("nome-analista-qa").value;
+    let formDataQA = document.getElementById("data-validacao-site").value;
+    let formNameProd = document.getElementById("nome-analista-producao").value;
+    let formDataProd = document.getElementById("data-producacao-site").value;
 
-    // Adiciona texto ao PDF
+    let pontuacaoFinal = document.getElementById("pontuacao").value;
+    let pontuacaoPorcento = document.getElementById("pontuacaoPorcento").value;
+    let pontuacaoMax = document.getElementById("pontuacaoMaximo").value;
+    let pontuacaoStatus = document.getElementById("pontuacaoStatus").value;
 
-    // Pega a pontuação gerada pelo PHP
-    // let pontuacaoFinal = document.getElementById("pontuacao").value;
-    // let pontuacaoPorcento = document.getElementById("pontuacaoPorcento").value;
-    // let pontuacaoStatus = document.getElementById("pontuacaoStatus").value;
-    // let formName = document.getElementById("nome").value;
-
-    // doc.setFontSize(18);
-    // doc.text(`Prontuario de Validação`, 10, y);
-    // y += 10;
-    // doc.setFontSize(12);
-    // doc.text(`Pontuação: ${pontuacaoFinal}`, 10, y);
-    // y += 10;
-
-    // doc.text(`Aprovação: ${pontuacaoPorcento}%`, 10, y);
-    // y += 10;
-
-    // doc.text(`Status: ${pontuacaoStatus}`, 10, y);
-    // y += 10;
-
-    // doc.text(`Nome: ${formName}`, 10, y);
-    // y += 10;
-
-    // let jsonItens = await getJson('../../data/itens.json');
-
-
+    //Criar array de itens reprovados
     const inputItems = document.querySelectorAll("input.btn-check");
     let reprovedItems = new Array();
     for (const inputItem of inputItems) {
@@ -85,9 +89,6 @@ export async function generatePDF(jsonItens, imageList) {
             const itenArray = jsonItens.find(elemento => elemento.item === itenKey[1]);
             const itemName = itenArray.itemLabel;
             const itemCat = itenArray.catLabel;
-
-            // doc.text(`${itenArray.catLabel} - ${itenArray.itemLabel}`, 10, y);
-            // y += 10;
 
             const imageItemList = imageList[itenKey[1]];
 
@@ -110,6 +111,7 @@ export async function generatePDF(jsonItens, imageList) {
 
     };
 
+    //Organiza a array dos erros por categoria
     const reprovedCat = {};
     reprovedItems.forEach(reprovedItem => {
         if (!reprovedCat[reprovedItem["category"]]) {
@@ -119,22 +121,97 @@ export async function generatePDF(jsonItens, imageList) {
     });
 
 
+    //PDF Construção
+    const doc = new jsPDF({
+        orientation: 'p',
+        unit: 'px',
+        format: 'a4',
+    });
+
+    // marginPdf(doc);
+
+    //Titulo
+    doc.setFont('helvetica', 'bold');
+    doc.setTextColor('#4278f5');
+    doc.setFontSize(26);
+
+    let y = 30;
+    doc.text(`PRONTUARIO DE VALIDAÇÃO`, 220, y, { align: "center" });
+
+    //Linha Separação
+    y += 10;
+    doc.setLineWidth(2);
+    doc.line(20, y, 425, y);
+
+    //Cabeçalho
+    doc.setFont('helvetica', 'normal');
+    doc.setTextColor('#000000');
+    doc.setFontSize(12);
+
+    y += 20;
+    doc.text(`ID Cliente: ${formIdClient}`, 15, y);
+    doc.text(`Domínio: ${formDomain}`, 200, y);
+
+    y += 20;
+    doc.text(`ID Runrun It: ${formIdRunrunit}`, 15, y);
+
+    y += 12;
+    doc.text(`Data de Validação: ${formDataQA}`, 15, y);
+    doc.text(`Analista QA: ${formNameQa}`, 200, y);
+
+    y += 12;
+    doc.text(`Data de Produção: ${formDataProd}`, 15, y);
+    doc.text(`Analista Desenvolvedor: ${formNameProd}`, 200, y);
+
+    //Linha Separação
+    y += 10;
+    doc.setLineWidth(1);
+    doc.line(50, y, 395, y);
+
+    //Resultado
+    doc.setFont('helvetica', 'bold');
     doc.setFontSize(16);
+    y += 16;
+    doc.text(`Resultado: `, 15, y);
+    doc.setTextColor(pontuacaoStatus == "Aprovado" ? '#26ab2c' : '#d95829');
+    doc.text(`${pontuacaoStatus}`, 100, y);
+
+    doc.setFont('helvetica', 'normal');
+    doc.setTextColor('#000000');
+    doc.setFontSize(12);
+
+    y += 20;
+    doc.text(`Maxima: ${pontuacaoMax}`, 15, y);
+    doc.text(`Final: ${pontuacaoFinal}`, 75, y);
+    doc.text(`Porcentagem: ${pontuacaoPorcento}%`, 125, y);
+
+    //Linha Separação
+    y += 10;
+    doc.setLineWidth(1);
+    doc.line(50, y, 395, y);
+
+    //Categorias com erros
     if (reprovedCat != "") {
-        doc.text(`Categorias com erros: `, 10, y);
-        y += 10;
+        doc.setFont('helvetica', 'bold');
+        doc.setTextColor('#000000');
+        doc.setFontSize(16);
+        y += 16;
+        doc.text(`Categorias com erros: `, 15, y);
+
+        doc.setFont('helvetica', 'normal');
+        doc.setTextColor('#000000');
         doc.setFontSize(12);
         Object.keys(reprovedCat).forEach(categoria => {
-            doc.text(`- ${categoria}`, 15, y);
-            y += 10;
+            y += 12;
+            doc.text(`- ${categoria}`, 20, y);
         });
     } else {
-        doc.text(`Site sem erros `, 10, y);
-        y += 10;
+        doc.text(`Site sem erros `, 15, y);
     }
 
+    //Criação de paginas para cada categoria
     Object.keys(reprovedCat).forEach(categoria => {
-        doc.addPage('a4');
+        doc.addPage();
         let py = 10
         doc.setFontSize(18);
         doc.text(`${categoria}: `, 10, py);

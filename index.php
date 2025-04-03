@@ -42,6 +42,27 @@
                     </div>
 
                     <label class="form-label" for="dominio">Dominio:</label>
+                    <input class="form-control" type="text" id="dominio" name="dominio" placeholder="exemplo.com.br" required value="teste.com.br">
+
+                    <label class="form-label" for="id-cliente">ID Cliente</label>
+                    <input class="form-control" type="text" id="id-cliente" name="id-cliente" placeholder="000-00000-00" required value="25-20154-111">
+
+                    <label class="form-label" for="id-card-runrunit">ID Card Runrun It</label>
+                    <input class="form-control" type="number" id="id-card-runrunit" name="id-card-runrunit" required value="101202">
+
+                    <label class="form-label" for="nome-analista-qa">Nome Analista de QA:</label>
+                    <input class="form-control" type="text" id="nome-analista-qa" name="nome-analista-qa" placeholder="Nome Completo" required value="Gustavo">
+
+                    <label class="form-label" for="data-validacao-site">Data de Validação do Site</label>
+                    <input class="form-control" type="date" id="data-validacao-site" name="data-validacao-site" placeholder="00/00/0000" required>
+
+                    <label class="form-label" for="nome-analista-producao">Nome Analista Produção</label>
+                    <input class="form-control" type="text" id="nome-analista-producao" name="nome-analista-producao" placeholder="Nome Completo" required value="Leonardo">
+
+                    <label class="form-label" for="data-producacao-site">Data de Finalização do Site</label>
+                    <input class="form-control" type="date" id="data-producacao-site" name="data-producacao-site" placeholder="00/00/0000" required>
+
+                    <!-- <label class="form-label" for="dominio">Dominio:</label>
                     <input class="form-control" type="text" id="dominio" name="dominio" placeholder="exemplo.com.br" required>
 
                     <label class="form-label" for="id-cliente">ID Cliente</label>
@@ -60,12 +81,13 @@
                     <input class="form-control" type="text" id="nome-analista-producao" name="nome-analista-producao" placeholder="Nome Completo" required>
 
                     <label class="form-label" for="data-producacao-site">Data de Finalização do Site</label>
-                    <input class="form-control" type="date" id="data-producacao-site" name="data-producacao-site" placeholder="dd/mm/yyyy" required>
+                    <input class="form-control" type="date" id="data-producacao-site" name="data-producacao-site" placeholder="dd/mm/yyyy" required> -->
 
 
                     <button type="button" id="btnCalcular" class="btn btn-primary mt-3 col-12">Calcular Pontuação</button>
 
                     <input type="hidden" name="pontuacao" id="pontuacao" value="">
+                    <input type="hidden" name="pontuacao-maximo" id="pontuacaoMaximo" value="">
                     <input type="hidden" name="pontuacao-porcento" id="pontuacaoPorcento" value="">
                     <input type="hidden" name="pontuacao-status" id="pontuacaoStatus" value="">
 

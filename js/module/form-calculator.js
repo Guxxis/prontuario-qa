@@ -11,6 +11,7 @@ export function formCalculator (){
             // Atualizar campo oculto com a pontuação
             document.getElementById("pontuacao").value = data.pontuacao;
             document.getElementById("pontuacaoPorcento").value = data.pontuacaoPorcento;
+            document.getElementById("pontuacaoMaximo").value = data.pontuacaoMax;
             document.getElementById("pontuacaoStatus").value = data.pontuacaoStatus;
 
             const formResultDiv = document.getElementById("formResult");
