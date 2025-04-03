@@ -29,13 +29,16 @@
             <option value="cat">Categoria</option>
         </select>
 
-        <form class="mt-3" id="formValidacao">
+        <form class="mt-3 needs-validation" id="formValidacao" novalidate>
             <div class="row container-scroll">
                 <div class="col-4 left-panel">
 
-                    <p>Progresso: </p>
-                    <div class="progress mt-3">
-                        <div id="barraProgresso" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+                    <div id="progress-container">
+                        <p>Progresso Validação </p>
+                        <div class="progress mb-3">
+                            <div id="barraProgresso" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+                        </div>
+                        <div class="invalid-feedback">Falta Itens para Validar</div>
                     </div>
 
                     <label class="form-label" for="dominio">Dominio:</label>
@@ -45,19 +48,19 @@
                     <input class="form-control" type="text" id="id-cliente" name="id-cliente" placeholder="000-00000-00" required>
 
                     <label class="form-label" for="id-card-runrunit">ID Card Runrun It</label>
-                    <input class="form-control" type="number" id="id-card-runrunit" name="id-card-runrunit">
+                    <input class="form-control" type="number" id="id-card-runrunit" name="id-card-runrunit" required>
 
                     <label class="form-label" for="nome-analista-qa">Nome Analista de QA:</label>
-                    <input class="form-control" type="text" id="nome-analista-qa" name="nome-analista-qa" placeholder="Nome Completo">
+                    <input class="form-control" type="text" id="nome-analista-qa" name="nome-analista-qa" placeholder="Nome Completo" required>
 
                     <label class="form-label" for="data-validacao-site">Data de Validação do Site</label>
-                    <input class="form-control" type="date" id="data-validacao-site" name="data-validacao-site" placeholder="dd/mm/yyyy">
+                    <input class="form-control" type="date" id="data-validacao-site" name="data-validacao-site" placeholder="dd/mm/yyyy" required>
 
                     <label class="form-label" for="nome-analista-producao">Nome Analista Produção</label>
-                    <input class="form-control" type="text" id="nome-analista-producao" name="nome-analista-producao" placeholder="Nome Completo">
+                    <input class="form-control" type="text" id="nome-analista-producao" name="nome-analista-producao" placeholder="Nome Completo" required>
 
                     <label class="form-label" for="data-producacao-site">Data de Finalização do Site</label>
-                    <input class="form-control" type="date" id="data-producacao-site" name="data-producacao-site" placeholder="dd/mm/yyyy">
+                    <input class="form-control" type="date" id="data-producacao-site" name="data-producacao-site" placeholder="dd/mm/yyyy" required>
 
 
                     <button type="button" id="btnCalcular" class="btn btn-primary mt-3 col-12">Calcular Pontuação</button>
@@ -85,7 +88,9 @@
     <script type="module" src="js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+    <script>
 
+    </script>
 </body>
 
 </html>

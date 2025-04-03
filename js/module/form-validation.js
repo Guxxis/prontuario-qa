@@ -1,24 +1,26 @@
-export function validarFormulario() {
-    let isValid = true;
-    let mensagensErro = [];
+export function formValidation(event) {
+    let formOk = true;
 
-    // Validar se campos obrigatórios estão preenchidos
-    const validationList = document.querySelectorAll("[required]");
+    const forms = document.querySelectorAll('.needs-validation');
 
-    validationList.forEach(campo => {
-        if (!campo.value.trim()) {
-            isValid = false;
-            mensagensErro.push(`O campo ${campo.id} é obrigatório.`);
-            campo.classList.add("erro"); // Adiciona classe de erro
+    // const progressContainer = document.getElementById('progress-container');
+    const progresBar = document.querySelector('#barraProgresso');
+    const progressFeedback = document.querySelector('#progress-container .invalid-feedback');
+    const progressNow = progresBar.getAttribute("aria-valuenow");
+    const progressMax = progresBar.getAttribute("aria-valuemax");
+
+    Array.from(forms).forEach(form => {
+        form.classList.add('was-validated')
+        if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+            progressFeedback.style.display = progressNow > progressMax ? 'block':'none';
+            formOk = false;
         } else {
-            campo.classList.remove("erro"); // Remove erro se estiver correto
+            progressFeedback.style.display = 'none';
+            formOk = true;
         }
-    });
+    })
 
-    // Exibir mensagens de erro, se houver
-    if (!isValid) {
-        alert(mensagensErro.join("\n"));
-    }
-
-    return isValid;
+    return formOk;
 }

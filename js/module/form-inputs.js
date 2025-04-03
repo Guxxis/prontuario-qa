@@ -95,9 +95,9 @@ export function construcInputForm(jsonItens, orderBy) {
             const radioContainer = document.createElement("div");
             radioContainer.classList.add("col-4");
             radioContainer.innerHTML = `
-                <input type="radio" class="btn-check" id="success-${valueIten.item}" name="${valueIten.cat};${valueIten.item}" value="sim">
+                <input type="radio" class="btn-check" id="success-${valueIten.item}" name="${valueIten.cat};${valueIten.item}" value="sim" required>
                 <label class="btn btn-outline-success" for="success-${valueIten.item}">Aprovado</label>
-                <input type="radio" class="btn-check" id="danger-${valueIten.item}" name="${valueIten.cat};${valueIten.item}" value="nao">
+                <input type="radio" class="btn-check" id="danger-${valueIten.item}" name="${valueIten.cat};${valueIten.item}" value="nao" required>
                 <label class="btn btn-outline-danger" for="danger-${valueIten.item}">Reprovado</label>
             `;
 

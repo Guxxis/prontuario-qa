@@ -1,0 +1,10 @@
+[
+    {"cat": "seguranca", "catLabel": "Segurança", "item": "sem_self_redirect_quem_somos_home", "itemLabel": "Sem Self redirect (Quem somos) Home", "tool": "screamingfrog", "toolLabel": "ScreamingFrog"},
+    {"cat": "validacao_de_codigo", "catLabel": "Validação de Código", "item": "w3c_html_home_e_mpi", "itemLabel": "W3C HTML Home e MPI", "tool": "checkbot", "toolLabel": "CheckBot"},
+    {"cat": "validacao_de_codigo", "catLabel": "Validação de Código", "item": "w3c_css_home_e_mpi", "itemLabel": "W3C CSS Home e MPI", "tool": "checkbot", "toolLabel": "CheckBot"},
+    {"cat": "estrutura_semantica", "catLabel": "Estrutura Semântica", "item": "font_awesome_todas_as_paginas", "itemLabel": "Font Awesome Todas as páginas", "tool": "stackcrawler", "toolLabel": "StackCrawler"},
+    {"cat": "conteudo", "catLabel": "Conteúdo", "item": "readability_very_difficult_0_content", "itemLabel": "Readability very difficult (0%) Content", "tool": "webfx", "toolLabel": "WebFX"},
+    {"cat": "estrutura_semantica", "catLabel": "Estrutura Semântica", "item": "favicon_todas_as_paginas", "itemLabel": "Favicon Todas as páginas", "tool": "favicon_detector", "toolLabel": "Favicon Detector"},
+    {"cat": "metadados_e_seo", "catLabel": "Metadados e SEO", "item": "seo_100", "itemLabel": "SEO 100 Home e MPI", "tool": "lighthouse", "toolLabel": "Extensão LightHouse"}
+    
+]
