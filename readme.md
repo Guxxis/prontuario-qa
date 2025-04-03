@@ -19,10 +19,7 @@
 * Definir tamanho das imagens de anexo (imagens apenas informativas, nao precisam de qualidade ou tamanho bom)
 
 # Validação dos campos do formulario
-* Definir todos os campos de formularios
-* Colocar todos os campos como obrigatorio
 * Definir mascaras para campos digitaveis
-* Validador para campos digitaveis
 * Definir lista de projetos
 * Definir lista de analitas
 
