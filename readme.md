@@ -1,6 +1,11 @@
 # Campo de anexo de Imagens
 * Adicionar opção de escolher anexo
 
+# Campo de Comentario
+* Ajustar campo de comentario para aparecer apenas quando item reprovado
+* salvar valor do comentario na troca de categoria
+* campo ativo na hora que trocar de categoria e o item é reprovado
+
 # Campo de comentarios Gerais
 * Adicionar campo de comentarios gerais do projeto
 * Adicionar campo de imagens gerais para comportar varias imagens
@@ -14,10 +19,7 @@
 * Definir tamanho das imagens de anexo (imagens apenas informativas, nao precisam de qualidade ou tamanho bom)
 
 # Validação dos campos do formulario
-* Definir todos os campos de formularios
-* Colocar todos os campos como obrigatorio
 * Definir mascaras para campos digitaveis
-* Validador para campos digitaveis
 * Definir lista de projetos
 * Definir lista de analitas
 

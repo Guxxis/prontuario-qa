@@ -51,26 +51,26 @@ export async function generatePDF(jsonItens, imageList) {
     // Adiciona texto ao PDF
 
     // Pega a pontuação gerada pelo PHP
-    let pontuacaoFinal = document.getElementById("pontuacao").value;
-    let pontuacaoPorcento = document.getElementById("pontuacaoPorcento").value;
-    let pontuacaoStatus = document.getElementById("pontuacaoStatus").value;
-    let formName = document.getElementById("nome").value;
+    // let pontuacaoFinal = document.getElementById("pontuacao").value;
+    // let pontuacaoPorcento = document.getElementById("pontuacaoPorcento").value;
+    // let pontuacaoStatus = document.getElementById("pontuacaoStatus").value;
+    // let formName = document.getElementById("nome").value;
 
-    doc.setFontSize(18);
-    doc.text(`Prontuario de Validação`, 10, y);
-    y += 10;
-    doc.setFontSize(12);
-    doc.text(`Pontuação: ${pontuacaoFinal}`, 10, y);
-    y += 10;
+    // doc.setFontSize(18);
+    // doc.text(`Prontuario de Validação`, 10, y);
+    // y += 10;
+    // doc.setFontSize(12);
+    // doc.text(`Pontuação: ${pontuacaoFinal}`, 10, y);
+    // y += 10;
 
-    doc.text(`Aprovação: ${pontuacaoPorcento}%`, 10, y);
-    y += 10;
+    // doc.text(`Aprovação: ${pontuacaoPorcento}%`, 10, y);
+    // y += 10;
 
-    doc.text(`Status: ${pontuacaoStatus}`, 10, y);
-    y += 10;
+    // doc.text(`Status: ${pontuacaoStatus}`, 10, y);
+    // y += 10;
 
-    doc.text(`Nome: ${formName}`, 10, y);
-    y += 10;
+    // doc.text(`Nome: ${formName}`, 10, y);
+    // y += 10;
 
     // let jsonItens = await getJson('../../data/itens.json');
 

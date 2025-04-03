@@ -3,10 +3,11 @@ import { formCalculator } from "./module/form-calculator.js";
 import { renderForm } from "./module/form-render.js";
 import { getJson } from "./module/get-json.js";
 import { toggleAttach } from "./module/form-render.js";
+import { formValidation } from "./module/form-validation.js";
 
 async function init() {
 
-    let jsonItens = await getJson('./data/itens.json');
+    let jsonItens = await getJson('./data/itens-test.json');
     let imageList = {};
 
     await renderForm(jsonItens, imageList);
@@ -18,8 +19,12 @@ async function init() {
         renderForm(jsonItens, imageList, e.target.value);
     });
 
-    document.getElementById("btnGerarPDF").addEventListener("click", () => {
-        generatePDF(jsonItens, imageList);
+    document.getElementById("btnGerarPDF").addEventListener("click", (e) => {
+        if (!formValidation(e)) {
+            // e.preventDefault(); // Impede o envio se houver erro
+        } else {
+            generatePDF(jsonItens, imageList);
+        }
     });
 
     document.getElementById("btnCalcular").addEventListener("click", () => {
@@ -31,6 +36,7 @@ async function init() {
             toggleAttach(e);
         }
     });
+
 
 }
 
