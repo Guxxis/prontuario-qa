@@ -28,22 +28,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     foreach ($_POST as $key => $value) {
         $catItem = explode(";", $key, 2);
 
-        // var_dump($catItem[0]);
-        // var_dump($value);
         foreach ($pesos as $categoria => $peso) {
             if ($categoria == $catItem[0]) {
                 $pontuacao_maxima += $peso;
                 if ($value == "sim") {
-
-                    // var_dump($categoria);
                     $pontuacao += $peso;
                 }
             }
         }
     }
-    // var_dump($itens);
-    // var_dump($pontuacao_maxima);
-
     
     $pontuacao_final = $pontuacao;
     $pontuacao_porcento = round(($pontuacao / $pontuacao_maxima) * 100, 2);
@@ -58,6 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo json_encode([
         "sucesso" => true,
         "pontuacao" => $pontuacao_final,
+        "pontuacaoMax" => $pontuacao_maxima,
         "pontuacaoPorcento" => $pontuacao_porcento,
         "pontuacaoStatus" => $pontuacao_status
     ]);
