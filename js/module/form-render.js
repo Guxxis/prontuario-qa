@@ -28,7 +28,9 @@ function restoreFormData(formData) {
                 if(input.value ==="nao"){
                     const itemKey = input.name.split(";")[1]
                     const attachContainer = document.getElementById(`image-container-${itemKey}`);
+                    const commentContainer = document.getElementById(`text-container-${itemKey}`);
                     attachContainer.style.display="block";
+                    commentContainer.style.display="block";
                 }
             }
         } else if (formData[input.name]) {
@@ -68,11 +70,14 @@ export async function renderForm(jsonItens, imageList, orderBy = 'tool') {
 
 export function toggleAttach(event) {
     const itemId = event.target.id.split("-")[1]; // Pega o ID do item
-    const anexoContainer = document.getElementById(`image-container-${itemId}`);
+    const attachContainer = document.getElementById(`image-container-${itemId}`);
+    const commentContainer = document.getElementById(`text-container-${itemId}`);
 
     if (event.target.value === "nao") {
-        anexoContainer.style.display = "block"; // Mostra o campo de anexo
+        attachContainer.style.display = "block"; // Mostra o campo de anexo
+        commentContainer.style.display = "block"; // Mostra o campo de anexo
     } else {
-        anexoContainer.style.display = "none"; // Esconde o campo de anexo
+        attachContainer.style.display = "none"; // Esconde o campo de anexo
+        commentContainer.style.display = "none"; // Esconde o campo de anexo
     }
 }

@@ -51,19 +51,14 @@ export async function generatePDF(jsonItens, imageList) {
 
             const imageItemList = imageList[itenKey[1]];
 
-            //Tratando campo anexo
-            // const fileInput = document.getElementById(`file-${itenKey[1]}`);
-            // const file = fileInput.files[0]; // Pega o primeiro arquivo carregado
-            // const itemImage = await loadImage(file);
-
             //Tratando campo comentario
-            // const itemComment = document.getElementById(`text-${itenKey[1]}`).value;
+            const itemComment = document.getElementById(`text-${itenKey[1]}`).value;
 
 
             reprovedItems.push({
                 "category": itemCat,
                 "item": itemName,
-                // "comment": itemComment,
+                "comment": itemComment,
                 "image": imageItemList,
             });
         }
@@ -211,10 +206,10 @@ export async function generatePDF(jsonItens, imageList) {
 
             //Caso tenha comentario
             if (reprovedItem["comment"]) {
-                py += 10;
+                py += 12;
                 doc.setFont('times', 'normal');
-                doc.setFontSize(10);
-                doc.text(`Comentario - ${reprovedItem["comment"]}`, 25, py);
+                doc.setFontSize(12);
+                doc.text(`obs.: ${reprovedItem["comment"]}`, 30, py);
             }
 
             //Caso tenha imagem

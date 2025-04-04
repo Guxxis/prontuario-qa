@@ -83,9 +83,11 @@ export function construcInputForm(jsonItens, orderBy) {
             const li = document.createElement("li");
             li.classList.add("list-group-item");
 
-            const divRowItem = document.createElement("div");
-            divRowItem.classList.add("row");
+            const divRow = document.createElement("div");
+            divRow.classList.add("row");
 
+            const divRowRadio = divRow;
+            
             // Texto do item
             const textContainer = document.createElement("label");
             textContainer.classList.add("form-label");
@@ -100,12 +102,27 @@ export function construcInputForm(jsonItens, orderBy) {
                 <input type="radio" class="btn-check" id="danger-${valueIten.item}" name="${valueIten.cat};${valueIten.item}" value="nao" required>
                 <label class="btn btn-outline-danger" for="danger-${valueIten.item}">Reprovado</label>
             `;
+            divRowRadio.appendChild(radioContainer);
 
-            divRowItem.appendChild(radioContainer);
+
+            // Campo de comentario
+            const commentContainer = document.createElement("div");
+            commentContainer.classList.add("col-8");
+            commentContainer.style.display = "none";
+            commentContainer.id = (`text-container-${valueIten.item}`);
+            commentContainer.innerHTML = `
+                <input type="text" id="text-${valueIten.item}" name="text-container-${valueIten.item}" class="form-control"placeholder="Observações...">
+            `;
+            // commentContainer.innerHTML = `
+            //     <textarea id="text-${valueIten.item}" class="form-control" rows="1" cols="50" placeholder="Observações..."></textarea>
+            // `;
+            divRowRadio.appendChild(commentContainer);
+
+            const divRowAttach = divRow;
 
             // Area Drag and Drop
             const imageContainer = document.createElement("div");
-            imageContainer.classList.add("col-1");
+            imageContainer.classList.add("col-12");
             imageContainer.classList.add("drop-area");
             imageContainer.style.display = "none";
             imageContainer.id = (`image-container-${valueIten.item}`);
@@ -113,7 +130,6 @@ export function construcInputForm(jsonItens, orderBy) {
             imageContainer.addEventListener("click", ()=>{
                 activeField = `image-container-${valueIten.item}`;
             });
-
 
             const imageAttach = document.createElement("input");
             imageAttach.type = "file";
@@ -126,18 +142,13 @@ export function construcInputForm(jsonItens, orderBy) {
 
             imageContainer.appendChild(imageAttach);
             imageContainer.appendChild(imagePreview);
-            divRowItem.appendChild(imageContainer);
-            // Campo de comentario
-            // const colObs = document.createElement("div");
-            // colObs.classList.add("col");
-            // colObs.innerHTML = `
-            //     <label for="text-${valueIten.item}">obs: </label>
-            //     <input type="textarea" id="text-${valueIten.item}">
-            // `;
-            // divRowItem.appendChild(colObs);
+            divRowAttach.appendChild(imageContainer);
 
+
+            //
             li.appendChild(textContainer);
-            li.appendChild(divRowItem);
+            li.appendChild(divRowRadio);
+            li.appendChild(divRowAttach);
             itemList.appendChild(li);
         });
 
