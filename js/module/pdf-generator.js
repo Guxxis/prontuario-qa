@@ -120,15 +120,13 @@ export async function generatePDF(jsonItens, imageList) {
         reprovedCat[reprovedItem["category"]].push(reprovedItem);
     });
 
-
+    console.log(reprovedCat)
     //PDF Construção
     const doc = new jsPDF({
         orientation: 'p',
         unit: 'px',
         format: 'a4',
     });
-
-    // marginPdf(doc);
 
     //Titulo
     doc.setFont('helvetica', 'bold');
@@ -164,7 +162,7 @@ export async function generatePDF(jsonItens, imageList) {
     doc.text(`Analista Desenvolvedor: ${formNameProd}`, 200, y);
 
     //Linha Separação
-    y += 10;
+    y += 15;
     doc.setLineWidth(1);
     doc.line(50, y, 395, y);
 
@@ -186,7 +184,7 @@ export async function generatePDF(jsonItens, imageList) {
     doc.text(`Porcentagem: ${pontuacaoPorcento}%`, 125, y);
 
     //Linha Separação
-    y += 10;
+    y += 15;
     doc.setLineWidth(1);
     doc.line(50, y, 395, y);
 
@@ -201,6 +199,7 @@ export async function generatePDF(jsonItens, imageList) {
         doc.setFont('helvetica', 'normal');
         doc.setTextColor('#000000');
         doc.setFontSize(12);
+        y += 20;
         Object.keys(reprovedCat).forEach(categoria => {
             y += 12;
             doc.text(`- ${categoria}`, 20, y);
@@ -209,21 +208,55 @@ export async function generatePDF(jsonItens, imageList) {
         doc.text(`Site sem erros `, 15, y);
     }
 
-    //Criação de paginas para cada categoria
-    Object.keys(reprovedCat).forEach(categoria => {
-        doc.addPage();
-        let py = 10
-        doc.setFontSize(18);
-        doc.text(`${categoria}: `, 10, py);
-        py += 10;
+    //Rodapé
+    doc.setFont('courier', 'bold');
+    doc.setTextColor('#525252')
+    doc.setFontSize(12);
+    doc.text(`Página 1`, 225, 615, { align: "center" });
 
+    //Criação de paginas para cada categoria
+    let page = 1;
+    Object.keys(reprovedCat).forEach(categoria => {
+        page++
+        doc.addPage();
+        // marginPdf(doc);
+
+        //Cabeçalho padrão
+        let py = 22
+
+        doc.setFont('courier', 'bold');
+        doc.setTextColor('#00000');
+        doc.setFontSize(16);
+        doc.text(`Prontuario de Validação`, 20, py);
+
+        doc.setFont('courier', 'normal');
+        doc.setFontSize(12);
+        doc.text(`${formDomain}`, 300, py);
+
+        //Linha Separação
+        py += 10;
+        doc.setLineWidth(0,5);
+        doc.line(20, py, 425, py);
+
+        //Titulo da Pagina
+        py += 22;
+        doc.setFont('helvetica', 'bold');
+        doc.setTextColor('#4278f5');
+        doc.setFontSize(22);
+        doc.text(`${categoria}: `, 15, py);
+        py += 20;
         reprovedCat[categoria].forEach(reprovedItem => {
+            py += 14;
+            doc.setFont('helvetica', 'normal');
+            doc.setTextColor('#000000');
             doc.setFontSize(12);
-            doc.text(`- ${reprovedItem["item"]}`, 15, py);
-            py += 10;
+            doc.text(`- ${reprovedItem["item"]}`, 20, py);
+            
             if (reprovedItem["comment"]) {
-                doc.text(`Comentario - ${reprovedItem["comment"]}`, 20, py);
+                doc.setFont('times', 'normal');
+                doc.setFontSize(10);
                 py += 10;
+                doc.text(`Comentario - ${reprovedItem["comment"]}`, 25, py);
             }
             if (reprovedItem["image"]) {
                 let px = 20
@@ -234,11 +267,17 @@ export async function generatePDF(jsonItens, imageList) {
                 py += 75;
             }
         })
+
+        //Rodapé
+
+        doc.setFont('courier', 'bold');
+        doc.setTextColor('#525252')
+        doc.setFontSize(12);
+        doc.text(`Página ${page}`, 225, 615, { align: "center" });
     });
 
 
-
     // Salva o PDF
-    doc.save("validacao.pdf");
+    doc.save(`prontuario-${formDomain}.pdf`);
 }
 
