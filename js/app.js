@@ -7,7 +7,7 @@ import { formValidation } from "./module/form-validation.js";
 
 async function init() {
 
-    let jsonItens = await getJson('./data/itens-test.json');
+    let jsonItens = await getJson('./data/itens.json');
     let imageList = {};
 
     await renderForm(jsonItens, imageList);
