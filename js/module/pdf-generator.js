@@ -69,10 +69,6 @@ export async function generatePDF(jsonItens, imageList) {
         }
 
     };
-console.log(reprovedItems);
-    for (let i = 0; i < reprovedItems.length; i++) {
-        
-    }
 
     //Organiza a array dos erros por categoria
     const reprovedCat = {};
@@ -83,7 +79,6 @@ console.log(reprovedItems);
         reprovedCat[reprovedItem["category"]].push(reprovedItem);
     });
 
-    console.log(reprovedCat)
     //PDF Construção
     const doc = new jsPDF({
         orientation: 'p',
@@ -227,13 +222,20 @@ console.log(reprovedItems);
             if (reprovedItem["image"]) {
                 let px = 25
                 for (let i = 0; i < reprovedItem["image"].length; i++) {
-                    const imgAspecRatio = addImageToPDF(reprovedItem["image"][i].base64, 70, 70);
-                    console.log(imgAspecRatio.widht);
-                    console.log(imgAspecRatio.height);
-                    // addImageToPDF(doc, reprovedItem["image"][i].base64, px, py, 70, 70); // Adiciona ao PDF
-                    px += 75;
+                    const imageBase64 = reprovedItem["image"][i].base64;
+                    const imageWight = reprovedItem["image"][i].width;
+                    const imageHeigth = reprovedItem["image"][i].height;
+                    //caso ultrapasse tamanho da pagina
+                    if((px + imageHeigth) >= 435) {
+                        py += 10 + imageHeigth;
+                        px = 25;
+                        doc.addImage(imageBase64, px, py, imageWight, imageHeigth);
+                    } else {
+                        doc.addImage(imageBase64, px, py, imageWight, imageHeigth);
+                        px += 10 + imageWight;
+                    }
                 }
-                py += 75;
+                py += 85;
             }
         })
 

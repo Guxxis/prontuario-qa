@@ -27,10 +27,10 @@ export function handleAspectRatio (base64Image, maxWidth, maxHeight) {
             // Calcular proporção
             const aspectRatio = imgWidth / imgHeight;
 
-            if (imgWidth > maxWidth) {
-                imgWidth = maxWidth;
-                imgHeight = imgWidth / aspectRatio;
-            }
+            // if (imgWidth > maxWidth) {
+            //     imgWidth = maxWidth;
+            //     imgHeight = imgWidth / aspectRatio;
+            // }
             if (imgHeight > maxHeight) {
                 imgHeight = maxHeight;
                 imgWidth = imgHeight * aspectRatio;

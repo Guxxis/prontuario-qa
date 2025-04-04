@@ -45,7 +45,7 @@ export function attachField(imageList) {
     const dropAreas = document.querySelectorAll(".drop-area");
     let activeField = null;
     const maxWidth = 100;
-    const maxHeight = 100;
+    const maxHeight = 75;
 
     dropAreas.forEach((dropArea) => {
         const itemId = dropArea.id.split("-")[2]; // Pega o ID do item correspondente
@@ -121,7 +121,7 @@ export function attachField(imageList) {
                 }
 
                 let imageUrl64 = await handleFiles(file);
-                let imageAspectRatio = await imageAspectRatio(imageUrl64, maxWidth, maxHeight);
+                let imageAspectRatio = await handleAspectRatio(imageUrl64, maxWidth, maxHeight);
                 imageList[itemId].push({
                     "name": file.name,
                     "base64": imageUrl64,
