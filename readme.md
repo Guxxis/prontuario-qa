@@ -11,12 +11,8 @@
 * Adicionar campo de imagens gerais para comportar varias imagens
 
 # Estilização do PDF
-* Criar capa do prontuario com as principais infomarções do projeto validado
-* Resultado da validação
 * Configurar para campo de comentarios ser a primeira pagina do protuario depois da capa
 * Pagina de comentario, com observações e imagens gerais
-* Cada pagina tera um cabeçario com as informações principais do prontuario
-* Definir tamanho das imagens de anexo (imagens apenas informativas, nao precisam de qualidade ou tamanho bom)
 
 # Validação dos campos do formulario
 * Definir mascaras para campos digitaveis
