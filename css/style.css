@@ -57,9 +57,9 @@
 .drop-area {
     border: 2px dashed #007bff;
     padding: 30px;
-    width: 80%;
-    max-width: 400px;
-    margin: auto;
+    width: 100%;
+    max-width: 500px;
+    margin: 15px auto 15px;
     background-color: #f8f9fa;
 }
 
