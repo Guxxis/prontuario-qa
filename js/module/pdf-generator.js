@@ -1,44 +1,3 @@
-function loadImage(file) {
-    return new Promise((resolve, reject) => {
-        if (!file) {
-            resolve(null); // Se não houver imagem, resolve imediatamente
-            return;
-        }
-
-        let reader = new FileReader();
-        reader.readAsDataURL(file);
-        reader.onload = function (event) {
-            let img = new Image();
-            img.src = event.target.result;
-            img.onload = function () {
-
-                let maxWidth = 150;
-                let maxHeight = 150;
-                let imgWidth = img.width;
-                let imgHeight = img.height;
-
-                if (imgWidth > imgHeight) {
-                    let scale = maxWidth / imgWidth;
-                    imgWidth = maxWidth;
-                    imgHeight *= scale;
-                } else {
-                    let scale = maxHeight / imgHeight;
-                    imgHeight = maxHeight;
-                    imgWidth *= scale;
-                }
-
-                doc.addImage(event.target.result, 'JPEG', 10, y, imgWidth, imgHeight);
-                y += imgHeight + 5;
-
-                processFile(index + 1); // Processa a próxima imagem
-                resolve(reader.result); // Retorna a imagem em Base64
-            };
-
-        };
-        reader.onerror = reject; // Rejeita se der erro
-    });
-}
-
 function marginPdf(doc) {
     //margin x
     let mx = 0;
@@ -110,6 +69,10 @@ export async function generatePDF(jsonItens, imageList) {
         }
 
     };
+console.log(reprovedItems);
+    for (let i = 0; i < reprovedItems.length; i++) {
+        
+    }
 
     //Organiza a array dos erros por categoria
     const reprovedCat = {};
@@ -134,7 +97,7 @@ export async function generatePDF(jsonItens, imageList) {
     doc.setFontSize(26);
 
     let y = 30;
-    doc.text(`PRONTUARIO DE VALIDAÇÃO`, 220, y, { align: "center" });
+    doc.text(`PRONTUÁRIO DE VALIDAÇÃO`, 220, y, { align: "center" });
 
     //Linha Separação
     y += 10;
@@ -172,19 +135,16 @@ export async function generatePDF(jsonItens, imageList) {
     y += 16;
     doc.text(`Resultado: `, 15, y);
     doc.setTextColor(pontuacaoStatus == "Aprovado" ? '#26ab2c' : '#d95829');
-    doc.text(`${pontuacaoStatus}`, 100, y);
+    doc.text(`${pontuacaoStatus}`, 80, y);
 
     doc.setFont('helvetica', 'normal');
     doc.setTextColor('#000000');
     doc.setFontSize(12);
-
-    y += 20;
-    doc.text(`Maxima: ${pontuacaoMax}`, 15, y);
-    doc.text(`Final: ${pontuacaoFinal}`, 75, y);
-    doc.text(`Porcentagem: ${pontuacaoPorcento}%`, 125, y);
+    doc.text(`Pontuação Final: ${pontuacaoFinal}`, 160, y);
+    doc.text(`Porcentagem: ${pontuacaoPorcento}%`, 250, y);
 
     //Linha Separação
-    y += 15;
+    y += 20;
     doc.setLineWidth(1);
     doc.line(50, y, 395, y);
 
@@ -193,13 +153,13 @@ export async function generatePDF(jsonItens, imageList) {
         doc.setFont('helvetica', 'bold');
         doc.setTextColor('#000000');
         doc.setFontSize(16);
-        y += 16;
+        y += 25;
         doc.text(`Categorias com erros: `, 15, y);
 
         doc.setFont('helvetica', 'normal');
         doc.setTextColor('#000000');
         doc.setFontSize(12);
-        y += 20;
+        y += 10;
         Object.keys(reprovedCat).forEach(categoria => {
             y += 12;
             doc.text(`- ${categoria}`, 20, y);
@@ -227,7 +187,7 @@ export async function generatePDF(jsonItens, imageList) {
         doc.setFont('courier', 'bold');
         doc.setTextColor('#00000');
         doc.setFontSize(16);
-        doc.text(`Prontuario de Validação`, 20, py);
+        doc.text(`Prontuário de Validação`, 20, py);
 
         doc.setFont('courier', 'normal');
         doc.setFontSize(12);
@@ -235,7 +195,7 @@ export async function generatePDF(jsonItens, imageList) {
 
         //Linha Separação
         py += 10;
-        doc.setLineWidth(0,5);
+        doc.setLineWidth(0, 5);
         doc.line(20, py, 425, py);
 
         //Titulo da Pagina
@@ -243,25 +203,34 @@ export async function generatePDF(jsonItens, imageList) {
         doc.setFont('helvetica', 'bold');
         doc.setTextColor('#4278f5');
         doc.setFontSize(22);
-        doc.text(`${categoria}: `, 15, py);
-        py += 20;
+        doc.text(`${categoria}`, 15, py);
+        py += 10;
+
+        //Itens de cada categoria
         reprovedCat[categoria].forEach(reprovedItem => {
             py += 14;
             doc.setFont('helvetica', 'normal');
             doc.setTextColor('#000000');
             doc.setFontSize(12);
             doc.text(`- ${reprovedItem["item"]}`, 20, py);
-            
+
+            //Caso tenha comentario
             if (reprovedItem["comment"]) {
+                py += 10;
                 doc.setFont('times', 'normal');
                 doc.setFontSize(10);
-                py += 10;
                 doc.text(`Comentario - ${reprovedItem["comment"]}`, 25, py);
             }
+
+            //Caso tenha imagem
+            py += 10;
             if (reprovedItem["image"]) {
-                let px = 20
+                let px = 25
                 for (let i = 0; i < reprovedItem["image"].length; i++) {
-                    doc.addImage(reprovedItem["image"][i].base64, "jpeg", px, py, 70, 70); // Adiciona ao PDF
+                    const imgAspecRatio = addImageToPDF(reprovedItem["image"][i].base64, 70, 70);
+                    console.log(imgAspecRatio.widht);
+                    console.log(imgAspecRatio.height);
+                    // addImageToPDF(doc, reprovedItem["image"][i].base64, px, py, 70, 70); // Adiciona ao PDF
                     px += 75;
                 }
                 py += 75;
