@@ -1,19 +1,18 @@
-# Campo de comentarios Gerais
-* Adicionar campo de comentarios gerais do projeto
-* Adicionar campo de imagens gerais para comportar varias imagens
-* Configurar para campo de comentarios ser a primeira pagina do protuario depois da capa
-* Pagina de comentario, com observações e imagens gerais
+# PRONTUARIO DE VALIDAÇÃO
 
-# Validação dos campos do formulario
-* Definir mascaras para campos digitaveis
-* Definir lista de projetos
-* Definir lista de analitas
+> Formulario para o time de QA para validação de sites focado em SEO
 
-# Get BigQuery
-* criar uma tabela de analista, email, time
-* criar uma tabela de projetos, id
-* vincular tabela nos campos do formulario
+### Funcionalidades:
+* PDF do resultado separado por categoria
+* Calculo de pontuação por peso de categoria
+* Calculo de aprovação da validação
+* Organização dos campos por Ferramentas ou Categoria
+* Lista de Dominios JSON
+* Lista de Analsitas JSON
+* Campo de Itens gerado dinamicamente por Json
+* Campo de Anexo e Comentario para itens reprovados
+    * Drag & Drop para anexos de imagens
+    * Ctrl + V para anexos de imagens
 
-# Set Bigquery
-* difinir forma de selecionar quais prontuarios vão para o bigquery
-* enviar informação do prontuario para o bigquery
+
+*Criado por: Gustavo Gonçalves* - [Site](https://guxxis.com) - [Github](https://github.com/Guxxis)
