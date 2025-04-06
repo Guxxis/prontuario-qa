@@ -115,15 +115,16 @@ export function attachField(imageList) {
                 }
 
                 if (imageList[itemId].length >= 3) {
-
                     alert("Limite de imagens atingido");
                     break;
                 }
 
-                let imageUrl64 = await handleFiles(file);
+                const imgfile = file.getAsFile();
+
+                let imageUrl64 = await handleFiles(imgfile);
                 let imageAspectRatio = await handleAspectRatio(imageUrl64, maxWidth, maxHeight);
                 imageList[itemId].push({
-                    "name": file.name,
+                    "name": "Clipboard Image",
                     "base64": imageUrl64,
                     "width": imageAspectRatio.width,
                     "height": imageAspectRatio.height,
