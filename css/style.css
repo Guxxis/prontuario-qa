@@ -72,6 +72,9 @@
     flex-wrap: wrap;
     gap: 10px;
 }
+.preview-area:focus{
+    background-color: #e0e0e0;
+}
 
 .preview {
     position: relative;
