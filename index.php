@@ -8,8 +8,8 @@
     <title>Validação de QA</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
@@ -41,48 +41,30 @@
                         <div class="invalid-feedback">Falta Itens para Validar</div>
                     </div>
 
-                    <!-- <label class="form-label" for="dominio">Dominio:</label>
-                    <input class="form-control" type="text" id="dominio" name="dominio" placeholder="exemplo.com.br" required value="teste.com.br">
-
-                    <label class="form-label" for="id-cliente">ID Cliente</label>
-                    <input class="form-control" type="text" id="id-cliente" name="id-cliente" placeholder="000-00000-00" required value="25-20154-111">
-
-                    <label class="form-label" for="id-card-runrunit">ID Card Runrun It</label>
-                    <input class="form-control" type="number" id="id-card-runrunit" name="id-card-runrunit" required value="101202">
-
-                    <label class="form-label" for="nome-analista-qa">Nome Analista de QA:</label>
-                    <input class="form-control" type="text" id="nome-analista-qa" name="nome-analista-qa" placeholder="Nome Completo" required value="Gustavo">
-
-                    <label class="form-label" for="data-validacao-site">Data de Validação do Site</label>
-                    <input class="form-control" type="date" id="data-validacao-site" name="data-validacao-site" placeholder="00/00/0000" required>
-
-                    <label class="form-label" for="nome-analista-producao">Nome Analista Produção</label>
-                    <input class="form-control" type="text" id="nome-analista-producao" name="nome-analista-producao" placeholder="Nome Completo" required value="Leonardo">
-
-                    <label class="form-label" for="data-producacao-site">Data de Finalização do Site</label>
-                    <input class="form-control" type="date" id="data-producacao-site" name="data-producacao-site" placeholder="00/00/0000" required> -->
-
                     <label class="form-label" for="dominio">Dominio:</label>
-                    <input class="form-control" type="text" id="dominio" name="dominio" placeholder="exemplo.com.br" required>
-
+                    <input list="list-dominios" class="form-control" type="text" id="dominio" name="dominio" placeholder="exemplo.com.br" required>
+                    
                     <label class="form-label" for="id-cliente">ID Cliente</label>
                     <input class="form-control" type="text" id="id-cliente" name="id-cliente" placeholder="000-00000-00" required>
-
+                    
                     <label class="form-label" for="id-card-runrunit">ID Card Runrun It</label>
                     <input class="form-control" type="number" id="id-card-runrunit" name="id-card-runrunit" placeholder="100100" required>
-
+                    
                     <label class="form-label" for="nome-analista-qa">Nome Analista de QA:</label>
-                    <input class="form-control" type="text" id="nome-analista-qa" name="nome-analista-qa" placeholder="Nome Completo" required>
-
+                    <input list="list-analistas" class="form-control" type="text" id="nome-analista-qa" name="nome-analista-qa" placeholder="Nome Completo" required>
+                    
                     <label class="form-label" for="data-validacao-site">Data de Validação do Site</label>
                     <input class="form-control" type="date" id="data-validacao-site" name="data-validacao-site" required>
 
                     <label class="form-label" for="nome-analista-producao">Nome Analista Produção</label>
-                    <input class="form-control" type="text" id="nome-analista-producao" name="nome-analista-producao" placeholder="Nome Completo" required>
-
+                    <input list="list-analistas" class="form-control" type="text" id="nome-analista-producao" name="nome-analista-producao" placeholder="Nome Completo" required>
+                    
+                    
                     <label class="form-label" for="data-producacao-site">Data de Finalização do Site</label>
                     <input class="form-control" type="date" id="data-producacao-site" name="data-producacao-site" required>
-
+                    
+                    <datalist id="list-dominios"></datalist>
+                    <datalist id="list-analistas"></datalist>
 
                     <button type="button" id="btnCalcular" class="btn btn-primary mt-3 col-12">Calcular Pontuação</button>
 

@@ -9,7 +9,23 @@ async function init() {
 
     // let jsonItens = await getJson('./data/itens.json');
     let jsonItens = await getJson('./data/itens-test.json');
+    let jsonDomains = await getJson('./data/dominios.json');
+    let jsonAnalist = await getJson('./data/analistas.json');
     let imageList = {};
+
+    const dataListDominios = document.getElementById("list-dominios");
+    jsonDomains.forEach(dominio => {
+        let option = document.createElement("option");
+        option.value = dominio.dominio;
+        dataListDominios.appendChild(option);
+    });
+
+    const dataListAnalista = document.getElementById("list-analistas");
+    jsonAnalist.forEach(analista => {
+        let option = document.createElement("option");
+        option.value = analista.name;
+        dataListAnalista.appendChild(option);
+    });
 
     await renderForm(jsonItens, imageList);
 

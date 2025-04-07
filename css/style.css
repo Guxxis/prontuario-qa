@@ -101,3 +101,7 @@
 .preview>button:hover {
     background-color: red;
 }
+
+datalist {
+    max-height: 200px;
+}
