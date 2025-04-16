@@ -1,5 +1,14 @@
+<?php
+session_start();
+if (!isset($_SESSION['access_token'])) {
+    header('Location: auth/login.php');
+    exit;
+}
+echo "Você está autenticado!";?>
 <!DOCTYPE html>
 <html lang="pt">
+
+
 <?php include('inc/validationItensKey.php') ?>
 
 <head>
