@@ -8,6 +8,5 @@ $auth_url = $config['authority'] . "/oauth2/v2.0/authorize?" . http_build_query(
     'scope' => $config['scopes'],
     'state' => '12345' // Pode usar algo dinâmico para segurança
 ]);
-
 header('Location: ' . $auth_url);
 exit;
