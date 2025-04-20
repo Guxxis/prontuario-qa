@@ -31,5 +31,5 @@ return [
     'client_secret' => $azureClientSecret,
     'redirect_uri' => $azureRedirectUri . '/auth/callback.php',
     'authority' => 'https://login.microsoftonline.com/' . $azureTenantId,
-    'scopes' => 'openid profile email'
+    'scopes' => 'openid profile email user.read'
 ];
