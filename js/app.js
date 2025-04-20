@@ -29,6 +29,34 @@ async function init() {
 
     await renderForm(jsonItens, imageList);
 
+    const form = document.querySelector('#formValidacao');
+    const campos = form.querySelectorAll('input, textarea, select');
+
+    // Carrega os dados
+    campos.forEach(campo => {
+        if (campo.type === 'radio' || campo.type === 'checkbox') {
+            const checked = sessionStorage.getItem(campo.name + '_' + campo.value) === 'true';
+            campo.checked = checked;
+        } else if (campo.type !== 'file') {
+            const valor = sessionStorage.getItem(campo.name);
+            if (valor !== null) campo.value = valor;
+        }
+    });
+
+    // Salvar a cada digitação
+    campos.forEach(campo => {
+        campo.addEventListener('input', () => {
+            if (campo.type === 'radio' || campo.type === 'checkbox') {
+                sessionStorage.setItem(campo.name + '_' + campo.value, campo.checked);
+            } else if (campo.type === 'file') {
+                // Não salva o arquivo, mas pode salvar o nome
+                sessionStorage.setItem(campo.name, campo.files[0]?.name || '');
+            } else {
+                sessionStorage.setItem(campo.name, campo.value);
+            }
+        });
+    });
+
     const orderSelect = document.getElementById("orderSelect");
 
     orderSelect.addEventListener("change", (e) => {

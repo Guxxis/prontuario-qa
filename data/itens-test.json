@@ -1,3 +1,10 @@
 [
-    {"cat": "seguranca", "catLabel": "Segurança", "item": "sem_self_redirect_quem_somos_home", "itemLabel": "Sem Self redirect (Quem somos) Home", "tool": "screamingfrog", "toolLabel": "ScreamingFrog"}
+    {"cat": "seguranca", "catLabel": "Segurança", "item": "sem_self_redirect_quem_somos_home", "itemLabel": "Sem Self redirect (Quem somos) Home", "tool": "screamingfrog", "toolLabel": "ScreamingFrog"},
+    {"cat": "metadados_e_seo", "catLabel": "Metadados e SEO", "item": "mapa_site_footer", "itemLabel": "Mapa do Site no Footer", "tool": "manual", "toolLabel": "Manual"},
+    {"cat": "urls", "catLabel": "URLs", "item": "non_ascii_characters_0_url", "itemLabel": "Non ASCII Characters (0%) URL", "tool": "screamingfrog", "toolLabel": "ScreamingFrog"},
+    {"cat": "urls", "catLabel": "URLs", "item": "uppercase_0_url", "itemLabel": "Uppercase (0%) URL", "tool": "screamingfrog", "toolLabel": "ScreamingFrog"},
+    {"cat": "urls", "catLabel": "URLs", "item": "multiple_slashes_0", "itemLabel": "Multiple Slashes (0%)", "tool": "screamingfrog", "toolLabel": "ScreamingFrog"},
+    {"cat": "urls", "catLabel": "URLs", "item": "contains_space_0", "itemLabel": "Contains Space (0%)", "tool": "screamingfrog", "toolLabel": "ScreamingFrog"},
+    {"cat": "estrutura_semantica", "catLabel": "Estrutura Semântica", "item": "missing_0_h1", "itemLabel": "Missing (0%) H1", "tool": "screamingfrog", "toolLabel": "ScreamingFrog"}
+    
 ]
