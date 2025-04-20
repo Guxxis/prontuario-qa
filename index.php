@@ -7,6 +7,11 @@ if (!isset($_SESSION['access_token'])) {
 echo "Você está autenticado! <br>";
 echo $_SESSION['user'];
 ?>
+
+<?php if (isset($_SESSION['access_token'])): ?>
+    <a href="auth/logout.php">Sair</a>
+<?php endif; ?>
+
 <!DOCTYPE html>
 <html lang="pt">
 
