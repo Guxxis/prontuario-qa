@@ -41,11 +41,11 @@ if (isset($_GET['code'])) {
         $email = $userData['mail'] ?? $userData['userPrincipalName']; // depende da conta
         $user = $userData['displayName'] ?? $userData['userPrincipalName']; // depende da conta
 
-        $allowedEmails = ['gustavo.goncalves@doutoresdaweb.com.br'];
+        // $allowedEmails = ['gustavo.goncalves@doutoresdaweb.com.br'];
 
-        if (!in_array($email, $allowedEmails)) {
-            die('Acesso não autorizado!');
-        }
+        // if (!in_array($email, $allowedEmails)) {
+        //     die('Acesso não autorizado!');
+        // }
 
 
         $_SESSION['access_token'] = $data['access_token'];
