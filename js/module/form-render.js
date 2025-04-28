@@ -25,12 +25,12 @@ function restoreFormData(formData) {
         if (input.type === "radio") {
             if (formData[input.name] === input.value) {
                 input.checked = true; // Restaura o radio selecionado
-                if(input.value ==="nao"){
+                if (input.value === "nao") {
                     const itemKey = input.name.split(";")[1]
                     const attachContainer = document.getElementById(`image-container-${itemKey}`);
                     const commentContainer = document.getElementById(`text-container-${itemKey}`);
-                    attachContainer.style.display="block";
-                    commentContainer.style.display="block";
+                    attachContainer.style.display = "block";
+                    commentContainer.style.display = "block";
                 }
             }
         } else if (formData[input.name]) {
@@ -61,6 +61,9 @@ export async function renderForm(jsonItens, imageList, orderBy = 'tool') {
         progressBar();
         countItens();
         attachField(imageList);
+
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
 
     } catch (error) {

@@ -83,15 +83,37 @@ export function construcInputForm(jsonItens, orderBy) {
             const li = document.createElement("li");
             li.classList.add("list-group-item");
 
-            const divRow = document.createElement("div");
-            divRow.classList.add("row");
+            const divRowText = document.createElement("div");
+            divRowText.classList.add("row");
 
-            const divRowRadio = divRow;
-            
+            //Tooltip
+            const tooltipContainer = document.createElement("div");
+            tooltipContainer.classList.add("col-1")
+            tooltipContainer.innerHTML = `
+                <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="${valueIten.info}">
+                    <button class="custom-button-tooltip" type="button" disabled>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/>
+                    </svg>
+                    </button>
+                </span>
+            `
+
+            divRowText.appendChild(tooltipContainer);
+
             // Texto do item
-            const textContainer = document.createElement("label");
-            textContainer.classList.add("form-label");
-            textContainer.innerText = `${valueIten[subCategory]} > ${valueIten.itemLabel}`;
+            const textContainer = document.createElement("div");
+            textContainer.classList.add("col")
+
+            const textLabel = document.createElement("label");
+            textLabel.classList.add("form-label");
+            textLabel.innerText = `${valueIten[subCategory]} > ${valueIten.itemLabel}`;
+
+            textContainer.appendChild(textLabel);
+            divRowText.appendChild(textContainer);
+
+            const divRowRadio = document.createElement("div");
+            divRowRadio.classList.add("row");
 
             // Botões de Aprovação
             const radioContainer = document.createElement("div");
@@ -118,7 +140,8 @@ export function construcInputForm(jsonItens, orderBy) {
             // `;
             divRowRadio.appendChild(commentContainer);
 
-            const divRowAttach = divRow;
+            const divRowAttach = document.createElement("div");
+            divRowAttach.classList.add("row");
 
             // Area Drag and Drop
             const imageContainer = document.createElement("div");
@@ -127,18 +150,18 @@ export function construcInputForm(jsonItens, orderBy) {
             imageContainer.style.display = "none";
             imageContainer.id = (`image-container-${valueIten.item}`);
 
-            imageContainer.addEventListener("click", ()=>{
+            imageContainer.addEventListener("click", () => {
                 activeField = `image-container-${valueIten.item}`;
             });
 
             const imageAttach = document.createElement("input");
             imageAttach.type = "file";
             imageAttach.style.display = "none";
-            
+
             const imagePreview = document.createElement("div");
             imagePreview.classList.add("preview-area")
             imagePreview.id = (`image-preview-${valueIten.item}`);
-            
+
 
             imageContainer.appendChild(imageAttach);
             imageContainer.appendChild(imagePreview);
@@ -146,7 +169,7 @@ export function construcInputForm(jsonItens, orderBy) {
 
 
             //
-            li.appendChild(textContainer);
+            li.appendChild(divRowText);
             li.appendChild(divRowRadio);
             li.appendChild(divRowAttach);
             itemList.appendChild(li);

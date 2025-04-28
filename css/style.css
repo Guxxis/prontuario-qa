@@ -105,3 +105,8 @@
 datalist {
     max-height: 200px;
 }
+
+.custom-button-tooltip {
+    border: none;
+    background-color: transparent;
+}
