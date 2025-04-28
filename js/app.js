@@ -5,39 +5,79 @@ import { getJson } from "./module/get-json.js";
 import { toggleAttach } from "./module/form-render.js";
 import { formValidation } from "./module/form-validation.js";
 
+function formInit(formJSON) {
+    const itensJSON = sessionStorage.getItem('prontuarioValidacao');
+    if (itensJSON) {
+        return JSON.parse(itensJSON);
+    } else {
+        const itensIniciais = formJSON;
+        const dadosUnificados = itensIniciais.map(item => ({
+            ...item,
+            approved: null,
+            comment: "",
+            images: []
+        }));
+        sessionStorage.setItem('prontuarioValidacao', JSON.stringify(dadosUnificados));
+        return dadosUnificados;
+    }
+}
+
+export function updateIten(itemId, campo, valor) {
+    const dados = JSON.parse(sessionStorage.getItem('prontuarioValidacao'));
+    const itemIndex = dados.findIndex(item => item.item === itemId);
+
+    if (itemIndex >= 0) {
+        dados[itemIndex][campo] = valor; // Ex.: "aprovado", "comentario"
+        sessionStorage.setItem('prontuarioValidacao', JSON.stringify(dados));
+    }
+}
+
+export function addImage(itemId, imagem) {
+    const dados = JSON.parse(sessionStorage.getItem('prontuarioValidacao'));
+    const itemIndex = dados.findIndex(item => item.id === itemId);
+
+    if (itemIndex >= 0) {
+        if (!dados[itemIndex].imagens) dados[itemIndex].imagens = [];
+        dados[itemIndex].imagens.push(imagem);
+        sessionStorage.setItem('prontuarioValidacao', JSON.stringify(dados));
+    }
+}
+
 async function init() {
 
     //Lista de Itens
     // let jsonItens = await getJson('./data/itens.json');
     let jsonItens = await getJson('./data/itens-test.json');
-    let jsonDomains = await getJson('./data/dominios.json');
-    let jsonAnalist = await getJson('./data/analistas.json');
-    let imageList = {};
+    // let jsonDomains = await getJson('./data/dominios.json');
+    // let jsonAnalist = await getJson('./data/analistas.json');
+    // let imageList = {};
 
-    //dataset Lista dos dominios
-    const dataListDominios = document.getElementById("list-dominios");
-    jsonDomains.forEach(dominio => {
-        let option = document.createElement("option");
-        option.value = dominio.dominio;
-        dataListDominios.appendChild(option);
-    });
+    const formInputs = formInit(jsonItens);
 
-    //dataset Lista dos Analistas
-    const dataListAnalista = document.getElementById("list-analistas");
-    jsonAnalist.forEach(analista => {
-        let option = document.createElement("option");
-        option.value = analista.name;
-        dataListAnalista.appendChild(option);
-    });
+    // //dataset Lista dos dominios
+    // const dataListDominios = document.getElementById("list-dominios");
+    // jsonDomains.forEach(dominio => {
+    //     let option = document.createElement("option");
+    //     option.value = dominio.dominio;
+    //     dataListDominios.appendChild(option);
+    // });
+
+    // //dataset Lista dos Analistas
+    // const dataListAnalista = document.getElementById("list-analistas");
+    // jsonAnalist.forEach(analista => {
+    //     let option = document.createElement("option");
+    //     option.value = analista.name;
+    //     dataListAnalista.appendChild(option);
+    // });
 
     //Renderizar formulario itens de validação
-    await renderForm(jsonItens, imageList);
+    await renderForm(formInputs);
 
-    const orderSelect = document.getElementById("orderSelect");
+    // const orderSelect = document.getElementById("orderSelect");
 
-    orderSelect.addEventListener("change", (e) => {
-        renderForm(jsonItens, imageList, e.target.value);
-    });
+    // orderSelect.addEventListener("change", (e) => {
+    //     renderForm(jsonItens, imageList, e.target.value);
+    // });
 
     //Botao de Gerar PDF
     document.getElementById("btnGerarPDF").addEventListener("click", (e) => {

@@ -2,6 +2,7 @@ import { construcInputForm } from "./form-inputs.js";
 import { progressBar, countItens } from "./progress-bar.js";
 import { attachField } from "./form-attach.js";
 import { carregarImagensDoSessionStorage } from "./form-attach.js";
+import { updateIten, addImage } from "../app.js";
 
 // Função para salvar os valores preenchidos
 function saveFormData() {
@@ -41,7 +42,7 @@ function restoreFormData(formData) {
 }
 
 // Função principal para renderizar o formulário
-export async function renderForm(jsonItens, imageList, orderBy = 'tool') {
+export async function renderForm(jsonItens, orderBy = 'cat') {
     try {
         // const jsonItens = await getJson('./data/itens.json');
 
@@ -62,37 +63,40 @@ export async function renderForm(jsonItens, imageList, orderBy = 'tool') {
         progressBar();
         countItens();
         attachField(imageList);
-        carregarImagensDoSessionStorage()
+        // carregarImagensDoSessionStorage()
         // console.log(imageList);
 
         const form = document.querySelector('#formValidacao');
-            const campos = form.querySelectorAll('input, textarea, select');
-        
-            // Carrega os dados
-            campos.forEach(campo => {
-                if (campo.type === 'radio' || campo.type === 'checkbox') {
-                    const checked = sessionStorage.getItem(campo.name + '_' + campo.value) === 'true';
-                    campo.checked = checked;
-                } else if (campo.type !== 'file') {
-                    const valor = sessionStorage.getItem(campo.name);
-                    if (valor !== null) campo.value = valor;
+        const campos = form.querySelectorAll('input, textarea, select');
+
+        // Carrega os dados
+        campos.forEach(campo => {
+            if (campo.type === 'radio' || campo.type === 'checkbox') {
+                const checked = sessionStorage.getItem(campo.name + '_' + campo.value) === 'true';
+                campo.checked = checked;
+            } else if (campo.type !== 'file') {
+                const valor = sessionStorage.getItem(campo.name);
+                if (valor !== null) campo.value = valor;
+            }
+        });
+
+        // Salvar a cada digitação
+        campos.forEach(campo => {
+            campo.addEventListener('input', () => {
+                const fieldArray = campo.name.split('--');
+                const fieldIndex = fieldArray[1]
+                const fieldComp = fieldArray[0]
+                if (campo.type === 'radio' || campo.classList === 'btn-check') {
+                    const approved = campo.value == "sim" ? true : false;
+                    updateIten(fieldIndex, "approved", approved);
+                }
+
+                if (campo.type === 'text' || fieldComp === 'text-field') {
+                    updateIten(fieldIndex, "comment", campo.value);
                 }
             });
-        
-            // Salvar a cada digitação
-            campos.forEach(campo => {
-                campo.addEventListener('input', () => {
-                    if (campo.type === 'radio' || campo.type === 'checkbox') {
-                        sessionStorage.setItem(campo.name, campo.value);
-                    } else if (campo.type === 'file') {
-                        // Não salva o arquivo, mas pode salvar o nome
-                        // sessionStorage.setItem(campo.id, campo.files[0]?.name || '');
-                    } else {
-                        sessionStorage.setItem(campo.name, campo.value);
-                    }
-                });
-            });
-        
+        });
+
 
         const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
         const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
@@ -104,9 +108,9 @@ export async function renderForm(jsonItens, imageList, orderBy = 'tool') {
 }
 
 export function toggleAttach(event) {
-    const itemId = event.target.id.split("-")[1]; // Pega o ID do item
-    const attachContainer = document.getElementById(`image-container-${itemId}`);
-    const commentContainer = document.getElementById(`text-container-${itemId}`);
+    const itemId = event.target.name.split("--")[1]; // Pega o ID do item
+    const attachContainer = document.getElementById(`image-container--${itemId}`);
+    const commentContainer = document.getElementById(`text-container--${itemId}`);
 
     if (event.target.value === "nao") {
         attachContainer.style.display = "block"; // Mostra o campo de anexo

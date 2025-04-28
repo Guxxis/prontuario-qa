@@ -119,9 +119,9 @@ export function construcInputForm(jsonItens, orderBy) {
             const radioContainer = document.createElement("div");
             radioContainer.classList.add("col-4");
             radioContainer.innerHTML = `
-                <input type="radio" class="btn-check" id="success-${valueIten.item}" name="${valueIten.cat};${valueIten.item}" value="sim" required>
+                <input type="radio" class="btn-check" id="success-${valueIten.item}" name="${valueIten.cat}--${valueIten.item}" value="sim" required>
                 <label class="btn btn-outline-success" for="success-${valueIten.item}">Aprovado</label>
-                <input type="radio" class="btn-check" id="danger-${valueIten.item}" name="${valueIten.cat};${valueIten.item}" value="nao" required>
+                <input type="radio" class="btn-check" id="danger-${valueIten.item}" name="${valueIten.cat}--${valueIten.item}" value="nao" required>
                 <label class="btn btn-outline-danger" for="danger-${valueIten.item}">Reprovado</label>
             `;
             divRowRadio.appendChild(radioContainer);
@@ -131,9 +131,9 @@ export function construcInputForm(jsonItens, orderBy) {
             const commentContainer = document.createElement("div");
             commentContainer.classList.add("col-8");
             commentContainer.style.display = "none";
-            commentContainer.id = (`text-container-${valueIten.item}`);
+            commentContainer.id = (`text-container--${valueIten.item}`);
             commentContainer.innerHTML = `
-                <input type="text" id="text-${valueIten.item}" name="text-container-${valueIten.item}" class="form-control"placeholder="Observações...">
+                <input type="text" id="text-${valueIten.item}" name="text-field--${valueIten.item}" class="form-control" placeholder="Observações...">
             `;
             // commentContainer.innerHTML = `
             //     <textarea id="text-${valueIten.item}" class="form-control" rows="1" cols="50" placeholder="Observações..."></textarea>
@@ -148,10 +148,10 @@ export function construcInputForm(jsonItens, orderBy) {
             imageContainer.classList.add("col-12");
             imageContainer.classList.add("drop-area");
             imageContainer.style.display = "none";
-            imageContainer.id = (`image-container-${valueIten.item}`);
+            imageContainer.id = (`image-container--${valueIten.item}`);
 
             imageContainer.addEventListener("click", () => {
-                activeField = `image-container-${valueIten.item}`;
+                const activeField = `image-container--${valueIten.item}`;
             });
 
             const imageAttach = document.createElement("input");
@@ -160,7 +160,7 @@ export function construcInputForm(jsonItens, orderBy) {
 
             const imagePreview = document.createElement("div");
             imagePreview.classList.add("preview-area")
-            imagePreview.id = (`image-preview-${valueIten.item}`);
+            imagePreview.id = (`image-preview--${valueIten.item}`);
 
 
             imageContainer.appendChild(imageAttach);

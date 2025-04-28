@@ -127,8 +127,6 @@ export function attachField(imageList) {
                     "width": imageAspectRatio.width,
                     "height": imageAspectRatio.height,
                 });
-
-                salvarImagensNoSessionStorage(imageList[itemId]);
             }
 
             updateAttachPreview(imageList);
@@ -138,25 +136,3 @@ export function attachField(imageList) {
 
 
 }
-
-function salvarImagensNoSessionStorage(performance) {
-    try {
-        sessionStorage.setItem('imagensProntuarioQA', JSON.stringify(performance));
-        console.log('Imagens salvas no sessionStorage!');
-    } catch (error) {
-        console.error('Erro ao salvar imagens:', error);
-        // Se o erro for por tamanho excessivo, comprima as imagens primeiro (veja abaixo)
-    }
-}
-
-export function carregarImagensDoSessionStorage() {
-    const imagensSalvas = sessionStorage.getItem('imagensProntuarioQA');
-    if (imagensSalvas) {
-        performance = JSON.parse(imagensSalvas); // Atualiza o array `performance`
-        console.log('Imagens recuperadas:', performance);
-        // Renderize as imagens no DOM se necessário
-    }
-}
-
-// Execute ao carregar a página
-window.addEventListener('load', carregarImagensDoSessionStorage);
