@@ -1,6 +1,7 @@
 import { construcInputForm } from "./form-inputs.js";
 import { progressBar, countItens } from "./progress-bar.js";
 import { attachField } from "./form-attach.js";
+import { carregarImagensDoSessionStorage } from "./form-attach.js";
 
 // Função para salvar os valores preenchidos
 function saveFormData() {
@@ -61,6 +62,37 @@ export async function renderForm(jsonItens, imageList, orderBy = 'tool') {
         progressBar();
         countItens();
         attachField(imageList);
+        carregarImagensDoSessionStorage()
+        // console.log(imageList);
+
+        const form = document.querySelector('#formValidacao');
+            const campos = form.querySelectorAll('input, textarea, select');
+        
+            // Carrega os dados
+            campos.forEach(campo => {
+                if (campo.type === 'radio' || campo.type === 'checkbox') {
+                    const checked = sessionStorage.getItem(campo.name + '_' + campo.value) === 'true';
+                    campo.checked = checked;
+                } else if (campo.type !== 'file') {
+                    const valor = sessionStorage.getItem(campo.name);
+                    if (valor !== null) campo.value = valor;
+                }
+            });
+        
+            // Salvar a cada digitação
+            campos.forEach(campo => {
+                campo.addEventListener('input', () => {
+                    if (campo.type === 'radio' || campo.type === 'checkbox') {
+                        sessionStorage.setItem(campo.name, campo.value);
+                    } else if (campo.type === 'file') {
+                        // Não salva o arquivo, mas pode salvar o nome
+                        // sessionStorage.setItem(campo.id, campo.files[0]?.name || '');
+                    } else {
+                        sessionStorage.setItem(campo.name, campo.value);
+                    }
+                });
+            });
+        
 
         const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
         const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))

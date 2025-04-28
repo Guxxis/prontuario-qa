@@ -7,12 +7,14 @@ import { formValidation } from "./module/form-validation.js";
 
 async function init() {
 
+    //Lista de Itens
     // let jsonItens = await getJson('./data/itens.json');
     let jsonItens = await getJson('./data/itens-test.json');
     let jsonDomains = await getJson('./data/dominios.json');
     let jsonAnalist = await getJson('./data/analistas.json');
     let imageList = {};
 
+    //dataset Lista dos dominios
     const dataListDominios = document.getElementById("list-dominios");
     jsonDomains.forEach(dominio => {
         let option = document.createElement("option");
@@ -20,6 +22,7 @@ async function init() {
         dataListDominios.appendChild(option);
     });
 
+    //dataset Lista dos Analistas
     const dataListAnalista = document.getElementById("list-analistas");
     jsonAnalist.forEach(analista => {
         let option = document.createElement("option");
@@ -27,35 +30,8 @@ async function init() {
         dataListAnalista.appendChild(option);
     });
 
+    //Renderizar formulario itens de validação
     await renderForm(jsonItens, imageList);
-
-    const form = document.querySelector('#formValidacao');
-    const campos = form.querySelectorAll('input, textarea, select');
-
-    // Carrega os dados
-    campos.forEach(campo => {
-        if (campo.type === 'radio' || campo.type === 'checkbox') {
-            const checked = sessionStorage.getItem(campo.name + '_' + campo.value) === 'true';
-            campo.checked = checked;
-        } else if (campo.type !== 'file') {
-            const valor = sessionStorage.getItem(campo.name);
-            if (valor !== null) campo.value = valor;
-        }
-    });
-
-    // Salvar a cada digitação
-    campos.forEach(campo => {
-        campo.addEventListener('input', () => {
-            if (campo.type === 'radio' || campo.type === 'checkbox') {
-                sessionStorage.setItem(campo.name + '_' + campo.value, campo.checked);
-            } else if (campo.type === 'file') {
-                // Não salva o arquivo, mas pode salvar o nome
-                sessionStorage.setItem(campo.name, campo.files[0]?.name || '');
-            } else {
-                sessionStorage.setItem(campo.name, campo.value);
-            }
-        });
-    });
 
     const orderSelect = document.getElementById("orderSelect");
 
@@ -63,6 +39,7 @@ async function init() {
         renderForm(jsonItens, imageList, e.target.value);
     });
 
+    //Botao de Gerar PDF
     document.getElementById("btnGerarPDF").addEventListener("click", (e) => {
         if (!formValidation(e)) {
             // e.preventDefault(); // Impede o envio se houver erro
@@ -71,10 +48,12 @@ async function init() {
         }
     });
 
+    //Botao de Calcular Pontuação
     document.getElementById("btnCalcular").addEventListener("click", () => {
         formCalculator();
     });
 
+    //Evento de ativação dos campos escondidos quando reprovado
     document.addEventListener("change", (e) => {
         if (e.target.matches('.btn-check')) {
             toggleAttach(e);
