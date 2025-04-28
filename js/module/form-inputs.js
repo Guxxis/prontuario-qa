@@ -151,7 +151,7 @@ export function construcInputForm(jsonItens, orderBy) {
             imageContainer.id = (`image-container--${valueIten.item}`);
 
             imageContainer.addEventListener("click", () => {
-                const activeField = `image-container--${valueIten.item}`;
+                activeField = `image-container--${valueIten.item}`;
             });
 
             const imageAttach = document.createElement("input");

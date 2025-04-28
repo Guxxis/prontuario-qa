@@ -1,45 +1,44 @@
 import { construcInputForm } from "./form-inputs.js";
 import { progressBar, countItens } from "./progress-bar.js";
 import { attachField } from "./form-attach.js";
-import { carregarImagensDoSessionStorage } from "./form-attach.js";
 import { updateIten, addImage } from "../app.js";
 
 // Função para salvar os valores preenchidos
-function saveFormData() {
-    const inputs = document.querySelectorAll("input, textarea");
-    const formData = {};
-    inputs.forEach(input => {
-        if (input.type === "radio") {
-            if (input.checked) {
-                formData[input.name] = input.value; // Salva apenas o radio selecionado
-            }
-        } else {
-            formData[input.name] = input.value; // Salva os outros campos normalmente
-        }
-    });
-    return formData;
-}
+// function saveFormData() {
+//     const inputs = document.querySelectorAll("input, textarea");
+//     const formData = {};
+//     inputs.forEach(input => {
+//         if (input.type === "radio") {
+//             if (input.checked) {
+//                 formData[input.name] = input.value; // Salva apenas o radio selecionado
+//             }
+//         } else {
+//             formData[input.name] = input.value; // Salva os outros campos normalmente
+//         }
+//     });
+//     return formData;
+// }
 
 // Função para restaurar os valores preenchidos
-function restoreFormData(formData) {
-    const inputs = document.querySelectorAll("input, textarea");
-    inputs.forEach(input => {
-        if (input.type === "radio") {
-            if (formData[input.name] === input.value) {
-                input.checked = true; // Restaura o radio selecionado
-                if (input.value === "nao") {
-                    const itemKey = input.name.split(";")[1]
-                    const attachContainer = document.getElementById(`image-container-${itemKey}`);
-                    const commentContainer = document.getElementById(`text-container-${itemKey}`);
-                    attachContainer.style.display = "block";
-                    commentContainer.style.display = "block";
-                }
-            }
-        } else if (formData[input.name]) {
-            input.value = formData[input.name]; // Restaura os outros campos
-        }
-    });
-}
+// function restoreFormData(formData) {
+//     const inputs = document.querySelectorAll("input, textarea");
+//     inputs.forEach(input => {
+//         if (input.type === "radio") {
+//             if (formData[input.name] === input.value) {
+//                 input.checked = true; // Restaura o radio selecionado
+//                 if (input.value === "nao") {
+//                     const itemKey = input.name.split(";")[1]
+//                     const attachContainer = document.getElementById(`image-container-${itemKey}`);
+//                     const commentContainer = document.getElementById(`text-container-${itemKey}`);
+//                     attachContainer.style.display = "block";
+//                     commentContainer.style.display = "block";
+//                 }
+//             }
+//         } else if (formData[input.name]) {
+//             input.value = formData[input.name]; // Restaura os outros campos
+//         }
+//     });
+// }
 
 // Função principal para renderizar o formulário
 export async function renderForm(jsonItens, orderBy = 'cat') {
@@ -47,7 +46,7 @@ export async function renderForm(jsonItens, orderBy = 'cat') {
         // const jsonItens = await getJson('./data/itens.json');
 
         // Salvar os dados preenchidos antes de limpar
-        const savedData = saveFormData();
+        // const savedData = saveFormData();
 
         // Limpa o formulário antes de renderizar novamente
         const formContainer = document.getElementById("form-container");
@@ -57,12 +56,12 @@ export async function renderForm(jsonItens, orderBy = 'cat') {
         construcInputForm(jsonItens, orderBy);
 
         // Restaurar os dados preenchidos
-        restoreFormData(savedData);
+        // restoreFormData(savedData);
 
         // Atualiza a barra de progresso
         progressBar();
         countItens();
-        attachField(imageList);
+        attachField();
         // carregarImagensDoSessionStorage()
         // console.log(imageList);
 

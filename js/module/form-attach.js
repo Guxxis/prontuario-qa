@@ -37,7 +37,7 @@ function updateAttachPreview(categorys) {
 
 
 
-export function attachField(imageList) {
+export function attachField(imageList = []) {
     if (imageList != "") {
 
         updateAttachPreview(imageList);
@@ -48,7 +48,7 @@ export function attachField(imageList) {
     const maxHeight = 75;
 
     dropAreas.forEach((dropArea) => {
-        const itemId = dropArea.id.split("-")[2]; // Pega o ID do item correspondente
+        const itemId = dropArea.id.split("--")[1]; // Pega o ID do item correspondente
 
         // Prevenir comportamentos padrões
         ["dragenter", "dragover", "dragleave", "drop"].forEach((eventName) => {
