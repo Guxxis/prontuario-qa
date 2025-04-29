@@ -51,6 +51,7 @@ export function attachField() {
     let activeField = null;
     const maxWidth = 100;
     const maxHeight = 75;
+    const MAX_IMAGES_PER_ITEM = 3;
 
     dropAreas.forEach((dropArea) => {
         const itemId = dropArea.id.split("--")[1]; // Pega o ID do item correspondente
@@ -87,11 +88,6 @@ export function attachField() {
 
             for (let file of files) {
 
-                // if (imageList[itemId].length >= 3) {
-                //     alert("Limite de imagens atingido");
-                //     break;
-                // }
-
                 let imageUrl64 = await handleFiles(file);
                 let imageCompressed = await compressImage(imageUrl64);
                 let imageAspectRatio = await handleAspectRatio(imageCompressed, maxWidth, maxHeight);
@@ -118,11 +114,11 @@ export function attachField() {
                 const imgfile = file.getAsFile();
 
                 let imageUrl64 = await handleFiles(imgfile);
-                let imageAspectRatio = await handleAspectRatio(imageUrl64, maxWidth, maxHeight);
-
+                let imageCompressed = await compressImage(imageUrl64);
+                let imageAspectRatio = await handleAspectRatio(imageCompressed, maxWidth, maxHeight);
                 const dataImage = {
                     "name": "Clipboard Image",
-                    "base64": imageUrl64,
+                    "base64": imageCompressed,
                     "width": imageAspectRatio.width,
                     "height": imageAspectRatio.height,
 

@@ -50,7 +50,7 @@ export function compressImage(base64, quality = 0.6) {
       img.src = base64;
       img.onload = () => {
         const canvas = document.createElement('canvas');
-        const MAX_WIDTH = 800; // Largura máxima (ajuste conforme necessário)
+        const MAX_WIDTH = 100; // Largura máxima (ajuste conforme necessário)
         const scale = MAX_WIDTH / img.width;
         canvas.width = MAX_WIDTH;
         canvas.height = img.height * scale;

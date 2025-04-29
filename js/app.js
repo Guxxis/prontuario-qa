@@ -38,8 +38,13 @@ export function addImage(itemId, image) {
 
     if (itemIndex >= 0) {
         // if (!dados[itemIndex].images){ dados[itemIndex].images = []};
-        dados[itemIndex].images.push(image);
-        sessionStorage.setItem('prontuarioValidacao', JSON.stringify(dados));
+        // console.log(dados[itemIndex].images.length);
+        if (dados[itemIndex].images.length >= 3) {
+            alert(`Limite de imagens por item atingido`);
+        } else {
+            dados[itemIndex].images.push(image);
+            sessionStorage.setItem('prontuarioValidacao', JSON.stringify(dados));
+        }
     }
 }
 
