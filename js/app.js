@@ -32,13 +32,13 @@ export function updateIten(itemId, campo, valor) {
     }
 }
 
-export function addImage(itemId, imagem) {
+export function addImage(itemId, image) {
     const dados = JSON.parse(sessionStorage.getItem('prontuarioValidacao'));
-    const itemIndex = dados.findIndex(item => item.id === itemId);
+    const itemIndex = dados.findIndex(item => item.item === itemId);
 
     if (itemIndex >= 0) {
-        if (!dados[itemIndex].imagens) dados[itemIndex].imagens = [];
-        dados[itemIndex].imagens.push(imagem);
+        if (!dados[itemIndex].images) dados[itemIndex].images = [];
+        dados[itemIndex].images.push(image);
         sessionStorage.setItem('prontuarioValidacao', JSON.stringify(dados));
     }
 }

@@ -1,14 +1,18 @@
+import { addImage } from "../app.js";
 import { handleFiles } from "./handle-file.js";
 import { handleAspectRatio } from "./handle-file.js";
 
-function updateAttachPreview(categorys) {
-    // preview.innerHTML = "";
+function updateAttachPreview() {
+    const storageItens = JSON.parse(sessionStorage.getItem('prontuarioValidacao'));
 
-    Object.keys(categorys).forEach(key => {
-        const preview = document.getElementById(`image-preview-${key}`)
+    Object.keys(storageItens).forEach(key => {
+        const storageImages = storageItens[key].images
+        const storageIndex = storageItens[key].item
+        const preview = document.getElementById(`image-preview--${storageIndex}`)
         preview.innerHTML = "";
+
         //imagens itens
-        categorys[key].forEach((image, index) => {
+        storageImages.forEach((image, index) => {
 
             const imgPreview = document.createElement("img");
             imgPreview.src = image.base64;
@@ -20,8 +24,9 @@ function updateAttachPreview(categorys) {
             deleteButton.classList = "delete-button";
 
             deleteButton.addEventListener("click", () => {
-                categorys[key].splice(index, 1);
-                updateAttachPreview(categorys);
+                storageImages.splice(index, 1);
+                sessionStorage.setItem('prontuarioValidacao', JSON.stringify(storageItens));
+                updateAttachPreview(storageItens);
             });
 
             const divPreview = document.createElement("div");
@@ -121,15 +126,24 @@ export function attachField(imageList = []) {
 
                 let imageUrl64 = await handleFiles(imgfile);
                 let imageAspectRatio = await handleAspectRatio(imageUrl64, maxWidth, maxHeight);
-                imageList[itemId].push({
+                // imageList[itemId].push({
+                //     "name": "Clipboard Image",
+                //     "base64": imageUrl64,
+                //     "width": imageAspectRatio.width,
+                //     "height": imageAspectRatio.height,
+                // });
+
+                const dataImage = {
                     "name": "Clipboard Image",
                     "base64": imageUrl64,
                     "width": imageAspectRatio.width,
                     "height": imageAspectRatio.height,
-                });
+
+                }
+                addImage(itemId, dataImage)
             }
 
-            updateAttachPreview(imageList);
+            updateAttachPreview();
 
         });
     });
