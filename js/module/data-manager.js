@@ -2,7 +2,7 @@
 export const DataManager = {  
     // Carrega dados do sessionStorage  
     load() {  
-      const savedData = sessionStorage.getItem('prontuarioQA');  
+      const savedData = sessionStorage.getItem('prontuarioValidacao');  
       return savedData ? JSON.parse(savedData) : [];  
     },  
   

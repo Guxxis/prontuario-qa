@@ -2,6 +2,7 @@ import { construcInputForm } from "./form-inputs.js";
 import { progressBar, countItens } from "./progress-bar.js";
 import { attachField } from "./form-attach.js";
 import { updateIten, addImage } from "../app.js";
+import { DataManager } from "./data-manager.js";
 
 // Função para salvar os valores preenchidos
 // function saveFormData() {
@@ -62,22 +63,33 @@ export async function renderForm(jsonItens, orderBy = 'cat') {
         progressBar();
         countItens();
         attachField();
-        
+
         // carregarImagensDoSessionStorage()
         // console.log(imageList);
 
         const form = document.querySelector('#formValidacao');
         const campos = form.querySelectorAll('input, textarea, select');
+        const storageItens = DataManager.load();
 
         // Carrega os dados
         campos.forEach(campo => {
-            if (campo.type === 'radio' || campo.type === 'checkbox') {
-                const checked = sessionStorage.getItem(campo.name + '_' + campo.value) === 'true';
-                campo.checked = checked;
-            } else if (campo.type !== 'file') {
-                const valor = sessionStorage.getItem(campo.name);
-                if (valor !== null) campo.value = valor;
+            const fieldArray = campo.name.split('--');
+            const fieldIndex = fieldArray[1]
+            const fieldComp = fieldArray[0]
+            if (campo.type === 'radio' || campo.classList === 'btn-check') {
+                const itemIndex = storageItens.findIndex(item => item.item === fieldIndex);
+                if (storageItens[itemIndex].approved === true) {
+                    campo.checked = campo.value === 'sim' ? true : false;
+                }
+                if (storageItens[itemIndex].approved === false) {
+                    campo.checked = campo.value === 'nao' ? true : false;
+                    const attachContainer = document.getElementById(`image-container--${fieldIndex}`);
+                    const commentContainer = document.getElementById(`text-container--${fieldIndex}`);
+                    attachContainer.style.display = "block";
+                    commentContainer.style.display = "block";
+                }
             }
+
         });
 
         // Salvar a cada digitação
