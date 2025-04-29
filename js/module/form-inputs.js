@@ -135,9 +135,7 @@ export function construcInputForm(jsonItens, orderBy) {
             commentContainer.innerHTML = `
                 <input type="text" id="text-${valueIten.item}" name="text-field--${valueIten.item}" class="form-control" placeholder="Observações...">
             `;
-            // commentContainer.innerHTML = `
-            //     <textarea id="text-${valueIten.item}" class="form-control" rows="1" cols="50" placeholder="Observações..."></textarea>
-            // `;
+            
             divRowRadio.appendChild(commentContainer);
 
             const divRowAttach = document.createElement("div");
@@ -149,10 +147,6 @@ export function construcInputForm(jsonItens, orderBy) {
             imageContainer.classList.add("drop-area");
             imageContainer.style.display = "none";
             imageContainer.id = (`image-container--${valueIten.item}`);
-
-            imageContainer.addEventListener("click", () => {
-                activeField = `image-container--${valueIten.item}`;
-            });
 
             const imageAttach = document.createElement("input");
             imageAttach.type = "file";

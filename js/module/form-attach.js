@@ -1,9 +1,11 @@
 import { addImage } from "../app.js";
 import { handleFiles } from "./handle-file.js";
 import { handleAspectRatio } from "./handle-file.js";
+import { compressImage } from "./handle-file.js";
 
 function updateAttachPreview() {
     const storageItens = JSON.parse(sessionStorage.getItem('prontuarioValidacao'));
+    console.log("Tamanho dos dados:", JSON.stringify(storageItens).length / 1024, "KB");
 
     Object.keys(storageItens).forEach(key => {
         const storageImages = storageItens[key].images
@@ -42,11 +44,9 @@ function updateAttachPreview() {
 
 
 
-export function attachField(imageList = []) {
-    if (imageList != "") {
+export function attachField() {
 
-        updateAttachPreview(imageList);
-    }
+    updateAttachPreview();
     const dropAreas = document.querySelectorAll(".drop-area");
     let activeField = null;
     const maxWidth = 100;
@@ -70,6 +70,14 @@ export function attachField(imageList = []) {
             dropArea.classList.remove("highlight");
         });
 
+
+        // Define campo ativo
+        document.querySelectorAll(".drop-area").forEach(campo => {
+            campo.addEventListener("click", () => {
+                activeField = campo;  // Define qual campo está ativo
+            });
+        });
+
         // Manipula o drop
         dropArea.addEventListener("drop", async (e) => {
 
@@ -77,34 +85,27 @@ export function attachField(imageList = []) {
 
             const files = e.dataTransfer.files;
 
-            if (!imageList[itemId]) {
-                imageList[itemId] = []; // Cria a chave se não existir
-            }
-
             for (let file of files) {
 
-                if (imageList[itemId].length >= 3) {
-                    alert("Limite de imagens atingido");
-                    break;
-                }
+                // if (imageList[itemId].length >= 3) {
+                //     alert("Limite de imagens atingido");
+                //     break;
+                // }
 
                 let imageUrl64 = await handleFiles(file);
-                let imageAspectRatio = await handleAspectRatio(imageUrl64, maxWidth, maxHeight);
-                imageList[itemId].push({
-                    "name": file.name,
-                    "base64": imageUrl64,
+                let imageCompressed = await compressImage(imageUrl64);
+                let imageAspectRatio = await handleAspectRatio(imageCompressed, maxWidth, maxHeight);
+                const dataImage = {
+                    "name": "Clipboard Image",
+                    "base64": imageCompressed,
                     "width": imageAspectRatio.width,
                     "height": imageAspectRatio.height,
-                });
+
+                }
+                addImage(itemId, dataImage)
             }
 
-            updateAttachPreview(imageList);
-        });
-
-        document.querySelectorAll(".drop-area").forEach(campo => {
-            campo.addEventListener("click", () => {
-                activeField = campo;  // Define qual campo está ativo
-            });
+            updateAttachPreview();
         });
 
         // Evento para colar imagem do clipboard
@@ -113,25 +114,11 @@ export function attachField(imageList = []) {
             const files = e.clipboardData.items;
 
             for (const file of files) {
-                if (!imageList[itemId]) {
-                    imageList[itemId] = []; // Cria a chave se não existir
-                }
-
-                if (imageList[itemId].length >= 3) {
-                    alert("Limite de imagens atingido");
-                    break;
-                }
 
                 const imgfile = file.getAsFile();
 
                 let imageUrl64 = await handleFiles(imgfile);
                 let imageAspectRatio = await handleAspectRatio(imageUrl64, maxWidth, maxHeight);
-                // imageList[itemId].push({
-                //     "name": "Clipboard Image",
-                //     "base64": imageUrl64,
-                //     "width": imageAspectRatio.width,
-                //     "height": imageAspectRatio.height,
-                // });
 
                 const dataImage = {
                     "name": "Clipboard Image",

@@ -62,6 +62,7 @@ export async function renderForm(jsonItens, orderBy = 'cat') {
         progressBar();
         countItens();
         attachField();
+        
         // carregarImagensDoSessionStorage()
         // console.log(imageList);
 

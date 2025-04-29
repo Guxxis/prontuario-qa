@@ -37,7 +37,7 @@ export function addImage(itemId, image) {
     const itemIndex = dados.findIndex(item => item.item === itemId);
 
     if (itemIndex >= 0) {
-        if (!dados[itemIndex].images) dados[itemIndex].images = [];
+        // if (!dados[itemIndex].images){ dados[itemIndex].images = []};
         dados[itemIndex].images.push(image);
         sessionStorage.setItem('prontuarioValidacao', JSON.stringify(dados));
     }
