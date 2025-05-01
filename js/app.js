@@ -27,7 +27,7 @@ export function updateIten(itemId, campo, valor) {
     const itemIndex = dados.findIndex(item => item.item === itemId);
 
     if (itemIndex >= 0) {
-        dados[itemIndex][campo] = valor; // Ex.: "aprovado", "comentario"
+        dados[itemIndex][campo] = valor;
         sessionStorage.setItem('prontuarioValidacao', JSON.stringify(dados));
     }
 }
@@ -37,8 +37,6 @@ export function addImage(itemId, image) {
     const itemIndex = dados.findIndex(item => item.item === itemId);
 
     if (itemIndex >= 0) {
-        // if (!dados[itemIndex].images){ dados[itemIndex].images = []};
-        // console.log(dados[itemIndex].images.length);
         if (dados[itemIndex].images.length >= 3) {
             alert(`Limite de imagens por item atingido`);
         } else {

@@ -5,7 +5,6 @@ import { compressImage } from "./handle-file.js";
 
 function updateAttachPreview() {
     const storageItens = JSON.parse(sessionStorage.getItem('prontuarioValidacao'));
-    console.log("Tamanho dos dados:", JSON.stringify(storageItens).length / 1024, "KB");
 
     Object.keys(storageItens).forEach(key => {
         const storageImages = storageItens[key].images
@@ -51,7 +50,6 @@ export function attachField() {
     let activeField = null;
     const maxWidth = 100;
     const maxHeight = 75;
-    const MAX_IMAGES_PER_ITEM = 3;
 
     dropAreas.forEach((dropArea) => {
         const itemId = dropArea.id.split("--")[1]; // Pega o ID do item correspondente
