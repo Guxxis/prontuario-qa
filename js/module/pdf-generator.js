@@ -1,3 +1,5 @@
+import { DataManager } from "./data-manager.js";
+
 function marginPdf(doc) {
     //margin x
     let mx = 0;
@@ -21,7 +23,9 @@ function marginPdf(doc) {
     }
 }
 
-export async function generatePDF(jsonItens, imageList) {
+export async function generatePDF() {
+
+    const formData = DataManager.load();
 
     // Pega campos do formulario
     let formDomain = document.getElementById("dominio").value;
@@ -34,35 +38,20 @@ export async function generatePDF(jsonItens, imageList) {
 
     let pontuacaoFinal = document.getElementById("pontuacao").value;
     let pontuacaoPorcento = document.getElementById("pontuacaoPorcento").value;
-    let pontuacaoMax = document.getElementById("pontuacaoMaximo").value;
+    // let pontuacaoMax = document.getElementById("pontuacaoMaximo").value;
     let pontuacaoStatus = document.getElementById("pontuacaoStatus").value;
 
     //Criar array de itens reprovados
-    const inputItems = document.querySelectorAll("input.btn-check");
     let reprovedItems = new Array();
-    for (const inputItem of inputItems) {
-        if (inputItem.checked === true && inputItem.value === "nao") {
-            const itenKey = inputItem.name.split(";", 2);
-
-            //Tratando o nome do Item e Categoria
-            const itenArray = jsonItens.find(elemento => elemento.item === itenKey[1]);
-            const itemName = itenArray.itemLabel;
-            const itemCat = itenArray.catLabel;
-
-            const imageItemList = imageList[itenKey[1]];
-
-            //Tratando campo comentario
-            const itemComment = document.getElementById(`text-${itenKey[1]}`).value;
-
-
+    for (const item of formData) {
+        if (item.approved === false) {
             reprovedItems.push({
-                "category": itemCat,
-                "item": itemName,
-                "comment": itemComment,
-                "image": imageItemList,
+                "category": item.catLabel,
+                "item": item.itemLabel,
+                "comment": item.comment,
+                "image": item.images,
             });
         }
-
     };
 
     //Organiza a array dos erros por categoria
@@ -246,4 +235,3 @@ export async function generatePDF(jsonItens, imageList) {
     // Salva o PDF
     doc.save(`prontuario-${formDomain}.pdf`);
 }
-

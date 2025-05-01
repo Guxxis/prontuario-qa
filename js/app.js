@@ -87,7 +87,7 @@ async function init() {
         if (!formValidation(e)) {
             // e.preventDefault(); // Impede o envio se houver erro
         } else {
-            generatePDF(jsonItens, imageList);
+            generatePDF();
         }
     });
 
