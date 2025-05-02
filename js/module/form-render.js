@@ -3,7 +3,7 @@ import { progressBar, countItens } from "./progress-bar.js";
 import { attachField } from "./form-attach.js";
 import { DataManager } from "./data-manager.js";
 
-export async function renderForm(jsonItens, orderBy = 'cat') {
+export async function renderForm(jsonItens, orderBy = 'tool') {
     try {
 
         // Organiza o formulário com base na opção (categoria ou ferramenta)

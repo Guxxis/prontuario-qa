@@ -37,8 +37,8 @@ function formInit(itemList) {
 async function init() {
 
     //Lista de Itens
-    // let jsonItens = await getJson('./data/itens.json');
-    let jsonItens = await getJson('./data/itens-test.json');
+    let jsonItens = await getJson('./data/itens.json');
+    // let jsonItens = await getJson('./data/itens-test.json');
     let jsonDomains = await getJson('./data/dominios.json');
     let jsonAnalist = await getJson('./data/analistas.json');
 
@@ -64,11 +64,11 @@ async function init() {
     //Renderizar formulario itens de validação
     await renderForm(formInputs);
 
-    // const orderSelect = document.getElementById("orderSelect");
+    const orderSelect = document.getElementById("orderSelect");
 
-    // orderSelect.addEventListener("change", (e) => {
-    //     renderForm(jsonItens, imageList, e.target.value);
-    // });
+    orderSelect.addEventListener("change", (e) => {
+        renderForm(formInputs,  e.target.value);
+    });
 
     //Botao de Gerar PDF
     document.getElementById("btnGerarPDF").addEventListener("click", (e) => {

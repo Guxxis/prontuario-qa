@@ -23,6 +23,3 @@
 * vincular tabela nos campos do formulario
 * enviar informação do prontuario para o bigquery
 * difinir forma de selecionar quais prontuarios vão para o bigquery
-
-## Automação n8n
-* vincular resultado com webhook do n8n
