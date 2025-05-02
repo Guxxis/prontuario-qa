@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1111111,
+        "dominio": "teste.com.br"
+    },
+    {
+        "id": 222222,
+        "dominio": "exemplo.com.br"
+    },
+    {
+        "id": 333333,
+        "dominio": "dominio.com.br"
+    },
+    {
+        "id": 4444444,
+        "dominio": "outroteste.com.br"
+    },
+    {
+        "id": 55555555,
+        "dominio": "outroexemplo.com.br"
+    }
+]

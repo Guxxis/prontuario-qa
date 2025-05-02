@@ -1,3 +1,38 @@
 [
-    {"cat": "seguranca", "catLabel": "Segurança", "item": "sem_self_redirect_quem_somos_home", "itemLabel": "Sem Self redirect (Quem somos) Home", "tool": "screamingfrog", "toolLabel": "ScreamingFrog"}
+    {
+        "cat": "core_web_vitals",
+        "catLabel": "Core Web Vitals",
+        "item": "performance",
+        "itemLabel": "Performance",
+        "tool": "lighthouse",
+        "toolLabel": "LightHouse",
+        "info": "Pontuação minima 60 na Home e MPIs Mobile"
+    },
+    {
+        "cat": "metadados_seo",
+        "catLabel": "Metadados e SEO",
+        "item": "paginas_mpis",
+        "itemLabel": "Páginas MPIs ",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "Quantidade Igual ou maior que descrito no senseData Todas as palavras MPIs acessíveis Thumb Regioes"
+    },
+    {
+        "cat": "metadados_seo",
+        "catLabel": "Metadados e SEO",
+        "item": "links_externos",
+        "itemLabel": "Links Externos - Outlinks",
+        "tool": "screamingfrog",
+        "toolLabel": "ScreamingFrog",
+        "info": "Todos os links externos com os atributos target=”_blank” rel=”nofollow”"
+    },
+    {
+        "cat": "validacao_codigo",
+        "catLabel": "Validação de Código",
+        "item": "sem_arquivos_old",
+        "itemLabel": "Arquivos Old",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "Sem arquivos antigos ou inutilizaveis no repositorio arquivos old ou com ! na frente"
+    }
 ]

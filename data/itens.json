@@ -1,72 +1,749 @@
 [
-    {"cat": "metadados_e_seo", "catLabel": "Metadados e SEO", "item": "missing_page_titles", "itemLabel": "Missing (0%) Page Titles", "tool": "screamingfrog", "toolLabel": "ScreamingFrog"},
-    {"cat": "metadados_e_seo", "catLabel": "Metadados e SEO", "item": "duplicate_page_titles", "itemLabel": "Duplicate (0%) Page Titles", "tool": "screamingfrog", "toolLabel": "ScreamingFrog"},
-    {"cat": "metadados_e_seo", "catLabel": "Metadados e SEO", "item": "over_60_characters_page_titles", "itemLabel": "Over 60 Characters - Truncated (0%) Page Titles", "tool": "screamingfrog", "toolLabel": "ScreamingFrog"},
-    {"cat": "metadados_e_seo", "catLabel": "Metadados e SEO", "item": "multiple_page_titles", "itemLabel": "Multiple (0%) Page Titles", "tool": "screamingfrog", "toolLabel": "ScreamingFrog"},
-    {"cat": "metadados_e_seo", "catLabel": "Metadados e SEO", "item": "missing_meta_descriptions", "itemLabel": "Missing (0%) Meta Descriptions", "tool": "screamingfrog", "toolLabel": "ScreamingFrog"},
-    {"cat": "metadados_e_seo", "catLabel": "Metadados e SEO", "item": "duplicate_meta_descriptions", "itemLabel": "Duplicate (0%) Meta Descriptions", "tool": "screamingfrog", "toolLabel": "ScreamingFrog"},
-    {"cat": "metadados_e_seo", "catLabel": "Metadados e SEO", "item": "over_155_characters_meta_descriptions", "itemLabel": "Over 155 Characters - Truncated (0%) Meta Descriptions", "tool": "screamingfrog", "toolLabel": "ScreamingFrog"},
-    {"cat": "metadados_e_seo", "catLabel": "Metadados e SEO", "item": "mapa_site_footer", "itemLabel": "Mapa do Site no Footer", "tool": "manual", "toolLabel": "Manual"},
-    {"cat": "urls", "catLabel": "URLs", "item": "non_ascii_characters_0_url", "itemLabel": "Non ASCII Characters (0%) URL", "tool": "screamingfrog", "toolLabel": "ScreamingFrog"},
-    {"cat": "urls", "catLabel": "URLs", "item": "uppercase_0_url", "itemLabel": "Uppercase (0%) URL", "tool": "screamingfrog", "toolLabel": "ScreamingFrog"},
-    {"cat": "urls", "catLabel": "URLs", "item": "multiple_slashes_0", "itemLabel": "Multiple Slashes (0%)", "tool": "screamingfrog", "toolLabel": "ScreamingFrog"},
-    {"cat": "urls", "catLabel": "URLs", "item": "contains_space_0", "itemLabel": "Contains Space (0%)", "tool": "screamingfrog", "toolLabel": "ScreamingFrog"},
-    {"cat": "estrutura_semantica", "catLabel": "Estrutura Semântica", "item": "missing_0_h1", "itemLabel": "Missing (0%) H1", "tool": "screamingfrog", "toolLabel": "ScreamingFrog"},
-    {"cat": "estrutura_semantica", "catLabel": "Estrutura Semântica", "item": "duplicate_0_h1", "itemLabel": "Duplicate (0%) H1", "tool": "screamingfrog", "toolLabel": "ScreamingFrog"},
-    {"cat": "estrutura_semantica", "catLabel": "Estrutura Semântica", "item": "multiple_0_h1", "itemLabel": "Multiple (0%) H1", "tool": "screamingfrog", "toolLabel": "ScreamingFrog"},
-    {"cat": "estrutura_semantica", "catLabel": "Estrutura Semântica", "item": "missing_0_h2", "itemLabel": "Missing (0%) H2", "tool": "screamingfrog", "toolLabel": "ScreamingFrog"},
-    {"cat": "imagens", "catLabel": "Imagens", "item": "instrucao_1over_200kb_0_images", "itemLabel": "Instrução 1Over 200kb (0%) Images", "tool": "screamingfrog", "toolLabel": "ScreamingFrog"},
-    {"cat": "imagens", "catLabel": "Imagens", "item": "over_500kb_banner_0_images", "itemLabel": "Over 500kb Banner (0%) Images", "tool": "screamingfrog", "toolLabel": "ScreamingFrog"},
-    {"cat": "resposta_do_servidor", "catLabel": "Resposta do Sevidor", "item": "success_200_response_codes", "itemLabel": "Success (200) Response Codes", "tool": "screamingfrog", "toolLabel": "ScreamingFrog"},
-    {"cat": "resposta_do_servidor", "catLabel": "Resposta do Sevidor", "item": "redirection_301_302_response_codes", "itemLabel": "Redirection (301, 302)Response Codes", "tool": "screamingfrog", "toolLabel": "ScreamingFrog"},
-    {"cat": "resposta_do_servidor", "catLabel": "Resposta do Sevidor", "item": "client_error_0_response_codes", "itemLabel": "Client Error (0%) Response Codes", "tool": "screamingfrog", "toolLabel": "ScreamingFrog"},
-    {"cat": "resposta_do_servidor", "catLabel": "Resposta do Sevidor", "item": "server_error_0_response_codes", "itemLabel": "Server Error (0%) Response Codes", "tool": "screamingfrog", "toolLabel": "ScreamingFrog"},
-    {"cat": "seguranca", "catLabel": "Segurança", "item": "https_urls_100", "itemLabel": "HTTPS URL’s (100%)", "tool": "screamingfrog", "toolLabel": "ScreamingFrog"},
-    {"cat": "seguranca", "catLabel": "Segurança", "item": "mixed_content_0", "itemLabel": "Mixed Content (0%)", "tool": "screamingfrog", "toolLabel": "ScreamingFrog"},
-    {"cat": "seguranca", "catLabel": "Segurança", "item": "links_externos_outlinks_target_blank_rel_nofollow", "itemLabel": "Links Externos - Outlinks (target=”_blank” rel=”nofollow”)", "tool": "screamingfrog", "toolLabel": "ScreamingFrog"},
-    {"cat": "seguranca", "catLabel": "Segurança", "item": "sem_self_redirect_quem_somos_home", "itemLabel": "Sem Self redirect (Quem somos) Home", "tool": "screamingfrog", "toolLabel": "ScreamingFrog"},
-    {"cat": "validacao_de_codigo", "catLabel": "Validação de Código", "item": "w3c_html_home_e_mpi", "itemLabel": "W3C HTML Home e MPI", "tool": "checkbot", "toolLabel": "CheckBot"},
-    {"cat": "validacao_de_codigo", "catLabel": "Validação de Código", "item": "w3c_css_home_e_mpi", "itemLabel": "W3C CSS Home e MPI", "tool": "checkbot", "toolLabel": "CheckBot"},
-    {"cat": "estrutura_semantica", "catLabel": "Estrutura Semântica", "item": "font_awesome_todas_as_paginas", "itemLabel": "Font Awesome Todas as páginas", "tool": "stackcrawler", "toolLabel": "StackCrawler"},
-    {"cat": "conteudo", "catLabel": "Conteúdo", "item": "readability_very_difficult_0_content", "itemLabel": "Readability very difficult (0%) Content", "tool": "webfx", "toolLabel": "WebFX"},
-    {"cat": "estrutura_semantica", "catLabel": "Estrutura Semântica", "item": "favicon_todas_as_paginas", "itemLabel": "Favicon Todas as páginas", "tool": "favicon_detector", "toolLabel": "Favicon Detector"},
-    {"cat": "metadados_e_seo", "catLabel": "Metadados e SEO", "item": "seo_100", "itemLabel": "SEO 100 Home e MPI", "tool": "lighthouse", "toolLabel": "Extensão LightHouse"},
-    {"cat": "performance", "catLabel": "Performance", "item": "performance_60_home_e_mpi", "itemLabel": "Performance > 60 Home e MPI", "tool": "lighthouse", "toolLabel": "Extensão LightHouse"},
-    {"cat": "performance", "catLabel": "Performance", "item": "accessibility_90_home_e_mpi", "itemLabel": "Accessibility > 90 Home e MPI", "tool": "lighthouse", "toolLabel": "Extensão LightHouse"},
-    {"cat": "performance", "catLabel": "Performance", "item": "best_practices_90_home_e_mpi", "itemLabel": "Best Pratices > 90 Home e MPI", "tool": "lighthouse", "toolLabel": "Extensão LightHouse"},
-    {"cat": "performance", "catLabel": "Performance", "item": "footer_lazy_load_todas_as_paginas", "itemLabel": "Footer Lazy Load Todas as páginas", "tool": "manual", "toolLabel": "Manual"},
-    {"cat": "metadados_e_seo", "catLabel": "Metadados e SEO", "item": "banners_links_mpi", "itemLabel": "Banners - links para MPI Home", "tool": "manual", "toolLabel": "Manual"},
-    {"cat": "metadados_e_seo", "catLabel": "Metadados e SEO", "item": "produtos_em_destaque", "itemLabel": "Produtos em destaque Home", "tool": "manual", "toolLabel": "Manual"},
-    {"cat": "metadados_e_seo", "catLabel": "Metadados e SEO", "item": "coluna_lateral", "itemLabel": "Coluna Lateral Todas as páginas", "tool": "manual", "toolLabel": "Manual"},
-    {"cat": "estrutura_semantica", "catLabel": "Estrutura Semântica", "item": "nome_da_empresa_segmento_h1_home", "itemLabel": "Nome da empresa + segmento (H1) Home", "tool": "manual", "toolLabel": "Manual"},
-    {"cat": "estrutura_semantica", "catLabel": "Estrutura Semântica", "item": "url_coerente_h1_pagina_todas_as_paginas", "itemLabel": "URL coerente ao H1 da página Todas as páginas", "tool": "manual", "toolLabel": "Manual"},
-    {"cat": "fluxo", "catLabel": "Fluxo", "item": "pull_request", "itemLabel": "Pull request", "tool": "manual", "toolLabel": "Manual"},
-    {"cat": "fluxo", "catLabel": "Fluxo", "item": "arquivo_old", "itemLabel": "Arquivo Old", "tool": "manual", "toolLabel": "Manual"},
-    {"cat": "conteudo", "catLabel": "Conteúdo", "item": "spelling_errors_lorem_ipsum_content", "itemLabel": "Spelling Errors (Lorem Ipsum) Content", "tool": "manual", "toolLabel": "Manual"},
-    {"cat": "conteudo", "catLabel": "Conteúdo", "item": "grammar_errors_lorem_ipsum_content", "itemLabel": "Grammar Errors (Lorem Ipsum) Content", "tool": "manual", "toolLabel": "Manual"},
-    {"cat": "layout_e_usabilidade", "catLabel": "Layout e Usabilidade", "item": "botao_link_whatsapp_home", "itemLabel": "Botão Link (WhatsApp) Home", "tool": "manual", "toolLabel": "Manual"},
-    {"cat": "layout_e_usabilidade", "catLabel": "Layout e Usabilidade", "item": "mobile_smartphone_375px_home_e_mpi", "itemLabel": "Mobile - Smartphone (375px) Home e MPI", "tool": "manual", "toolLabel": "Manual"},
-    {"cat": "layout_e_usabilidade", "catLabel": "Layout e Usabilidade", "item": "mobile_tablet_768px_home_e_mpi", "itemLabel": "Mobile - Tablet (768px) Home e MPI", "tool": "manual", "toolLabel": "Manual"},
-    {"cat": "layout_e_usabilidade", "catLabel": "Layout e Usabilidade", "item": "active_menu_topo_todas_as_paginas", "itemLabel": "Active menu topo Todas as páginas", "tool": "manual", "toolLabel": "Manual"},
-    {"cat": "layout_e_usabilidade", "catLabel": "Layout e Usabilidade", "item": "botoes_links_clicaveis_todas_as_paginas", "itemLabel": "Botões - links clicáveis Todas as páginas", "tool": "manual", "toolLabel": "Manual"},
-    {"cat": "layout_e_usabilidade", "catLabel": "Layout e Usabilidade", "item": "contraste_entre_elementos_todas_as_paginas", "itemLabel": "Contraste entre elementos Todas as páginas", "tool": "manual", "toolLabel": "Manual"},
-    {"cat": "layout_e_usabilidade", "catLabel": "Layout e Usabilidade", "item": "breadcrumbs_todas_as_paginas", "itemLabel": "Breadcrumbs Todas as páginas", "tool": "manual", "toolLabel": "Manual"},
-    {"cat": "layout_e_usabilidade", "catLabel": "Layout e Usabilidade", "item": "menu_footer_menu_header_todas_as_paginas", "itemLabel": "Menu Footer = Menu Header Todas as páginas", "tool": "manual", "toolLabel": "Manual"},
-    {"cat": "layout_e_usabilidade", "catLabel": "Layout e Usabilidade", "item": "broken_image_or_components", "itemLabel": "Broken Image or Components", "tool": "manual", "toolLabel": "Manual"},
-    {"cat": "layout_e_usabilidade", "catLabel": "Layout e Usabilidade", "item": "disproportionate_elements", "itemLabel": "Disproportionate Elements", "tool": "manual", "toolLabel": "Manual"},
-    {"cat": "contato", "catLabel": "Contato", "item": "telefones", "itemLabel": "Telefones", "tool": "manual", "toolLabel": "Manual"},
-    {"cat": "contato", "catLabel": "Contato", "item": "endereco", "itemLabel": "Endereço", "tool": "manual", "toolLabel": "Manual"},
-    {"cat": "contato", "catLabel": "Contato", "item": "formatacao_de_endereco", "itemLabel": "Formatação de endereço", "tool": "manual", "toolLabel": "Manual"},
-    {"cat": "formularios", "catLabel": "Formulários", "item": "botao_cta_formulario_home", "itemLabel": "Botão CTA (formulário) Home", "tool": "manual", "toolLabel": "Manual"},
-    {"cat": "formularios", "catLabel": "Formulários", "item": "campos_do_formulario", "itemLabel": "Campos do formulário", "tool": "manual", "toolLabel": "Manual"},
-    {"cat": "formularios", "catLabel": "Formulários", "item": "recaptcha_formulario", "itemLabel": "Recaptcha formulário", "tool": "manual", "toolLabel": "Manual"},
-    {"cat": "publicacao", "catLabel": "Publicação", "item": "mpis_cadastradas_no_spider", "itemLabel": "MPIs Cadastradas no Spider", "tool": "manual", "toolLabel": "Manual"},
-    {"cat": "publicacao", "catLabel": "Publicação", "item": "configuracao_no_servidor_100", "itemLabel": "Configuração no Servidor 100%", "tool": "manual", "toolLabel": "Manual"},
-    {"cat": "publicacao", "catLabel": "Publicação", "item": "apontamentos_dns_100", "itemLabel": "Apontamentos DNS 100%", "tool": "manual", "toolLabel": "Manual"},
-    {"cat": "publicacao", "catLabel": "Publicação", "item": "sensedata_preenchido_100", "itemLabel": "SenseData Preenchido 100%", "tool": "manual", "toolLabel": "Manual"},
-    {"cat": "publicacao", "catLabel": "Publicação", "item": "upload_sitemap_searchconsole", "itemLabel": "Upload Sitemap Searchconsole", "tool": "manual", "toolLabel": "Manual"},
-    {"cat": "publicacao", "catLabel": "Publicação", "item": "redirects_funcionando", "itemLabel": "Redirects Funcionando", "tool": "manual", "toolLabel": "Manual"},
-    {"cat": "publicacao", "catLabel": "Publicação", "item": "configuracao_metricas_analytics", "itemLabel": "Configuração Metricas Analytics", "tool": "manual", "toolLabel": "Manual"},
-    {"cat": "publicacao", "catLabel": "Publicação", "item": "configuracao_recaptcha", "itemLabel": "Configuração Recaptcha", "tool": "manual", "toolLabel": "Manual"},
-    {"cat": "publicacao", "catLabel": "Publicação", "item": "configuracao_htaccess", "itemLabel": "Configuração htaccess", "tool": "manual", "toolLabel": "Manual"}
+    {
+        "cat": "core_web_vitals",
+        "catLabel": "Core Web Vitals",
+        "item": "mobile_banner",
+        "itemLabel": "Mobile Banner",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "Smartphone (375px) - Por padrao nao é para ter, vai depender da performance do site Tablet (768px) - Pode ter"
+    },
+    {
+        "cat": "core_web_vitals",
+        "catLabel": "Core Web Vitals",
+        "item": "footer_lazy_load",
+        "itemLabel": "Footer Lazy Load",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "Validação em todas as paginas"
+    },
+    {
+        "cat": "core_web_vitals",
+        "catLabel": "Core Web Vitals",
+        "item": "seo",
+        "itemLabel": "SEO",
+        "tool": "lighthouse",
+        "toolLabel": "LightHouse",
+        "info": "Pontuação minima 100 na Home e MPIs Mobile"
+    },
+    {
+        "cat": "core_web_vitals",
+        "catLabel": "Core Web Vitals",
+        "item": "best_pratices",
+        "itemLabel": "Best Pratices",
+        "tool": "lighthouse",
+        "toolLabel": "LightHouse",
+        "info": "Pontuação minima 90 na Home e MPIs Mobile"
+    },
+    {
+        "cat": "core_web_vitals",
+        "catLabel": "Core Web Vitals",
+        "item": "accessibility",
+        "itemLabel": "Accessibility",
+        "tool": "lighthouse",
+        "toolLabel": "LightHouse",
+        "info": "Pontuação minima 90 na Home e MPIs Mobile"
+    },
+    {
+        "cat": "core_web_vitals",
+        "catLabel": "Core Web Vitals",
+        "item": "performance",
+        "itemLabel": "Performance",
+        "tool": "lighthouse",
+        "toolLabel": "LightHouse",
+        "info": "Pontuação minima 60 na Home e MPIs Mobile"
+    },
+    {
+        "cat": "metadados_seo",
+        "catLabel": "Metadados e SEO",
+        "item": "paginas_mpis",
+        "itemLabel": "Páginas MPIs ",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "Qunatidade Igual ou maior que descrito no senseData Todas as palavras MPIs acessíveis Thumb Regioes"
+    },
+    {
+        "cat": "metadados_seo",
+        "catLabel": "Metadados e SEO",
+        "item": "mapa_site_links",
+        "itemLabel": "Mapa do Site",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "Todos os links registrados no mapa do site"
+    },
+    {
+        "cat": "metadados_seo",
+        "catLabel": "Metadados e SEO",
+        "item": "page_titles_multiple",
+        "itemLabel": "Page Titles Multiple",
+        "tool": "screamingfrog",
+        "toolLabel": "ScreamingFrog",
+        "info": "Resultado total 0%"
+    },
+    {
+        "cat": "metadados_seo",
+        "catLabel": "Metadados e SEO",
+        "item": "coluna_lateral",
+        "itemLabel": "Coluna Lateral",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "Todas paginas MPIs, Produtos e Serviços"
+    },
+    {
+        "cat": "metadados_seo",
+        "catLabel": "Metadados e SEO",
+        "item": "url_coerente_h1_pagina",
+        "itemLabel": "URL coerente ao <h1> da página",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "Validação em todas as paginas"
+    },
+    {
+        "cat": "metadados_seo",
+        "catLabel": "Metadados e SEO",
+        "item": "menu_header_footer",
+        "itemLabel": "Menu Header = Menu Footer + Mapa do site",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "Menu header igual menu footer mais o link do mapa do site"
+    },
+    {
+        "cat": "metadados_seo",
+        "catLabel": "Metadados e SEO",
+        "item": "produtos_destaque",
+        "itemLabel": "Produtos em destaque",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "Thumbs de “produtos” na Home que levam para paginas MPIs"
+    },
+    {
+        "cat": "metadados_seo",
+        "catLabel": "Metadados e SEO",
+        "item": "empresa_segmento_h1_home",
+        "itemLabel": "Nome da empresa + segmento",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "H1 da home - nome da empresa + segmento"
+    },
+    {
+        "cat": "metadados_seo",
+        "catLabel": "Metadados e SEO",
+        "item": "banners_link_mpis",
+        "itemLabel": "Banner com links para MPIs",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "Pelo menos 3 banners com links direcionando para alguma pagina MPIs"
+    },
+    {
+        "cat": "metadados_seo",
+        "catLabel": "Metadados e SEO",
+        "item": "meta_discriptions_duplicate",
+        "itemLabel": "Meta Descriptions Duplicate",
+        "tool": "screamingfrog",
+        "toolLabel": "ScreamingFrog",
+        "info": "Resultado total 0%"
+    },
+    {
+        "cat": "metadados_seo",
+        "catLabel": "Metadados e SEO",
+        "item": "meta_discriptions_missing",
+        "itemLabel": "Meta Descriptions Missing",
+        "tool": "screamingfrog",
+        "toolLabel": "ScreamingFrog",
+        "info": "Resultado total 0%"
+    },
+    {
+        "cat": "metadados_seo",
+        "catLabel": "Metadados e SEO",
+        "item": "page_titles_over_caracteres",
+        "itemLabel": "Page Titles Over 60 Characters",
+        "tool": "screamingfrog",
+        "toolLabel": "ScreamingFrog",
+        "info": "Resultado total 0% - Acima de 60 Caracteres"
+    },
+    {
+        "cat": "metadados_seo",
+        "catLabel": "Metadados e SEO",
+        "item": "meta_discriptions_over_caracters",
+        "itemLabel": "Meta Descriptions Over 155 Characters",
+        "tool": "screamingfrog",
+        "toolLabel": "ScreamingFrog",
+        "info": "Resultado total 0% - Acima de 155 Caracteres"
+    },
+    {
+        "cat": "metadados_seo",
+        "catLabel": "Metadados e SEO",
+        "item": "page_titles_missing",
+        "itemLabel": "Page Titles Missing",
+        "tool": "screamingfrog",
+        "toolLabel": "ScreamingFrog",
+        "info": "Resultado total 0%"
+    },
+    {
+        "cat": "metadados_seo",
+        "catLabel": "Metadados e SEO",
+        "item": "page_titles_duplicate",
+        "itemLabel": "Page Titles Duplicate",
+        "tool": "screamingfrog",
+        "toolLabel": "ScreamingFrog",
+        "info": "Resultado total 0%"
+    },
+    {
+        "cat": "metadados_seo",
+        "catLabel": "Metadados e SEO",
+        "item": "links_externos",
+        "itemLabel": "Links Externos - Outlinks",
+        "tool": "screamingfrog",
+        "toolLabel": "ScreamingFrog",
+        "info": "Todos os links externos com os atributos target=”_blank” rel=”nofollow”"
+    },
+    {
+        "cat": "validacao_codigo",
+        "catLabel": "Validação de Código",
+        "item": "sem_arquivos_old",
+        "itemLabel": "Arquivos Old",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "Sem arquivos antigos ou inutilizaveis no repositorio arquivos old ou com ! na frente"
+    },
+    {
+        "cat": "validacao_codigo",
+        "catLabel": "Validação de Código",
+        "item": "font_awesome",
+        "itemLabel": "Font Awesome",
+        "tool": "stackcrawler",
+        "toolLabel": "StackCrawler",
+        "info": "Validação em todas as paginas"
+    },
+    {
+        "cat": "validacao_codigo",
+        "catLabel": "Validação de Código",
+        "item": "w3c_html",
+        "itemLabel": "W3C HTML",
+        "tool": "checkbot",
+        "toolLabel": "Checkbot",
+        "info": "Validação em todas as paginas"
+    },
+    {
+        "cat": "validacao_codigo",
+        "catLabel": "Validação de Código",
+        "item": "w3c_css",
+        "itemLabel": "W3C CSS",
+        "tool": "checkbot",
+        "toolLabel": "Checkbot",
+        "info": "Validação em todas as paginas"
+    },
+    {
+        "cat": "validacao_codigo",
+        "catLabel": "Validação de Código",
+        "item": "lorem_ipsum_placeholder",
+        "itemLabel": "Lorem Ipsum Placeholder",
+        "tool": "screamingfrog",
+        "toolLabel": "ScreamingFrog",
+        "info": "Resultado Total 0%"
+    },
+    {
+        "cat": "estrutura_semantica",
+        "catLabel": "Estrutura Semântica",
+        "item": "h1_duplicate",
+        "itemLabel": "H1 Duplicate",
+        "tool": "screamingfrog",
+        "toolLabel": "ScreamingFrog",
+        "info": "Resultado total 0% na Home e MPIs"
+    },
+    {
+        "cat": "estrutura_semantica",
+        "catLabel": "Estrutura Semântica",
+        "item": "h1_multiple",
+        "itemLabel": "H1 Multiple",
+        "tool": "screamingfrog",
+        "toolLabel": "ScreamingFrog",
+        "info": "Resultado total 0% na Home e MPIs"
+    },
+    {
+        "cat": "estrutura_semantica",
+        "catLabel": "Estrutura Semântica",
+        "item": "h2_missing",
+        "itemLabel": "H2 Missing",
+        "tool": "screamingfrog",
+        "toolLabel": "ScreamingFrog",
+        "info": "Resultado total 0% na Home e MPIs"
+    },
+    {
+        "cat": "estrutura_semantica",
+        "catLabel": "Estrutura Semântica",
+        "item": "h1_missing",
+        "itemLabel": "H1 Missing",
+        "tool": "screamingfrog",
+        "toolLabel": "ScreamingFrog",
+        "info": "Resultado total 0% na Home e MPIs"
+    },
+    {
+        "cat": "fluxo",
+        "catLabel": "Fluxo",
+        "item": "pull_request",
+        "itemLabel": "Pull request",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "Validação se o git flow foi seguido"
+    },
+    {
+        "cat": "fluxo",
+        "catLabel": "Fluxo",
+        "item": "backup_bd",
+        "itemLabel": "Backup banco",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "Salvar o backup do Banco de Dados do sig dentro da pasta /doutor/backkup."
+    },
+    {
+        "cat": "urls",
+        "catLabel": "URLs",
+        "item": "urls_over_caracters",
+        "itemLabel": "URLs over caracters",
+        "tool": "screamingfrog",
+        "toolLabel": "ScreamingFrog",
+        "info": "URLs acima de 115 caracters"
+    },
+    {
+        "cat": "urls",
+        "catLabel": "URLs",
+        "item": "contains_space",
+        "itemLabel": "Contains Space",
+        "tool": "screamingfrog",
+        "toolLabel": "ScreamingFrog",
+        "info": "Resultado total 0%"
+    },
+    {
+        "cat": "urls",
+        "catLabel": "URLs",
+        "item": "multiple_slashes",
+        "itemLabel": "Multiple Slashes",
+        "tool": "screamingfrog",
+        "toolLabel": "ScreamingFrog",
+        "info": "Resultado total 0%"
+    },
+    {
+        "cat": "urls",
+        "catLabel": "URLs",
+        "item": "non_ascii_caracters",
+        "itemLabel": "Non ASCII Characters URL",
+        "tool": "screamingfrog",
+        "toolLabel": "ScreamingFrog",
+        "info": "Resultado total 0%"
+    },
+    {
+        "cat": "urls",
+        "catLabel": "URLs",
+        "item": "uppercase",
+        "itemLabel": "Uppercase URL",
+        "tool": "screamingfrog",
+        "toolLabel": "ScreamingFrog",
+        "info": "Resultado total 0%"
+    },
+    {
+        "cat": "formulario",
+        "catLabel": "Formulário",
+        "item": "recaptcha_formulario",
+        "itemLabel": "ReCaptcha nos Formulário ",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "Todos os formularios devem conter recaptcha Ter apenas um tipo de recaptcha no site (v.2 ou v.3)"
+    },
+    {
+        "cat": "formulario",
+        "catLabel": "Formulário",
+        "item": "mascara_formulario",
+        "itemLabel": "Mascara nos Formulários",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "Todos os formularios"
+    },
+    {
+        "cat": "imagens",
+        "catLabel": "Imagens",
+        "item": "favicon",
+        "itemLabel": "Favicon",
+        "tool": "favicon_detector",
+        "toolLabel": "Favicon Detector",
+        "info": "Validação em todas as paginas Extensão .icon Tamanho padrao 32x32 pixels"
+    },
+    {
+        "cat": "imagens",
+        "catLabel": "Imagens",
+        "item": "image_over",
+        "itemLabel": "Images Over 200kb",
+        "tool": "screamingfrog",
+        "toolLabel": "ScreamingFrog",
+        "info": "Imagens acima de 200kb 0% Tamanho maximo 800x800 Extensão webp"
+    },
+    {
+        "cat": "imagens",
+        "catLabel": "Imagens",
+        "item": "image_banner_over",
+        "itemLabel": "Images Banner Over 500kb",
+        "tool": "screamingfrog",
+        "toolLabel": "ScreamingFrog",
+        "info": "Imagens do Banner acima de 500kb 0% Tamanho  maximo de largura - 1920"
+    },
+    {
+        "cat": "layout_usabilidade",
+        "catLabel": "Layout e Usabilidade",
+        "item": "botao_voltar_topo",
+        "itemLabel": "Botão de Voltar ao Topo ",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "Precisa ser visivel Ser clicavel"
+    },
+    {
+        "cat": "layout_usabilidade",
+        "catLabel": "Layout e Usabilidade",
+        "item": "mobile_elementos_desproporcionais",
+        "itemLabel": "Mobile Elementos Desproporcionais",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "Smartphone (375px) e Tablet (768px) - Home e MPIs"
+    },
+    {
+        "cat": "layout_usabilidade",
+        "catLabel": "Layout e Usabilidade",
+        "item": "mobile_footer",
+        "itemLabel": "Mobile Footer",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "Smartphone (375px) e Tablet (768px) Ordem dos elementos"
+    },
+    {
+        "cat": "layout_usabilidade",
+        "catLabel": "Layout e Usabilidade",
+        "item": "mobile_menu_hamburguer",
+        "itemLabel": "Mobile Menu Hamburguer",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "Smartphone (375px) e Tablet (768px)"
+    },
+    {
+        "cat": "layout_usabilidade",
+        "catLabel": "Layout e Usabilidade",
+        "item": "scroll_lateral",
+        "itemLabel": "Scroll Lateral",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "Sem scroll lateral / horizontal"
+    },
+    {
+        "cat": "layout_usabilidade",
+        "catLabel": "Layout e Usabilidade",
+        "item": "mobile_mapa_google",
+        "itemLabel": "Mobile Mapa Google",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "Smartphone (375px) e Tablet (768px) - Contato"
+    },
+    {
+        "cat": "layout_usabilidade",
+        "catLabel": "Layout e Usabilidade",
+        "item": "disproportionate_elementes",
+        "itemLabel": "Disproportionate Elements",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "Validação em todas as paginas"
+    },
+    {
+        "cat": "layout_usabilidade",
+        "catLabel": "Layout e Usabilidade",
+        "item": "broke_image_components",
+        "itemLabel": "Broken Image or Components",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "Validação em todas as paginas"
+    },
+    {
+        "cat": "layout_usabilidade",
+        "catLabel": "Layout e Usabilidade",
+        "item": "contraste_elementos",
+        "itemLabel": "Contraste entre elementos",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "Validação em todas as paginas Situação onde não tem como visualizar o elemento Exemplo: texto branco em fundo branco"
+    },
+    {
+        "cat": "layout_usabilidade",
+        "catLabel": "Layout e Usabilidade",
+        "item": "botoes_clicaveis",
+        "itemLabel": "Botões clicáveis",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "Validar todos os botões"
+    },
+    {
+        "cat": "layout_usabilidade",
+        "catLabel": "Layout e Usabilidade",
+        "item": "breadcrumbs",
+        "itemLabel": "Breadcrumbs",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "Validação em  todas as paginas"
+    },
+    {
+        "cat": "layout_usabilidade",
+        "catLabel": "Layout e Usabilidade",
+        "item": "active_menu",
+        "itemLabel": "Active menu",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "Validação em todas as paginas Menu topo e Coluna lateral"
+    },
+    {
+        "cat": "contato",
+        "catLabel": "Contato",
+        "item": "formatacao_endereco",
+        "itemLabel": "Formatação de endereço",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "Endereço - Complemento - Bairros* - Cidade/Estado - CEP obs: bairros não são obrigatórios obs2: devem ser separados por - ou quebra de linha Exemplo: Av. Presidente Juscelino Kubitschek 2041 - Torre B 5º andar Vila Olímpia São Paulo/SP - CEP:"
+    },
+    {
+        "cat": "contato",
+        "catLabel": "Contato",
+        "item": "formatacao_telefone",
+        "itemLabel": "Formatação de telefone",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "Link funcional + ‘(ddd) 0*0000-0000’"
+    },
+    {
+        "cat": "contato",
+        "catLabel": "Contato",
+        "item": "formatacao_email",
+        "itemLabel": "Formatação de email",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "Link funcional + ‘icone envelope + mailto:contato@dominio.com.br’"
+    },
+    {
+        "cat": "contato",
+        "catLabel": "Contato",
+        "item": "email",
+        "itemLabel": "Emails",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "Validação na pagina de contato e no footer"
+    },
+    {
+        "cat": "contato",
+        "catLabel": "Contato",
+        "item": "endereco",
+        "itemLabel": "Endereços",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "Validação na pagina de contato e no footer"
+    },
+    {
+        "cat": "contato",
+        "catLabel": "Contato",
+        "item": "telefone",
+        "itemLabel": "Telefones",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "Validação na pagina de contato e no footer"
+    },
+    {
+        "cat": "contato",
+        "catLabel": "Contato",
+        "item": "botao_cta_whatsapp",
+        "itemLabel": "Botão Link WhatsApp",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "Validação em todas as paginas Redirecionamento funcionando Formulario funcionando"
+    },
+    {
+        "cat": "contato",
+        "catLabel": "Contato",
+        "item": "faixa_cta",
+        "itemLabel": "Faixa CTA",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "Todas as faixas CTAs Home e MPIs Todos devem por padrao levar para pagina de Contato"
+    },
+    {
+        "cat": "resposta_servidor",
+        "catLabel": "Respota do Servidor",
+        "item": "response_code_server_error",
+        "itemLabel": "Server Error",
+        "tool": "screamingfrog",
+        "toolLabel": "ScreamingFrog",
+        "info": "Resultado total 0%"
+    },
+    {
+        "cat": "resposta_servidor",
+        "catLabel": "Respota do Servidor",
+        "item": "response_code_client_error",
+        "itemLabel": "Client Error",
+        "tool": "screamingfrog",
+        "toolLabel": "ScreamingFrog",
+        "info": "Resultado total 0%"
+    },
+    {
+        "cat": "resposta_servidor",
+        "catLabel": "Respota do Servidor",
+        "item": "response_code_success",
+        "itemLabel": "Success",
+        "tool": "screamingfrog",
+        "toolLabel": "ScreamingFrog",
+        "info": "Resultado total 100%"
+    },
+    {
+        "cat": "resposta_servidor",
+        "catLabel": "Respota do Servidor",
+        "item": "response_code_redirection",
+        "itemLabel": "Redirection",
+        "tool": "screamingfrog",
+        "toolLabel": "ScreamingFrog",
+        "info": "Resultado total 0%"
+    },
+    {
+        "cat": "seguranca",
+        "catLabel": "Segurança",
+        "item": "security_missing_secure_referrer_policy",
+        "itemLabel": "Missing Secure Referrer Policy",
+        "tool": "screamingfrog",
+        "toolLabel": "ScreamingFrog",
+        "info": "Resultado total 0%"
+    },
+    {
+        "cat": "seguranca",
+        "catLabel": "Segurança",
+        "item": "security_missing_x_frame_options",
+        "itemLabel": "Missing X Frame Options",
+        "tool": "screamingfrog",
+        "toolLabel": "ScreamingFrog",
+        "info": "Resultado total 0%"
+    },
+    {
+        "cat": "seguranca",
+        "catLabel": "Segurança",
+        "item": "security_missing_x_content_type_options",
+        "itemLabel": "Missing X Content Type Options",
+        "tool": "screamingfrog",
+        "toolLabel": "ScreamingFrog",
+        "info": "Resultado total 0%"
+    },
+    {
+        "cat": "seguranca",
+        "catLabel": "Segurança",
+        "item": "security_missing_content_security_policy",
+        "itemLabel": "Missing Content Security Policy",
+        "tool": "screamingfrog",
+        "toolLabel": "ScreamingFrog",
+        "info": "Resultado total 0%"
+    },
+    {
+        "cat": "seguranca",
+        "catLabel": "Segurança",
+        "item": "popup_cookie",
+        "itemLabel": "Popup de Cookie",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "Cookie ativo no site"
+    },
+    {
+        "cat": "seguranca",
+        "catLabel": "Segurança",
+        "item": "security_missing_hsts",
+        "itemLabel": "Missing HSTS",
+        "tool": "screamingfrog",
+        "toolLabel": "ScreamingFrog",
+        "info": "Resultado total 0%"
+    },
+    {
+        "cat": "seguranca",
+        "catLabel": "Segurança",
+        "item": "security_mixed_content",
+        "itemLabel": "Mixed Content",
+        "tool": "screamingfrog",
+        "toolLabel": "ScreamingFrog",
+        "info": "Resultado total 0%"
+    },
+    {
+        "cat": "seguranca",
+        "catLabel": "Segurança",
+        "item": "security_https_urls",
+        "itemLabel": "HTTPS URL’s",
+        "tool": "screamingfrog",
+        "toolLabel": "ScreamingFrog",
+        "info": "Resultado total 100%"
+    },
+    {
+        "cat": "publicacao",
+        "catLabel": "Publicação",
+        "item": "gitignore",
+        "itemLabel": "Configuração .gitignore",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "Configurado no gitignore o .htaccess e robots.txt Apagar o .htacces e o robots.txt da raiz do projeto"
+    },
+    {
+        "cat": "publicacao",
+        "catLabel": "Publicação",
+        "item": "spider",
+        "itemLabel": "Configuração Spider",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "Todas as MPIs configurados no sistema"
+    },
+    {
+        "cat": "publicacao",
+        "catLabel": "Publicação",
+        "item": "sensedata",
+        "itemLabel": "Validação SenseData",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "Todos os campos do SenseData Preenchido"
+    },
+    {
+        "cat": "publicacao",
+        "catLabel": "Publicação",
+        "item": "searchconsole",
+        "itemLabel": "Configuração SearchConsole",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "Sitemap mais atual configurado no SearchConsole"
+    },
+    {
+        "cat": "publicacao",
+        "catLabel": "Publicação",
+        "item": "redirect_serp_404",
+        "itemLabel": "URL Redirect SERP 404",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "Paginas indexadas 404 redirecionando para Home"
+    },
+    {
+        "cat": "publicacao",
+        "catLabel": "Publicação",
+        "item": "analytics",
+        "itemLabel": "Configuração Analytics",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "Metrificação do analytics"
+    },
+    {
+        "cat": "publicacao",
+        "catLabel": "Publicação",
+        "item": "mpisistema",
+        "itemLabel": "Configuração MPI Sistema",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "Leads chegando no MPI Sistema Leads chegando para os remetentes"
+    },
+    {
+        "cat": "publicacao",
+        "catLabel": "Publicação",
+        "item": "redirect_www",
+        "itemLabel": "URL Redirect para o www",
+        "tool": "manual",
+        "toolLabel": "Manual ",
+        "info": "Links redirecionando para o www"
+    }
 ]

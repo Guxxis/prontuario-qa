@@ -1,14 +1,19 @@
+import { DataManager } from "./data-manager.js";
 import { handleFiles } from "./handle-file.js";
 import { handleAspectRatio } from "./handle-file.js";
+import { compressImage } from "./handle-file.js";
 
-function updateAttachPreview(categorys) {
-    // preview.innerHTML = "";
+function updateAttachPreview() {
+    const storageItens = DataManager.load();
 
-    Object.keys(categorys).forEach(key => {
-        const preview = document.getElementById(`image-preview-${key}`)
+    Object.keys(storageItens[0].items).forEach(key => {
+        const storageImages = storageItens[0].items[key].images
+        const storageIndex = storageItens[0].items[key].item
+        const preview = document.getElementById(`image-preview--${storageIndex}`)
         preview.innerHTML = "";
+
         //imagens itens
-        categorys[key].forEach((image, index) => {
+        storageImages.forEach((image, index) => {
 
             const imgPreview = document.createElement("img");
             imgPreview.src = image.base64;
@@ -20,8 +25,9 @@ function updateAttachPreview(categorys) {
             deleteButton.classList = "delete-button";
 
             deleteButton.addEventListener("click", () => {
-                categorys[key].splice(index, 1);
-                updateAttachPreview(categorys);
+                storageImages.splice(index, 1);
+                DataManager.save(storageItens)
+                updateAttachPreview(storageItens);
             });
 
             const divPreview = document.createElement("div");
@@ -37,18 +43,16 @@ function updateAttachPreview(categorys) {
 
 
 
-export function attachField(imageList) {
-    if (imageList != "") {
+export function attachField() {
 
-        updateAttachPreview(imageList);
-    }
+    updateAttachPreview();
     const dropAreas = document.querySelectorAll(".drop-area");
     let activeField = null;
     const maxWidth = 100;
     const maxHeight = 75;
 
     dropAreas.forEach((dropArea) => {
-        const itemId = dropArea.id.split("-")[2]; // Pega o ID do item correspondente
+        const itemId = dropArea.id.split("--")[1]; // Pega o ID do item correspondente
 
         // Prevenir comportamentos padrões
         ["dragenter", "dragover", "dragleave", "drop"].forEach((eventName) => {
@@ -65,6 +69,14 @@ export function attachField(imageList) {
             dropArea.classList.remove("highlight");
         });
 
+
+        // Define campo ativo
+        document.querySelectorAll(".drop-area").forEach(campo => {
+            campo.addEventListener("click", () => {
+                activeField = campo;  // Define qual campo está ativo
+            });
+        });
+
         // Manipula o drop
         dropArea.addEventListener("drop", async (e) => {
 
@@ -72,36 +84,22 @@ export function attachField(imageList) {
 
             const files = e.dataTransfer.files;
 
-            if (!imageList[itemId]) {
-                imageList[itemId] = []; // Cria a chave se não existir
-            }
-
             for (let file of files) {
 
-                if (imageList[itemId].length >= 3) {
-                    alert("Limite de imagens atingido");
-                    break;
-                }
-
                 let imageUrl64 = await handleFiles(file);
-                let imageAspectRatio = await handleAspectRatio(imageUrl64, maxWidth, maxHeight);
-                imageList[itemId].push({
-                    "name": file.name,
-                    "base64": imageUrl64,
+                let imageCompressed = await compressImage(imageUrl64);
+                let imageAspectRatio = await handleAspectRatio(imageCompressed, maxWidth, maxHeight);
+                const dataImage = {
+                    "name": "Clipboard Image",
+                    "base64": imageCompressed,
                     "width": imageAspectRatio.width,
                     "height": imageAspectRatio.height,
-                });
+
+                }
+                DataManager.addImage(itemId, dataImage)
             }
 
-            updateAttachPreview(imageList);
-        });
-
-
-
-        document.querySelectorAll(".drop-area").forEach(campo => {
-            campo.addEventListener("click", () => {
-                activeField = campo;  // Define qual campo está ativo
-            });
+            updateAttachPreview();
         });
 
         // Evento para colar imagem do clipboard
@@ -110,29 +108,26 @@ export function attachField(imageList) {
             const files = e.clipboardData.items;
 
             for (const file of files) {
-                if (!imageList[itemId]) {
-                    imageList[itemId] = []; // Cria a chave se não existir
-                }
-
-                if (imageList[itemId].length >= 3) {
-                    alert("Limite de imagens atingido");
-                    break;
-                }
 
                 const imgfile = file.getAsFile();
 
                 let imageUrl64 = await handleFiles(imgfile);
-                let imageAspectRatio = await handleAspectRatio(imageUrl64, maxWidth, maxHeight);
-                imageList[itemId].push({
+                let imageCompressed = await compressImage(imageUrl64);
+                let imageAspectRatio = await handleAspectRatio(imageCompressed, maxWidth, maxHeight);
+                const dataImage = {
                     "name": "Clipboard Image",
-                    "base64": imageUrl64,
+                    "base64": imageCompressed,
                     "width": imageAspectRatio.width,
                     "height": imageAspectRatio.height,
-                });
+
+                }
+                DataManager.addImage(itemId, dataImage)
             }
 
-            updateAttachPreview(imageList);
+            updateAttachPreview();
 
         });
     });
+
+
 }

@@ -1,3 +1,5 @@
+import { DataManager } from "./data-manager.js";
+
 function marginPdf(doc) {
     //margin x
     let mx = 0;
@@ -21,48 +23,35 @@ function marginPdf(doc) {
     }
 }
 
-export async function generatePDF(jsonItens, imageList) {
+export async function generatePDF() {
+
+    const formData = DataManager.load()[0];
 
     // Pega campos do formulario
-    let formDomain = document.getElementById("dominio").value;
-    let formIdClient = document.getElementById("id-cliente").value;
-    let formIdRunrunit = document.getElementById("id-card-runrunit").value;
-    let formNameQa = document.getElementById("nome-analista-qa").value;
-    let formDataQA = document.getElementById("data-validacao-site").value;
-    let formNameProd = document.getElementById("nome-analista-producao").value;
-    let formDataProd = document.getElementById("data-producacao-site").value;
+    let formDomain = formData['dominio'];
+    let formIdClient = formData['idCliente'];
+    let formIdRunrunit = formData['idTicket'];
+    let formNameQa = formData['analistaQa'];
+    let formDataQA = formData['dataValidacao'];
+    let formNameProd = formData['analistaProducao'];
+    let formDataProd = formData['dataProducao'];
 
-    let pontuacaoFinal = document.getElementById("pontuacao").value;
-    let pontuacaoPorcento = document.getElementById("pontuacaoPorcento").value;
-    let pontuacaoMax = document.getElementById("pontuacaoMaximo").value;
-    let pontuacaoStatus = document.getElementById("pontuacaoStatus").value;
+    let pontuacaoFinal = formData.resultado['pontuacao'];
+    let pontuacaoPorcento = formData.resultado['porcentagem'];
+    let pontuacaoMax = formData.resultado['pontuacaoMaxima'];
+    let pontuacaoStatus = formData.resultado['status'];
 
     //Criar array de itens reprovados
-    const inputItems = document.querySelectorAll("input.btn-check");
     let reprovedItems = new Array();
-    for (const inputItem of inputItems) {
-        if (inputItem.checked === true && inputItem.value === "nao") {
-            const itenKey = inputItem.name.split(";", 2);
-
-            //Tratando o nome do Item e Categoria
-            const itenArray = jsonItens.find(elemento => elemento.item === itenKey[1]);
-            const itemName = itenArray.itemLabel;
-            const itemCat = itenArray.catLabel;
-
-            const imageItemList = imageList[itenKey[1]];
-
-            //Tratando campo comentario
-            const itemComment = document.getElementById(`text-${itenKey[1]}`).value;
-
-
+    for (const item of formData.items) {
+        if (item.approved === false) {
             reprovedItems.push({
-                "category": itemCat,
-                "item": itemName,
-                "comment": itemComment,
-                "image": imageItemList,
+                "category": item.catLabel,
+                "item": item.itemLabel,
+                "comment": item.comment,
+                "image": item.images,
             });
         }
-
     };
 
     //Organiza a array dos erros por categoria
@@ -246,4 +235,3 @@ export async function generatePDF(jsonItens, imageList) {
     // Salva o PDF
     doc.save(`prontuario-${formDomain}.pdf`);
 }
-
