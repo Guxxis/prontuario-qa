@@ -26,6 +26,7 @@ function formInit(itemList) {
             "dataValidacao": null,
             "analistaProducao": null,
             "dataProducao": null,
+            "comentarioGeral": null,
             "items": formItems,
             "resultado": []
         }]

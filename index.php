@@ -75,7 +75,10 @@ echo $_SESSION['user'];
                     
                     <label class="form-label" for="dataProducao">Data de Finalização do Site</label>
                     <input class="form-control" type="date" id="dataProducao" name="data-producacao-site" required>
-                    
+
+                    <label class="form-label" for="comentarioGeral">Comentarios</label>
+                    <textarea class="form-control" rows="5" id="comentarioGeral" name="campo-comentario-geral"></textarea>
+
                     <datalist id="list-dominios"></datalist>
                     <datalist id="list-analistas"></datalist>
 
