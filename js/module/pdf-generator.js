@@ -36,10 +36,10 @@ export async function generatePDF() {
     let formNameProd = formData['analistaProducao'];
     let formDataProd = formData['dataProducao'];
 
-    let pontuacaoFinal = document.getElementById("pontuacao").value;
-    let pontuacaoPorcento = document.getElementById("pontuacaoPorcento").value;
-    // let pontuacaoMax = document.getElementById("pontuacaoMaximo").value;
-    let pontuacaoStatus = document.getElementById("pontuacaoStatus").value;
+    let pontuacaoFinal = formData.resultado['pontuacao'];
+    let pontuacaoPorcento = formData.resultado['porcentagem'];
+    let pontuacaoMax = formData.resultado['pontuacaoMaxima'];
+    let pontuacaoStatus = formData.resultado['status'];
 
     //Criar array de itens reprovados
     let reprovedItems = new Array();

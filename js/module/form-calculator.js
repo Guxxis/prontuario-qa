@@ -17,6 +17,15 @@ export function formCalculator() {
                 throw new Error(data.mensagem || "Erro desconhecido no servidor");
             }
 
+            const resposta = {
+                "pontuacao": data.pontuacao,
+                "porcentagem": data.pontuacaoPorcento,
+                "pontuacaoMaxima": data.pontuacaoMax,
+                "status": data.pontuacaoStatus
+            }
+
+            DataManager.updateHeader('resultado',resposta);
+
             // Atualizar campo oculto com a pontuação
             document.getElementById("pontuacao").value = data.pontuacao;
             document.getElementById("pontuacaoPorcento").value = data.pontuacaoPorcento;
@@ -25,10 +34,10 @@ export function formCalculator() {
 
             const formResultDiv = document.getElementById("formResult");
             formResultDiv.innerHTML = `
-            <p>Pontuação: ${data.pontuacao}</p>
-            <p>Porcentagem: ${data.pontuacaoPorcento}</p>
-            <p>Situação: ${data.pontuacaoStatus}</p>
-        `;
+                <p>Pontuação: ${data.pontuacao}</p>
+                <p>Porcentagem: ${data.pontuacaoPorcento}</p>
+                <p>Situação: ${data.pontuacaoStatus}</p>
+            `;
 
             document.getElementById("btnGerarPDF").style.display = "inline-block";
         })
