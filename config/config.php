@@ -29,7 +29,7 @@ $azureRedirectUri = getenv('AZURE_REDIRECT_URI');
 return [
     'client_id' => $azureClientId,
     'client_secret' => $azureClientSecret,
-    'redirect_uri' => 'http://localhost/prontuario-qa/auth/callback.php',
-    'authority' => 'https://login.microsoftonline.com/' + $azureTenantId,
-    'scopes' => 'openid profile email'
+    'redirect_uri' => $azureRedirectUri . '/auth/callback.php',
+    'authority' => 'https://login.microsoftonline.com/' . $azureTenantId,
+    'scopes' => 'openid profile email user.read'
 ];

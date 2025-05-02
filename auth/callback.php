@@ -1,8 +1,4 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
 session_start();
 $config = require('../config/config.php');
 
@@ -27,16 +23,34 @@ if (isset($_GET['code'])) {
     $response = curl_exec($ch);
     curl_close($ch);
     $data = json_decode($response, true);
-    // echo "Callback chegou até aqui!";
-    // $data = json_decode($response, true);
-    // var_dump($data);
-    // exit;
 
     if (isset($data['access_token'])) {
+
+        $headers = [
+            "Authorization: Bearer {$data['access_token']}",
+            "Content-Type: application/json"
+        ];
+
+        $chead = curl_init('https://graph.microsoft.com/v1.0/me');
+        curl_setopt($chead, CURLOPT_HTTPHEADER, $headers);
+        curl_setopt($chead, CURLOPT_RETURNTRANSFER, true);
+        $userResponse = curl_exec($chead);
+        curl_close($chead);
+
+        $userData = json_decode($userResponse, true);
+        $email = $userData['mail'] ?? $userData['userPrincipalName']; // depende da conta
+        $user = $userData['displayName'] ?? $userData['userPrincipalName']; // depende da conta
+
+        // $allowedEmails = ['gustavo.goncalves@doutoresdaweb.com.br'];
+
+        // if (!in_array($email, $allowedEmails)) {
+        //     die('Acesso não autorizado!');
+        // }
+
+
         $_SESSION['access_token'] = $data['access_token'];
-        // Aqui você pode decodificar o token ou fazer requisição ao /me da Microsoft
-        // $basePath = dirname($_SERVER['PHP_SELF'], 2); // volta duas pastas a partir de /auth/callback.php
-        // header("Location: {$basePath}/index.php");
+        $_SESSION['email'] = $email;
+        $_SESSION['user'] = $user;
         header('Location: /prontuario-qa/index.php');
         exit;
     }

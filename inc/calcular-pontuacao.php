@@ -1,59 +1,68 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+header('Content-Type: application/json');
+try {
+    $json = file_get_contents('php://input');
+    $data = json_decode($json, true);
 
     //Pesos dos jsonItens
     $pesos = [
-        "metadados_e_seo" => 5,
-        "performance" => 5,
-        "validacao_de_codigo" => 5,
+        "metadados_seo" => 5,
+        "core_web_vitals" => 5,
+        "validacao_codigo" => 5,
         "urls" => 4,
         "estrutura_semantica" => 4,
         "fluxo" => 4,
         "imagens" => 3,
         "conteudo" => 3,
-        "layout_e_usabilidade" => 3,
+        "layout_usabilidade" => 3,
         "contato" => 2,
         "formularios" => 2,
-        "resposta_do_servidor" => 1,
+        "resposta_servidor" => 1,
         "seguranca" => 1,
         "publicacao" => 1
     ];
 
-    $total_peso = array_sum($pesos);
     $pontuacao = 0;
     $pontuacao_maxima = 0;
-    $erros = [];
-    include('validationItensKey.php');
-    // Calculo dos itens aprovados
-    foreach ($_POST as $key => $value) {
-        $catItem = explode(";", $key, 2);
 
-        foreach ($pesos as $categoria => $peso) {
-            if ($categoria == $catItem[0]) {
-                $pontuacao_maxima += $peso;
-                if ($value == "sim") {
-                    $pontuacao += $peso;
-                }
+    foreach ($data['items'] as $item) {
+
+        $categoria = $item['cat'];
+        $aprovado = $item['approved'];
+
+        if (isset($pesos[$categoria])) {
+            $peso = $pesos[$categoria];
+            $pontuacao_maxima += $peso;
+            
+            if ($aprovado) {
+                $pontuacao += $peso;
             }
+        } else {
+            error_log("Categoria não encontrada: $categoria");
         }
     }
-    
-    $pontuacao_final = $pontuacao;
-    $pontuacao_porcento = round(($pontuacao / $pontuacao_maxima) * 100, 2);
-    $pontuacao_status = "";
 
-    if ($pontuacao_porcento >= 90){
-        $pontuacao_status = "Aprovado";
-    } else {
-        $pontuacao_status = "Reprovado";
+    if ($pontuacao_maxima <= 0) {
+        throw new Exception("Nenhum item válido para cálculo");
     }
+
+    $porcentagem  = round(($pontuacao / $pontuacao_maxima) * 100, 2);
+    $status = ($porcentagem >= 90) ? "Aprovado" : "Reprovado";
 
     echo json_encode([
         "sucesso" => true,
-        "pontuacao" => $pontuacao_final,
+        "pontuacao" => $pontuacao,
         "pontuacaoMax" => $pontuacao_maxima,
-        "pontuacaoPorcento" => $pontuacao_porcento,
-        "pontuacaoStatus" => $pontuacao_status
+        "pontuacaoPorcento" => $porcentagem,
+        "pontuacaoStatus" => $status
+    ]);
+} catch (Exception $e) {
+    // Retorna erro se algo der errado
+    http_response_code(400);
+    echo json_encode([
+        'sucesso' => false,
+        'mensagem' => $e->getMessage(),
+        'dadosRecebidos' => $data ?? null,
+        'erroPHP' => error_get_last()
     ]);
 }
-?>

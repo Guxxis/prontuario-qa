@@ -9,6 +9,7 @@ function groupBy(items, key) {
 
 export function construcInputForm(jsonItens, orderBy) {
     const formContainer = document.getElementById("form-container");
+    formContainer.innerHTML = "";
 
     let category = '';
     let subCategory = '';
@@ -24,10 +25,7 @@ export function construcInputForm(jsonItens, orderBy) {
             break;
         default:
             console.log("Opção de organização não aceita!");
-
     }
-
-
 
     const categorias = groupBy(jsonItens, orderBy);
 
@@ -40,7 +38,6 @@ export function construcInputForm(jsonItens, orderBy) {
         // Criar div do Cabeçalho
         const divRowCat = document.createElement("div");
         divRowCat.classList.add("row");
-
 
         // Progresso da Categoria
         const progressDiv = document.createElement("div");
@@ -83,23 +80,45 @@ export function construcInputForm(jsonItens, orderBy) {
             const li = document.createElement("li");
             li.classList.add("list-group-item");
 
-            const divRow = document.createElement("div");
-            divRow.classList.add("row");
+            const divRowText = document.createElement("div");
+            divRowText.classList.add("row");
 
-            const divRowRadio = divRow;
-            
+            //Tooltip
+            const tooltipContainer = document.createElement("div");
+            tooltipContainer.classList.add("col-1")
+            tooltipContainer.innerHTML = `
+                <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="${valueIten.info}">
+                    <button class="custom-button-tooltip" type="button" disabled>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
+                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2"/>
+                    </svg>
+                    </button>
+                </span>
+            `
+
+            divRowText.appendChild(tooltipContainer);
+
             // Texto do item
-            const textContainer = document.createElement("label");
-            textContainer.classList.add("form-label");
-            textContainer.innerText = `${valueIten[subCategory]} > ${valueIten.itemLabel}`;
+            const textContainer = document.createElement("div");
+            textContainer.classList.add("col")
+
+            const textLabel = document.createElement("label");
+            textLabel.classList.add("form-label");
+            textLabel.innerText = `${valueIten[subCategory]} > ${valueIten.itemLabel}`;
+
+            textContainer.appendChild(textLabel);
+            divRowText.appendChild(textContainer);
+
+            const divRowRadio = document.createElement("div");
+            divRowRadio.classList.add("row");
 
             // Botões de Aprovação
             const radioContainer = document.createElement("div");
             radioContainer.classList.add("col-4");
             radioContainer.innerHTML = `
-                <input type="radio" class="btn-check" id="success-${valueIten.item}" name="${valueIten.cat};${valueIten.item}" value="sim" required>
+                <input type="radio" class="btn-check" id="success-${valueIten.item}" name="${valueIten.cat}--${valueIten.item}" value="sim" required>
                 <label class="btn btn-outline-success" for="success-${valueIten.item}">Aprovado</label>
-                <input type="radio" class="btn-check" id="danger-${valueIten.item}" name="${valueIten.cat};${valueIten.item}" value="nao" required>
+                <input type="radio" class="btn-check" id="danger-${valueIten.item}" name="${valueIten.cat}--${valueIten.item}" value="nao" required>
                 <label class="btn btn-outline-danger" for="danger-${valueIten.item}">Reprovado</label>
             `;
             divRowRadio.appendChild(radioContainer);
@@ -109,36 +128,31 @@ export function construcInputForm(jsonItens, orderBy) {
             const commentContainer = document.createElement("div");
             commentContainer.classList.add("col-8");
             commentContainer.style.display = "none";
-            commentContainer.id = (`text-container-${valueIten.item}`);
+            commentContainer.id = (`text-container--${valueIten.item}`);
             commentContainer.innerHTML = `
-                <input type="text" id="text-${valueIten.item}" name="text-container-${valueIten.item}" class="form-control"placeholder="Observações...">
+                <input type="text" id="text-${valueIten.item}" name="text-field--${valueIten.item}" class="form-control" placeholder="Observações...">
             `;
-            // commentContainer.innerHTML = `
-            //     <textarea id="text-${valueIten.item}" class="form-control" rows="1" cols="50" placeholder="Observações..."></textarea>
-            // `;
+            
             divRowRadio.appendChild(commentContainer);
 
-            const divRowAttach = divRow;
+            const divRowAttach = document.createElement("div");
+            divRowAttach.classList.add("row");
 
             // Area Drag and Drop
             const imageContainer = document.createElement("div");
             imageContainer.classList.add("col-12");
             imageContainer.classList.add("drop-area");
             imageContainer.style.display = "none";
-            imageContainer.id = (`image-container-${valueIten.item}`);
-
-            imageContainer.addEventListener("click", ()=>{
-                activeField = `image-container-${valueIten.item}`;
-            });
+            imageContainer.id = (`image-container--${valueIten.item}`);
 
             const imageAttach = document.createElement("input");
             imageAttach.type = "file";
             imageAttach.style.display = "none";
-            
+
             const imagePreview = document.createElement("div");
             imagePreview.classList.add("preview-area")
-            imagePreview.id = (`image-preview-${valueIten.item}`);
-            
+            imagePreview.id = (`image-preview--${valueIten.item}`);
+
 
             imageContainer.appendChild(imageAttach);
             imageContainer.appendChild(imagePreview);
@@ -146,7 +160,7 @@ export function construcInputForm(jsonItens, orderBy) {
 
 
             //
-            li.appendChild(textContainer);
+            li.appendChild(divRowText);
             li.appendChild(divRowRadio);
             li.appendChild(divRowAttach);
             itemList.appendChild(li);

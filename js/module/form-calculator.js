@@ -1,13 +1,31 @@
-export function formCalculator (){
-    let formData = new FormData(document.getElementById("formValidacao"));
+import { DataManager } from "./data-manager.js";
 
+export function formCalculator() {
+    let formData = DataManager.load()[0].items;
     fetch("inc/calcular-pontuacao.php", {
         method: "POST",
-        body: formData
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            items: formData
+        })
     })
-    .then(response => response.json()) // Retorna JSON do PHP
-    .then(data => {
-        if (data.sucesso) {
+        .then(response => response.json())
+        .then(data => {
+            if (!data.sucesso) {
+                throw new Error(data.mensagem || "Erro desconhecido no servidor");
+            }
+
+            const resposta = {
+                "pontuacao": data.pontuacao,
+                "porcentagem": data.pontuacaoPorcento,
+                "pontuacaoMaxima": data.pontuacaoMax,
+                "status": data.pontuacaoStatus
+            }
+
+            DataManager.updateHeader('resultado',resposta);
+
             // Atualizar campo oculto com a pontuação
             document.getElementById("pontuacao").value = data.pontuacao;
             document.getElementById("pontuacaoPorcento").value = data.pontuacaoPorcento;
@@ -22,9 +40,9 @@ export function formCalculator (){
             `;
 
             document.getElementById("btnGerarPDF").style.display = "inline-block";
-
-
-        }
-    })
-    .catch(error => console.error("Erro ao calcular pontuação:", error));
+        })
+        .catch(error => {
+            console.error("Erro ao calcular pontuação:", error);
+            alert("Erro ao calcular pontuação: " + error.message);
+        });
 }
