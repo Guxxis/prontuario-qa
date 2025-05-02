@@ -25,16 +25,16 @@ function marginPdf(doc) {
 
 export async function generatePDF() {
 
-    const formData = DataManager.load();
+    const formData = DataManager.load()[0];
 
     // Pega campos do formulario
-    let formDomain = document.getElementById("dominio").value;
-    let formIdClient = document.getElementById("id-cliente").value;
-    let formIdRunrunit = document.getElementById("id-card-runrunit").value;
-    let formNameQa = document.getElementById("nome-analista-qa").value;
-    let formDataQA = document.getElementById("data-validacao-site").value;
-    let formNameProd = document.getElementById("nome-analista-producao").value;
-    let formDataProd = document.getElementById("data-producacao-site").value;
+    let formDomain = formData['dominio'];
+    let formIdClient = formData['idCliente'];
+    let formIdRunrunit = formData['idTicket'];
+    let formNameQa = formData['analistaQa'];
+    let formDataQA = formData['dataValidacao'];
+    let formNameProd = formData['analistaProducao'];
+    let formDataProd = formData['dataProducao'];
 
     let pontuacaoFinal = document.getElementById("pontuacao").value;
     let pontuacaoPorcento = document.getElementById("pontuacaoPorcento").value;
@@ -43,7 +43,7 @@ export async function generatePDF() {
 
     //Criar array de itens reprovados
     let reprovedItems = new Array();
-    for (const item of formData) {
+    for (const item of formData.items) {
         if (item.approved === false) {
             reprovedItems.push({
                 "category": item.catLabel,

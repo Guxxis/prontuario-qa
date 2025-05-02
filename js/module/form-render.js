@@ -1,94 +1,48 @@
 import { construcInputForm } from "./form-inputs.js";
 import { progressBar, countItens } from "./progress-bar.js";
 import { attachField } from "./form-attach.js";
-import { updateIten, addImage } from "../app.js";
 import { DataManager } from "./data-manager.js";
 
-// Função para salvar os valores preenchidos
-// function saveFormData() {
-//     const inputs = document.querySelectorAll("input, textarea");
-//     const formData = {};
-//     inputs.forEach(input => {
-//         if (input.type === "radio") {
-//             if (input.checked) {
-//                 formData[input.name] = input.value; // Salva apenas o radio selecionado
-//             }
-//         } else {
-//             formData[input.name] = input.value; // Salva os outros campos normalmente
-//         }
-//     });
-//     return formData;
-// }
-
-// Função para restaurar os valores preenchidos
-// function restoreFormData(formData) {
-//     const inputs = document.querySelectorAll("input, textarea");
-//     inputs.forEach(input => {
-//         if (input.type === "radio") {
-//             if (formData[input.name] === input.value) {
-//                 input.checked = true; // Restaura o radio selecionado
-//                 if (input.value === "nao") {
-//                     const itemKey = input.name.split(";")[1]
-//                     const attachContainer = document.getElementById(`image-container-${itemKey}`);
-//                     const commentContainer = document.getElementById(`text-container-${itemKey}`);
-//                     attachContainer.style.display = "block";
-//                     commentContainer.style.display = "block";
-//                 }
-//             }
-//         } else if (formData[input.name]) {
-//             input.value = formData[input.name]; // Restaura os outros campos
-//         }
-//     });
-// }
-
-// Função principal para renderizar o formulário
 export async function renderForm(jsonItens, orderBy = 'cat') {
     try {
-        // const jsonItens = await getJson('./data/itens.json');
-
-        // Salvar os dados preenchidos antes de limpar
-        // const savedData = saveFormData();
-
-        // Limpa o formulário antes de renderizar novamente
-        const formContainer = document.getElementById("form-container");
-        formContainer.innerHTML = "";
 
         // Organiza o formulário com base na opção (categoria ou ferramenta)
-        construcInputForm(jsonItens, orderBy);
-
-        // Restaurar os dados preenchidos
-        // restoreFormData(savedData);
+        construcInputForm(jsonItens[0].items, orderBy);
 
         // Atualiza a barra de progresso
         progressBar();
         countItens();
         attachField();
 
-        // carregarImagensDoSessionStorage()
-        // console.log(imageList);
-
         const form = document.querySelector('#formValidacao');
         const campos = form.querySelectorAll('input, textarea, select');
-        const storageItens = DataManager.load();
-
+        
         // Carrega os dados
         campos.forEach(campo => {
+            const storageItens = DataManager.load()[0];
             const fieldArray = campo.name.split('--');
             const fieldIndex = fieldArray[1]
-            const fieldComp = fieldArray[0]
-            if (campo.type === 'radio' || campo.classList === 'btn-check') {
-                const itemIndex = storageItens.findIndex(item => item.item === fieldIndex);
-                if (storageItens[itemIndex].approved === true) {
+            const fieldComp = fieldArray
+            const itemIndex = storageItens.items.findIndex(item => item.item === fieldIndex);
+            if (campo.type === 'radio' && campo.className === 'btn-check') {
+                if (storageItens.items[itemIndex].approved === true) {
                     campo.checked = campo.value === 'sim' ? true : false;
                 }
-                if (storageItens[itemIndex].approved === false) {
+                if (storageItens.items[itemIndex].approved === false) {
                     campo.checked = campo.value === 'nao' ? true : false;
                     const attachContainer = document.getElementById(`image-container--${fieldIndex}`);
                     const commentContainer = document.getElementById(`text-container--${fieldIndex}`);
                     attachContainer.style.display = "block";
                     commentContainer.style.display = "block";
                 }
+            } else if (campo.type === 'text' && fieldComp === 'text-field'){
+                campo.value = storageItens.items[itemIndex].comment;
             }
+            Object.keys(storageItens).forEach(header => {
+                if(campo.id == header) {
+                    campo.value = storageItens[header];
+                }
+            })
 
         });
 
@@ -98,13 +52,13 @@ export async function renderForm(jsonItens, orderBy = 'cat') {
                 const fieldArray = campo.name.split('--');
                 const fieldIndex = fieldArray[1]
                 const fieldComp = fieldArray[0]
-                if (campo.type === 'radio' || campo.classList === 'btn-check') {
+                if (campo.type === 'radio' && campo.className === 'btn-check') {
                     const approved = campo.value == "sim" ? true : false;
-                    updateIten(fieldIndex, "approved", approved);
-                }
-
-                if (campo.type === 'text' || fieldComp === 'text-field') {
-                    updateIten(fieldIndex, "comment", campo.value);
+                    DataManager.updateItem(fieldIndex, "approved", approved);
+                } else if (campo.type === 'text' && fieldComp === 'text-field') {
+                    DataManager.updateItem(fieldIndex, "comment", campo.value);
+                } else {
+                    DataManager.updateHeader(campo.id,campo.value)
                 }
             });
         });

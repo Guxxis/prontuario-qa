@@ -1,14 +1,14 @@
-import { addImage } from "../app.js";
+import { DataManager } from "./data-manager.js";
 import { handleFiles } from "./handle-file.js";
 import { handleAspectRatio } from "./handle-file.js";
 import { compressImage } from "./handle-file.js";
 
 function updateAttachPreview() {
-    const storageItens = JSON.parse(sessionStorage.getItem('prontuarioValidacao'));
+    const storageItens = DataManager.load();
 
-    Object.keys(storageItens).forEach(key => {
-        const storageImages = storageItens[key].images
-        const storageIndex = storageItens[key].item
+    Object.keys(storageItens[0].items).forEach(key => {
+        const storageImages = storageItens[0].items[key].images
+        const storageIndex = storageItens[0].items[key].item
         const preview = document.getElementById(`image-preview--${storageIndex}`)
         preview.innerHTML = "";
 
@@ -26,7 +26,7 @@ function updateAttachPreview() {
 
             deleteButton.addEventListener("click", () => {
                 storageImages.splice(index, 1);
-                sessionStorage.setItem('prontuarioValidacao', JSON.stringify(storageItens));
+                DataManager.save(storageItens)
                 updateAttachPreview(storageItens);
             });
 
@@ -96,7 +96,7 @@ export function attachField() {
                     "height": imageAspectRatio.height,
 
                 }
-                addImage(itemId, dataImage)
+                DataManager.addImage(itemId, dataImage)
             }
 
             updateAttachPreview();
@@ -121,7 +121,7 @@ export function attachField() {
                     "height": imageAspectRatio.height,
 
                 }
-                addImage(itemId, dataImage)
+                DataManager.addImage(itemId, dataImage)
             }
 
             updateAttachPreview();

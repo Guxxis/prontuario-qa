@@ -58,24 +58,23 @@ echo $_SESSION['user'];
                     <label class="form-label" for="dominio">Dominio:</label>
                     <input list="list-dominios" class="form-control" type="text" id="dominio" name="dominio" placeholder="exemplo.com.br" required>
                     
-                    <label class="form-label" for="id-cliente">ID Cliente</label>
-                    <input class="form-control" type="text" id="id-cliente" name="id-cliente" placeholder="000-00000-00" required>
+                    <label class="form-label" for="idCliente">ID Cliente</label>
+                    <input class="form-control" type="text" id="idCliente" name="id-cliente" placeholder="000-00000-00" required>
                     
-                    <label class="form-label" for="id-card-runrunit">ID Card Runrun It</label>
-                    <input class="form-control" type="number" id="id-card-runrunit" name="id-card-runrunit" placeholder="100100" required>
+                    <label class="form-label" for="idTicket">ID Card Runrun It</label>
+                    <input class="form-control" type="number" id="idTicket" name="id-card-runrunit" placeholder="100100" required>
                     
-                    <label class="form-label" for="nome-analista-qa">Nome Analista de QA:</label>
-                    <input list="list-analistas" class="form-control" type="text" id="nome-analista-qa" name="nome-analista-qa" placeholder="Nome Completo" required>
+                    <label class="form-label" for="analistaQa">Nome Analista de QA:</label>
+                    <input list="list-analistas" class="form-control" type="text" id="analistaQa" name="nome-analista-qa" placeholder="Nome Completo" required>
                     
-                    <label class="form-label" for="data-validacao-site">Data de Validação do Site</label>
-                    <input class="form-control" type="date" id="data-validacao-site" name="data-validacao-site" required>
+                    <label class="form-label" for="dataValidacao">Data de Validação do Site</label>
+                    <input class="form-control" type="date" id="dataValidacao" name="data-validacao-site" required>
 
-                    <label class="form-label" for="nome-analista-producao">Nome Analista Produção</label>
-                    <input list="list-analistas" class="form-control" type="text" id="nome-analista-producao" name="nome-analista-producao" placeholder="Nome Completo" required>
+                    <label class="form-label" for="analistaProducao">Nome Analista Produção</label>
+                    <input list="list-analistas" class="form-control" type="text" id="analistaProducao" name="nome-analista-producao" placeholder="Nome Completo" required>
                     
-                    
-                    <label class="form-label" for="data-producacao-site">Data de Finalização do Site</label>
-                    <input class="form-control" type="date" id="data-producacao-site" name="data-producacao-site" required>
+                    <label class="form-label" for="dataProducao">Data de Finalização do Site</label>
+                    <input class="form-control" type="date" id="dataProducao" name="data-producacao-site" required>
                     
                     <datalist id="list-dominios"></datalist>
                     <datalist id="list-analistas"></datalist>

@@ -44,7 +44,7 @@ export function handleAspectRatio (base64Image, maxWidth, maxHeight) {
     });
 }
 
-export function compressImage(base64, quality = 0.6) {
+export function compressImage(base64, quality = 1) {
     return new Promise((resolve) => {
       const img = new Image();
       img.src = base64;

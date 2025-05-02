@@ -1,7 +1,7 @@
 import { DataManager } from "./data-manager.js";
 
 export function formCalculator() {
-    let formData = DataManager.load();
+    let formData = DataManager.load()[0].items;
     fetch("inc/calcular-pontuacao.php", {
         method: "POST",
         headers: {

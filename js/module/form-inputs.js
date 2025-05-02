@@ -9,6 +9,7 @@ function groupBy(items, key) {
 
 export function construcInputForm(jsonItens, orderBy) {
     const formContainer = document.getElementById("form-container");
+    formContainer.innerHTML = "";
 
     let category = '';
     let subCategory = '';
@@ -24,10 +25,7 @@ export function construcInputForm(jsonItens, orderBy) {
             break;
         default:
             console.log("Opção de organização não aceita!");
-
     }
-
-
 
     const categorias = groupBy(jsonItens, orderBy);
 
@@ -40,7 +38,6 @@ export function construcInputForm(jsonItens, orderBy) {
         // Criar div do Cabeçalho
         const divRowCat = document.createElement("div");
         divRowCat.classList.add("row");
-
 
         // Progresso da Categoria
         const progressDiv = document.createElement("div");
