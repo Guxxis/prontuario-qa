@@ -1,5 +1,6 @@
 {
     "require": {
-        "google/cloud-bigquery": "^1.30"
+        "google/cloud-bigquery": "^1.30",
+        "vlucas/phpdotenv": "^5.6"
     }
 }

@@ -1,7 +1,8 @@
 <?php
 
 // Função para carregar o arquivo .env
-function loadEnv($path = '../.env') {
+function loadEnv($path = '../.env')
+{
     if (!file_exists($path)) {
         die("Arquivo .env não encontrado!");
     }

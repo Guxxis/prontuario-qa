@@ -5,6 +5,7 @@ import { getJson } from "./module/get-json.js";
 import { toggleAttach } from "./module/form-render.js";
 import { formValidation } from "./module/form-validation.js";
 import { DataManager } from "./module/data-manager.js";
+import { postData } from "./module/save-form.js";
 
 function formInit(itemList) {
     const dataJSON = DataManager.load();
@@ -38,8 +39,8 @@ function formInit(itemList) {
 async function init() {
 
     //Lista de Itens
-    let jsonItens = await getJson('./data/itens.json');
-    // let jsonItens = await getJson('./data/itens-test.json');
+    // let jsonItens = await getJson('./data/itens.json');
+    let jsonItens = await getJson('./data/itens-test.json');
     let jsonDomains = await getJson('./data/dominios.json');
     let jsonAnalist = await getJson('./data/analistas.json');
 
@@ -72,13 +73,13 @@ async function init() {
     });
 
     //Botao de Gerar PDF
-    document.getElementById("btnGerarPDF").addEventListener("click", (e) => {
-        if (!formValidation(e)) {
-            // e.preventDefault(); // Impede o envio se houver erro
-        } else {
-            generatePDF();
-        }
-    });
+    // document.getElementById("btnGerarPDF").addEventListener("click", (e) => {
+    //     if (!formValidation(e)) {
+    //         // e.preventDefault(); // Impede o envio se houver erro
+    //     } else {
+    //         generatePDF();
+    //     }
+    // });
 
     //Botao de Calcular Pontuação
     document.getElementById("btnCalcular").addEventListener("click", () => {
@@ -90,6 +91,10 @@ async function init() {
         if (e.target.matches('.btn-check')) {
             toggleAttach(e);
         }
+    });
+    document.getElementById("btnGerarPDF").addEventListener("click", async function (e) {
+        e.preventDefault();
+        postData();
     });
 
 }
