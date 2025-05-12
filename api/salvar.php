@@ -33,12 +33,38 @@ try {
     error_log('Dados recebidos: ' . print_r($data, true));
 
 
+    // $dados = [
+    //     'nome' => $data['dominio'] ?? '',
+    //     'email' => $data['dominio'] ?? '',
+    //     'mensagem' => $data['dominio'] ?? '',
+    // ];
+
     $dados = [
-        'nome' => $data['dominio'] ?? '',
-        'email' => $data['dominio'] ?? '',
-        'mensagem' => $data['dominio'] ?? '',
-        'dataEnvio' => date('c')
+        "id" => $data["id"],
+        "dominio" => $data["dominio"],
+        "op_tipo" => $data["op_tipo"],
+        "id_cliente" => $data["id_cliente"],
+        "id_ticket" => $data["id_ticket"],
+        "analista_qa" => $data["analista_qa"],
+        "data_validacao" => $data["data_validacao"],
+        "analista_producao" => $data["analista_producao"],
+        "data_producao" => $data["data_producao"],
+        "pontuacao" => $data["pontuacao"],
+        "porcentagem" => $data["porcentagem"],
+        "pontuacao_maxima" => $data["pontuacao_maxima"],
+        "status" => $data["status"],
+        "core_web_vitals" => [ 
+            "performance" => $data["core_web_vitals"]["performance"],
+        ],
+        "metadados_seo" => [
+            "paginas_mpis" => $data["metadados_seo"]["paginas_mpis"],
+            "links_externos" => $data["metadados_seo"]["links_externos"],
+        ],
+        "validacao_codigo" => [
+            "sem_arquivos_old"  => $data["validacao_codigo"]["sem_arquivos_old"]
+        ]
     ];
+
 
     // Insere e aguarda resposta explícita
     $resultado = inserirNoBigQuery($dados);
