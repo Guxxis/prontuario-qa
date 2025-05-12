@@ -16,7 +16,7 @@ export async function renderForm(jsonItens, orderBy = 'tool') {
 
         const form = document.querySelector('#formValidacao');
         const campos = form.querySelectorAll('input, textarea, select');
-        
+
         // Carrega os dados
         campos.forEach(campo => {
             const storageItens = DataManager.load()[0];
@@ -35,11 +35,18 @@ export async function renderForm(jsonItens, orderBy = 'tool') {
                     attachContainer.style.display = "block";
                     commentContainer.style.display = "block";
                 }
-            } else if (campo.type === 'text' && fieldComp === 'text-field'){
+            } else if (campo.type === 'text' && fieldComp === 'text-field') {
                 campo.value = storageItens.items[itemIndex].comment;
+            } else if (campo.type === 'radio' && campo.name === 'opTipo') {
+                if (storageItens.opTipo === "Validação") {
+                    campo.checked = campo.value === 'Validação' ? true : false;
+                }
+                if (storageItens.opTipo === "Correção") {
+                    campo.checked = campo.value === 'Correção' ? true : false;
+                }
             }
             Object.keys(storageItens).forEach(header => {
-                if(campo.id == header) {
+                if (campo.id == header) {
                     campo.value = storageItens[header];
                 }
             })
@@ -55,10 +62,12 @@ export async function renderForm(jsonItens, orderBy = 'tool') {
                 if (campo.type === 'radio' && campo.className === 'btn-check') {
                     const approved = campo.value == "sim" ? true : false;
                     DataManager.updateItem(fieldIndex, "approved", approved);
+                } else if (campo.type === 'radio' && campo.name === 'opTipo') {
+                    DataManager.updateHeader(campo.name, campo.value);
                 } else if (campo.type === 'text' && fieldComp === 'text-field') {
                     DataManager.updateItem(fieldIndex, "comment", campo.value);
                 } else {
-                    DataManager.updateHeader(campo.id,campo.value)
+                    DataManager.updateHeader(campo.id, campo.value)
                 }
             });
         });

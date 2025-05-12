@@ -21,6 +21,7 @@ function formInit(itemList) {
         }));
         const formJson = [{
             "dominio": null,
+            "opTipo": null,
             "idCliente": null,
             "idTicket": null,
             "analistaQa": null,
@@ -92,12 +93,13 @@ async function init() {
         if (e.target.matches('.btn-check')) {
             toggleAttach(e);
         }
-        if (e.target.matches('#opCorrecao')) {
-            const inputAnalistaProd = document.getElementById(`analistaProducao`);
-            inputAnalistaProd.setAttribute("disabled", "");
-            inputAnalistaProd.removeAttribute("required");
-        }
+        // if (e.target.matches('#opCorrecao')) {
+        //     const inputAnalistaProd = document.getElementById(`analistaProducao`);
+        //     inputAnalistaProd.setAttribute("disabled", "");
+        //     inputAnalistaProd.removeAttribute("required");
+        // }
     });
+
     document.getElementById("btnGerarPDF").addEventListener("click", async function (e) {
         e.preventDefault();
         postData();

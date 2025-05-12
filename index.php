@@ -55,13 +55,13 @@ echo $_SESSION['user'];
                         <div class="invalid-feedback">Falta Itens para Validar</div>
                     </div>
 
-                    <label class="form-label" for="opCheck">Prontuario de?</label><br>
+                    <label class="form-label" for="opTipo">Tipo de Prontuario</label><br>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="opProntuario" id="opValidação" value="validacao" checked>
-                        <label class="form-check-label" for="opValidação">Validação</label>
+                        <input class="form-check-input" type="radio" name="opTipo" id="opValidacao" value="Validação">
+                        <label class="form-check-label" for="opValidacao">Validação</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="opProntuario" id="opCorrecao" value="correcao">
+                        <input class="form-check-input" type="radio" name="opTipo" id="opCorrecao" value="Correção">
                         <label class="form-check-label" for="opCorrecao">Correção</label>
                     </div><br>
 
