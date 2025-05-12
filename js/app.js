@@ -10,7 +10,7 @@ import { postData } from "./module/save-form.js";
 function formInit(itemList) {
     const dataJSON = DataManager.load();
     if (dataJSON) {
-        return dataJSON ;
+        return dataJSON;
     } else {
         const itensIniciais = itemList;
         const formItems = itensIniciais.map(item => ({
@@ -69,7 +69,7 @@ async function init() {
     const orderSelect = document.getElementById("orderSelect");
 
     orderSelect.addEventListener("change", (e) => {
-        renderForm(formInputs,  e.target.value);
+        renderForm(formInputs, e.target.value);
     });
 
     //Botao de Gerar PDF
@@ -88,8 +88,14 @@ async function init() {
 
     //Evento de ativação dos campos escondidos quando reprovado
     document.addEventListener("change", (e) => {
+        console.log(e.target);
         if (e.target.matches('.btn-check')) {
             toggleAttach(e);
+        }
+        if (e.target.matches('#opCorrecao')) {
+            const inputAnalistaProd = document.getElementById(`analistaProducao`);
+            inputAnalistaProd.setAttribute("disabled", "");
+            inputAnalistaProd.removeAttribute("required");
         }
     });
     document.getElementById("btnGerarPDF").addEventListener("click", async function (e) {

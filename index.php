@@ -19,7 +19,7 @@ echo $_SESSION['user'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prontuario QA</title>
-    
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -48,31 +48,42 @@ echo $_SESSION['user'];
                 <div class="col-4 left-panel">
 
                     <div id="progress-container">
-                        <p>Progresso Validação </p>
+                        <p>Progresso Prontuario</p>
                         <div class="progress mb-3">
                             <div id="barraProgresso" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
                         </div>
                         <div class="invalid-feedback">Falta Itens para Validar</div>
                     </div>
 
+                    <label class="form-label" for="opCheck">Prontuario de?</label><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="opProntuario" id="opValidação" value="validacao" checked>
+                        <label class="form-check-label" for="opValidação">Validação</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="opProntuario" id="opCorrecao" value="correcao">
+                        <label class="form-check-label" for="opCorrecao">Correção</label>
+                    </div><br>
+
+
                     <label class="form-label" for="dominio">Dominio:</label>
                     <input list="list-dominios" class="form-control" type="text" id="dominio" name="dominio" placeholder="exemplo.com.br" required>
-                    
+
                     <label class="form-label" for="idCliente">ID Cliente</label>
                     <input class="form-control" type="text" id="idCliente" name="id-cliente" placeholder="000-00000-00" required>
-                    
+
                     <label class="form-label" for="idTicket">ID Card Runrun It</label>
                     <input class="form-control" type="number" id="idTicket" name="id-card-runrunit" placeholder="100100" required>
-                    
+
                     <label class="form-label" for="analistaQa">Nome Analista de QA:</label>
                     <input list="list-analistas" class="form-control" type="text" id="analistaQa" name="nome-analista-qa" placeholder="Nome Completo" required>
-                    
+
                     <label class="form-label" for="dataValidacao">Data de Validação do Site</label>
                     <input class="form-control" type="date" id="dataValidacao" name="data-validacao-site" required>
 
                     <label class="form-label" for="analistaProducao">Nome Analista Produção</label>
                     <input list="list-analistas" class="form-control" type="text" id="analistaProducao" name="nome-analista-producao" placeholder="Nome Completo" required>
-                    
+
                     <label class="form-label" for="dataProducao">Data de Finalização do Site</label>
                     <input class="form-control" type="date" id="dataProducao" name="data-producacao-site" required>
 
