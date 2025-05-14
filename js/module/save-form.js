@@ -55,7 +55,7 @@ export async function postData() {
             .then(response => response.json())
             .then(data => {
                 if (data.sucesso) {
-                    DataManager.drop();
+                    // DataManager.drop();
                     alert('Enviado com sucesso!');
                 } else {
                     alert('Erro ao enviar!');
@@ -68,7 +68,7 @@ export async function postData() {
         // 7. Limpeza opcional após sucesso
         // DataManager.clear();
 
-        return data;
+        // return data;
 
     } catch (error) {
         console.error("Erro ao enviar dados:", error);

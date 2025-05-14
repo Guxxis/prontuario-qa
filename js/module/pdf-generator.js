@@ -42,6 +42,8 @@ export async function generatePDF() {
     let pontuacaoPorcento = formData.resultado['porcentagem'];
     let pontuacaoStatus = formData.resultado['status'];
 
+    const maxLenght = 550;
+
     //Criar array de itens reprovados
     let reprovedItems = new Array();
     for (const item of formData.items) {
@@ -154,11 +156,12 @@ export async function generatePDF() {
     y += 25;
     doc.text(`Comentarios Gerais:  `, 15, y);
 
+    const textWrap = doc.splitTextToSize(formComment, maxLenght);
     doc.setFont('helvetica', 'normal');
     doc.setTextColor('#000000');
     doc.setFontSize(12);
     y += 16;
-    doc.text(`${formComment}`, 20, y);
+    doc.text(textWrap, 20, y);
 
     //Rodapé
     doc.setFont('courier', 'bold');
@@ -209,13 +212,24 @@ export async function generatePDF() {
             //Caso tenha comentario
             if (reprovedItem["comment"] != null) {
 
-                py += 12;
-                doc.text(`teste.: ${reprovedItem["comment"].length}`, 30, py);
-                
+                const textMaxLength = 430;
+                const textCommentWrap = doc.splitTextToSize(reprovedItem["comment"], textMaxLength);
+                const textArrayLength = textCommentWrap.length;
+                // py += 12;
+                // doc.text(`teste.: ${reprovedItem["comment"].length}`, 30, py);
+
                 py += 12;
                 doc.setFont('times', 'normal');
                 doc.setFontSize(12);
-                doc.text(`obs.: ${reprovedItem["comment"]}`, 30, py);
+                doc.text("obs: ", 25, py);
+                doc.text(textCommentWrap, 40, py);
+                console.log(textArrayLength);
+
+                console.log(py)
+                py += textArrayLength * 12;
+
+                console.log(py)
+
             }
 
             //Caso tenha imagem
