@@ -203,7 +203,7 @@ export async function generatePDF() {
 
             //Caso tenha imagem
             py += 10;
-            if (reprovedItem["image"]) {
+            if (reprovedItem["image"].length > 0) {
                 let px = 25
                 for (let i = 0; i < reprovedItem["image"].length; i++) {
                     const imageBase64 = reprovedItem["image"][i].base64;
