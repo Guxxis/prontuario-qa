@@ -223,17 +223,12 @@ export async function generatePDF() {
                 doc.setFontSize(12);
                 doc.text("obs: ", 25, py);
                 doc.text(textCommentWrap, 40, py);
-                console.log(textArrayLength);
 
-                console.log(py)
                 py += textArrayLength * 12;
-
-                console.log(py)
-
             }
 
             //Caso tenha imagem
-            py += 10;
+            // py += 10;
             if (reprovedItem["image"].length > 0) {
                 let px = 25
                 for (let i = 0; i < reprovedItem["image"].length; i++) {
