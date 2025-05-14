@@ -6,6 +6,10 @@ export const DataManager = {
     return savedData ? JSON.parse(savedData) : null;
   },
 
+  drop() {
+    sessionStorage.removeItem('prontuarioValidacao');
+  },
+
   // Salva dados no sessionStorage  
   save(data) {
     try {

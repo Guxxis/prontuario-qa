@@ -22,24 +22,48 @@ export async function postData() {
         //     }
         // };
 
-        console.log(payload);
+        // console.log(payload);
 
         // 4. Faz a requisição
-        const response = await fetch('api/salvar.php', {
+        // const response = await fetch('api/salvar.php', {
+        //     method: 'POST',
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //         'X-Requested-With': 'XMLHttpRequest'
+        //     },
+        //     body: JSON.stringify(payload)
+        // });
+
+        // // 5. Processa a resposta
+        // const data = await response.json();
+
+        // if (!response.ok) {
+        //     throw new Error(data.mensagem || 'Erro no servidor');
+        // } else {
+        //     DataManager.drop();
+        //     alert('Enviado com sucesso!');
+        // }
+
+        fetch('api/salvar.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
                 'X-Requested-With': 'XMLHttpRequest'
             },
             body: JSON.stringify(payload)
-        });
-
-        // 5. Processa a resposta
-        const data = await response.json();
-
-        if (!response.ok) {
-            throw new Error(data.mensagem || 'Erro no servidor');
-        }
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.sucesso) {
+                    DataManager.drop();
+                    alert('Enviado com sucesso!');
+                } else {
+                    alert('Erro ao enviar!');
+                }
+            })
+            .catch(error => {
+                console.error("erro ao encaminhar dados: ", error)
+            });
 
         // 7. Limpeza opcional após sucesso
         // DataManager.clear();

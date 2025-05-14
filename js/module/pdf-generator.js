@@ -35,10 +35,11 @@ export async function generatePDF() {
     let formDataQA = formData['dataValidacao'];
     let formNameProd = formData['analistaProducao'];
     let formDataProd = formData['dataProducao'];
+    let formComment = formData['comentarioGeral'];
+    let formType = formData['opTipo'];
 
     let pontuacaoFinal = formData.resultado['pontuacao'];
     let pontuacaoPorcento = formData.resultado['porcentagem'];
-    let pontuacaoMax = formData.resultado['pontuacaoMaxima'];
     let pontuacaoStatus = formData.resultado['status'];
 
     //Criar array de itens reprovados
@@ -147,6 +148,18 @@ export async function generatePDF() {
         doc.text(`Site sem erros `, 15, y);
     }
 
+    doc.setFont('helvetica', 'bold');
+    doc.setTextColor('#000000');
+    doc.setFontSize(16);
+    y += 25;
+    doc.text(`Comentarios Gerais:  `, 15, y);
+
+    doc.setFont('helvetica', 'normal');
+    doc.setTextColor('#000000');
+    doc.setFontSize(12);
+    y += 16;
+    doc.text(`${formComment}`, 20, y);
+
     //Rodapé
     doc.setFont('courier', 'bold');
     doc.setTextColor('#525252')
@@ -194,7 +207,11 @@ export async function generatePDF() {
             doc.text(`- ${reprovedItem["item"]}`, 20, py);
 
             //Caso tenha comentario
-            if (reprovedItem["comment"]) {
+            if (reprovedItem["comment"] != null) {
+
+                py += 12;
+                doc.text(`teste.: ${reprovedItem["comment"].length}`, 30, py);
+                
                 py += 12;
                 doc.setFont('times', 'normal');
                 doc.setFontSize(12);
@@ -210,7 +227,7 @@ export async function generatePDF() {
                     const imageWight = reprovedItem["image"][i].width;
                     const imageHeigth = reprovedItem["image"][i].height;
                     //caso ultrapasse tamanho da pagina
-                    if((px + imageHeigth) >= 435) {
+                    if ((px + imageHeigth) >= 435) {
                         py += 10 + imageHeigth;
                         px = 25;
                         doc.addImage(imageBase64, px, py, imageWight, imageHeigth);
