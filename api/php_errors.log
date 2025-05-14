@@ -1,464 +1,464 @@
-[12-May-2025 21:51:18 Europe/Berlin] Dados recebidos: Array
+[14-May-2025 04:32:20 Europe/Berlin] Dados recebidos: Array
 (
-    [id] => mali0grir6dczedahyh
-    [dominio] => exemplo.com.br
-    [op_tipo] => Correção
-    [id_cliente] => 222222
-    [id_ticket] => 11111111
-    [analista_qa] => Gustavo Gonçalves
+    [id] => manbs2fx3a0iumbn9i1
+    [dominio] => exemplo.net
+    [op_tipo] => Validação
+    [id_cliente] => 35353535
+    [id_ticket] => 1414141414
+    [analista_qa] => Ana Diniz
     [data_validacao] => 2025-05-13
-    [analista_producao] => Lucas Santos
-    [data_producao] => 2025-05-12
-    [pontuacao] => 232
-    [porcentagem] => 89.23
-    [pontuacao_maxima] => 260
-    [status] => Reprovado
+    [analista_producao] => Sofia Silva
+    [data_producao] => 2025-05-06
+    [pontuacao] => 287
+    [porcentagem] => 100
+    [pontuacao_maxima] => 287
+    [status] => Aprovado
     [core_web_vitals] => Array
         (
-            [mobile_banner] => 1
+            [accessibility] => 1
+            [best_pratices] => 1
+            [performance] => 1
+            [seo] => 1
             [footer_lazy_load] => 1
-            [seo] => 
-            [best_pratices] => 
-            [accessibility] => 
-            [performance] => 
+            [smartphone_banner] => 1
         )
 
     [metadados_seo] => Array
         (
-            [paginas_mpis] => 1
-            [mapa_site_links] => 1
-            [page_titles_multiple] => 1
-            [coluna_lateral] => 1
-            [url_coerente_h1_pagina] => 1
-            [menu_header_footer] => 1
-            [produtos_destaque] => 1
-            [empresa_segmento_h1_home] => 1
             [banners_link_mpis] => 1
+            [breadcrumbs] => 1
+            [enterprise_name_h1_home] => 1
+            [featured_products] => 1
+            [menu_header_footer] => 1
+            [mpis_pages] => 1
+            [side_column] => 1
+            [sitemap_links] => 1
+            [url_match_h1_page] => 1
+            [links_internal_nofollow] => 1
             [meta_discriptions_duplicate] => 1
             [meta_discriptions_missing] => 1
-            [page_titles_over_caracteres] => 1
             [meta_discriptions_over_caracters] => 1
-            [page_titles_missing] => 1
             [page_titles_duplicate] => 1
-            [links_externos] => 1
+            [page_titles_missing] => 1
+            [page_titles_multiple] => 1
+            [page_titles_over_caracteres] => 1
         )
 
     [validacao_codigo] => Array
         (
-            [sem_arquivos_old] => 1
-            [font_awesome] => 
-            [w3c_html] => 1
+            [backup_bd] => 1
+            [buttons_clickable] => 1
+            [config_gitignore] => 1
+            [old_archives] => 1
+            [popup_cookie] => 1
+            [content_lorem_ipsum_placeholder] => 1
+            [font_awesome] => 1
             [w3c_css] => 1
-            [lorem_ipsum_placeholder] => 1
+            [w3c_html] => 1
         )
 
     [estrutura_semantica] => Array
         (
             [h1_duplicate] => 1
+            [h1_missing] => 1
             [h1_multiple] => 1
             [h2_missing] => 1
-            [h1_missing] => 1
-        )
-
-    [fluxo] => Array
-        (
-            [pull_request] => 1
-            [backup_bd] => 1
         )
 
     [urls] => Array
         (
+            [redirect_serp_404] => 1
+            [redirect_www] => 1
+            [urls_contains_space] => 1
+            [urls_multiple_slashes] => 1
+            [urls_non_ascii_caracters] => 1
             [urls_over_caracters] => 1
-            [contains_space] => 1
-            [multiple_slashes] => 1
-            [non_ascii_caracters] => 1
-            [uppercase] => 1
-        )
-
-    [formulario] => Array
-        (
-            [recaptcha_formulario] => 1
-            [mascara_formulario] => 1
-        )
-
-    [imagens] => Array
-        (
-            [favicon] => 
-            [image_over] => 1
-            [image_banner_over] => 1
-        )
-
-    [layout_usabilidade] => Array
-        (
-            [botao_voltar_topo] => 1
-            [mobile_elementos_desproporcionais] => 1
-            [mobile_footer] => 1
-            [mobile_menu_hamburguer] => 1
-            [scroll_lateral] => 1
-            [mobile_mapa_google] => 1
-            [disproportionate_elementes] => 1
-            [broke_image_components] => 1
-            [contraste_elementos] => 1
-            [botoes_clicaveis] => 1
-            [breadcrumbs] => 1
-            [active_menu] => 1
+            [urls_uppercase] => 1
         )
 
     [contato] => Array
         (
-            [formatacao_endereco] => 1
-            [formatacao_telefone] => 1
-            [formatacao_email] => 1
-            [email] => 1
-            [endereco] => 1
-            [telefone] => 1
-            [botao_cta_whatsapp] => 1
-            [faixa_cta] => 1
+            [cta_container] => 1
+            [cta_whatsapp] => 1
+            [formatting_address] => 1
+            [formatting_fone] => 1
+            [formatting_mail] => 1
+            [text_address] => 1
+            [text_fone] => 1
+            [text_mail] => 1
+        )
+
+    [formulario] => Array
+        (
+            [form_leads] => 1
+            [form_mask] => 1
+            [form_recaptcha] => 1
+        )
+
+    [imagens] => Array
+        (
+            [image_broke] => 1
+            [image_favicon] => 1
+            [image_banner_over] => 1
+            [image_over] => 1
+        )
+
+    [layout_usabilidade] => Array
+        (
+            [buttons_active_menu] => 1
+            [buttons_back_top] => 1
+            [desktop_disproportionate_elements] => 1
+            [elements_contrast] => 1
+            [horizontal_scroll] => 1
+            [smartphone_disproportionate_elements] => 1
+            [smartphone_footer] => 1
+            [smartphone_google_map] => 1
+            [smartphone_mobile_menu] => 1
+            [tablet_disproportionate_elements] => 1
+            [tablet_footer] => 1
+            [tablet_google_map] => 1
+            [tablet_mobile_menu] => 1
         )
 
     [resposta_servidor] => Array
         (
-            [response_code_server_error] => 1
             [response_code_client_error] => 1
-            [response_code_success] => 1
             [response_code_redirection] => 1
+            [response_code_server_error] => 1
+            [response_code_success] => 1
         )
 
     [seguranca] => Array
         (
-            [security_missing_secure_referrer_policy] => 1
-            [security_missing_x_frame_options] => 1
-            [security_missing_x_content_type_options] => 1
-            [security_missing_content_security_policy] => 1
-            [popup_cookie] => 1
-            [security_missing_hsts] => 1
-            [security_mixed_content] => 1
             [security_https_urls] => 1
+            [security_missing_content_security_policy] => 1
+            [security_missing_hsts] => 1
+            [security_missing_secure_referrer_policy] => 1
+            [security_missing_x_content_type_options] => 1
+            [security_missing_x_frame_options] => 1
+            [security_mixed_content] => 1
         )
 
     [publicacao] => Array
         (
-            [spider] => 1
-            [sensedata] => 1
-            [searchconsole] => 1
-            [redirect_serp_404] => 1
-            [analytics] => 1
-            [mpisistema] => 1
-            [redirect_www] => 1
-            [gitignore] => 1
+            [config_analytics] => 1
+            [config_crm] => 1
+            [config_mpisistema] => 1
+            [config_searchconsole] => 1
+            [config_spider] => 1
         )
 
 )
 
-[12-May-2025 21:51:18 Europe/Berlin] Dados recebidos para inserção: Array
+[14-May-2025 04:32:20 Europe/Berlin] Dados recebidos para inserção: Array
 (
-    [id] => mali0grir6dczedahyh
-    [dominio] => exemplo.com.br
-    [op_tipo] => Correção
-    [id_cliente] => 222222
-    [id_ticket] => 11111111
-    [analista_qa] => Gustavo Gonçalves
+    [id] => manbs2fx3a0iumbn9i1
+    [dominio] => exemplo.net
+    [op_tipo] => Validação
+    [id_cliente] => 35353535
+    [id_ticket] => 1414141414
+    [analista_qa] => Ana Diniz
     [data_validacao] => 2025-05-13
-    [analista_producao] => Lucas Santos
-    [data_producao] => 2025-05-12
-    [pontuacao] => 232
-    [porcentagem] => 89.23
-    [pontuacao_maxima] => 260
-    [status] => Reprovado
+    [analista_producao] => Sofia Silva
+    [data_producao] => 2025-05-06
+    [pontuacao] => 287
+    [porcentagem] => 100
+    [pontuacao_maxima] => 287
+    [status] => Aprovado
     [core_web_vitals] => Array
         (
-            [mobile_banner] => 1
+            [accessibility] => 1
+            [best_pratices] => 1
+            [performance] => 1
+            [seo] => 1
             [footer_lazy_load] => 1
-            [seo] => 
-            [best_pratices] => 
-            [accessibility] => 
-            [performance] => 
+            [smartphone_banner] => 1
         )
 
     [metadados_seo] => Array
         (
-            [paginas_mpis] => 1
-            [mapa_site_links] => 1
-            [page_titles_multiple] => 1
-            [coluna_lateral] => 1
-            [url_coerente_h1_pagina] => 1
-            [menu_header_footer] => 1
-            [produtos_destaque] => 1
-            [empresa_segmento_h1_home] => 1
             [banners_link_mpis] => 1
+            [breadcrumbs] => 1
+            [enterprise_name_h1_home] => 1
+            [featured_products] => 1
+            [menu_header_footer] => 1
+            [mpis_pages] => 1
+            [side_column] => 1
+            [sitemap_links] => 1
+            [url_match_h1_page] => 1
+            [links_internal_nofollow] => 1
             [meta_discriptions_duplicate] => 1
             [meta_discriptions_missing] => 1
-            [page_titles_over_caracteres] => 1
             [meta_discriptions_over_caracters] => 1
-            [page_titles_missing] => 1
             [page_titles_duplicate] => 1
-            [links_externos] => 1
+            [page_titles_missing] => 1
+            [page_titles_multiple] => 1
+            [page_titles_over_caracteres] => 1
         )
 
     [validacao_codigo] => Array
         (
-            [sem_arquivos_old] => 1
-            [font_awesome] => 
-            [w3c_html] => 1
+            [backup_bd] => 1
+            [buttons_clickable] => 1
+            [config_gitignore] => 1
+            [old_archives] => 1
+            [popup_cookie] => 1
+            [content_lorem_ipsum_placeholder] => 1
+            [font_awesome] => 1
             [w3c_css] => 1
-            [lorem_ipsum_placeholder] => 1
+            [w3c_html] => 1
         )
 
     [estrutura_semantica] => Array
         (
             [h1_duplicate] => 1
+            [h1_missing] => 1
             [h1_multiple] => 1
             [h2_missing] => 1
-            [h1_missing] => 1
-        )
-
-    [fluxo] => Array
-        (
-            [pull_request] => 1
-            [backup_bd] => 1
         )
 
     [urls] => Array
         (
+            [redirect_serp_404] => 1
+            [redirect_www] => 1
+            [urls_contains_space] => 1
+            [urls_multiple_slashes] => 1
+            [urls_non_ascii_caracters] => 1
             [urls_over_caracters] => 1
-            [contains_space] => 1
-            [multiple_slashes] => 1
-            [non_ascii_caracters] => 1
-            [uppercase] => 1
-        )
-
-    [formulario] => Array
-        (
-            [recaptcha_formulario] => 1
-            [mascara_formulario] => 1
-        )
-
-    [imagens] => Array
-        (
-            [favicon] => 
-            [image_over] => 1
-            [image_banner_over] => 1
-        )
-
-    [layout_usabilidade] => Array
-        (
-            [botao_voltar_topo] => 1
-            [mobile_elementos_desproporcionais] => 1
-            [mobile_footer] => 1
-            [mobile_menu_hamburguer] => 1
-            [scroll_lateral] => 1
-            [mobile_mapa_google] => 1
-            [disproportionate_elementes] => 1
-            [broke_image_components] => 1
-            [contraste_elementos] => 1
-            [botoes_clicaveis] => 1
-            [breadcrumbs] => 1
-            [active_menu] => 1
+            [urls_uppercase] => 1
         )
 
     [contato] => Array
         (
-            [formatacao_endereco] => 1
-            [formatacao_telefone] => 1
-            [formatacao_email] => 1
-            [email] => 1
-            [endereco] => 1
-            [telefone] => 1
-            [botao_cta_whatsapp] => 1
-            [faixa_cta] => 1
+            [cta_container] => 1
+            [cta_whatsapp] => 1
+            [formatting_address] => 1
+            [formatting_fone] => 1
+            [formatting_mail] => 1
+            [text_address] => 1
+            [text_fone] => 1
+            [text_mail] => 1
+        )
+
+    [formulario] => Array
+        (
+            [form_leads] => 1
+            [form_mask] => 1
+            [form_recaptcha] => 1
+        )
+
+    [imagens] => Array
+        (
+            [image_broke] => 1
+            [image_favicon] => 1
+            [image_banner_over] => 1
+            [image_over] => 1
+        )
+
+    [layout_usabilidade] => Array
+        (
+            [buttons_active_menu] => 1
+            [buttons_back_top] => 1
+            [desktop_disproportionate_elements] => 1
+            [elements_contrast] => 1
+            [horizontal_scroll] => 1
+            [smartphone_disproportionate_elements] => 1
+            [smartphone_footer] => 1
+            [smartphone_google_map] => 1
+            [smartphone_mobile_menu] => 1
+            [tablet_disproportionate_elements] => 1
+            [tablet_footer] => 1
+            [tablet_google_map] => 1
+            [tablet_mobile_menu] => 1
         )
 
     [resposta_servidor] => Array
         (
-            [response_code_server_error] => 1
             [response_code_client_error] => 1
-            [response_code_success] => 1
             [response_code_redirection] => 1
+            [response_code_server_error] => 1
+            [response_code_success] => 1
         )
 
     [seguranca] => Array
         (
-            [security_missing_secure_referrer_policy] => 1
-            [security_missing_x_frame_options] => 1
-            [security_missing_x_content_type_options] => 1
-            [security_missing_content_security_policy] => 1
-            [popup_cookie] => 1
-            [security_missing_hsts] => 1
-            [security_mixed_content] => 1
             [security_https_urls] => 1
+            [security_missing_content_security_policy] => 1
+            [security_missing_hsts] => 1
+            [security_missing_secure_referrer_policy] => 1
+            [security_missing_x_content_type_options] => 1
+            [security_missing_x_frame_options] => 1
+            [security_mixed_content] => 1
         )
 
     [publicacao] => Array
         (
-            [spider] => 1
-            [sensedata] => 1
-            [searchconsole] => 1
-            [redirect_serp_404] => 1
-            [analytics] => 1
-            [mpisistema] => 1
-            [redirect_www] => 1
-            [gitignore] => 1
+            [config_analytics] => 1
+            [config_crm] => 1
+            [config_mpisistema] => 1
+            [config_searchconsole] => 1
+            [config_spider] => 1
         )
 
 )
 
-[12-May-2025 21:51:18 Europe/Berlin] Configuração BigQuery:
+[14-May-2025 04:32:20 Europe/Berlin] Configuração BigQuery:
         Project: data-analytics-d-1669130019479
         Dataset: qa_validacao_dw
-        Table: geralprontuario_resposta
-        KeyPath: C:\xampp\htdocs\prontuario-qa\config\bigquery-key.json
-[12-May-2025 21:51:18 Europe/Berlin] Dados formatados para inserção: Array
+        Table: prontuario_respostas
+        KeyPath: 
+[14-May-2025 04:32:20 Europe/Berlin] Dados formatados para inserção: Array
 (
     [0] => Array
         (
             [data] => Array
                 (
-                    [id] => mali0grir6dczedahyh
-                    [dominio] => exemplo.com.br
-                    [op_tipo] => Correção
-                    [id_cliente] => 222222
-                    [id_ticket] => 11111111
-                    [analista_qa] => Gustavo Gonçalves
+                    [id] => manbs2fx3a0iumbn9i1
+                    [dominio] => exemplo.net
+                    [op_tipo] => Validação
+                    [id_cliente] => 35353535
+                    [id_ticket] => 1414141414
+                    [analista_qa] => Ana Diniz
                     [data_validacao] => 2025-05-13
-                    [analista_producao] => Lucas Santos
-                    [data_producao] => 2025-05-12
-                    [pontuacao] => 232
-                    [porcentagem] => 89.23
-                    [pontuacao_maxima] => 260
-                    [status] => Reprovado
+                    [analista_producao] => Sofia Silva
+                    [data_producao] => 2025-05-06
+                    [pontuacao] => 287
+                    [porcentagem] => 100
+                    [pontuacao_maxima] => 287
+                    [status] => Aprovado
                     [core_web_vitals] => Array
                         (
-                            [mobile_banner] => 1
+                            [accessibility] => 1
+                            [best_pratices] => 1
+                            [performance] => 1
+                            [seo] => 1
                             [footer_lazy_load] => 1
-                            [seo] => 
-                            [best_pratices] => 
-                            [accessibility] => 
-                            [performance] => 
+                            [smartphone_banner] => 1
                         )
 
                     [metadados_seo] => Array
                         (
-                            [paginas_mpis] => 1
-                            [mapa_site_links] => 1
-                            [page_titles_multiple] => 1
-                            [coluna_lateral] => 1
-                            [url_coerente_h1_pagina] => 1
-                            [menu_header_footer] => 1
-                            [produtos_destaque] => 1
-                            [empresa_segmento_h1_home] => 1
                             [banners_link_mpis] => 1
+                            [breadcrumbs] => 1
+                            [enterprise_name_h1_home] => 1
+                            [featured_products] => 1
+                            [menu_header_footer] => 1
+                            [mpis_pages] => 1
+                            [side_column] => 1
+                            [sitemap_links] => 1
+                            [url_match_h1_page] => 1
+                            [links_internal_nofollow] => 1
                             [meta_discriptions_duplicate] => 1
                             [meta_discriptions_missing] => 1
-                            [page_titles_over_caracteres] => 1
                             [meta_discriptions_over_caracters] => 1
-                            [page_titles_missing] => 1
                             [page_titles_duplicate] => 1
-                            [links_externos] => 1
+                            [page_titles_missing] => 1
+                            [page_titles_multiple] => 1
+                            [page_titles_over_caracteres] => 1
                         )
 
                     [validacao_codigo] => Array
                         (
-                            [sem_arquivos_old] => 1
-                            [font_awesome] => 
-                            [w3c_html] => 1
+                            [backup_bd] => 1
+                            [buttons_clickable] => 1
+                            [config_gitignore] => 1
+                            [old_archives] => 1
+                            [popup_cookie] => 1
+                            [content_lorem_ipsum_placeholder] => 1
+                            [font_awesome] => 1
                             [w3c_css] => 1
-                            [lorem_ipsum_placeholder] => 1
+                            [w3c_html] => 1
                         )
 
                     [estrutura_semantica] => Array
                         (
                             [h1_duplicate] => 1
+                            [h1_missing] => 1
                             [h1_multiple] => 1
                             [h2_missing] => 1
-                            [h1_missing] => 1
-                        )
-
-                    [fluxo] => Array
-                        (
-                            [pull_request] => 1
-                            [backup_bd] => 1
                         )
 
                     [urls] => Array
                         (
+                            [redirect_serp_404] => 1
+                            [redirect_www] => 1
+                            [urls_contains_space] => 1
+                            [urls_multiple_slashes] => 1
+                            [urls_non_ascii_caracters] => 1
                             [urls_over_caracters] => 1
-                            [contains_space] => 1
-                            [multiple_slashes] => 1
-                            [non_ascii_caracters] => 1
-                            [uppercase] => 1
-                        )
-
-                    [formulario] => Array
-                        (
-                            [recaptcha_formulario] => 1
-                            [mascara_formulario] => 1
-                        )
-
-                    [imagens] => Array
-                        (
-                            [favicon] => 
-                            [image_over] => 1
-                            [image_banner_over] => 1
-                        )
-
-                    [layout_usabilidade] => Array
-                        (
-                            [botao_voltar_topo] => 1
-                            [mobile_elementos_desproporcionais] => 1
-                            [mobile_footer] => 1
-                            [mobile_menu_hamburguer] => 1
-                            [scroll_lateral] => 1
-                            [mobile_mapa_google] => 1
-                            [disproportionate_elementes] => 1
-                            [broke_image_components] => 1
-                            [contraste_elementos] => 1
-                            [botoes_clicaveis] => 1
-                            [breadcrumbs] => 1
-                            [active_menu] => 1
+                            [urls_uppercase] => 1
                         )
 
                     [contato] => Array
                         (
-                            [formatacao_endereco] => 1
-                            [formatacao_telefone] => 1
-                            [formatacao_email] => 1
-                            [email] => 1
-                            [endereco] => 1
-                            [telefone] => 1
-                            [botao_cta_whatsapp] => 1
-                            [faixa_cta] => 1
+                            [cta_container] => 1
+                            [cta_whatsapp] => 1
+                            [formatting_address] => 1
+                            [formatting_fone] => 1
+                            [formatting_mail] => 1
+                            [text_address] => 1
+                            [text_fone] => 1
+                            [text_mail] => 1
+                        )
+
+                    [formulario] => Array
+                        (
+                            [form_leads] => 1
+                            [form_mask] => 1
+                            [form_recaptcha] => 1
+                        )
+
+                    [imagens] => Array
+                        (
+                            [image_broke] => 1
+                            [image_favicon] => 1
+                            [image_banner_over] => 1
+                            [image_over] => 1
+                        )
+
+                    [layout_usabilidade] => Array
+                        (
+                            [buttons_active_menu] => 1
+                            [buttons_back_top] => 1
+                            [desktop_disproportionate_elements] => 1
+                            [elements_contrast] => 1
+                            [horizontal_scroll] => 1
+                            [smartphone_disproportionate_elements] => 1
+                            [smartphone_footer] => 1
+                            [smartphone_google_map] => 1
+                            [smartphone_mobile_menu] => 1
+                            [tablet_disproportionate_elements] => 1
+                            [tablet_footer] => 1
+                            [tablet_google_map] => 1
+                            [tablet_mobile_menu] => 1
                         )
 
                     [resposta_servidor] => Array
                         (
-                            [response_code_server_error] => 1
                             [response_code_client_error] => 1
-                            [response_code_success] => 1
                             [response_code_redirection] => 1
+                            [response_code_server_error] => 1
+                            [response_code_success] => 1
                         )
 
                     [seguranca] => Array
                         (
-                            [security_missing_secure_referrer_policy] => 1
-                            [security_missing_x_frame_options] => 1
-                            [security_missing_x_content_type_options] => 1
-                            [security_missing_content_security_policy] => 1
-                            [popup_cookie] => 1
-                            [security_missing_hsts] => 1
-                            [security_mixed_content] => 1
                             [security_https_urls] => 1
+                            [security_missing_content_security_policy] => 1
+                            [security_missing_hsts] => 1
+                            [security_missing_secure_referrer_policy] => 1
+                            [security_missing_x_content_type_options] => 1
+                            [security_missing_x_frame_options] => 1
+                            [security_mixed_content] => 1
                         )
 
                     [publicacao] => Array
                         (
-                            [spider] => 1
-                            [sensedata] => 1
-                            [searchconsole] => 1
-                            [redirect_serp_404] => 1
-                            [analytics] => 1
-                            [mpisistema] => 1
-                            [redirect_www] => 1
-                            [gitignore] => 1
+                            [config_analytics] => 1
+                            [config_crm] => 1
+                            [config_mpisistema] => 1
+                            [config_searchconsole] => 1
+                            [config_spider] => 1
                         )
 
                 )
@@ -467,13 +467,519 @@
 
 )
 
-[12-May-2025 21:51:18 Europe/Berlin] EXCEÇÃO: {
+[14-May-2025 04:32:22 Europe/Berlin] EXCEÇÃO: {
   "error": {
-    "code": 404,
-    "message": "Not found: Table data-analytics-d-1669130019479:qa_validacao_dw.geralprontuario_resposta",
+    "code": 401,
+    "message": "Request is missing required authentication credential. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.",
     "errors": [
       {
-        "message": "Not found: Table data-analytics-d-1669130019479:qa_validacao_dw.geralprontuario_resposta",
+        "message": "Login Required.",
+        "domain": "global",
+        "reason": "required",
+        "location": "Authorization",
+        "locationType": "header"
+      }
+    ],
+    "status": "UNAUTHENTICATED",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.ErrorInfo",
+        "reason": "CREDENTIALS_MISSING",
+        "domain": "googleapis.com",
+        "metadata": {
+          "service": "bigquery.googleapis.com",
+          "method": "google.cloud.bigquery.v2.TableDataService.InsertAll"
+        }
+      }
+    ]
+  }
+}
+
+[14-May-2025 04:32:22 Europe/Berlin] TRACE: #0 C:\xampp\htdocs\prontuario-qa\vendor\google\cloud-core\src\RequestWrapper.php(232): Google\Cloud\Core\RequestWrapper->convertToGoogleException(Object(GuzzleHttp\Exception\ClientException))
+#1 C:\xampp\htdocs\prontuario-qa\vendor\google\cloud-core\src\RestTrait.php(102): Google\Cloud\Core\RequestWrapper->send(Object(GuzzleHttp\Psr7\Request), Array)
+#2 C:\xampp\htdocs\prontuario-qa\vendor\google\cloud-bigquery\src\Connection\Rest.php(197): Google\Cloud\BigQuery\Connection\Rest->send('tabledata', 'insertAll', Array)
+#3 C:\xampp\htdocs\prontuario-qa\vendor\google\cloud-bigquery\src\Table.php(839): Google\Cloud\BigQuery\Connection\Rest->insertAllTableData(Array)
+#4 C:\xampp\htdocs\prontuario-qa\vendor\google\cloud-bigquery\src\Table.php(699): Google\Cloud\BigQuery\Table->handleInsert(Array)
+#5 C:\xampp\htdocs\prontuario-qa\api\bigquery.php(64): Google\Cloud\BigQuery\Table->insertRows(Array)
+#6 C:\xampp\htdocs\prontuario-qa\api\salvar.php(171): inserirNoBigQuery(Array)
+#7 {main}
+[14-May-2025 04:32:22 Europe/Berlin] Falha na inserção no BigQuery
+[14-May-2025 04:33:35 Europe/Berlin] Dados recebidos: Array
+(
+    [id] => manbto73j5jokvea7xs
+    [dominio] => exemplo.net
+    [op_tipo] => Validação
+    [id_cliente] => 35353535
+    [id_ticket] => 1414141414
+    [analista_qa] => Ana Diniz
+    [data_validacao] => 2025-05-13
+    [analista_producao] => Sofia Silva
+    [data_producao] => 2025-05-06
+    [pontuacao] => 287
+    [porcentagem] => 100
+    [pontuacao_maxima] => 287
+    [status] => Aprovado
+    [core_web_vitals] => Array
+        (
+            [accessibility] => 1
+            [best_pratices] => 1
+            [performance] => 1
+            [seo] => 1
+            [footer_lazy_load] => 1
+            [smartphone_banner] => 1
+        )
+
+    [metadados_seo] => Array
+        (
+            [banners_link_mpis] => 1
+            [breadcrumbs] => 1
+            [enterprise_name_h1_home] => 1
+            [featured_products] => 1
+            [menu_header_footer] => 1
+            [mpis_pages] => 1
+            [side_column] => 1
+            [sitemap_links] => 1
+            [url_match_h1_page] => 1
+            [links_internal_nofollow] => 1
+            [meta_discriptions_duplicate] => 1
+            [meta_discriptions_missing] => 1
+            [meta_discriptions_over_caracters] => 1
+            [page_titles_duplicate] => 1
+            [page_titles_missing] => 1
+            [page_titles_multiple] => 1
+            [page_titles_over_caracteres] => 1
+        )
+
+    [validacao_codigo] => Array
+        (
+            [backup_bd] => 1
+            [buttons_clickable] => 1
+            [config_gitignore] => 1
+            [old_archives] => 1
+            [popup_cookie] => 1
+            [content_lorem_ipsum_placeholder] => 1
+            [font_awesome] => 1
+            [w3c_css] => 1
+            [w3c_html] => 1
+        )
+
+    [estrutura_semantica] => Array
+        (
+            [h1_duplicate] => 1
+            [h1_missing] => 1
+            [h1_multiple] => 1
+            [h2_missing] => 1
+        )
+
+    [urls] => Array
+        (
+            [redirect_serp_404] => 1
+            [redirect_www] => 1
+            [urls_contains_space] => 1
+            [urls_multiple_slashes] => 1
+            [urls_non_ascii_caracters] => 1
+            [urls_over_caracters] => 1
+            [urls_uppercase] => 1
+        )
+
+    [contato] => Array
+        (
+            [cta_container] => 1
+            [cta_whatsapp] => 1
+            [formatting_address] => 1
+            [formatting_fone] => 1
+            [formatting_mail] => 1
+            [text_address] => 1
+            [text_fone] => 1
+            [text_mail] => 1
+        )
+
+    [formulario] => Array
+        (
+            [form_leads] => 1
+            [form_mask] => 1
+            [form_recaptcha] => 1
+        )
+
+    [imagens] => Array
+        (
+            [image_broke] => 1
+            [image_favicon] => 1
+            [image_banner_over] => 1
+            [image_over] => 1
+        )
+
+    [layout_usabilidade] => Array
+        (
+            [buttons_active_menu] => 1
+            [buttons_back_top] => 1
+            [desktop_disproportionate_elements] => 1
+            [elements_contrast] => 1
+            [horizontal_scroll] => 1
+            [smartphone_disproportionate_elements] => 1
+            [smartphone_footer] => 1
+            [smartphone_google_map] => 1
+            [smartphone_mobile_menu] => 1
+            [tablet_disproportionate_elements] => 1
+            [tablet_footer] => 1
+            [tablet_google_map] => 1
+            [tablet_mobile_menu] => 1
+        )
+
+    [resposta_servidor] => Array
+        (
+            [response_code_client_error] => 1
+            [response_code_redirection] => 1
+            [response_code_server_error] => 1
+            [response_code_success] => 1
+        )
+
+    [seguranca] => Array
+        (
+            [security_https_urls] => 1
+            [security_missing_content_security_policy] => 1
+            [security_missing_hsts] => 1
+            [security_missing_secure_referrer_policy] => 1
+            [security_missing_x_content_type_options] => 1
+            [security_missing_x_frame_options] => 1
+            [security_mixed_content] => 1
+        )
+
+    [publicacao] => Array
+        (
+            [config_analytics] => 1
+            [config_crm] => 1
+            [config_mpisistema] => 1
+            [config_searchconsole] => 1
+            [config_spider] => 1
+        )
+
+)
+
+[14-May-2025 04:33:35 Europe/Berlin] Dados recebidos para inserção: Array
+(
+    [id] => manbto73j5jokvea7xs
+    [dominio] => exemplo.net
+    [op_tipo] => Validação
+    [id_cliente] => 35353535
+    [id_ticket] => 1414141414
+    [analista_qa] => Ana Diniz
+    [data_validacao] => 2025-05-13
+    [analista_producao] => Sofia Silva
+    [data_producao] => 2025-05-06
+    [pontuacao] => 287
+    [porcentagem] => 100
+    [pontuacao_maxima] => 287
+    [status] => Aprovado
+    [core_web_vitals] => Array
+        (
+            [accessibility] => 1
+            [best_pratices] => 1
+            [performance] => 1
+            [seo] => 1
+            [footer_lazy_load] => 1
+            [smartphone_banner] => 1
+        )
+
+    [metadados_seo] => Array
+        (
+            [banners_link_mpis] => 1
+            [breadcrumbs] => 1
+            [enterprise_name_h1_home] => 1
+            [featured_products] => 1
+            [menu_header_footer] => 1
+            [mpis_pages] => 1
+            [side_column] => 1
+            [sitemap_links] => 1
+            [url_match_h1_page] => 1
+            [links_internal_nofollow] => 1
+            [meta_discriptions_duplicate] => 1
+            [meta_discriptions_missing] => 1
+            [meta_discriptions_over_caracters] => 1
+            [page_titles_duplicate] => 1
+            [page_titles_missing] => 1
+            [page_titles_multiple] => 1
+            [page_titles_over_caracteres] => 1
+        )
+
+    [validacao_codigo] => Array
+        (
+            [backup_bd] => 1
+            [buttons_clickable] => 1
+            [config_gitignore] => 1
+            [old_archives] => 1
+            [popup_cookie] => 1
+            [content_lorem_ipsum_placeholder] => 1
+            [font_awesome] => 1
+            [w3c_css] => 1
+            [w3c_html] => 1
+        )
+
+    [estrutura_semantica] => Array
+        (
+            [h1_duplicate] => 1
+            [h1_missing] => 1
+            [h1_multiple] => 1
+            [h2_missing] => 1
+        )
+
+    [urls] => Array
+        (
+            [redirect_serp_404] => 1
+            [redirect_www] => 1
+            [urls_contains_space] => 1
+            [urls_multiple_slashes] => 1
+            [urls_non_ascii_caracters] => 1
+            [urls_over_caracters] => 1
+            [urls_uppercase] => 1
+        )
+
+    [contato] => Array
+        (
+            [cta_container] => 1
+            [cta_whatsapp] => 1
+            [formatting_address] => 1
+            [formatting_fone] => 1
+            [formatting_mail] => 1
+            [text_address] => 1
+            [text_fone] => 1
+            [text_mail] => 1
+        )
+
+    [formulario] => Array
+        (
+            [form_leads] => 1
+            [form_mask] => 1
+            [form_recaptcha] => 1
+        )
+
+    [imagens] => Array
+        (
+            [image_broke] => 1
+            [image_favicon] => 1
+            [image_banner_over] => 1
+            [image_over] => 1
+        )
+
+    [layout_usabilidade] => Array
+        (
+            [buttons_active_menu] => 1
+            [buttons_back_top] => 1
+            [desktop_disproportionate_elements] => 1
+            [elements_contrast] => 1
+            [horizontal_scroll] => 1
+            [smartphone_disproportionate_elements] => 1
+            [smartphone_footer] => 1
+            [smartphone_google_map] => 1
+            [smartphone_mobile_menu] => 1
+            [tablet_disproportionate_elements] => 1
+            [tablet_footer] => 1
+            [tablet_google_map] => 1
+            [tablet_mobile_menu] => 1
+        )
+
+    [resposta_servidor] => Array
+        (
+            [response_code_client_error] => 1
+            [response_code_redirection] => 1
+            [response_code_server_error] => 1
+            [response_code_success] => 1
+        )
+
+    [seguranca] => Array
+        (
+            [security_https_urls] => 1
+            [security_missing_content_security_policy] => 1
+            [security_missing_hsts] => 1
+            [security_missing_secure_referrer_policy] => 1
+            [security_missing_x_content_type_options] => 1
+            [security_missing_x_frame_options] => 1
+            [security_mixed_content] => 1
+        )
+
+    [publicacao] => Array
+        (
+            [config_analytics] => 1
+            [config_crm] => 1
+            [config_mpisistema] => 1
+            [config_searchconsole] => 1
+            [config_spider] => 1
+        )
+
+)
+
+[14-May-2025 04:33:35 Europe/Berlin] Configuração BigQuery:
+        Project: data-analytics-d-1669130019479
+        Dataset: qa_validacao_dw
+        Table: prontuario_respostas
+        KeyPath: C:\xampp\htdocs\prontuario-qa\config\bigquery-key.json
+[14-May-2025 04:33:35 Europe/Berlin] Dados formatados para inserção: Array
+(
+    [0] => Array
+        (
+            [data] => Array
+                (
+                    [id] => manbto73j5jokvea7xs
+                    [dominio] => exemplo.net
+                    [op_tipo] => Validação
+                    [id_cliente] => 35353535
+                    [id_ticket] => 1414141414
+                    [analista_qa] => Ana Diniz
+                    [data_validacao] => 2025-05-13
+                    [analista_producao] => Sofia Silva
+                    [data_producao] => 2025-05-06
+                    [pontuacao] => 287
+                    [porcentagem] => 100
+                    [pontuacao_maxima] => 287
+                    [status] => Aprovado
+                    [core_web_vitals] => Array
+                        (
+                            [accessibility] => 1
+                            [best_pratices] => 1
+                            [performance] => 1
+                            [seo] => 1
+                            [footer_lazy_load] => 1
+                            [smartphone_banner] => 1
+                        )
+
+                    [metadados_seo] => Array
+                        (
+                            [banners_link_mpis] => 1
+                            [breadcrumbs] => 1
+                            [enterprise_name_h1_home] => 1
+                            [featured_products] => 1
+                            [menu_header_footer] => 1
+                            [mpis_pages] => 1
+                            [side_column] => 1
+                            [sitemap_links] => 1
+                            [url_match_h1_page] => 1
+                            [links_internal_nofollow] => 1
+                            [meta_discriptions_duplicate] => 1
+                            [meta_discriptions_missing] => 1
+                            [meta_discriptions_over_caracters] => 1
+                            [page_titles_duplicate] => 1
+                            [page_titles_missing] => 1
+                            [page_titles_multiple] => 1
+                            [page_titles_over_caracteres] => 1
+                        )
+
+                    [validacao_codigo] => Array
+                        (
+                            [backup_bd] => 1
+                            [buttons_clickable] => 1
+                            [config_gitignore] => 1
+                            [old_archives] => 1
+                            [popup_cookie] => 1
+                            [content_lorem_ipsum_placeholder] => 1
+                            [font_awesome] => 1
+                            [w3c_css] => 1
+                            [w3c_html] => 1
+                        )
+
+                    [estrutura_semantica] => Array
+                        (
+                            [h1_duplicate] => 1
+                            [h1_missing] => 1
+                            [h1_multiple] => 1
+                            [h2_missing] => 1
+                        )
+
+                    [urls] => Array
+                        (
+                            [redirect_serp_404] => 1
+                            [redirect_www] => 1
+                            [urls_contains_space] => 1
+                            [urls_multiple_slashes] => 1
+                            [urls_non_ascii_caracters] => 1
+                            [urls_over_caracters] => 1
+                            [urls_uppercase] => 1
+                        )
+
+                    [contato] => Array
+                        (
+                            [cta_container] => 1
+                            [cta_whatsapp] => 1
+                            [formatting_address] => 1
+                            [formatting_fone] => 1
+                            [formatting_mail] => 1
+                            [text_address] => 1
+                            [text_fone] => 1
+                            [text_mail] => 1
+                        )
+
+                    [formulario] => Array
+                        (
+                            [form_leads] => 1
+                            [form_mask] => 1
+                            [form_recaptcha] => 1
+                        )
+
+                    [imagens] => Array
+                        (
+                            [image_broke] => 1
+                            [image_favicon] => 1
+                            [image_banner_over] => 1
+                            [image_over] => 1
+                        )
+
+                    [layout_usabilidade] => Array
+                        (
+                            [buttons_active_menu] => 1
+                            [buttons_back_top] => 1
+                            [desktop_disproportionate_elements] => 1
+                            [elements_contrast] => 1
+                            [horizontal_scroll] => 1
+                            [smartphone_disproportionate_elements] => 1
+                            [smartphone_footer] => 1
+                            [smartphone_google_map] => 1
+                            [smartphone_mobile_menu] => 1
+                            [tablet_disproportionate_elements] => 1
+                            [tablet_footer] => 1
+                            [tablet_google_map] => 1
+                            [tablet_mobile_menu] => 1
+                        )
+
+                    [resposta_servidor] => Array
+                        (
+                            [response_code_client_error] => 1
+                            [response_code_redirection] => 1
+                            [response_code_server_error] => 1
+                            [response_code_success] => 1
+                        )
+
+                    [seguranca] => Array
+                        (
+                            [security_https_urls] => 1
+                            [security_missing_content_security_policy] => 1
+                            [security_missing_hsts] => 1
+                            [security_missing_secure_referrer_policy] => 1
+                            [security_missing_x_content_type_options] => 1
+                            [security_missing_x_frame_options] => 1
+                            [security_mixed_content] => 1
+                        )
+
+                    [publicacao] => Array
+                        (
+                            [config_analytics] => 1
+                            [config_crm] => 1
+                            [config_mpisistema] => 1
+                            [config_searchconsole] => 1
+                            [config_spider] => 1
+                        )
+
+                )
+
+        )
+
+)
+
+[14-May-2025 04:33:36 Europe/Berlin] EXCEÇÃO: {
+  "error": {
+    "code": 404,
+    "message": "Not found: Table data-analytics-d-1669130019479:qa_validacao_dw.prontuario_respostas",
+    "errors": [
+      {
+        "message": "Not found: Table data-analytics-d-1669130019479:qa_validacao_dw.prontuario_respostas",
         "domain": "global",
         "reason": "notFound"
       }
@@ -482,1889 +988,476 @@
   }
 }
 
-[12-May-2025 21:51:18 Europe/Berlin] TRACE: #0 C:\xampp\htdocs\prontuario-qa\vendor\google\cloud-core\src\RequestWrapper.php(232): Google\Cloud\Core\RequestWrapper->convertToGoogleException(Object(GuzzleHttp\Exception\ClientException))
-#1 C:\xampp\htdocs\prontuario-qa\vendor\google\cloud-core\src\RestTrait.php(103): Google\Cloud\Core\RequestWrapper->send(Object(GuzzleHttp\Psr7\Request), Array)
+[14-May-2025 04:33:36 Europe/Berlin] TRACE: #0 C:\xampp\htdocs\prontuario-qa\vendor\google\cloud-core\src\RequestWrapper.php(232): Google\Cloud\Core\RequestWrapper->convertToGoogleException(Object(GuzzleHttp\Exception\ClientException))
+#1 C:\xampp\htdocs\prontuario-qa\vendor\google\cloud-core\src\RestTrait.php(102): Google\Cloud\Core\RequestWrapper->send(Object(GuzzleHttp\Psr7\Request), Array)
 #2 C:\xampp\htdocs\prontuario-qa\vendor\google\cloud-bigquery\src\Connection\Rest.php(197): Google\Cloud\BigQuery\Connection\Rest->send('tabledata', 'insertAll', Array)
-#3 C:\xampp\htdocs\prontuario-qa\vendor\google\cloud-bigquery\src\Table.php(840): Google\Cloud\BigQuery\Connection\Rest->insertAllTableData(Array)
+#3 C:\xampp\htdocs\prontuario-qa\vendor\google\cloud-bigquery\src\Table.php(839): Google\Cloud\BigQuery\Connection\Rest->insertAllTableData(Array)
 #4 C:\xampp\htdocs\prontuario-qa\vendor\google\cloud-bigquery\src\Table.php(699): Google\Cloud\BigQuery\Table->handleInsert(Array)
 #5 C:\xampp\htdocs\prontuario-qa\api\bigquery.php(64): Google\Cloud\BigQuery\Table->insertRows(Array)
-#6 C:\xampp\htdocs\prontuario-qa\api\salvar.php(169): inserirNoBigQuery(Array)
+#6 C:\xampp\htdocs\prontuario-qa\api\salvar.php(171): inserirNoBigQuery(Array)
 #7 {main}
-[12-May-2025 21:51:18 Europe/Berlin] Falha na inserção no BigQuery
-[12-May-2025 21:52:12 Europe/Berlin] Dados recebidos: Array
+[14-May-2025 04:33:36 Europe/Berlin] Falha na inserção no BigQuery
+[14-May-2025 04:34:02 Europe/Berlin] Dados recebidos: Array
 (
-    [id] => mali1n1jrpj29gbzl7
-    [dominio] => exemplo.com.br
-    [op_tipo] => Correção
-    [id_cliente] => 222222
-    [id_ticket] => 11111111
-    [analista_qa] => Gustavo Gonçalves
+    [id] => manbu965tlysd7lwtp
+    [dominio] => exemplo.net
+    [op_tipo] => Validação
+    [id_cliente] => 35353535
+    [id_ticket] => 1414141414
+    [analista_qa] => Ana Diniz
     [data_validacao] => 2025-05-13
-    [analista_producao] => Lucas Santos
-    [data_producao] => 2025-05-12
-    [pontuacao] => 232
-    [porcentagem] => 89.23
-    [pontuacao_maxima] => 260
-    [status] => Reprovado
+    [analista_producao] => Sofia Silva
+    [data_producao] => 2025-05-06
+    [pontuacao] => 287
+    [porcentagem] => 100
+    [pontuacao_maxima] => 287
+    [status] => Aprovado
     [core_web_vitals] => Array
         (
-            [mobile_banner] => 1
+            [accessibility] => 1
+            [best_pratices] => 1
+            [performance] => 1
+            [seo] => 1
             [footer_lazy_load] => 1
-            [seo] => 
-            [best_pratices] => 
-            [accessibility] => 
-            [performance] => 
+            [smartphone_banner] => 1
         )
 
     [metadados_seo] => Array
         (
-            [paginas_mpis] => 1
-            [mapa_site_links] => 1
-            [page_titles_multiple] => 1
-            [coluna_lateral] => 1
-            [url_coerente_h1_pagina] => 1
-            [menu_header_footer] => 1
-            [produtos_destaque] => 1
-            [empresa_segmento_h1_home] => 1
             [banners_link_mpis] => 1
+            [breadcrumbs] => 1
+            [enterprise_name_h1_home] => 1
+            [featured_products] => 1
+            [menu_header_footer] => 1
+            [mpis_pages] => 1
+            [side_column] => 1
+            [sitemap_links] => 1
+            [url_match_h1_page] => 1
+            [links_internal_nofollow] => 1
             [meta_discriptions_duplicate] => 1
             [meta_discriptions_missing] => 1
-            [page_titles_over_caracteres] => 1
             [meta_discriptions_over_caracters] => 1
-            [page_titles_missing] => 1
             [page_titles_duplicate] => 1
-            [links_externos] => 1
+            [page_titles_missing] => 1
+            [page_titles_multiple] => 1
+            [page_titles_over_caracteres] => 1
         )
 
     [validacao_codigo] => Array
         (
-            [sem_arquivos_old] => 1
-            [font_awesome] => 
-            [w3c_html] => 1
+            [backup_bd] => 1
+            [buttons_clickable] => 1
+            [config_gitignore] => 1
+            [old_archives] => 1
+            [popup_cookie] => 1
+            [content_lorem_ipsum_placeholder] => 1
+            [font_awesome] => 1
             [w3c_css] => 1
-            [lorem_ipsum_placeholder] => 1
+            [w3c_html] => 1
         )
 
     [estrutura_semantica] => Array
         (
             [h1_duplicate] => 1
+            [h1_missing] => 1
             [h1_multiple] => 1
             [h2_missing] => 1
-            [h1_missing] => 1
-        )
-
-    [fluxo] => Array
-        (
-            [pull_request] => 1
-            [backup_bd] => 1
         )
 
     [urls] => Array
         (
+            [redirect_serp_404] => 1
+            [redirect_www] => 1
+            [urls_contains_space] => 1
+            [urls_multiple_slashes] => 1
+            [urls_non_ascii_caracters] => 1
             [urls_over_caracters] => 1
-            [contains_space] => 1
-            [multiple_slashes] => 1
-            [non_ascii_caracters] => 1
-            [uppercase] => 1
-        )
-
-    [formulario] => Array
-        (
-            [recaptcha_formulario] => 1
-            [mascara_formulario] => 1
-        )
-
-    [imagens] => Array
-        (
-            [favicon] => 
-            [image_over] => 1
-            [image_banner_over] => 1
-        )
-
-    [layout_usabilidade] => Array
-        (
-            [botao_voltar_topo] => 1
-            [mobile_elementos_desproporcionais] => 1
-            [mobile_footer] => 1
-            [mobile_menu_hamburguer] => 1
-            [scroll_lateral] => 1
-            [mobile_mapa_google] => 1
-            [disproportionate_elementes] => 1
-            [broke_image_components] => 1
-            [contraste_elementos] => 1
-            [botoes_clicaveis] => 1
-            [breadcrumbs] => 1
-            [active_menu] => 1
+            [urls_uppercase] => 1
         )
 
     [contato] => Array
         (
-            [formatacao_endereco] => 1
-            [formatacao_telefone] => 1
-            [formatacao_email] => 1
-            [email] => 1
-            [endereco] => 1
-            [telefone] => 1
-            [botao_cta_whatsapp] => 1
-            [faixa_cta] => 1
+            [cta_container] => 1
+            [cta_whatsapp] => 1
+            [formatting_address] => 1
+            [formatting_fone] => 1
+            [formatting_mail] => 1
+            [text_address] => 1
+            [text_fone] => 1
+            [text_mail] => 1
+        )
+
+    [formulario] => Array
+        (
+            [form_leads] => 1
+            [form_mask] => 1
+            [form_recaptcha] => 1
+        )
+
+    [imagens] => Array
+        (
+            [image_broke] => 1
+            [image_favicon] => 1
+            [image_banner_over] => 1
+            [image_over] => 1
+        )
+
+    [layout_usabilidade] => Array
+        (
+            [buttons_active_menu] => 1
+            [buttons_back_top] => 1
+            [desktop_disproportionate_elements] => 1
+            [elements_contrast] => 1
+            [horizontal_scroll] => 1
+            [smartphone_disproportionate_elements] => 1
+            [smartphone_footer] => 1
+            [smartphone_google_map] => 1
+            [smartphone_mobile_menu] => 1
+            [tablet_disproportionate_elements] => 1
+            [tablet_footer] => 1
+            [tablet_google_map] => 1
+            [tablet_mobile_menu] => 1
         )
 
     [resposta_servidor] => Array
         (
-            [response_code_server_error] => 1
             [response_code_client_error] => 1
-            [response_code_success] => 1
             [response_code_redirection] => 1
+            [response_code_server_error] => 1
+            [response_code_success] => 1
         )
 
     [seguranca] => Array
         (
-            [security_missing_secure_referrer_policy] => 1
-            [security_missing_x_frame_options] => 1
-            [security_missing_x_content_type_options] => 1
-            [security_missing_content_security_policy] => 1
-            [popup_cookie] => 1
-            [security_missing_hsts] => 1
-            [security_mixed_content] => 1
             [security_https_urls] => 1
+            [security_missing_content_security_policy] => 1
+            [security_missing_hsts] => 1
+            [security_missing_secure_referrer_policy] => 1
+            [security_missing_x_content_type_options] => 1
+            [security_missing_x_frame_options] => 1
+            [security_mixed_content] => 1
         )
 
     [publicacao] => Array
         (
-            [spider] => 1
-            [sensedata] => 1
-            [searchconsole] => 1
-            [redirect_serp_404] => 1
-            [analytics] => 1
-            [mpisistema] => 1
-            [redirect_www] => 1
-            [gitignore] => 1
+            [config_analytics] => 1
+            [config_crm] => 1
+            [config_mpisistema] => 1
+            [config_searchconsole] => 1
+            [config_spider] => 1
         )
 
 )
 
-[12-May-2025 21:52:12 Europe/Berlin] Dados recebidos para inserção: Array
+[14-May-2025 04:34:02 Europe/Berlin] Dados recebidos para inserção: Array
 (
-    [id] => mali1n1jrpj29gbzl7
-    [dominio] => exemplo.com.br
-    [op_tipo] => Correção
-    [id_cliente] => 222222
-    [id_ticket] => 11111111
-    [analista_qa] => Gustavo Gonçalves
+    [id] => manbu965tlysd7lwtp
+    [dominio] => exemplo.net
+    [op_tipo] => Validação
+    [id_cliente] => 35353535
+    [id_ticket] => 1414141414
+    [analista_qa] => Ana Diniz
     [data_validacao] => 2025-05-13
-    [analista_producao] => Lucas Santos
-    [data_producao] => 2025-05-12
-    [pontuacao] => 232
-    [porcentagem] => 89.23
-    [pontuacao_maxima] => 260
-    [status] => Reprovado
+    [analista_producao] => Sofia Silva
+    [data_producao] => 2025-05-06
+    [pontuacao] => 287
+    [porcentagem] => 100
+    [pontuacao_maxima] => 287
+    [status] => Aprovado
     [core_web_vitals] => Array
         (
-            [mobile_banner] => 1
+            [accessibility] => 1
+            [best_pratices] => 1
+            [performance] => 1
+            [seo] => 1
             [footer_lazy_load] => 1
-            [seo] => 
-            [best_pratices] => 
-            [accessibility] => 
-            [performance] => 
+            [smartphone_banner] => 1
         )
 
     [metadados_seo] => Array
         (
-            [paginas_mpis] => 1
-            [mapa_site_links] => 1
-            [page_titles_multiple] => 1
-            [coluna_lateral] => 1
-            [url_coerente_h1_pagina] => 1
-            [menu_header_footer] => 1
-            [produtos_destaque] => 1
-            [empresa_segmento_h1_home] => 1
             [banners_link_mpis] => 1
+            [breadcrumbs] => 1
+            [enterprise_name_h1_home] => 1
+            [featured_products] => 1
+            [menu_header_footer] => 1
+            [mpis_pages] => 1
+            [side_column] => 1
+            [sitemap_links] => 1
+            [url_match_h1_page] => 1
+            [links_internal_nofollow] => 1
             [meta_discriptions_duplicate] => 1
             [meta_discriptions_missing] => 1
-            [page_titles_over_caracteres] => 1
             [meta_discriptions_over_caracters] => 1
-            [page_titles_missing] => 1
             [page_titles_duplicate] => 1
-            [links_externos] => 1
+            [page_titles_missing] => 1
+            [page_titles_multiple] => 1
+            [page_titles_over_caracteres] => 1
         )
 
     [validacao_codigo] => Array
         (
-            [sem_arquivos_old] => 1
-            [font_awesome] => 
-            [w3c_html] => 1
+            [backup_bd] => 1
+            [buttons_clickable] => 1
+            [config_gitignore] => 1
+            [old_archives] => 1
+            [popup_cookie] => 1
+            [content_lorem_ipsum_placeholder] => 1
+            [font_awesome] => 1
             [w3c_css] => 1
-            [lorem_ipsum_placeholder] => 1
+            [w3c_html] => 1
         )
 
     [estrutura_semantica] => Array
         (
             [h1_duplicate] => 1
+            [h1_missing] => 1
             [h1_multiple] => 1
             [h2_missing] => 1
-            [h1_missing] => 1
-        )
-
-    [fluxo] => Array
-        (
-            [pull_request] => 1
-            [backup_bd] => 1
         )
 
     [urls] => Array
         (
+            [redirect_serp_404] => 1
+            [redirect_www] => 1
+            [urls_contains_space] => 1
+            [urls_multiple_slashes] => 1
+            [urls_non_ascii_caracters] => 1
             [urls_over_caracters] => 1
-            [contains_space] => 1
-            [multiple_slashes] => 1
-            [non_ascii_caracters] => 1
-            [uppercase] => 1
-        )
-
-    [formulario] => Array
-        (
-            [recaptcha_formulario] => 1
-            [mascara_formulario] => 1
-        )
-
-    [imagens] => Array
-        (
-            [favicon] => 
-            [image_over] => 1
-            [image_banner_over] => 1
-        )
-
-    [layout_usabilidade] => Array
-        (
-            [botao_voltar_topo] => 1
-            [mobile_elementos_desproporcionais] => 1
-            [mobile_footer] => 1
-            [mobile_menu_hamburguer] => 1
-            [scroll_lateral] => 1
-            [mobile_mapa_google] => 1
-            [disproportionate_elementes] => 1
-            [broke_image_components] => 1
-            [contraste_elementos] => 1
-            [botoes_clicaveis] => 1
-            [breadcrumbs] => 1
-            [active_menu] => 1
+            [urls_uppercase] => 1
         )
 
     [contato] => Array
         (
-            [formatacao_endereco] => 1
-            [formatacao_telefone] => 1
-            [formatacao_email] => 1
-            [email] => 1
-            [endereco] => 1
-            [telefone] => 1
-            [botao_cta_whatsapp] => 1
-            [faixa_cta] => 1
+            [cta_container] => 1
+            [cta_whatsapp] => 1
+            [formatting_address] => 1
+            [formatting_fone] => 1
+            [formatting_mail] => 1
+            [text_address] => 1
+            [text_fone] => 1
+            [text_mail] => 1
+        )
+
+    [formulario] => Array
+        (
+            [form_leads] => 1
+            [form_mask] => 1
+            [form_recaptcha] => 1
+        )
+
+    [imagens] => Array
+        (
+            [image_broke] => 1
+            [image_favicon] => 1
+            [image_banner_over] => 1
+            [image_over] => 1
+        )
+
+    [layout_usabilidade] => Array
+        (
+            [buttons_active_menu] => 1
+            [buttons_back_top] => 1
+            [desktop_disproportionate_elements] => 1
+            [elements_contrast] => 1
+            [horizontal_scroll] => 1
+            [smartphone_disproportionate_elements] => 1
+            [smartphone_footer] => 1
+            [smartphone_google_map] => 1
+            [smartphone_mobile_menu] => 1
+            [tablet_disproportionate_elements] => 1
+            [tablet_footer] => 1
+            [tablet_google_map] => 1
+            [tablet_mobile_menu] => 1
         )
 
     [resposta_servidor] => Array
         (
-            [response_code_server_error] => 1
             [response_code_client_error] => 1
-            [response_code_success] => 1
             [response_code_redirection] => 1
+            [response_code_server_error] => 1
+            [response_code_success] => 1
         )
 
     [seguranca] => Array
         (
-            [security_missing_secure_referrer_policy] => 1
-            [security_missing_x_frame_options] => 1
-            [security_missing_x_content_type_options] => 1
-            [security_missing_content_security_policy] => 1
-            [popup_cookie] => 1
-            [security_missing_hsts] => 1
-            [security_mixed_content] => 1
             [security_https_urls] => 1
+            [security_missing_content_security_policy] => 1
+            [security_missing_hsts] => 1
+            [security_missing_secure_referrer_policy] => 1
+            [security_missing_x_content_type_options] => 1
+            [security_missing_x_frame_options] => 1
+            [security_mixed_content] => 1
         )
 
     [publicacao] => Array
         (
-            [spider] => 1
-            [sensedata] => 1
-            [searchconsole] => 1
-            [redirect_serp_404] => 1
-            [analytics] => 1
-            [mpisistema] => 1
-            [redirect_www] => 1
-            [gitignore] => 1
+            [config_analytics] => 1
+            [config_crm] => 1
+            [config_mpisistema] => 1
+            [config_searchconsole] => 1
+            [config_spider] => 1
         )
 
 )
 
-[12-May-2025 21:52:12 Europe/Berlin] Configuração BigQuery:
+[14-May-2025 04:34:02 Europe/Berlin] Configuração BigQuery:
         Project: data-analytics-d-1669130019479
         Dataset: qa_validacao_dw
         Table: prontuario_resposta
         KeyPath: C:\xampp\htdocs\prontuario-qa\config\bigquery-key.json
-[12-May-2025 21:52:12 Europe/Berlin] Dados formatados para inserção: Array
+[14-May-2025 04:34:02 Europe/Berlin] Dados formatados para inserção: Array
 (
     [0] => Array
         (
             [data] => Array
                 (
-                    [id] => mali1n1jrpj29gbzl7
-                    [dominio] => exemplo.com.br
-                    [op_tipo] => Correção
-                    [id_cliente] => 222222
-                    [id_ticket] => 11111111
-                    [analista_qa] => Gustavo Gonçalves
+                    [id] => manbu965tlysd7lwtp
+                    [dominio] => exemplo.net
+                    [op_tipo] => Validação
+                    [id_cliente] => 35353535
+                    [id_ticket] => 1414141414
+                    [analista_qa] => Ana Diniz
                     [data_validacao] => 2025-05-13
-                    [analista_producao] => Lucas Santos
-                    [data_producao] => 2025-05-12
-                    [pontuacao] => 232
-                    [porcentagem] => 89.23
-                    [pontuacao_maxima] => 260
-                    [status] => Reprovado
+                    [analista_producao] => Sofia Silva
+                    [data_producao] => 2025-05-06
+                    [pontuacao] => 287
+                    [porcentagem] => 100
+                    [pontuacao_maxima] => 287
+                    [status] => Aprovado
                     [core_web_vitals] => Array
                         (
-                            [mobile_banner] => 1
+                            [accessibility] => 1
+                            [best_pratices] => 1
+                            [performance] => 1
+                            [seo] => 1
                             [footer_lazy_load] => 1
-                            [seo] => 
-                            [best_pratices] => 
-                            [accessibility] => 
-                            [performance] => 
+                            [smartphone_banner] => 1
                         )
 
                     [metadados_seo] => Array
                         (
-                            [paginas_mpis] => 1
-                            [mapa_site_links] => 1
-                            [page_titles_multiple] => 1
-                            [coluna_lateral] => 1
-                            [url_coerente_h1_pagina] => 1
+                            [banners_link_mpis] => 1
+                            [breadcrumbs] => 1
+                            [enterprise_name_h1_home] => 1
+                            [featured_products] => 1
                             [menu_header_footer] => 1
-                            [produtos_destaque] => 1
-                            [empresa_segmento_h1_home] => 1
-                            [banners_link_mpis] => 1
+                            [mpis_pages] => 1
+                            [side_column] => 1
+                            [sitemap_links] => 1
+                            [url_match_h1_page] => 1
+                            [links_internal_nofollow] => 1
                             [meta_discriptions_duplicate] => 1
                             [meta_discriptions_missing] => 1
-                            [page_titles_over_caracteres] => 1
                             [meta_discriptions_over_caracters] => 1
-                            [page_titles_missing] => 1
                             [page_titles_duplicate] => 1
-                            [links_externos] => 1
+                            [page_titles_missing] => 1
+                            [page_titles_multiple] => 1
+                            [page_titles_over_caracteres] => 1
                         )
 
                     [validacao_codigo] => Array
                         (
-                            [sem_arquivos_old] => 1
-                            [font_awesome] => 
-                            [w3c_html] => 1
+                            [backup_bd] => 1
+                            [buttons_clickable] => 1
+                            [config_gitignore] => 1
+                            [old_archives] => 1
+                            [popup_cookie] => 1
+                            [content_lorem_ipsum_placeholder] => 1
+                            [font_awesome] => 1
                             [w3c_css] => 1
-                            [lorem_ipsum_placeholder] => 1
+                            [w3c_html] => 1
                         )
 
                     [estrutura_semantica] => Array
                         (
                             [h1_duplicate] => 1
+                            [h1_missing] => 1
                             [h1_multiple] => 1
                             [h2_missing] => 1
-                            [h1_missing] => 1
-                        )
-
-                    [fluxo] => Array
-                        (
-                            [pull_request] => 1
-                            [backup_bd] => 1
                         )
 
                     [urls] => Array
                         (
-                            [urls_over_caracters] => 1
-                            [contains_space] => 1
-                            [multiple_slashes] => 1
-                            [non_ascii_caracters] => 1
-                            [uppercase] => 1
-                        )
-
-                    [formulario] => Array
-                        (
-                            [recaptcha_formulario] => 1
-                            [mascara_formulario] => 1
-                        )
-
-                    [imagens] => Array
-                        (
-                            [favicon] => 
-                            [image_over] => 1
-                            [image_banner_over] => 1
-                        )
-
-                    [layout_usabilidade] => Array
-                        (
-                            [botao_voltar_topo] => 1
-                            [mobile_elementos_desproporcionais] => 1
-                            [mobile_footer] => 1
-                            [mobile_menu_hamburguer] => 1
-                            [scroll_lateral] => 1
-                            [mobile_mapa_google] => 1
-                            [disproportionate_elementes] => 1
-                            [broke_image_components] => 1
-                            [contraste_elementos] => 1
-                            [botoes_clicaveis] => 1
-                            [breadcrumbs] => 1
-                            [active_menu] => 1
-                        )
-
-                    [contato] => Array
-                        (
-                            [formatacao_endereco] => 1
-                            [formatacao_telefone] => 1
-                            [formatacao_email] => 1
-                            [email] => 1
-                            [endereco] => 1
-                            [telefone] => 1
-                            [botao_cta_whatsapp] => 1
-                            [faixa_cta] => 1
-                        )
-
-                    [resposta_servidor] => Array
-                        (
-                            [response_code_server_error] => 1
-                            [response_code_client_error] => 1
-                            [response_code_success] => 1
-                            [response_code_redirection] => 1
-                        )
-
-                    [seguranca] => Array
-                        (
-                            [security_missing_secure_referrer_policy] => 1
-                            [security_missing_x_frame_options] => 1
-                            [security_missing_x_content_type_options] => 1
-                            [security_missing_content_security_policy] => 1
-                            [popup_cookie] => 1
-                            [security_missing_hsts] => 1
-                            [security_mixed_content] => 1
-                            [security_https_urls] => 1
-                        )
-
-                    [publicacao] => Array
-                        (
-                            [spider] => 1
-                            [sensedata] => 1
-                            [searchconsole] => 1
                             [redirect_serp_404] => 1
-                            [analytics] => 1
-                            [mpisistema] => 1
                             [redirect_www] => 1
-                            [gitignore] => 1
-                        )
-
-                )
-
-        )
-
-)
-
-[12-May-2025 21:52:13 Europe/Berlin] Inserção bem-sucedida
-[12-May-2025 21:52:13 Europe/Berlin] Inserção no BigQuery bem-sucedida
-[12-May-2025 21:53:10 Europe/Berlin] Dados recebidos: Array
-(
-    [id] => mali2vb3cl0trqipj
-    [dominio] => outroexemplo.com.br
-    [op_tipo] => Correção
-    [id_cliente] => 222222
-    [id_ticket] => 11111111
-    [analista_qa] => Gustavo Gonçalves
-    [data_validacao] => 2025-05-13
-    [analista_producao] => Lucas Santos
-    [data_producao] => 2025-05-12
-    [pontuacao] => 202
-    [porcentagem] => 77.69
-    [pontuacao_maxima] => 260
-    [status] => Reprovado
-    [core_web_vitals] => Array
-        (
-            [mobile_banner] => 
-            [footer_lazy_load] => 
-            [seo] => 
-            [best_pratices] => 
-            [accessibility] => 
-            [performance] => 
-        )
-
-    [metadados_seo] => Array
-        (
-            [paginas_mpis] => 
-            [mapa_site_links] => 
-            [page_titles_multiple] => 1
-            [coluna_lateral] => 
-            [url_coerente_h1_pagina] => 
-            [menu_header_footer] => 1
-            [produtos_destaque] => 1
-            [empresa_segmento_h1_home] => 1
-            [banners_link_mpis] => 1
-            [meta_discriptions_duplicate] => 1
-            [meta_discriptions_missing] => 1
-            [page_titles_over_caracteres] => 1
-            [meta_discriptions_over_caracters] => 1
-            [page_titles_missing] => 1
-            [page_titles_duplicate] => 1
-            [links_externos] => 1
-        )
-
-    [validacao_codigo] => Array
-        (
-            [sem_arquivos_old] => 1
-            [font_awesome] => 
-            [w3c_html] => 1
-            [w3c_css] => 1
-            [lorem_ipsum_placeholder] => 1
-        )
-
-    [estrutura_semantica] => Array
-        (
-            [h1_duplicate] => 1
-            [h1_multiple] => 1
-            [h2_missing] => 1
-            [h1_missing] => 1
-        )
-
-    [fluxo] => Array
-        (
-            [pull_request] => 1
-            [backup_bd] => 1
-        )
-
-    [urls] => Array
-        (
-            [urls_over_caracters] => 1
-            [contains_space] => 1
-            [multiple_slashes] => 1
-            [non_ascii_caracters] => 1
-            [uppercase] => 1
-        )
-
-    [formulario] => Array
-        (
-            [recaptcha_formulario] => 1
-            [mascara_formulario] => 1
-        )
-
-    [imagens] => Array
-        (
-            [favicon] => 
-            [image_over] => 1
-            [image_banner_over] => 1
-        )
-
-    [layout_usabilidade] => Array
-        (
-            [botao_voltar_topo] => 1
-            [mobile_elementos_desproporcionais] => 1
-            [mobile_footer] => 1
-            [mobile_menu_hamburguer] => 1
-            [scroll_lateral] => 1
-            [mobile_mapa_google] => 1
-            [disproportionate_elementes] => 1
-            [broke_image_components] => 1
-            [contraste_elementos] => 1
-            [botoes_clicaveis] => 1
-            [breadcrumbs] => 1
-            [active_menu] => 1
-        )
-
-    [contato] => Array
-        (
-            [formatacao_endereco] => 1
-            [formatacao_telefone] => 1
-            [formatacao_email] => 1
-            [email] => 1
-            [endereco] => 1
-            [telefone] => 1
-            [botao_cta_whatsapp] => 1
-            [faixa_cta] => 1
-        )
-
-    [resposta_servidor] => Array
-        (
-            [response_code_server_error] => 1
-            [response_code_client_error] => 1
-            [response_code_success] => 1
-            [response_code_redirection] => 1
-        )
-
-    [seguranca] => Array
-        (
-            [security_missing_secure_referrer_policy] => 1
-            [security_missing_x_frame_options] => 1
-            [security_missing_x_content_type_options] => 1
-            [security_missing_content_security_policy] => 1
-            [popup_cookie] => 1
-            [security_missing_hsts] => 1
-            [security_mixed_content] => 1
-            [security_https_urls] => 1
-        )
-
-    [publicacao] => Array
-        (
-            [spider] => 1
-            [sensedata] => 1
-            [searchconsole] => 1
-            [redirect_serp_404] => 1
-            [analytics] => 1
-            [mpisistema] => 1
-            [redirect_www] => 1
-            [gitignore] => 1
-        )
-
-)
-
-[12-May-2025 21:53:10 Europe/Berlin] Dados recebidos para inserção: Array
-(
-    [id] => mali2vb3cl0trqipj
-    [dominio] => outroexemplo.com.br
-    [op_tipo] => Correção
-    [id_cliente] => 222222
-    [id_ticket] => 11111111
-    [analista_qa] => Gustavo Gonçalves
-    [data_validacao] => 2025-05-13
-    [analista_producao] => Lucas Santos
-    [data_producao] => 2025-05-12
-    [pontuacao] => 202
-    [porcentagem] => 77.69
-    [pontuacao_maxima] => 260
-    [status] => Reprovado
-    [core_web_vitals] => Array
-        (
-            [mobile_banner] => 
-            [footer_lazy_load] => 
-            [seo] => 
-            [best_pratices] => 
-            [accessibility] => 
-            [performance] => 
-        )
-
-    [metadados_seo] => Array
-        (
-            [paginas_mpis] => 
-            [mapa_site_links] => 
-            [page_titles_multiple] => 1
-            [coluna_lateral] => 
-            [url_coerente_h1_pagina] => 
-            [menu_header_footer] => 1
-            [produtos_destaque] => 1
-            [empresa_segmento_h1_home] => 1
-            [banners_link_mpis] => 1
-            [meta_discriptions_duplicate] => 1
-            [meta_discriptions_missing] => 1
-            [page_titles_over_caracteres] => 1
-            [meta_discriptions_over_caracters] => 1
-            [page_titles_missing] => 1
-            [page_titles_duplicate] => 1
-            [links_externos] => 1
-        )
-
-    [validacao_codigo] => Array
-        (
-            [sem_arquivos_old] => 1
-            [font_awesome] => 
-            [w3c_html] => 1
-            [w3c_css] => 1
-            [lorem_ipsum_placeholder] => 1
-        )
-
-    [estrutura_semantica] => Array
-        (
-            [h1_duplicate] => 1
-            [h1_multiple] => 1
-            [h2_missing] => 1
-            [h1_missing] => 1
-        )
-
-    [fluxo] => Array
-        (
-            [pull_request] => 1
-            [backup_bd] => 1
-        )
-
-    [urls] => Array
-        (
-            [urls_over_caracters] => 1
-            [contains_space] => 1
-            [multiple_slashes] => 1
-            [non_ascii_caracters] => 1
-            [uppercase] => 1
-        )
-
-    [formulario] => Array
-        (
-            [recaptcha_formulario] => 1
-            [mascara_formulario] => 1
-        )
-
-    [imagens] => Array
-        (
-            [favicon] => 
-            [image_over] => 1
-            [image_banner_over] => 1
-        )
-
-    [layout_usabilidade] => Array
-        (
-            [botao_voltar_topo] => 1
-            [mobile_elementos_desproporcionais] => 1
-            [mobile_footer] => 1
-            [mobile_menu_hamburguer] => 1
-            [scroll_lateral] => 1
-            [mobile_mapa_google] => 1
-            [disproportionate_elementes] => 1
-            [broke_image_components] => 1
-            [contraste_elementos] => 1
-            [botoes_clicaveis] => 1
-            [breadcrumbs] => 1
-            [active_menu] => 1
-        )
-
-    [contato] => Array
-        (
-            [formatacao_endereco] => 1
-            [formatacao_telefone] => 1
-            [formatacao_email] => 1
-            [email] => 1
-            [endereco] => 1
-            [telefone] => 1
-            [botao_cta_whatsapp] => 1
-            [faixa_cta] => 1
-        )
-
-    [resposta_servidor] => Array
-        (
-            [response_code_server_error] => 1
-            [response_code_client_error] => 1
-            [response_code_success] => 1
-            [response_code_redirection] => 1
-        )
-
-    [seguranca] => Array
-        (
-            [security_missing_secure_referrer_policy] => 1
-            [security_missing_x_frame_options] => 1
-            [security_missing_x_content_type_options] => 1
-            [security_missing_content_security_policy] => 1
-            [popup_cookie] => 1
-            [security_missing_hsts] => 1
-            [security_mixed_content] => 1
-            [security_https_urls] => 1
-        )
-
-    [publicacao] => Array
-        (
-            [spider] => 1
-            [sensedata] => 1
-            [searchconsole] => 1
-            [redirect_serp_404] => 1
-            [analytics] => 1
-            [mpisistema] => 1
-            [redirect_www] => 1
-            [gitignore] => 1
-        )
-
-)
-
-[12-May-2025 21:53:10 Europe/Berlin] Configuração BigQuery:
-        Project: data-analytics-d-1669130019479
-        Dataset: qa_validacao_dw
-        Table: prontuario_resposta
-        KeyPath: C:\xampp\htdocs\prontuario-qa\config\bigquery-key.json
-[12-May-2025 21:53:10 Europe/Berlin] Dados formatados para inserção: Array
-(
-    [0] => Array
-        (
-            [data] => Array
-                (
-                    [id] => mali2vb3cl0trqipj
-                    [dominio] => outroexemplo.com.br
-                    [op_tipo] => Correção
-                    [id_cliente] => 222222
-                    [id_ticket] => 11111111
-                    [analista_qa] => Gustavo Gonçalves
-                    [data_validacao] => 2025-05-13
-                    [analista_producao] => Lucas Santos
-                    [data_producao] => 2025-05-12
-                    [pontuacao] => 202
-                    [porcentagem] => 77.69
-                    [pontuacao_maxima] => 260
-                    [status] => Reprovado
-                    [core_web_vitals] => Array
-                        (
-                            [mobile_banner] => 
-                            [footer_lazy_load] => 
-                            [seo] => 
-                            [best_pratices] => 
-                            [accessibility] => 
-                            [performance] => 
-                        )
-
-                    [metadados_seo] => Array
-                        (
-                            [paginas_mpis] => 
-                            [mapa_site_links] => 
-                            [page_titles_multiple] => 1
-                            [coluna_lateral] => 
-                            [url_coerente_h1_pagina] => 
-                            [menu_header_footer] => 1
-                            [produtos_destaque] => 1
-                            [empresa_segmento_h1_home] => 1
-                            [banners_link_mpis] => 1
-                            [meta_discriptions_duplicate] => 1
-                            [meta_discriptions_missing] => 1
-                            [page_titles_over_caracteres] => 1
-                            [meta_discriptions_over_caracters] => 1
-                            [page_titles_missing] => 1
-                            [page_titles_duplicate] => 1
-                            [links_externos] => 1
-                        )
-
-                    [validacao_codigo] => Array
-                        (
-                            [sem_arquivos_old] => 1
-                            [font_awesome] => 
-                            [w3c_html] => 1
-                            [w3c_css] => 1
-                            [lorem_ipsum_placeholder] => 1
-                        )
-
-                    [estrutura_semantica] => Array
-                        (
-                            [h1_duplicate] => 1
-                            [h1_multiple] => 1
-                            [h2_missing] => 1
-                            [h1_missing] => 1
-                        )
-
-                    [fluxo] => Array
-                        (
-                            [pull_request] => 1
-                            [backup_bd] => 1
-                        )
-
-                    [urls] => Array
-                        (
+                            [urls_contains_space] => 1
+                            [urls_multiple_slashes] => 1
+                            [urls_non_ascii_caracters] => 1
                             [urls_over_caracters] => 1
-                            [contains_space] => 1
-                            [multiple_slashes] => 1
-                            [non_ascii_caracters] => 1
-                            [uppercase] => 1
-                        )
-
-                    [formulario] => Array
-                        (
-                            [recaptcha_formulario] => 1
-                            [mascara_formulario] => 1
-                        )
-
-                    [imagens] => Array
-                        (
-                            [favicon] => 
-                            [image_over] => 1
-                            [image_banner_over] => 1
-                        )
-
-                    [layout_usabilidade] => Array
-                        (
-                            [botao_voltar_topo] => 1
-                            [mobile_elementos_desproporcionais] => 1
-                            [mobile_footer] => 1
-                            [mobile_menu_hamburguer] => 1
-                            [scroll_lateral] => 1
-                            [mobile_mapa_google] => 1
-                            [disproportionate_elementes] => 1
-                            [broke_image_components] => 1
-                            [contraste_elementos] => 1
-                            [botoes_clicaveis] => 1
-                            [breadcrumbs] => 1
-                            [active_menu] => 1
+                            [urls_uppercase] => 1
                         )
 
                     [contato] => Array
                         (
-                            [formatacao_endereco] => 1
-                            [formatacao_telefone] => 1
-                            [formatacao_email] => 1
-                            [email] => 1
-                            [endereco] => 1
-                            [telefone] => 1
-                            [botao_cta_whatsapp] => 1
-                            [faixa_cta] => 1
+                            [cta_container] => 1
+                            [cta_whatsapp] => 1
+                            [formatting_address] => 1
+                            [formatting_fone] => 1
+                            [formatting_mail] => 1
+                            [text_address] => 1
+                            [text_fone] => 1
+                            [text_mail] => 1
+                        )
+
+                    [formulario] => Array
+                        (
+                            [form_leads] => 1
+                            [form_mask] => 1
+                            [form_recaptcha] => 1
+                        )
+
+                    [imagens] => Array
+                        (
+                            [image_broke] => 1
+                            [image_favicon] => 1
+                            [image_banner_over] => 1
+                            [image_over] => 1
+                        )
+
+                    [layout_usabilidade] => Array
+                        (
+                            [buttons_active_menu] => 1
+                            [buttons_back_top] => 1
+                            [desktop_disproportionate_elements] => 1
+                            [elements_contrast] => 1
+                            [horizontal_scroll] => 1
+                            [smartphone_disproportionate_elements] => 1
+                            [smartphone_footer] => 1
+                            [smartphone_google_map] => 1
+                            [smartphone_mobile_menu] => 1
+                            [tablet_disproportionate_elements] => 1
+                            [tablet_footer] => 1
+                            [tablet_google_map] => 1
+                            [tablet_mobile_menu] => 1
                         )
 
                     [resposta_servidor] => Array
                         (
-                            [response_code_server_error] => 1
                             [response_code_client_error] => 1
-                            [response_code_success] => 1
                             [response_code_redirection] => 1
+                            [response_code_server_error] => 1
+                            [response_code_success] => 1
                         )
 
                     [seguranca] => Array
                         (
-                            [security_missing_secure_referrer_policy] => 1
-                            [security_missing_x_frame_options] => 1
-                            [security_missing_x_content_type_options] => 1
-                            [security_missing_content_security_policy] => 1
-                            [popup_cookie] => 1
-                            [security_missing_hsts] => 1
-                            [security_mixed_content] => 1
                             [security_https_urls] => 1
-                        )
-
-                    [publicacao] => Array
-                        (
-                            [spider] => 1
-                            [sensedata] => 1
-                            [searchconsole] => 1
-                            [redirect_serp_404] => 1
-                            [analytics] => 1
-                            [mpisistema] => 1
-                            [redirect_www] => 1
-                            [gitignore] => 1
-                        )
-
-                )
-
-        )
-
-)
-
-[12-May-2025 21:53:10 Europe/Berlin] Inserção bem-sucedida
-[12-May-2025 21:53:10 Europe/Berlin] Inserção no BigQuery bem-sucedida
-[12-May-2025 21:53:22 Europe/Berlin] Dados recebidos: Array
-(
-    [id] => mali34ny8er20y03p3b
-    [dominio] => outroexemplo1.com.br
-    [op_tipo] => Correção
-    [id_cliente] => 222222
-    [id_ticket] => 11111111
-    [analista_qa] => Gustavo Gonçalves
-    [data_validacao] => 2025-05-13
-    [analista_producao] => Lucas Santos
-    [data_producao] => 2025-05-12
-    [pontuacao] => 187
-    [porcentagem] => 71.92
-    [pontuacao_maxima] => 260
-    [status] => Reprovado
-    [core_web_vitals] => Array
-        (
-            [mobile_banner] => 
-            [footer_lazy_load] => 
-            [seo] => 
-            [best_pratices] => 
-            [accessibility] => 
-            [performance] => 
-        )
-
-    [metadados_seo] => Array
-        (
-            [paginas_mpis] => 
-            [mapa_site_links] => 
-            [page_titles_multiple] => 1
-            [coluna_lateral] => 
-            [url_coerente_h1_pagina] => 
-            [menu_header_footer] => 
-            [produtos_destaque] => 
-            [empresa_segmento_h1_home] => 
-            [banners_link_mpis] => 1
-            [meta_discriptions_duplicate] => 1
-            [meta_discriptions_missing] => 1
-            [page_titles_over_caracteres] => 1
-            [meta_discriptions_over_caracters] => 1
-            [page_titles_missing] => 1
-            [page_titles_duplicate] => 1
-            [links_externos] => 1
-        )
-
-    [validacao_codigo] => Array
-        (
-            [sem_arquivos_old] => 1
-            [font_awesome] => 
-            [w3c_html] => 1
-            [w3c_css] => 1
-            [lorem_ipsum_placeholder] => 1
-        )
-
-    [estrutura_semantica] => Array
-        (
-            [h1_duplicate] => 1
-            [h1_multiple] => 1
-            [h2_missing] => 1
-            [h1_missing] => 1
-        )
-
-    [fluxo] => Array
-        (
-            [pull_request] => 1
-            [backup_bd] => 1
-        )
-
-    [urls] => Array
-        (
-            [urls_over_caracters] => 1
-            [contains_space] => 1
-            [multiple_slashes] => 1
-            [non_ascii_caracters] => 1
-            [uppercase] => 1
-        )
-
-    [formulario] => Array
-        (
-            [recaptcha_formulario] => 1
-            [mascara_formulario] => 1
-        )
-
-    [imagens] => Array
-        (
-            [favicon] => 
-            [image_over] => 1
-            [image_banner_over] => 1
-        )
-
-    [layout_usabilidade] => Array
-        (
-            [botao_voltar_topo] => 1
-            [mobile_elementos_desproporcionais] => 1
-            [mobile_footer] => 1
-            [mobile_menu_hamburguer] => 1
-            [scroll_lateral] => 1
-            [mobile_mapa_google] => 1
-            [disproportionate_elementes] => 1
-            [broke_image_components] => 1
-            [contraste_elementos] => 1
-            [botoes_clicaveis] => 1
-            [breadcrumbs] => 1
-            [active_menu] => 1
-        )
-
-    [contato] => Array
-        (
-            [formatacao_endereco] => 1
-            [formatacao_telefone] => 1
-            [formatacao_email] => 1
-            [email] => 1
-            [endereco] => 1
-            [telefone] => 1
-            [botao_cta_whatsapp] => 1
-            [faixa_cta] => 1
-        )
-
-    [resposta_servidor] => Array
-        (
-            [response_code_server_error] => 1
-            [response_code_client_error] => 1
-            [response_code_success] => 1
-            [response_code_redirection] => 1
-        )
-
-    [seguranca] => Array
-        (
-            [security_missing_secure_referrer_policy] => 1
-            [security_missing_x_frame_options] => 1
-            [security_missing_x_content_type_options] => 1
-            [security_missing_content_security_policy] => 1
-            [popup_cookie] => 1
-            [security_missing_hsts] => 1
-            [security_mixed_content] => 1
-            [security_https_urls] => 1
-        )
-
-    [publicacao] => Array
-        (
-            [spider] => 1
-            [sensedata] => 1
-            [searchconsole] => 1
-            [redirect_serp_404] => 1
-            [analytics] => 1
-            [mpisistema] => 1
-            [redirect_www] => 1
-            [gitignore] => 1
-        )
-
-)
-
-[12-May-2025 21:53:22 Europe/Berlin] Dados recebidos para inserção: Array
-(
-    [id] => mali34ny8er20y03p3b
-    [dominio] => outroexemplo1.com.br
-    [op_tipo] => Correção
-    [id_cliente] => 222222
-    [id_ticket] => 11111111
-    [analista_qa] => Gustavo Gonçalves
-    [data_validacao] => 2025-05-13
-    [analista_producao] => Lucas Santos
-    [data_producao] => 2025-05-12
-    [pontuacao] => 187
-    [porcentagem] => 71.92
-    [pontuacao_maxima] => 260
-    [status] => Reprovado
-    [core_web_vitals] => Array
-        (
-            [mobile_banner] => 
-            [footer_lazy_load] => 
-            [seo] => 
-            [best_pratices] => 
-            [accessibility] => 
-            [performance] => 
-        )
-
-    [metadados_seo] => Array
-        (
-            [paginas_mpis] => 
-            [mapa_site_links] => 
-            [page_titles_multiple] => 1
-            [coluna_lateral] => 
-            [url_coerente_h1_pagina] => 
-            [menu_header_footer] => 
-            [produtos_destaque] => 
-            [empresa_segmento_h1_home] => 
-            [banners_link_mpis] => 1
-            [meta_discriptions_duplicate] => 1
-            [meta_discriptions_missing] => 1
-            [page_titles_over_caracteres] => 1
-            [meta_discriptions_over_caracters] => 1
-            [page_titles_missing] => 1
-            [page_titles_duplicate] => 1
-            [links_externos] => 1
-        )
-
-    [validacao_codigo] => Array
-        (
-            [sem_arquivos_old] => 1
-            [font_awesome] => 
-            [w3c_html] => 1
-            [w3c_css] => 1
-            [lorem_ipsum_placeholder] => 1
-        )
-
-    [estrutura_semantica] => Array
-        (
-            [h1_duplicate] => 1
-            [h1_multiple] => 1
-            [h2_missing] => 1
-            [h1_missing] => 1
-        )
-
-    [fluxo] => Array
-        (
-            [pull_request] => 1
-            [backup_bd] => 1
-        )
-
-    [urls] => Array
-        (
-            [urls_over_caracters] => 1
-            [contains_space] => 1
-            [multiple_slashes] => 1
-            [non_ascii_caracters] => 1
-            [uppercase] => 1
-        )
-
-    [formulario] => Array
-        (
-            [recaptcha_formulario] => 1
-            [mascara_formulario] => 1
-        )
-
-    [imagens] => Array
-        (
-            [favicon] => 
-            [image_over] => 1
-            [image_banner_over] => 1
-        )
-
-    [layout_usabilidade] => Array
-        (
-            [botao_voltar_topo] => 1
-            [mobile_elementos_desproporcionais] => 1
-            [mobile_footer] => 1
-            [mobile_menu_hamburguer] => 1
-            [scroll_lateral] => 1
-            [mobile_mapa_google] => 1
-            [disproportionate_elementes] => 1
-            [broke_image_components] => 1
-            [contraste_elementos] => 1
-            [botoes_clicaveis] => 1
-            [breadcrumbs] => 1
-            [active_menu] => 1
-        )
-
-    [contato] => Array
-        (
-            [formatacao_endereco] => 1
-            [formatacao_telefone] => 1
-            [formatacao_email] => 1
-            [email] => 1
-            [endereco] => 1
-            [telefone] => 1
-            [botao_cta_whatsapp] => 1
-            [faixa_cta] => 1
-        )
-
-    [resposta_servidor] => Array
-        (
-            [response_code_server_error] => 1
-            [response_code_client_error] => 1
-            [response_code_success] => 1
-            [response_code_redirection] => 1
-        )
-
-    [seguranca] => Array
-        (
-            [security_missing_secure_referrer_policy] => 1
-            [security_missing_x_frame_options] => 1
-            [security_missing_x_content_type_options] => 1
-            [security_missing_content_security_policy] => 1
-            [popup_cookie] => 1
-            [security_missing_hsts] => 1
-            [security_mixed_content] => 1
-            [security_https_urls] => 1
-        )
-
-    [publicacao] => Array
-        (
-            [spider] => 1
-            [sensedata] => 1
-            [searchconsole] => 1
-            [redirect_serp_404] => 1
-            [analytics] => 1
-            [mpisistema] => 1
-            [redirect_www] => 1
-            [gitignore] => 1
-        )
-
-)
-
-[12-May-2025 21:53:22 Europe/Berlin] Configuração BigQuery:
-        Project: data-analytics-d-1669130019479
-        Dataset: qa_validacao_dw
-        Table: prontuario_resposta
-        KeyPath: C:\xampp\htdocs\prontuario-qa\config\bigquery-key.json
-[12-May-2025 21:53:22 Europe/Berlin] Dados formatados para inserção: Array
-(
-    [0] => Array
-        (
-            [data] => Array
-                (
-                    [id] => mali34ny8er20y03p3b
-                    [dominio] => outroexemplo1.com.br
-                    [op_tipo] => Correção
-                    [id_cliente] => 222222
-                    [id_ticket] => 11111111
-                    [analista_qa] => Gustavo Gonçalves
-                    [data_validacao] => 2025-05-13
-                    [analista_producao] => Lucas Santos
-                    [data_producao] => 2025-05-12
-                    [pontuacao] => 187
-                    [porcentagem] => 71.92
-                    [pontuacao_maxima] => 260
-                    [status] => Reprovado
-                    [core_web_vitals] => Array
-                        (
-                            [mobile_banner] => 
-                            [footer_lazy_load] => 
-                            [seo] => 
-                            [best_pratices] => 
-                            [accessibility] => 
-                            [performance] => 
-                        )
-
-                    [metadados_seo] => Array
-                        (
-                            [paginas_mpis] => 
-                            [mapa_site_links] => 
-                            [page_titles_multiple] => 1
-                            [coluna_lateral] => 
-                            [url_coerente_h1_pagina] => 
-                            [menu_header_footer] => 
-                            [produtos_destaque] => 
-                            [empresa_segmento_h1_home] => 
-                            [banners_link_mpis] => 1
-                            [meta_discriptions_duplicate] => 1
-                            [meta_discriptions_missing] => 1
-                            [page_titles_over_caracteres] => 1
-                            [meta_discriptions_over_caracters] => 1
-                            [page_titles_missing] => 1
-                            [page_titles_duplicate] => 1
-                            [links_externos] => 1
-                        )
-
-                    [validacao_codigo] => Array
-                        (
-                            [sem_arquivos_old] => 1
-                            [font_awesome] => 
-                            [w3c_html] => 1
-                            [w3c_css] => 1
-                            [lorem_ipsum_placeholder] => 1
-                        )
-
-                    [estrutura_semantica] => Array
-                        (
-                            [h1_duplicate] => 1
-                            [h1_multiple] => 1
-                            [h2_missing] => 1
-                            [h1_missing] => 1
-                        )
-
-                    [fluxo] => Array
-                        (
-                            [pull_request] => 1
-                            [backup_bd] => 1
-                        )
-
-                    [urls] => Array
-                        (
-                            [urls_over_caracters] => 1
-                            [contains_space] => 1
-                            [multiple_slashes] => 1
-                            [non_ascii_caracters] => 1
-                            [uppercase] => 1
-                        )
-
-                    [formulario] => Array
-                        (
-                            [recaptcha_formulario] => 1
-                            [mascara_formulario] => 1
-                        )
-
-                    [imagens] => Array
-                        (
-                            [favicon] => 
-                            [image_over] => 1
-                            [image_banner_over] => 1
-                        )
-
-                    [layout_usabilidade] => Array
-                        (
-                            [botao_voltar_topo] => 1
-                            [mobile_elementos_desproporcionais] => 1
-                            [mobile_footer] => 1
-                            [mobile_menu_hamburguer] => 1
-                            [scroll_lateral] => 1
-                            [mobile_mapa_google] => 1
-                            [disproportionate_elementes] => 1
-                            [broke_image_components] => 1
-                            [contraste_elementos] => 1
-                            [botoes_clicaveis] => 1
-                            [breadcrumbs] => 1
-                            [active_menu] => 1
-                        )
-
-                    [contato] => Array
-                        (
-                            [formatacao_endereco] => 1
-                            [formatacao_telefone] => 1
-                            [formatacao_email] => 1
-                            [email] => 1
-                            [endereco] => 1
-                            [telefone] => 1
-                            [botao_cta_whatsapp] => 1
-                            [faixa_cta] => 1
-                        )
-
-                    [resposta_servidor] => Array
-                        (
-                            [response_code_server_error] => 1
-                            [response_code_client_error] => 1
-                            [response_code_success] => 1
-                            [response_code_redirection] => 1
-                        )
-
-                    [seguranca] => Array
-                        (
-                            [security_missing_secure_referrer_policy] => 1
-                            [security_missing_x_frame_options] => 1
-                            [security_missing_x_content_type_options] => 1
                             [security_missing_content_security_policy] => 1
-                            [popup_cookie] => 1
                             [security_missing_hsts] => 1
-                            [security_mixed_content] => 1
-                            [security_https_urls] => 1
-                        )
-
-                    [publicacao] => Array
-                        (
-                            [spider] => 1
-                            [sensedata] => 1
-                            [searchconsole] => 1
-                            [redirect_serp_404] => 1
-                            [analytics] => 1
-                            [mpisistema] => 1
-                            [redirect_www] => 1
-                            [gitignore] => 1
-                        )
-
-                )
-
-        )
-
-)
-
-[12-May-2025 21:53:22 Europe/Berlin] Inserção bem-sucedida
-[12-May-2025 21:53:22 Europe/Berlin] Inserção no BigQuery bem-sucedida
-[12-May-2025 21:53:31 Europe/Berlin] Dados recebidos: Array
-(
-    [id] => mali3bejwaprv5zsfji
-    [dominio] => outroexemplo1.com.br
-    [op_tipo] => Correção
-    [id_cliente] => 222222
-    [id_ticket] => 11111111
-    [analista_qa] => Gustavo Gonçalves
-    [data_validacao] => 2025-05-13
-    [analista_producao] => Lucas Santos
-    [data_producao] => 2025-05-12
-    [pontuacao] => 181
-    [porcentagem] => 69.62
-    [pontuacao_maxima] => 260
-    [status] => Reprovado
-    [core_web_vitals] => Array
-        (
-            [mobile_banner] => 
-            [footer_lazy_load] => 
-            [seo] => 
-            [best_pratices] => 
-            [accessibility] => 
-            [performance] => 
-        )
-
-    [metadados_seo] => Array
-        (
-            [paginas_mpis] => 
-            [mapa_site_links] => 
-            [page_titles_multiple] => 1
-            [coluna_lateral] => 
-            [url_coerente_h1_pagina] => 
-            [menu_header_footer] => 
-            [produtos_destaque] => 
-            [empresa_segmento_h1_home] => 
-            [banners_link_mpis] => 1
-            [meta_discriptions_duplicate] => 1
-            [meta_discriptions_missing] => 1
-            [page_titles_over_caracteres] => 1
-            [meta_discriptions_over_caracters] => 1
-            [page_titles_missing] => 1
-            [page_titles_duplicate] => 1
-            [links_externos] => 1
-        )
-
-    [validacao_codigo] => Array
-        (
-            [sem_arquivos_old] => 1
-            [font_awesome] => 
-            [w3c_html] => 1
-            [w3c_css] => 1
-            [lorem_ipsum_placeholder] => 1
-        )
-
-    [estrutura_semantica] => Array
-        (
-            [h1_duplicate] => 1
-            [h1_multiple] => 1
-            [h2_missing] => 1
-            [h1_missing] => 1
-        )
-
-    [fluxo] => Array
-        (
-            [pull_request] => 1
-            [backup_bd] => 1
-        )
-
-    [urls] => Array
-        (
-            [urls_over_caracters] => 1
-            [contains_space] => 1
-            [multiple_slashes] => 1
-            [non_ascii_caracters] => 1
-            [uppercase] => 1
-        )
-
-    [formulario] => Array
-        (
-            [recaptcha_formulario] => 
-            [mascara_formulario] => 
-        )
-
-    [imagens] => Array
-        (
-            [favicon] => 
-            [image_over] => 1
-            [image_banner_over] => 1
-        )
-
-    [layout_usabilidade] => Array
-        (
-            [botao_voltar_topo] => 1
-            [mobile_elementos_desproporcionais] => 
-            [mobile_footer] => 1
-            [mobile_menu_hamburguer] => 1
-            [scroll_lateral] => 
-            [mobile_mapa_google] => 1
-            [disproportionate_elementes] => 1
-            [broke_image_components] => 1
-            [contraste_elementos] => 1
-            [botoes_clicaveis] => 1
-            [breadcrumbs] => 1
-            [active_menu] => 1
-        )
-
-    [contato] => Array
-        (
-            [formatacao_endereco] => 1
-            [formatacao_telefone] => 1
-            [formatacao_email] => 1
-            [email] => 1
-            [endereco] => 1
-            [telefone] => 1
-            [botao_cta_whatsapp] => 1
-            [faixa_cta] => 1
-        )
-
-    [resposta_servidor] => Array
-        (
-            [response_code_server_error] => 1
-            [response_code_client_error] => 1
-            [response_code_success] => 1
-            [response_code_redirection] => 1
-        )
-
-    [seguranca] => Array
-        (
-            [security_missing_secure_referrer_policy] => 1
-            [security_missing_x_frame_options] => 1
-            [security_missing_x_content_type_options] => 1
-            [security_missing_content_security_policy] => 1
-            [popup_cookie] => 1
-            [security_missing_hsts] => 1
-            [security_mixed_content] => 1
-            [security_https_urls] => 1
-        )
-
-    [publicacao] => Array
-        (
-            [spider] => 1
-            [sensedata] => 1
-            [searchconsole] => 1
-            [redirect_serp_404] => 1
-            [analytics] => 1
-            [mpisistema] => 1
-            [redirect_www] => 1
-            [gitignore] => 1
-        )
-
-)
-
-[12-May-2025 21:53:31 Europe/Berlin] Dados recebidos para inserção: Array
-(
-    [id] => mali3bejwaprv5zsfji
-    [dominio] => outroexemplo1.com.br
-    [op_tipo] => Correção
-    [id_cliente] => 222222
-    [id_ticket] => 11111111
-    [analista_qa] => Gustavo Gonçalves
-    [data_validacao] => 2025-05-13
-    [analista_producao] => Lucas Santos
-    [data_producao] => 2025-05-12
-    [pontuacao] => 181
-    [porcentagem] => 69.62
-    [pontuacao_maxima] => 260
-    [status] => Reprovado
-    [core_web_vitals] => Array
-        (
-            [mobile_banner] => 
-            [footer_lazy_load] => 
-            [seo] => 
-            [best_pratices] => 
-            [accessibility] => 
-            [performance] => 
-        )
-
-    [metadados_seo] => Array
-        (
-            [paginas_mpis] => 
-            [mapa_site_links] => 
-            [page_titles_multiple] => 1
-            [coluna_lateral] => 
-            [url_coerente_h1_pagina] => 
-            [menu_header_footer] => 
-            [produtos_destaque] => 
-            [empresa_segmento_h1_home] => 
-            [banners_link_mpis] => 1
-            [meta_discriptions_duplicate] => 1
-            [meta_discriptions_missing] => 1
-            [page_titles_over_caracteres] => 1
-            [meta_discriptions_over_caracters] => 1
-            [page_titles_missing] => 1
-            [page_titles_duplicate] => 1
-            [links_externos] => 1
-        )
-
-    [validacao_codigo] => Array
-        (
-            [sem_arquivos_old] => 1
-            [font_awesome] => 
-            [w3c_html] => 1
-            [w3c_css] => 1
-            [lorem_ipsum_placeholder] => 1
-        )
-
-    [estrutura_semantica] => Array
-        (
-            [h1_duplicate] => 1
-            [h1_multiple] => 1
-            [h2_missing] => 1
-            [h1_missing] => 1
-        )
-
-    [fluxo] => Array
-        (
-            [pull_request] => 1
-            [backup_bd] => 1
-        )
-
-    [urls] => Array
-        (
-            [urls_over_caracters] => 1
-            [contains_space] => 1
-            [multiple_slashes] => 1
-            [non_ascii_caracters] => 1
-            [uppercase] => 1
-        )
-
-    [formulario] => Array
-        (
-            [recaptcha_formulario] => 
-            [mascara_formulario] => 
-        )
-
-    [imagens] => Array
-        (
-            [favicon] => 
-            [image_over] => 1
-            [image_banner_over] => 1
-        )
-
-    [layout_usabilidade] => Array
-        (
-            [botao_voltar_topo] => 1
-            [mobile_elementos_desproporcionais] => 
-            [mobile_footer] => 1
-            [mobile_menu_hamburguer] => 1
-            [scroll_lateral] => 
-            [mobile_mapa_google] => 1
-            [disproportionate_elementes] => 1
-            [broke_image_components] => 1
-            [contraste_elementos] => 1
-            [botoes_clicaveis] => 1
-            [breadcrumbs] => 1
-            [active_menu] => 1
-        )
-
-    [contato] => Array
-        (
-            [formatacao_endereco] => 1
-            [formatacao_telefone] => 1
-            [formatacao_email] => 1
-            [email] => 1
-            [endereco] => 1
-            [telefone] => 1
-            [botao_cta_whatsapp] => 1
-            [faixa_cta] => 1
-        )
-
-    [resposta_servidor] => Array
-        (
-            [response_code_server_error] => 1
-            [response_code_client_error] => 1
-            [response_code_success] => 1
-            [response_code_redirection] => 1
-        )
-
-    [seguranca] => Array
-        (
-            [security_missing_secure_referrer_policy] => 1
-            [security_missing_x_frame_options] => 1
-            [security_missing_x_content_type_options] => 1
-            [security_missing_content_security_policy] => 1
-            [popup_cookie] => 1
-            [security_missing_hsts] => 1
-            [security_mixed_content] => 1
-            [security_https_urls] => 1
-        )
-
-    [publicacao] => Array
-        (
-            [spider] => 1
-            [sensedata] => 1
-            [searchconsole] => 1
-            [redirect_serp_404] => 1
-            [analytics] => 1
-            [mpisistema] => 1
-            [redirect_www] => 1
-            [gitignore] => 1
-        )
-
-)
-
-[12-May-2025 21:53:31 Europe/Berlin] Configuração BigQuery:
-        Project: data-analytics-d-1669130019479
-        Dataset: qa_validacao_dw
-        Table: prontuario_resposta
-        KeyPath: C:\xampp\htdocs\prontuario-qa\config\bigquery-key.json
-[12-May-2025 21:53:31 Europe/Berlin] Dados formatados para inserção: Array
-(
-    [0] => Array
-        (
-            [data] => Array
-                (
-                    [id] => mali3bejwaprv5zsfji
-                    [dominio] => outroexemplo1.com.br
-                    [op_tipo] => Correção
-                    [id_cliente] => 222222
-                    [id_ticket] => 11111111
-                    [analista_qa] => Gustavo Gonçalves
-                    [data_validacao] => 2025-05-13
-                    [analista_producao] => Lucas Santos
-                    [data_producao] => 2025-05-12
-                    [pontuacao] => 181
-                    [porcentagem] => 69.62
-                    [pontuacao_maxima] => 260
-                    [status] => Reprovado
-                    [core_web_vitals] => Array
-                        (
-                            [mobile_banner] => 
-                            [footer_lazy_load] => 
-                            [seo] => 
-                            [best_pratices] => 
-                            [accessibility] => 
-                            [performance] => 
-                        )
-
-                    [metadados_seo] => Array
-                        (
-                            [paginas_mpis] => 
-                            [mapa_site_links] => 
-                            [page_titles_multiple] => 1
-                            [coluna_lateral] => 
-                            [url_coerente_h1_pagina] => 
-                            [menu_header_footer] => 
-                            [produtos_destaque] => 
-                            [empresa_segmento_h1_home] => 
-                            [banners_link_mpis] => 1
-                            [meta_discriptions_duplicate] => 1
-                            [meta_discriptions_missing] => 1
-                            [page_titles_over_caracteres] => 1
-                            [meta_discriptions_over_caracters] => 1
-                            [page_titles_missing] => 1
-                            [page_titles_duplicate] => 1
-                            [links_externos] => 1
-                        )
-
-                    [validacao_codigo] => Array
-                        (
-                            [sem_arquivos_old] => 1
-                            [font_awesome] => 
-                            [w3c_html] => 1
-                            [w3c_css] => 1
-                            [lorem_ipsum_placeholder] => 1
-                        )
-
-                    [estrutura_semantica] => Array
-                        (
-                            [h1_duplicate] => 1
-                            [h1_multiple] => 1
-                            [h2_missing] => 1
-                            [h1_missing] => 1
-                        )
-
-                    [fluxo] => Array
-                        (
-                            [pull_request] => 1
-                            [backup_bd] => 1
-                        )
-
-                    [urls] => Array
-                        (
-                            [urls_over_caracters] => 1
-                            [contains_space] => 1
-                            [multiple_slashes] => 1
-                            [non_ascii_caracters] => 1
-                            [uppercase] => 1
-                        )
-
-                    [formulario] => Array
-                        (
-                            [recaptcha_formulario] => 
-                            [mascara_formulario] => 
-                        )
-
-                    [imagens] => Array
-                        (
-                            [favicon] => 
-                            [image_over] => 1
-                            [image_banner_over] => 1
-                        )
-
-                    [layout_usabilidade] => Array
-                        (
-                            [botao_voltar_topo] => 1
-                            [mobile_elementos_desproporcionais] => 
-                            [mobile_footer] => 1
-                            [mobile_menu_hamburguer] => 1
-                            [scroll_lateral] => 
-                            [mobile_mapa_google] => 1
-                            [disproportionate_elementes] => 1
-                            [broke_image_components] => 1
-                            [contraste_elementos] => 1
-                            [botoes_clicaveis] => 1
-                            [breadcrumbs] => 1
-                            [active_menu] => 1
-                        )
-
-                    [contato] => Array
-                        (
-                            [formatacao_endereco] => 1
-                            [formatacao_telefone] => 1
-                            [formatacao_email] => 1
-                            [email] => 1
-                            [endereco] => 1
-                            [telefone] => 1
-                            [botao_cta_whatsapp] => 1
-                            [faixa_cta] => 1
-                        )
-
-                    [resposta_servidor] => Array
-                        (
-                            [response_code_server_error] => 1
-                            [response_code_client_error] => 1
-                            [response_code_success] => 1
-                            [response_code_redirection] => 1
-                        )
-
-                    [seguranca] => Array
-                        (
                             [security_missing_secure_referrer_policy] => 1
+                            [security_missing_x_content_type_options] => 1
                             [security_missing_x_frame_options] => 1
-                            [security_missing_x_content_type_options] => 1
-                            [security_missing_content_security_policy] => 1
-                            [popup_cookie] => 1
-                            [security_missing_hsts] => 1
                             [security_mixed_content] => 1
-                            [security_https_urls] => 1
                         )
 
                     [publicacao] => Array
                         (
-                            [spider] => 1
-                            [sensedata] => 1
-                            [searchconsole] => 1
-                            [redirect_serp_404] => 1
-                            [analytics] => 1
-                            [mpisistema] => 1
-                            [redirect_www] => 1
-                            [gitignore] => 1
+                            [config_analytics] => 1
+                            [config_crm] => 1
+                            [config_mpisistema] => 1
+                            [config_searchconsole] => 1
+                            [config_spider] => 1
                         )
 
                 )
@@ -2373,2360 +1466,5 @@
 
 )
 
-[12-May-2025 21:53:31 Europe/Berlin] Inserção bem-sucedida
-[12-May-2025 21:53:31 Europe/Berlin] Inserção no BigQuery bem-sucedida
-[12-May-2025 21:53:40 Europe/Berlin] Dados recebidos: Array
-(
-    [id] => mali3iwuodo71d6y4o
-    [dominio] => outroexemplo1.com.br
-    [op_tipo] => Correção
-    [id_cliente] => 222222
-    [id_ticket] => 11111111
-    [analista_qa] => Gustavo Gonçalves
-    [data_validacao] => 2025-05-13
-    [analista_producao] => Lucas Santos
-    [data_producao] => 2025-05-12
-    [pontuacao] => 167
-    [porcentagem] => 64.23
-    [pontuacao_maxima] => 260
-    [status] => Reprovado
-    [core_web_vitals] => Array
-        (
-            [mobile_banner] => 
-            [footer_lazy_load] => 
-            [seo] => 
-            [best_pratices] => 
-            [accessibility] => 
-            [performance] => 
-        )
-
-    [metadados_seo] => Array
-        (
-            [paginas_mpis] => 
-            [mapa_site_links] => 
-            [page_titles_multiple] => 1
-            [coluna_lateral] => 
-            [url_coerente_h1_pagina] => 
-            [menu_header_footer] => 
-            [produtos_destaque] => 
-            [empresa_segmento_h1_home] => 
-            [banners_link_mpis] => 1
-            [meta_discriptions_duplicate] => 1
-            [meta_discriptions_missing] => 1
-            [page_titles_over_caracteres] => 1
-            [meta_discriptions_over_caracters] => 1
-            [page_titles_missing] => 1
-            [page_titles_duplicate] => 1
-            [links_externos] => 1
-        )
-
-    [validacao_codigo] => Array
-        (
-            [sem_arquivos_old] => 1
-            [font_awesome] => 
-            [w3c_html] => 1
-            [w3c_css] => 1
-            [lorem_ipsum_placeholder] => 1
-        )
-
-    [estrutura_semantica] => Array
-        (
-            [h1_duplicate] => 1
-            [h1_multiple] => 1
-            [h2_missing] => 1
-            [h1_missing] => 1
-        )
-
-    [fluxo] => Array
-        (
-            [pull_request] => 1
-            [backup_bd] => 1
-        )
-
-    [urls] => Array
-        (
-            [urls_over_caracters] => 1
-            [contains_space] => 1
-            [multiple_slashes] => 1
-            [non_ascii_caracters] => 1
-            [uppercase] => 1
-        )
-
-    [formulario] => Array
-        (
-            [recaptcha_formulario] => 
-            [mascara_formulario] => 
-        )
-
-    [imagens] => Array
-        (
-            [favicon] => 
-            [image_over] => 1
-            [image_banner_over] => 1
-        )
-
-    [layout_usabilidade] => Array
-        (
-            [botao_voltar_topo] => 1
-            [mobile_elementos_desproporcionais] => 
-            [mobile_footer] => 1
-            [mobile_menu_hamburguer] => 1
-            [scroll_lateral] => 
-            [mobile_mapa_google] => 1
-            [disproportionate_elementes] => 1
-            [broke_image_components] => 1
-            [contraste_elementos] => 
-            [botoes_clicaveis] => 
-            [breadcrumbs] => 1
-            [active_menu] => 1
-        )
-
-    [contato] => Array
-        (
-            [formatacao_endereco] => 
-            [formatacao_telefone] => 1
-            [formatacao_email] => 
-            [email] => 
-            [endereco] => 1
-            [telefone] => 
-            [botao_cta_whatsapp] => 1
-            [faixa_cta] => 1
-        )
-
-    [resposta_servidor] => Array
-        (
-            [response_code_server_error] => 1
-            [response_code_client_error] => 1
-            [response_code_success] => 1
-            [response_code_redirection] => 1
-        )
-
-    [seguranca] => Array
-        (
-            [security_missing_secure_referrer_policy] => 1
-            [security_missing_x_frame_options] => 1
-            [security_missing_x_content_type_options] => 1
-            [security_missing_content_security_policy] => 1
-            [popup_cookie] => 1
-            [security_missing_hsts] => 1
-            [security_mixed_content] => 1
-            [security_https_urls] => 1
-        )
-
-    [publicacao] => Array
-        (
-            [spider] => 1
-            [sensedata] => 1
-            [searchconsole] => 1
-            [redirect_serp_404] => 1
-            [analytics] => 1
-            [mpisistema] => 1
-            [redirect_www] => 1
-            [gitignore] => 1
-        )
-
-)
-
-[12-May-2025 21:53:40 Europe/Berlin] Dados recebidos para inserção: Array
-(
-    [id] => mali3iwuodo71d6y4o
-    [dominio] => outroexemplo1.com.br
-    [op_tipo] => Correção
-    [id_cliente] => 222222
-    [id_ticket] => 11111111
-    [analista_qa] => Gustavo Gonçalves
-    [data_validacao] => 2025-05-13
-    [analista_producao] => Lucas Santos
-    [data_producao] => 2025-05-12
-    [pontuacao] => 167
-    [porcentagem] => 64.23
-    [pontuacao_maxima] => 260
-    [status] => Reprovado
-    [core_web_vitals] => Array
-        (
-            [mobile_banner] => 
-            [footer_lazy_load] => 
-            [seo] => 
-            [best_pratices] => 
-            [accessibility] => 
-            [performance] => 
-        )
-
-    [metadados_seo] => Array
-        (
-            [paginas_mpis] => 
-            [mapa_site_links] => 
-            [page_titles_multiple] => 1
-            [coluna_lateral] => 
-            [url_coerente_h1_pagina] => 
-            [menu_header_footer] => 
-            [produtos_destaque] => 
-            [empresa_segmento_h1_home] => 
-            [banners_link_mpis] => 1
-            [meta_discriptions_duplicate] => 1
-            [meta_discriptions_missing] => 1
-            [page_titles_over_caracteres] => 1
-            [meta_discriptions_over_caracters] => 1
-            [page_titles_missing] => 1
-            [page_titles_duplicate] => 1
-            [links_externos] => 1
-        )
-
-    [validacao_codigo] => Array
-        (
-            [sem_arquivos_old] => 1
-            [font_awesome] => 
-            [w3c_html] => 1
-            [w3c_css] => 1
-            [lorem_ipsum_placeholder] => 1
-        )
-
-    [estrutura_semantica] => Array
-        (
-            [h1_duplicate] => 1
-            [h1_multiple] => 1
-            [h2_missing] => 1
-            [h1_missing] => 1
-        )
-
-    [fluxo] => Array
-        (
-            [pull_request] => 1
-            [backup_bd] => 1
-        )
-
-    [urls] => Array
-        (
-            [urls_over_caracters] => 1
-            [contains_space] => 1
-            [multiple_slashes] => 1
-            [non_ascii_caracters] => 1
-            [uppercase] => 1
-        )
-
-    [formulario] => Array
-        (
-            [recaptcha_formulario] => 
-            [mascara_formulario] => 
-        )
-
-    [imagens] => Array
-        (
-            [favicon] => 
-            [image_over] => 1
-            [image_banner_over] => 1
-        )
-
-    [layout_usabilidade] => Array
-        (
-            [botao_voltar_topo] => 1
-            [mobile_elementos_desproporcionais] => 
-            [mobile_footer] => 1
-            [mobile_menu_hamburguer] => 1
-            [scroll_lateral] => 
-            [mobile_mapa_google] => 1
-            [disproportionate_elementes] => 1
-            [broke_image_components] => 1
-            [contraste_elementos] => 
-            [botoes_clicaveis] => 
-            [breadcrumbs] => 1
-            [active_menu] => 1
-        )
-
-    [contato] => Array
-        (
-            [formatacao_endereco] => 
-            [formatacao_telefone] => 1
-            [formatacao_email] => 
-            [email] => 
-            [endereco] => 1
-            [telefone] => 
-            [botao_cta_whatsapp] => 1
-            [faixa_cta] => 1
-        )
-
-    [resposta_servidor] => Array
-        (
-            [response_code_server_error] => 1
-            [response_code_client_error] => 1
-            [response_code_success] => 1
-            [response_code_redirection] => 1
-        )
-
-    [seguranca] => Array
-        (
-            [security_missing_secure_referrer_policy] => 1
-            [security_missing_x_frame_options] => 1
-            [security_missing_x_content_type_options] => 1
-            [security_missing_content_security_policy] => 1
-            [popup_cookie] => 1
-            [security_missing_hsts] => 1
-            [security_mixed_content] => 1
-            [security_https_urls] => 1
-        )
-
-    [publicacao] => Array
-        (
-            [spider] => 1
-            [sensedata] => 1
-            [searchconsole] => 1
-            [redirect_serp_404] => 1
-            [analytics] => 1
-            [mpisistema] => 1
-            [redirect_www] => 1
-            [gitignore] => 1
-        )
-
-)
-
-[12-May-2025 21:53:40 Europe/Berlin] Configuração BigQuery:
-        Project: data-analytics-d-1669130019479
-        Dataset: qa_validacao_dw
-        Table: prontuario_resposta
-        KeyPath: C:\xampp\htdocs\prontuario-qa\config\bigquery-key.json
-[12-May-2025 21:53:40 Europe/Berlin] Dados formatados para inserção: Array
-(
-    [0] => Array
-        (
-            [data] => Array
-                (
-                    [id] => mali3iwuodo71d6y4o
-                    [dominio] => outroexemplo1.com.br
-                    [op_tipo] => Correção
-                    [id_cliente] => 222222
-                    [id_ticket] => 11111111
-                    [analista_qa] => Gustavo Gonçalves
-                    [data_validacao] => 2025-05-13
-                    [analista_producao] => Lucas Santos
-                    [data_producao] => 2025-05-12
-                    [pontuacao] => 167
-                    [porcentagem] => 64.23
-                    [pontuacao_maxima] => 260
-                    [status] => Reprovado
-                    [core_web_vitals] => Array
-                        (
-                            [mobile_banner] => 
-                            [footer_lazy_load] => 
-                            [seo] => 
-                            [best_pratices] => 
-                            [accessibility] => 
-                            [performance] => 
-                        )
-
-                    [metadados_seo] => Array
-                        (
-                            [paginas_mpis] => 
-                            [mapa_site_links] => 
-                            [page_titles_multiple] => 1
-                            [coluna_lateral] => 
-                            [url_coerente_h1_pagina] => 
-                            [menu_header_footer] => 
-                            [produtos_destaque] => 
-                            [empresa_segmento_h1_home] => 
-                            [banners_link_mpis] => 1
-                            [meta_discriptions_duplicate] => 1
-                            [meta_discriptions_missing] => 1
-                            [page_titles_over_caracteres] => 1
-                            [meta_discriptions_over_caracters] => 1
-                            [page_titles_missing] => 1
-                            [page_titles_duplicate] => 1
-                            [links_externos] => 1
-                        )
-
-                    [validacao_codigo] => Array
-                        (
-                            [sem_arquivos_old] => 1
-                            [font_awesome] => 
-                            [w3c_html] => 1
-                            [w3c_css] => 1
-                            [lorem_ipsum_placeholder] => 1
-                        )
-
-                    [estrutura_semantica] => Array
-                        (
-                            [h1_duplicate] => 1
-                            [h1_multiple] => 1
-                            [h2_missing] => 1
-                            [h1_missing] => 1
-                        )
-
-                    [fluxo] => Array
-                        (
-                            [pull_request] => 1
-                            [backup_bd] => 1
-                        )
-
-                    [urls] => Array
-                        (
-                            [urls_over_caracters] => 1
-                            [contains_space] => 1
-                            [multiple_slashes] => 1
-                            [non_ascii_caracters] => 1
-                            [uppercase] => 1
-                        )
-
-                    [formulario] => Array
-                        (
-                            [recaptcha_formulario] => 
-                            [mascara_formulario] => 
-                        )
-
-                    [imagens] => Array
-                        (
-                            [favicon] => 
-                            [image_over] => 1
-                            [image_banner_over] => 1
-                        )
-
-                    [layout_usabilidade] => Array
-                        (
-                            [botao_voltar_topo] => 1
-                            [mobile_elementos_desproporcionais] => 
-                            [mobile_footer] => 1
-                            [mobile_menu_hamburguer] => 1
-                            [scroll_lateral] => 
-                            [mobile_mapa_google] => 1
-                            [disproportionate_elementes] => 1
-                            [broke_image_components] => 1
-                            [contraste_elementos] => 
-                            [botoes_clicaveis] => 
-                            [breadcrumbs] => 1
-                            [active_menu] => 1
-                        )
-
-                    [contato] => Array
-                        (
-                            [formatacao_endereco] => 
-                            [formatacao_telefone] => 1
-                            [formatacao_email] => 
-                            [email] => 
-                            [endereco] => 1
-                            [telefone] => 
-                            [botao_cta_whatsapp] => 1
-                            [faixa_cta] => 1
-                        )
-
-                    [resposta_servidor] => Array
-                        (
-                            [response_code_server_error] => 1
-                            [response_code_client_error] => 1
-                            [response_code_success] => 1
-                            [response_code_redirection] => 1
-                        )
-
-                    [seguranca] => Array
-                        (
-                            [security_missing_secure_referrer_policy] => 1
-                            [security_missing_x_frame_options] => 1
-                            [security_missing_x_content_type_options] => 1
-                            [security_missing_content_security_policy] => 1
-                            [popup_cookie] => 1
-                            [security_missing_hsts] => 1
-                            [security_mixed_content] => 1
-                            [security_https_urls] => 1
-                        )
-
-                    [publicacao] => Array
-                        (
-                            [spider] => 1
-                            [sensedata] => 1
-                            [searchconsole] => 1
-                            [redirect_serp_404] => 1
-                            [analytics] => 1
-                            [mpisistema] => 1
-                            [redirect_www] => 1
-                            [gitignore] => 1
-                        )
-
-                )
-
-        )
-
-)
-
-[12-May-2025 21:53:41 Europe/Berlin] Inserção bem-sucedida
-[12-May-2025 21:53:41 Europe/Berlin] Inserção no BigQuery bem-sucedida
-[12-May-2025 21:53:50 Europe/Berlin] Dados recebidos: Array
-(
-    [id] => mali3qrdhelfi6z2pc9
-    [dominio] => outroexemplo1.com.br
-    [op_tipo] => Correção
-    [id_cliente] => 222222
-    [id_ticket] => 11111111
-    [analista_qa] => Gustavo Gonçalves
-    [data_validacao] => 2025-05-13
-    [analista_producao] => Lucas Santos
-    [data_producao] => 2025-05-12
-    [pontuacao] => 162
-    [porcentagem] => 62.31
-    [pontuacao_maxima] => 260
-    [status] => Reprovado
-    [core_web_vitals] => Array
-        (
-            [mobile_banner] => 
-            [footer_lazy_load] => 
-            [seo] => 
-            [best_pratices] => 
-            [accessibility] => 
-            [performance] => 
-        )
-
-    [metadados_seo] => Array
-        (
-            [paginas_mpis] => 
-            [mapa_site_links] => 
-            [page_titles_multiple] => 1
-            [coluna_lateral] => 
-            [url_coerente_h1_pagina] => 
-            [menu_header_footer] => 
-            [produtos_destaque] => 
-            [empresa_segmento_h1_home] => 
-            [banners_link_mpis] => 1
-            [meta_discriptions_duplicate] => 1
-            [meta_discriptions_missing] => 1
-            [page_titles_over_caracteres] => 1
-            [meta_discriptions_over_caracters] => 1
-            [page_titles_missing] => 1
-            [page_titles_duplicate] => 1
-            [links_externos] => 1
-        )
-
-    [validacao_codigo] => Array
-        (
-            [sem_arquivos_old] => 1
-            [font_awesome] => 
-            [w3c_html] => 1
-            [w3c_css] => 1
-            [lorem_ipsum_placeholder] => 1
-        )
-
-    [estrutura_semantica] => Array
-        (
-            [h1_duplicate] => 1
-            [h1_multiple] => 1
-            [h2_missing] => 1
-            [h1_missing] => 1
-        )
-
-    [fluxo] => Array
-        (
-            [pull_request] => 1
-            [backup_bd] => 1
-        )
-
-    [urls] => Array
-        (
-            [urls_over_caracters] => 1
-            [contains_space] => 1
-            [multiple_slashes] => 1
-            [non_ascii_caracters] => 1
-            [uppercase] => 1
-        )
-
-    [formulario] => Array
-        (
-            [recaptcha_formulario] => 
-            [mascara_formulario] => 
-        )
-
-    [imagens] => Array
-        (
-            [favicon] => 
-            [image_over] => 1
-            [image_banner_over] => 1
-        )
-
-    [layout_usabilidade] => Array
-        (
-            [botao_voltar_topo] => 1
-            [mobile_elementos_desproporcionais] => 
-            [mobile_footer] => 1
-            [mobile_menu_hamburguer] => 1
-            [scroll_lateral] => 
-            [mobile_mapa_google] => 1
-            [disproportionate_elementes] => 1
-            [broke_image_components] => 1
-            [contraste_elementos] => 
-            [botoes_clicaveis] => 
-            [breadcrumbs] => 1
-            [active_menu] => 1
-        )
-
-    [contato] => Array
-        (
-            [formatacao_endereco] => 
-            [formatacao_telefone] => 1
-            [formatacao_email] => 
-            [email] => 
-            [endereco] => 1
-            [telefone] => 
-            [botao_cta_whatsapp] => 1
-            [faixa_cta] => 1
-        )
-
-    [resposta_servidor] => Array
-        (
-            [response_code_server_error] => 1
-            [response_code_client_error] => 1
-            [response_code_success] => 1
-            [response_code_redirection] => 1
-        )
-
-    [seguranca] => Array
-        (
-            [security_missing_secure_referrer_policy] => 1
-            [security_missing_x_frame_options] => 1
-            [security_missing_x_content_type_options] => 1
-            [security_missing_content_security_policy] => 1
-            [popup_cookie] => 1
-            [security_missing_hsts] => 
-            [security_mixed_content] => 1
-            [security_https_urls] => 
-        )
-
-    [publicacao] => Array
-        (
-            [spider] => 1
-            [sensedata] => 1
-            [searchconsole] => 
-            [redirect_serp_404] => 
-            [analytics] => 1
-            [mpisistema] => 
-            [redirect_www] => 1
-            [gitignore] => 1
-        )
-
-)
-
-[12-May-2025 21:53:50 Europe/Berlin] Dados recebidos para inserção: Array
-(
-    [id] => mali3qrdhelfi6z2pc9
-    [dominio] => outroexemplo1.com.br
-    [op_tipo] => Correção
-    [id_cliente] => 222222
-    [id_ticket] => 11111111
-    [analista_qa] => Gustavo Gonçalves
-    [data_validacao] => 2025-05-13
-    [analista_producao] => Lucas Santos
-    [data_producao] => 2025-05-12
-    [pontuacao] => 162
-    [porcentagem] => 62.31
-    [pontuacao_maxima] => 260
-    [status] => Reprovado
-    [core_web_vitals] => Array
-        (
-            [mobile_banner] => 
-            [footer_lazy_load] => 
-            [seo] => 
-            [best_pratices] => 
-            [accessibility] => 
-            [performance] => 
-        )
-
-    [metadados_seo] => Array
-        (
-            [paginas_mpis] => 
-            [mapa_site_links] => 
-            [page_titles_multiple] => 1
-            [coluna_lateral] => 
-            [url_coerente_h1_pagina] => 
-            [menu_header_footer] => 
-            [produtos_destaque] => 
-            [empresa_segmento_h1_home] => 
-            [banners_link_mpis] => 1
-            [meta_discriptions_duplicate] => 1
-            [meta_discriptions_missing] => 1
-            [page_titles_over_caracteres] => 1
-            [meta_discriptions_over_caracters] => 1
-            [page_titles_missing] => 1
-            [page_titles_duplicate] => 1
-            [links_externos] => 1
-        )
-
-    [validacao_codigo] => Array
-        (
-            [sem_arquivos_old] => 1
-            [font_awesome] => 
-            [w3c_html] => 1
-            [w3c_css] => 1
-            [lorem_ipsum_placeholder] => 1
-        )
-
-    [estrutura_semantica] => Array
-        (
-            [h1_duplicate] => 1
-            [h1_multiple] => 1
-            [h2_missing] => 1
-            [h1_missing] => 1
-        )
-
-    [fluxo] => Array
-        (
-            [pull_request] => 1
-            [backup_bd] => 1
-        )
-
-    [urls] => Array
-        (
-            [urls_over_caracters] => 1
-            [contains_space] => 1
-            [multiple_slashes] => 1
-            [non_ascii_caracters] => 1
-            [uppercase] => 1
-        )
-
-    [formulario] => Array
-        (
-            [recaptcha_formulario] => 
-            [mascara_formulario] => 
-        )
-
-    [imagens] => Array
-        (
-            [favicon] => 
-            [image_over] => 1
-            [image_banner_over] => 1
-        )
-
-    [layout_usabilidade] => Array
-        (
-            [botao_voltar_topo] => 1
-            [mobile_elementos_desproporcionais] => 
-            [mobile_footer] => 1
-            [mobile_menu_hamburguer] => 1
-            [scroll_lateral] => 
-            [mobile_mapa_google] => 1
-            [disproportionate_elementes] => 1
-            [broke_image_components] => 1
-            [contraste_elementos] => 
-            [botoes_clicaveis] => 
-            [breadcrumbs] => 1
-            [active_menu] => 1
-        )
-
-    [contato] => Array
-        (
-            [formatacao_endereco] => 
-            [formatacao_telefone] => 1
-            [formatacao_email] => 
-            [email] => 
-            [endereco] => 1
-            [telefone] => 
-            [botao_cta_whatsapp] => 1
-            [faixa_cta] => 1
-        )
-
-    [resposta_servidor] => Array
-        (
-            [response_code_server_error] => 1
-            [response_code_client_error] => 1
-            [response_code_success] => 1
-            [response_code_redirection] => 1
-        )
-
-    [seguranca] => Array
-        (
-            [security_missing_secure_referrer_policy] => 1
-            [security_missing_x_frame_options] => 1
-            [security_missing_x_content_type_options] => 1
-            [security_missing_content_security_policy] => 1
-            [popup_cookie] => 1
-            [security_missing_hsts] => 
-            [security_mixed_content] => 1
-            [security_https_urls] => 
-        )
-
-    [publicacao] => Array
-        (
-            [spider] => 1
-            [sensedata] => 1
-            [searchconsole] => 
-            [redirect_serp_404] => 
-            [analytics] => 1
-            [mpisistema] => 
-            [redirect_www] => 1
-            [gitignore] => 1
-        )
-
-)
-
-[12-May-2025 21:53:50 Europe/Berlin] Configuração BigQuery:
-        Project: data-analytics-d-1669130019479
-        Dataset: qa_validacao_dw
-        Table: prontuario_resposta
-        KeyPath: C:\xampp\htdocs\prontuario-qa\config\bigquery-key.json
-[12-May-2025 21:53:50 Europe/Berlin] Dados formatados para inserção: Array
-(
-    [0] => Array
-        (
-            [data] => Array
-                (
-                    [id] => mali3qrdhelfi6z2pc9
-                    [dominio] => outroexemplo1.com.br
-                    [op_tipo] => Correção
-                    [id_cliente] => 222222
-                    [id_ticket] => 11111111
-                    [analista_qa] => Gustavo Gonçalves
-                    [data_validacao] => 2025-05-13
-                    [analista_producao] => Lucas Santos
-                    [data_producao] => 2025-05-12
-                    [pontuacao] => 162
-                    [porcentagem] => 62.31
-                    [pontuacao_maxima] => 260
-                    [status] => Reprovado
-                    [core_web_vitals] => Array
-                        (
-                            [mobile_banner] => 
-                            [footer_lazy_load] => 
-                            [seo] => 
-                            [best_pratices] => 
-                            [accessibility] => 
-                            [performance] => 
-                        )
-
-                    [metadados_seo] => Array
-                        (
-                            [paginas_mpis] => 
-                            [mapa_site_links] => 
-                            [page_titles_multiple] => 1
-                            [coluna_lateral] => 
-                            [url_coerente_h1_pagina] => 
-                            [menu_header_footer] => 
-                            [produtos_destaque] => 
-                            [empresa_segmento_h1_home] => 
-                            [banners_link_mpis] => 1
-                            [meta_discriptions_duplicate] => 1
-                            [meta_discriptions_missing] => 1
-                            [page_titles_over_caracteres] => 1
-                            [meta_discriptions_over_caracters] => 1
-                            [page_titles_missing] => 1
-                            [page_titles_duplicate] => 1
-                            [links_externos] => 1
-                        )
-
-                    [validacao_codigo] => Array
-                        (
-                            [sem_arquivos_old] => 1
-                            [font_awesome] => 
-                            [w3c_html] => 1
-                            [w3c_css] => 1
-                            [lorem_ipsum_placeholder] => 1
-                        )
-
-                    [estrutura_semantica] => Array
-                        (
-                            [h1_duplicate] => 1
-                            [h1_multiple] => 1
-                            [h2_missing] => 1
-                            [h1_missing] => 1
-                        )
-
-                    [fluxo] => Array
-                        (
-                            [pull_request] => 1
-                            [backup_bd] => 1
-                        )
-
-                    [urls] => Array
-                        (
-                            [urls_over_caracters] => 1
-                            [contains_space] => 1
-                            [multiple_slashes] => 1
-                            [non_ascii_caracters] => 1
-                            [uppercase] => 1
-                        )
-
-                    [formulario] => Array
-                        (
-                            [recaptcha_formulario] => 
-                            [mascara_formulario] => 
-                        )
-
-                    [imagens] => Array
-                        (
-                            [favicon] => 
-                            [image_over] => 1
-                            [image_banner_over] => 1
-                        )
-
-                    [layout_usabilidade] => Array
-                        (
-                            [botao_voltar_topo] => 1
-                            [mobile_elementos_desproporcionais] => 
-                            [mobile_footer] => 1
-                            [mobile_menu_hamburguer] => 1
-                            [scroll_lateral] => 
-                            [mobile_mapa_google] => 1
-                            [disproportionate_elementes] => 1
-                            [broke_image_components] => 1
-                            [contraste_elementos] => 
-                            [botoes_clicaveis] => 
-                            [breadcrumbs] => 1
-                            [active_menu] => 1
-                        )
-
-                    [contato] => Array
-                        (
-                            [formatacao_endereco] => 
-                            [formatacao_telefone] => 1
-                            [formatacao_email] => 
-                            [email] => 
-                            [endereco] => 1
-                            [telefone] => 
-                            [botao_cta_whatsapp] => 1
-                            [faixa_cta] => 1
-                        )
-
-                    [resposta_servidor] => Array
-                        (
-                            [response_code_server_error] => 1
-                            [response_code_client_error] => 1
-                            [response_code_success] => 1
-                            [response_code_redirection] => 1
-                        )
-
-                    [seguranca] => Array
-                        (
-                            [security_missing_secure_referrer_policy] => 1
-                            [security_missing_x_frame_options] => 1
-                            [security_missing_x_content_type_options] => 1
-                            [security_missing_content_security_policy] => 1
-                            [popup_cookie] => 1
-                            [security_missing_hsts] => 
-                            [security_mixed_content] => 1
-                            [security_https_urls] => 
-                        )
-
-                    [publicacao] => Array
-                        (
-                            [spider] => 1
-                            [sensedata] => 1
-                            [searchconsole] => 
-                            [redirect_serp_404] => 
-                            [analytics] => 1
-                            [mpisistema] => 
-                            [redirect_www] => 1
-                            [gitignore] => 1
-                        )
-
-                )
-
-        )
-
-)
-
-[12-May-2025 21:53:51 Europe/Berlin] Inserção bem-sucedida
-[12-May-2025 21:53:51 Europe/Berlin] Inserção no BigQuery bem-sucedida
-[12-May-2025 21:53:58 Europe/Berlin] Dados recebidos: Array
-(
-    [id] => mali3wbklf1qi63z7vj
-    [dominio] => outroexemplo1.com.br
-    [op_tipo] => Correção
-    [id_cliente] => 222222
-    [id_ticket] => 11111111
-    [analista_qa] => Gustavo Gonçalves
-    [data_validacao] => 2025-05-13
-    [analista_producao] => Lucas Santos
-    [data_producao] => 2025-05-12
-    [pontuacao] => 149
-    [porcentagem] => 57.31
-    [pontuacao_maxima] => 260
-    [status] => Reprovado
-    [core_web_vitals] => Array
-        (
-            [mobile_banner] => 
-            [footer_lazy_load] => 
-            [seo] => 
-            [best_pratices] => 
-            [accessibility] => 
-            [performance] => 
-        )
-
-    [metadados_seo] => Array
-        (
-            [paginas_mpis] => 
-            [mapa_site_links] => 
-            [page_titles_multiple] => 1
-            [coluna_lateral] => 
-            [url_coerente_h1_pagina] => 
-            [menu_header_footer] => 
-            [produtos_destaque] => 
-            [empresa_segmento_h1_home] => 
-            [banners_link_mpis] => 1
-            [meta_discriptions_duplicate] => 1
-            [meta_discriptions_missing] => 1
-            [page_titles_over_caracteres] => 1
-            [meta_discriptions_over_caracters] => 1
-            [page_titles_missing] => 1
-            [page_titles_duplicate] => 1
-            [links_externos] => 1
-        )
-
-    [validacao_codigo] => Array
-        (
-            [sem_arquivos_old] => 1
-            [font_awesome] => 
-            [w3c_html] => 1
-            [w3c_css] => 1
-            [lorem_ipsum_placeholder] => 1
-        )
-
-    [estrutura_semantica] => Array
-        (
-            [h1_duplicate] => 1
-            [h1_multiple] => 1
-            [h2_missing] => 1
-            [h1_missing] => 1
-        )
-
-    [fluxo] => Array
-        (
-            [pull_request] => 1
-            [backup_bd] => 1
-        )
-
-    [urls] => Array
-        (
-            [urls_over_caracters] => 1
-            [contains_space] => 1
-            [multiple_slashes] => 1
-            [non_ascii_caracters] => 
-            [uppercase] => 
-        )
-
-    [formulario] => Array
-        (
-            [recaptcha_formulario] => 
-            [mascara_formulario] => 
-        )
-
-    [imagens] => Array
-        (
-            [favicon] => 
-            [image_over] => 
-            [image_banner_over] => 1
-        )
-
-    [layout_usabilidade] => Array
-        (
-            [botao_voltar_topo] => 1
-            [mobile_elementos_desproporcionais] => 
-            [mobile_footer] => 1
-            [mobile_menu_hamburguer] => 1
-            [scroll_lateral] => 
-            [mobile_mapa_google] => 1
-            [disproportionate_elementes] => 1
-            [broke_image_components] => 1
-            [contraste_elementos] => 
-            [botoes_clicaveis] => 
-            [breadcrumbs] => 1
-            [active_menu] => 1
-        )
-
-    [contato] => Array
-        (
-            [formatacao_endereco] => 
-            [formatacao_telefone] => 1
-            [formatacao_email] => 
-            [email] => 
-            [endereco] => 1
-            [telefone] => 
-            [botao_cta_whatsapp] => 1
-            [faixa_cta] => 1
-        )
-
-    [resposta_servidor] => Array
-        (
-            [response_code_server_error] => 1
-            [response_code_client_error] => 1
-            [response_code_success] => 1
-            [response_code_redirection] => 
-        )
-
-    [seguranca] => Array
-        (
-            [security_missing_secure_referrer_policy] => 1
-            [security_missing_x_frame_options] => 
-            [security_missing_x_content_type_options] => 1
-            [security_missing_content_security_policy] => 1
-            [popup_cookie] => 1
-            [security_missing_hsts] => 
-            [security_mixed_content] => 1
-            [security_https_urls] => 
-        )
-
-    [publicacao] => Array
-        (
-            [spider] => 1
-            [sensedata] => 1
-            [searchconsole] => 
-            [redirect_serp_404] => 
-            [analytics] => 1
-            [mpisistema] => 
-            [redirect_www] => 1
-            [gitignore] => 1
-        )
-
-)
-
-[12-May-2025 21:53:58 Europe/Berlin] Dados recebidos para inserção: Array
-(
-    [id] => mali3wbklf1qi63z7vj
-    [dominio] => outroexemplo1.com.br
-    [op_tipo] => Correção
-    [id_cliente] => 222222
-    [id_ticket] => 11111111
-    [analista_qa] => Gustavo Gonçalves
-    [data_validacao] => 2025-05-13
-    [analista_producao] => Lucas Santos
-    [data_producao] => 2025-05-12
-    [pontuacao] => 149
-    [porcentagem] => 57.31
-    [pontuacao_maxima] => 260
-    [status] => Reprovado
-    [core_web_vitals] => Array
-        (
-            [mobile_banner] => 
-            [footer_lazy_load] => 
-            [seo] => 
-            [best_pratices] => 
-            [accessibility] => 
-            [performance] => 
-        )
-
-    [metadados_seo] => Array
-        (
-            [paginas_mpis] => 
-            [mapa_site_links] => 
-            [page_titles_multiple] => 1
-            [coluna_lateral] => 
-            [url_coerente_h1_pagina] => 
-            [menu_header_footer] => 
-            [produtos_destaque] => 
-            [empresa_segmento_h1_home] => 
-            [banners_link_mpis] => 1
-            [meta_discriptions_duplicate] => 1
-            [meta_discriptions_missing] => 1
-            [page_titles_over_caracteres] => 1
-            [meta_discriptions_over_caracters] => 1
-            [page_titles_missing] => 1
-            [page_titles_duplicate] => 1
-            [links_externos] => 1
-        )
-
-    [validacao_codigo] => Array
-        (
-            [sem_arquivos_old] => 1
-            [font_awesome] => 
-            [w3c_html] => 1
-            [w3c_css] => 1
-            [lorem_ipsum_placeholder] => 1
-        )
-
-    [estrutura_semantica] => Array
-        (
-            [h1_duplicate] => 1
-            [h1_multiple] => 1
-            [h2_missing] => 1
-            [h1_missing] => 1
-        )
-
-    [fluxo] => Array
-        (
-            [pull_request] => 1
-            [backup_bd] => 1
-        )
-
-    [urls] => Array
-        (
-            [urls_over_caracters] => 1
-            [contains_space] => 1
-            [multiple_slashes] => 1
-            [non_ascii_caracters] => 
-            [uppercase] => 
-        )
-
-    [formulario] => Array
-        (
-            [recaptcha_formulario] => 
-            [mascara_formulario] => 
-        )
-
-    [imagens] => Array
-        (
-            [favicon] => 
-            [image_over] => 
-            [image_banner_over] => 1
-        )
-
-    [layout_usabilidade] => Array
-        (
-            [botao_voltar_topo] => 1
-            [mobile_elementos_desproporcionais] => 
-            [mobile_footer] => 1
-            [mobile_menu_hamburguer] => 1
-            [scroll_lateral] => 
-            [mobile_mapa_google] => 1
-            [disproportionate_elementes] => 1
-            [broke_image_components] => 1
-            [contraste_elementos] => 
-            [botoes_clicaveis] => 
-            [breadcrumbs] => 1
-            [active_menu] => 1
-        )
-
-    [contato] => Array
-        (
-            [formatacao_endereco] => 
-            [formatacao_telefone] => 1
-            [formatacao_email] => 
-            [email] => 
-            [endereco] => 1
-            [telefone] => 
-            [botao_cta_whatsapp] => 1
-            [faixa_cta] => 1
-        )
-
-    [resposta_servidor] => Array
-        (
-            [response_code_server_error] => 1
-            [response_code_client_error] => 1
-            [response_code_success] => 1
-            [response_code_redirection] => 
-        )
-
-    [seguranca] => Array
-        (
-            [security_missing_secure_referrer_policy] => 1
-            [security_missing_x_frame_options] => 
-            [security_missing_x_content_type_options] => 1
-            [security_missing_content_security_policy] => 1
-            [popup_cookie] => 1
-            [security_missing_hsts] => 
-            [security_mixed_content] => 1
-            [security_https_urls] => 
-        )
-
-    [publicacao] => Array
-        (
-            [spider] => 1
-            [sensedata] => 1
-            [searchconsole] => 
-            [redirect_serp_404] => 
-            [analytics] => 1
-            [mpisistema] => 
-            [redirect_www] => 1
-            [gitignore] => 1
-        )
-
-)
-
-[12-May-2025 21:53:58 Europe/Berlin] Configuração BigQuery:
-        Project: data-analytics-d-1669130019479
-        Dataset: qa_validacao_dw
-        Table: prontuario_resposta
-        KeyPath: C:\xampp\htdocs\prontuario-qa\config\bigquery-key.json
-[12-May-2025 21:53:58 Europe/Berlin] Dados formatados para inserção: Array
-(
-    [0] => Array
-        (
-            [data] => Array
-                (
-                    [id] => mali3wbklf1qi63z7vj
-                    [dominio] => outroexemplo1.com.br
-                    [op_tipo] => Correção
-                    [id_cliente] => 222222
-                    [id_ticket] => 11111111
-                    [analista_qa] => Gustavo Gonçalves
-                    [data_validacao] => 2025-05-13
-                    [analista_producao] => Lucas Santos
-                    [data_producao] => 2025-05-12
-                    [pontuacao] => 149
-                    [porcentagem] => 57.31
-                    [pontuacao_maxima] => 260
-                    [status] => Reprovado
-                    [core_web_vitals] => Array
-                        (
-                            [mobile_banner] => 
-                            [footer_lazy_load] => 
-                            [seo] => 
-                            [best_pratices] => 
-                            [accessibility] => 
-                            [performance] => 
-                        )
-
-                    [metadados_seo] => Array
-                        (
-                            [paginas_mpis] => 
-                            [mapa_site_links] => 
-                            [page_titles_multiple] => 1
-                            [coluna_lateral] => 
-                            [url_coerente_h1_pagina] => 
-                            [menu_header_footer] => 
-                            [produtos_destaque] => 
-                            [empresa_segmento_h1_home] => 
-                            [banners_link_mpis] => 1
-                            [meta_discriptions_duplicate] => 1
-                            [meta_discriptions_missing] => 1
-                            [page_titles_over_caracteres] => 1
-                            [meta_discriptions_over_caracters] => 1
-                            [page_titles_missing] => 1
-                            [page_titles_duplicate] => 1
-                            [links_externos] => 1
-                        )
-
-                    [validacao_codigo] => Array
-                        (
-                            [sem_arquivos_old] => 1
-                            [font_awesome] => 
-                            [w3c_html] => 1
-                            [w3c_css] => 1
-                            [lorem_ipsum_placeholder] => 1
-                        )
-
-                    [estrutura_semantica] => Array
-                        (
-                            [h1_duplicate] => 1
-                            [h1_multiple] => 1
-                            [h2_missing] => 1
-                            [h1_missing] => 1
-                        )
-
-                    [fluxo] => Array
-                        (
-                            [pull_request] => 1
-                            [backup_bd] => 1
-                        )
-
-                    [urls] => Array
-                        (
-                            [urls_over_caracters] => 1
-                            [contains_space] => 1
-                            [multiple_slashes] => 1
-                            [non_ascii_caracters] => 
-                            [uppercase] => 
-                        )
-
-                    [formulario] => Array
-                        (
-                            [recaptcha_formulario] => 
-                            [mascara_formulario] => 
-                        )
-
-                    [imagens] => Array
-                        (
-                            [favicon] => 
-                            [image_over] => 
-                            [image_banner_over] => 1
-                        )
-
-                    [layout_usabilidade] => Array
-                        (
-                            [botao_voltar_topo] => 1
-                            [mobile_elementos_desproporcionais] => 
-                            [mobile_footer] => 1
-                            [mobile_menu_hamburguer] => 1
-                            [scroll_lateral] => 
-                            [mobile_mapa_google] => 1
-                            [disproportionate_elementes] => 1
-                            [broke_image_components] => 1
-                            [contraste_elementos] => 
-                            [botoes_clicaveis] => 
-                            [breadcrumbs] => 1
-                            [active_menu] => 1
-                        )
-
-                    [contato] => Array
-                        (
-                            [formatacao_endereco] => 
-                            [formatacao_telefone] => 1
-                            [formatacao_email] => 
-                            [email] => 
-                            [endereco] => 1
-                            [telefone] => 
-                            [botao_cta_whatsapp] => 1
-                            [faixa_cta] => 1
-                        )
-
-                    [resposta_servidor] => Array
-                        (
-                            [response_code_server_error] => 1
-                            [response_code_client_error] => 1
-                            [response_code_success] => 1
-                            [response_code_redirection] => 
-                        )
-
-                    [seguranca] => Array
-                        (
-                            [security_missing_secure_referrer_policy] => 1
-                            [security_missing_x_frame_options] => 
-                            [security_missing_x_content_type_options] => 1
-                            [security_missing_content_security_policy] => 1
-                            [popup_cookie] => 1
-                            [security_missing_hsts] => 
-                            [security_mixed_content] => 1
-                            [security_https_urls] => 
-                        )
-
-                    [publicacao] => Array
-                        (
-                            [spider] => 1
-                            [sensedata] => 1
-                            [searchconsole] => 
-                            [redirect_serp_404] => 
-                            [analytics] => 1
-                            [mpisistema] => 
-                            [redirect_www] => 1
-                            [gitignore] => 1
-                        )
-
-                )
-
-        )
-
-)
-
-[12-May-2025 21:53:58 Europe/Berlin] Inserção bem-sucedida
-[12-May-2025 21:53:58 Europe/Berlin] Inserção no BigQuery bem-sucedida
-[12-May-2025 21:54:05 Europe/Berlin] Dados recebidos: Array
-(
-    [id] => mali41qsikbmdoiith
-    [dominio] => outroexemplo1.com.br
-    [op_tipo] => Correção
-    [id_cliente] => 222222
-    [id_ticket] => 11111111
-    [analista_qa] => Gustavo Gonçalves
-    [data_validacao] => 2025-05-13
-    [analista_producao] => Lucas Santos
-    [data_producao] => 2025-05-12
-    [pontuacao] => 133
-    [porcentagem] => 51.15
-    [pontuacao_maxima] => 260
-    [status] => Reprovado
-    [core_web_vitals] => Array
-        (
-            [mobile_banner] => 
-            [footer_lazy_load] => 
-            [seo] => 
-            [best_pratices] => 
-            [accessibility] => 
-            [performance] => 
-        )
-
-    [metadados_seo] => Array
-        (
-            [paginas_mpis] => 
-            [mapa_site_links] => 
-            [page_titles_multiple] => 1
-            [coluna_lateral] => 
-            [url_coerente_h1_pagina] => 
-            [menu_header_footer] => 
-            [produtos_destaque] => 
-            [empresa_segmento_h1_home] => 
-            [banners_link_mpis] => 1
-            [meta_discriptions_duplicate] => 1
-            [meta_discriptions_missing] => 1
-            [page_titles_over_caracteres] => 1
-            [meta_discriptions_over_caracters] => 1
-            [page_titles_missing] => 1
-            [page_titles_duplicate] => 1
-            [links_externos] => 1
-        )
-
-    [validacao_codigo] => Array
-        (
-            [sem_arquivos_old] => 1
-            [font_awesome] => 
-            [w3c_html] => 1
-            [w3c_css] => 1
-            [lorem_ipsum_placeholder] => 1
-        )
-
-    [estrutura_semantica] => Array
-        (
-            [h1_duplicate] => 
-            [h1_multiple] => 
-            [h2_missing] => 1
-            [h1_missing] => 
-        )
-
-    [fluxo] => Array
-        (
-            [pull_request] => 1
-            [backup_bd] => 1
-        )
-
-    [urls] => Array
-        (
-            [urls_over_caracters] => 
-            [contains_space] => 1
-            [multiple_slashes] => 1
-            [non_ascii_caracters] => 
-            [uppercase] => 
-        )
-
-    [formulario] => Array
-        (
-            [recaptcha_formulario] => 
-            [mascara_formulario] => 
-        )
-
-    [imagens] => Array
-        (
-            [favicon] => 
-            [image_over] => 
-            [image_banner_over] => 1
-        )
-
-    [layout_usabilidade] => Array
-        (
-            [botao_voltar_topo] => 1
-            [mobile_elementos_desproporcionais] => 
-            [mobile_footer] => 1
-            [mobile_menu_hamburguer] => 1
-            [scroll_lateral] => 
-            [mobile_mapa_google] => 1
-            [disproportionate_elementes] => 1
-            [broke_image_components] => 1
-            [contraste_elementos] => 
-            [botoes_clicaveis] => 
-            [breadcrumbs] => 1
-            [active_menu] => 1
-        )
-
-    [contato] => Array
-        (
-            [formatacao_endereco] => 
-            [formatacao_telefone] => 1
-            [formatacao_email] => 
-            [email] => 
-            [endereco] => 1
-            [telefone] => 
-            [botao_cta_whatsapp] => 1
-            [faixa_cta] => 1
-        )
-
-    [resposta_servidor] => Array
-        (
-            [response_code_server_error] => 1
-            [response_code_client_error] => 1
-            [response_code_success] => 1
-            [response_code_redirection] => 
-        )
-
-    [seguranca] => Array
-        (
-            [security_missing_secure_referrer_policy] => 1
-            [security_missing_x_frame_options] => 
-            [security_missing_x_content_type_options] => 1
-            [security_missing_content_security_policy] => 1
-            [popup_cookie] => 1
-            [security_missing_hsts] => 
-            [security_mixed_content] => 1
-            [security_https_urls] => 
-        )
-
-    [publicacao] => Array
-        (
-            [spider] => 1
-            [sensedata] => 1
-            [searchconsole] => 
-            [redirect_serp_404] => 
-            [analytics] => 1
-            [mpisistema] => 
-            [redirect_www] => 1
-            [gitignore] => 1
-        )
-
-)
-
-[12-May-2025 21:54:05 Europe/Berlin] Dados recebidos para inserção: Array
-(
-    [id] => mali41qsikbmdoiith
-    [dominio] => outroexemplo1.com.br
-    [op_tipo] => Correção
-    [id_cliente] => 222222
-    [id_ticket] => 11111111
-    [analista_qa] => Gustavo Gonçalves
-    [data_validacao] => 2025-05-13
-    [analista_producao] => Lucas Santos
-    [data_producao] => 2025-05-12
-    [pontuacao] => 133
-    [porcentagem] => 51.15
-    [pontuacao_maxima] => 260
-    [status] => Reprovado
-    [core_web_vitals] => Array
-        (
-            [mobile_banner] => 
-            [footer_lazy_load] => 
-            [seo] => 
-            [best_pratices] => 
-            [accessibility] => 
-            [performance] => 
-        )
-
-    [metadados_seo] => Array
-        (
-            [paginas_mpis] => 
-            [mapa_site_links] => 
-            [page_titles_multiple] => 1
-            [coluna_lateral] => 
-            [url_coerente_h1_pagina] => 
-            [menu_header_footer] => 
-            [produtos_destaque] => 
-            [empresa_segmento_h1_home] => 
-            [banners_link_mpis] => 1
-            [meta_discriptions_duplicate] => 1
-            [meta_discriptions_missing] => 1
-            [page_titles_over_caracteres] => 1
-            [meta_discriptions_over_caracters] => 1
-            [page_titles_missing] => 1
-            [page_titles_duplicate] => 1
-            [links_externos] => 1
-        )
-
-    [validacao_codigo] => Array
-        (
-            [sem_arquivos_old] => 1
-            [font_awesome] => 
-            [w3c_html] => 1
-            [w3c_css] => 1
-            [lorem_ipsum_placeholder] => 1
-        )
-
-    [estrutura_semantica] => Array
-        (
-            [h1_duplicate] => 
-            [h1_multiple] => 
-            [h2_missing] => 1
-            [h1_missing] => 
-        )
-
-    [fluxo] => Array
-        (
-            [pull_request] => 1
-            [backup_bd] => 1
-        )
-
-    [urls] => Array
-        (
-            [urls_over_caracters] => 
-            [contains_space] => 1
-            [multiple_slashes] => 1
-            [non_ascii_caracters] => 
-            [uppercase] => 
-        )
-
-    [formulario] => Array
-        (
-            [recaptcha_formulario] => 
-            [mascara_formulario] => 
-        )
-
-    [imagens] => Array
-        (
-            [favicon] => 
-            [image_over] => 
-            [image_banner_over] => 1
-        )
-
-    [layout_usabilidade] => Array
-        (
-            [botao_voltar_topo] => 1
-            [mobile_elementos_desproporcionais] => 
-            [mobile_footer] => 1
-            [mobile_menu_hamburguer] => 1
-            [scroll_lateral] => 
-            [mobile_mapa_google] => 1
-            [disproportionate_elementes] => 1
-            [broke_image_components] => 1
-            [contraste_elementos] => 
-            [botoes_clicaveis] => 
-            [breadcrumbs] => 1
-            [active_menu] => 1
-        )
-
-    [contato] => Array
-        (
-            [formatacao_endereco] => 
-            [formatacao_telefone] => 1
-            [formatacao_email] => 
-            [email] => 
-            [endereco] => 1
-            [telefone] => 
-            [botao_cta_whatsapp] => 1
-            [faixa_cta] => 1
-        )
-
-    [resposta_servidor] => Array
-        (
-            [response_code_server_error] => 1
-            [response_code_client_error] => 1
-            [response_code_success] => 1
-            [response_code_redirection] => 
-        )
-
-    [seguranca] => Array
-        (
-            [security_missing_secure_referrer_policy] => 1
-            [security_missing_x_frame_options] => 
-            [security_missing_x_content_type_options] => 1
-            [security_missing_content_security_policy] => 1
-            [popup_cookie] => 1
-            [security_missing_hsts] => 
-            [security_mixed_content] => 1
-            [security_https_urls] => 
-        )
-
-    [publicacao] => Array
-        (
-            [spider] => 1
-            [sensedata] => 1
-            [searchconsole] => 
-            [redirect_serp_404] => 
-            [analytics] => 1
-            [mpisistema] => 
-            [redirect_www] => 1
-            [gitignore] => 1
-        )
-
-)
-
-[12-May-2025 21:54:05 Europe/Berlin] Configuração BigQuery:
-        Project: data-analytics-d-1669130019479
-        Dataset: qa_validacao_dw
-        Table: prontuario_resposta
-        KeyPath: C:\xampp\htdocs\prontuario-qa\config\bigquery-key.json
-[12-May-2025 21:54:05 Europe/Berlin] Dados formatados para inserção: Array
-(
-    [0] => Array
-        (
-            [data] => Array
-                (
-                    [id] => mali41qsikbmdoiith
-                    [dominio] => outroexemplo1.com.br
-                    [op_tipo] => Correção
-                    [id_cliente] => 222222
-                    [id_ticket] => 11111111
-                    [analista_qa] => Gustavo Gonçalves
-                    [data_validacao] => 2025-05-13
-                    [analista_producao] => Lucas Santos
-                    [data_producao] => 2025-05-12
-                    [pontuacao] => 133
-                    [porcentagem] => 51.15
-                    [pontuacao_maxima] => 260
-                    [status] => Reprovado
-                    [core_web_vitals] => Array
-                        (
-                            [mobile_banner] => 
-                            [footer_lazy_load] => 
-                            [seo] => 
-                            [best_pratices] => 
-                            [accessibility] => 
-                            [performance] => 
-                        )
-
-                    [metadados_seo] => Array
-                        (
-                            [paginas_mpis] => 
-                            [mapa_site_links] => 
-                            [page_titles_multiple] => 1
-                            [coluna_lateral] => 
-                            [url_coerente_h1_pagina] => 
-                            [menu_header_footer] => 
-                            [produtos_destaque] => 
-                            [empresa_segmento_h1_home] => 
-                            [banners_link_mpis] => 1
-                            [meta_discriptions_duplicate] => 1
-                            [meta_discriptions_missing] => 1
-                            [page_titles_over_caracteres] => 1
-                            [meta_discriptions_over_caracters] => 1
-                            [page_titles_missing] => 1
-                            [page_titles_duplicate] => 1
-                            [links_externos] => 1
-                        )
-
-                    [validacao_codigo] => Array
-                        (
-                            [sem_arquivos_old] => 1
-                            [font_awesome] => 
-                            [w3c_html] => 1
-                            [w3c_css] => 1
-                            [lorem_ipsum_placeholder] => 1
-                        )
-
-                    [estrutura_semantica] => Array
-                        (
-                            [h1_duplicate] => 
-                            [h1_multiple] => 
-                            [h2_missing] => 1
-                            [h1_missing] => 
-                        )
-
-                    [fluxo] => Array
-                        (
-                            [pull_request] => 1
-                            [backup_bd] => 1
-                        )
-
-                    [urls] => Array
-                        (
-                            [urls_over_caracters] => 
-                            [contains_space] => 1
-                            [multiple_slashes] => 1
-                            [non_ascii_caracters] => 
-                            [uppercase] => 
-                        )
-
-                    [formulario] => Array
-                        (
-                            [recaptcha_formulario] => 
-                            [mascara_formulario] => 
-                        )
-
-                    [imagens] => Array
-                        (
-                            [favicon] => 
-                            [image_over] => 
-                            [image_banner_over] => 1
-                        )
-
-                    [layout_usabilidade] => Array
-                        (
-                            [botao_voltar_topo] => 1
-                            [mobile_elementos_desproporcionais] => 
-                            [mobile_footer] => 1
-                            [mobile_menu_hamburguer] => 1
-                            [scroll_lateral] => 
-                            [mobile_mapa_google] => 1
-                            [disproportionate_elementes] => 1
-                            [broke_image_components] => 1
-                            [contraste_elementos] => 
-                            [botoes_clicaveis] => 
-                            [breadcrumbs] => 1
-                            [active_menu] => 1
-                        )
-
-                    [contato] => Array
-                        (
-                            [formatacao_endereco] => 
-                            [formatacao_telefone] => 1
-                            [formatacao_email] => 
-                            [email] => 
-                            [endereco] => 1
-                            [telefone] => 
-                            [botao_cta_whatsapp] => 1
-                            [faixa_cta] => 1
-                        )
-
-                    [resposta_servidor] => Array
-                        (
-                            [response_code_server_error] => 1
-                            [response_code_client_error] => 1
-                            [response_code_success] => 1
-                            [response_code_redirection] => 
-                        )
-
-                    [seguranca] => Array
-                        (
-                            [security_missing_secure_referrer_policy] => 1
-                            [security_missing_x_frame_options] => 
-                            [security_missing_x_content_type_options] => 1
-                            [security_missing_content_security_policy] => 1
-                            [popup_cookie] => 1
-                            [security_missing_hsts] => 
-                            [security_mixed_content] => 1
-                            [security_https_urls] => 
-                        )
-
-                    [publicacao] => Array
-                        (
-                            [spider] => 1
-                            [sensedata] => 1
-                            [searchconsole] => 
-                            [redirect_serp_404] => 
-                            [analytics] => 1
-                            [mpisistema] => 
-                            [redirect_www] => 1
-                            [gitignore] => 1
-                        )
-
-                )
-
-        )
-
-)
-
-[12-May-2025 21:54:05 Europe/Berlin] Inserção bem-sucedida
-[12-May-2025 21:54:05 Europe/Berlin] Inserção no BigQuery bem-sucedida
-[12-May-2025 21:54:11 Europe/Berlin] Dados recebidos: Array
-(
-    [id] => mali46rj1fbw0mbqfa2
-    [dominio] => outroexemplo1.com.br
-    [op_tipo] => Correção
-    [id_cliente] => 222222
-    [id_ticket] => 11111111
-    [analista_qa] => Gustavo Gonçalves
-    [data_validacao] => 2025-05-13
-    [analista_producao] => Lucas Santos
-    [data_producao] => 2025-05-12
-    [pontuacao] => 123
-    [porcentagem] => 47.31
-    [pontuacao_maxima] => 260
-    [status] => Reprovado
-    [core_web_vitals] => Array
-        (
-            [mobile_banner] => 
-            [footer_lazy_load] => 
-            [seo] => 
-            [best_pratices] => 
-            [accessibility] => 
-            [performance] => 
-        )
-
-    [metadados_seo] => Array
-        (
-            [paginas_mpis] => 
-            [mapa_site_links] => 
-            [page_titles_multiple] => 1
-            [coluna_lateral] => 
-            [url_coerente_h1_pagina] => 
-            [menu_header_footer] => 
-            [produtos_destaque] => 
-            [empresa_segmento_h1_home] => 
-            [banners_link_mpis] => 1
-            [meta_discriptions_duplicate] => 1
-            [meta_discriptions_missing] => 1
-            [page_titles_over_caracteres] => 1
-            [meta_discriptions_over_caracters] => 1
-            [page_titles_missing] => 
-            [page_titles_duplicate] => 
-            [links_externos] => 1
-        )
-
-    [validacao_codigo] => Array
-        (
-            [sem_arquivos_old] => 1
-            [font_awesome] => 
-            [w3c_html] => 1
-            [w3c_css] => 1
-            [lorem_ipsum_placeholder] => 1
-        )
-
-    [estrutura_semantica] => Array
-        (
-            [h1_duplicate] => 
-            [h1_multiple] => 
-            [h2_missing] => 1
-            [h1_missing] => 
-        )
-
-    [fluxo] => Array
-        (
-            [pull_request] => 1
-            [backup_bd] => 1
-        )
-
-    [urls] => Array
-        (
-            [urls_over_caracters] => 
-            [contains_space] => 1
-            [multiple_slashes] => 1
-            [non_ascii_caracters] => 
-            [uppercase] => 
-        )
-
-    [formulario] => Array
-        (
-            [recaptcha_formulario] => 
-            [mascara_formulario] => 
-        )
-
-    [imagens] => Array
-        (
-            [favicon] => 
-            [image_over] => 
-            [image_banner_over] => 1
-        )
-
-    [layout_usabilidade] => Array
-        (
-            [botao_voltar_topo] => 1
-            [mobile_elementos_desproporcionais] => 
-            [mobile_footer] => 1
-            [mobile_menu_hamburguer] => 1
-            [scroll_lateral] => 
-            [mobile_mapa_google] => 1
-            [disproportionate_elementes] => 1
-            [broke_image_components] => 1
-            [contraste_elementos] => 
-            [botoes_clicaveis] => 
-            [breadcrumbs] => 1
-            [active_menu] => 1
-        )
-
-    [contato] => Array
-        (
-            [formatacao_endereco] => 
-            [formatacao_telefone] => 1
-            [formatacao_email] => 
-            [email] => 
-            [endereco] => 1
-            [telefone] => 
-            [botao_cta_whatsapp] => 1
-            [faixa_cta] => 1
-        )
-
-    [resposta_servidor] => Array
-        (
-            [response_code_server_error] => 1
-            [response_code_client_error] => 1
-            [response_code_success] => 1
-            [response_code_redirection] => 
-        )
-
-    [seguranca] => Array
-        (
-            [security_missing_secure_referrer_policy] => 1
-            [security_missing_x_frame_options] => 
-            [security_missing_x_content_type_options] => 1
-            [security_missing_content_security_policy] => 1
-            [popup_cookie] => 1
-            [security_missing_hsts] => 
-            [security_mixed_content] => 1
-            [security_https_urls] => 
-        )
-
-    [publicacao] => Array
-        (
-            [spider] => 1
-            [sensedata] => 1
-            [searchconsole] => 
-            [redirect_serp_404] => 
-            [analytics] => 1
-            [mpisistema] => 
-            [redirect_www] => 1
-            [gitignore] => 1
-        )
-
-)
-
-[12-May-2025 21:54:11 Europe/Berlin] Dados recebidos para inserção: Array
-(
-    [id] => mali46rj1fbw0mbqfa2
-    [dominio] => outroexemplo1.com.br
-    [op_tipo] => Correção
-    [id_cliente] => 222222
-    [id_ticket] => 11111111
-    [analista_qa] => Gustavo Gonçalves
-    [data_validacao] => 2025-05-13
-    [analista_producao] => Lucas Santos
-    [data_producao] => 2025-05-12
-    [pontuacao] => 123
-    [porcentagem] => 47.31
-    [pontuacao_maxima] => 260
-    [status] => Reprovado
-    [core_web_vitals] => Array
-        (
-            [mobile_banner] => 
-            [footer_lazy_load] => 
-            [seo] => 
-            [best_pratices] => 
-            [accessibility] => 
-            [performance] => 
-        )
-
-    [metadados_seo] => Array
-        (
-            [paginas_mpis] => 
-            [mapa_site_links] => 
-            [page_titles_multiple] => 1
-            [coluna_lateral] => 
-            [url_coerente_h1_pagina] => 
-            [menu_header_footer] => 
-            [produtos_destaque] => 
-            [empresa_segmento_h1_home] => 
-            [banners_link_mpis] => 1
-            [meta_discriptions_duplicate] => 1
-            [meta_discriptions_missing] => 1
-            [page_titles_over_caracteres] => 1
-            [meta_discriptions_over_caracters] => 1
-            [page_titles_missing] => 
-            [page_titles_duplicate] => 
-            [links_externos] => 1
-        )
-
-    [validacao_codigo] => Array
-        (
-            [sem_arquivos_old] => 1
-            [font_awesome] => 
-            [w3c_html] => 1
-            [w3c_css] => 1
-            [lorem_ipsum_placeholder] => 1
-        )
-
-    [estrutura_semantica] => Array
-        (
-            [h1_duplicate] => 
-            [h1_multiple] => 
-            [h2_missing] => 1
-            [h1_missing] => 
-        )
-
-    [fluxo] => Array
-        (
-            [pull_request] => 1
-            [backup_bd] => 1
-        )
-
-    [urls] => Array
-        (
-            [urls_over_caracters] => 
-            [contains_space] => 1
-            [multiple_slashes] => 1
-            [non_ascii_caracters] => 
-            [uppercase] => 
-        )
-
-    [formulario] => Array
-        (
-            [recaptcha_formulario] => 
-            [mascara_formulario] => 
-        )
-
-    [imagens] => Array
-        (
-            [favicon] => 
-            [image_over] => 
-            [image_banner_over] => 1
-        )
-
-    [layout_usabilidade] => Array
-        (
-            [botao_voltar_topo] => 1
-            [mobile_elementos_desproporcionais] => 
-            [mobile_footer] => 1
-            [mobile_menu_hamburguer] => 1
-            [scroll_lateral] => 
-            [mobile_mapa_google] => 1
-            [disproportionate_elementes] => 1
-            [broke_image_components] => 1
-            [contraste_elementos] => 
-            [botoes_clicaveis] => 
-            [breadcrumbs] => 1
-            [active_menu] => 1
-        )
-
-    [contato] => Array
-        (
-            [formatacao_endereco] => 
-            [formatacao_telefone] => 1
-            [formatacao_email] => 
-            [email] => 
-            [endereco] => 1
-            [telefone] => 
-            [botao_cta_whatsapp] => 1
-            [faixa_cta] => 1
-        )
-
-    [resposta_servidor] => Array
-        (
-            [response_code_server_error] => 1
-            [response_code_client_error] => 1
-            [response_code_success] => 1
-            [response_code_redirection] => 
-        )
-
-    [seguranca] => Array
-        (
-            [security_missing_secure_referrer_policy] => 1
-            [security_missing_x_frame_options] => 
-            [security_missing_x_content_type_options] => 1
-            [security_missing_content_security_policy] => 1
-            [popup_cookie] => 1
-            [security_missing_hsts] => 
-            [security_mixed_content] => 1
-            [security_https_urls] => 
-        )
-
-    [publicacao] => Array
-        (
-            [spider] => 1
-            [sensedata] => 1
-            [searchconsole] => 
-            [redirect_serp_404] => 
-            [analytics] => 1
-            [mpisistema] => 
-            [redirect_www] => 1
-            [gitignore] => 1
-        )
-
-)
-
-[12-May-2025 21:54:11 Europe/Berlin] Configuração BigQuery:
-        Project: data-analytics-d-1669130019479
-        Dataset: qa_validacao_dw
-        Table: prontuario_resposta
-        KeyPath: C:\xampp\htdocs\prontuario-qa\config\bigquery-key.json
-[12-May-2025 21:54:11 Europe/Berlin] Dados formatados para inserção: Array
-(
-    [0] => Array
-        (
-            [data] => Array
-                (
-                    [id] => mali46rj1fbw0mbqfa2
-                    [dominio] => outroexemplo1.com.br
-                    [op_tipo] => Correção
-                    [id_cliente] => 222222
-                    [id_ticket] => 11111111
-                    [analista_qa] => Gustavo Gonçalves
-                    [data_validacao] => 2025-05-13
-                    [analista_producao] => Lucas Santos
-                    [data_producao] => 2025-05-12
-                    [pontuacao] => 123
-                    [porcentagem] => 47.31
-                    [pontuacao_maxima] => 260
-                    [status] => Reprovado
-                    [core_web_vitals] => Array
-                        (
-                            [mobile_banner] => 
-                            [footer_lazy_load] => 
-                            [seo] => 
-                            [best_pratices] => 
-                            [accessibility] => 
-                            [performance] => 
-                        )
-
-                    [metadados_seo] => Array
-                        (
-                            [paginas_mpis] => 
-                            [mapa_site_links] => 
-                            [page_titles_multiple] => 1
-                            [coluna_lateral] => 
-                            [url_coerente_h1_pagina] => 
-                            [menu_header_footer] => 
-                            [produtos_destaque] => 
-                            [empresa_segmento_h1_home] => 
-                            [banners_link_mpis] => 1
-                            [meta_discriptions_duplicate] => 1
-                            [meta_discriptions_missing] => 1
-                            [page_titles_over_caracteres] => 1
-                            [meta_discriptions_over_caracters] => 1
-                            [page_titles_missing] => 
-                            [page_titles_duplicate] => 
-                            [links_externos] => 1
-                        )
-
-                    [validacao_codigo] => Array
-                        (
-                            [sem_arquivos_old] => 1
-                            [font_awesome] => 
-                            [w3c_html] => 1
-                            [w3c_css] => 1
-                            [lorem_ipsum_placeholder] => 1
-                        )
-
-                    [estrutura_semantica] => Array
-                        (
-                            [h1_duplicate] => 
-                            [h1_multiple] => 
-                            [h2_missing] => 1
-                            [h1_missing] => 
-                        )
-
-                    [fluxo] => Array
-                        (
-                            [pull_request] => 1
-                            [backup_bd] => 1
-                        )
-
-                    [urls] => Array
-                        (
-                            [urls_over_caracters] => 
-                            [contains_space] => 1
-                            [multiple_slashes] => 1
-                            [non_ascii_caracters] => 
-                            [uppercase] => 
-                        )
-
-                    [formulario] => Array
-                        (
-                            [recaptcha_formulario] => 
-                            [mascara_formulario] => 
-                        )
-
-                    [imagens] => Array
-                        (
-                            [favicon] => 
-                            [image_over] => 
-                            [image_banner_over] => 1
-                        )
-
-                    [layout_usabilidade] => Array
-                        (
-                            [botao_voltar_topo] => 1
-                            [mobile_elementos_desproporcionais] => 
-                            [mobile_footer] => 1
-                            [mobile_menu_hamburguer] => 1
-                            [scroll_lateral] => 
-                            [mobile_mapa_google] => 1
-                            [disproportionate_elementes] => 1
-                            [broke_image_components] => 1
-                            [contraste_elementos] => 
-                            [botoes_clicaveis] => 
-                            [breadcrumbs] => 1
-                            [active_menu] => 1
-                        )
-
-                    [contato] => Array
-                        (
-                            [formatacao_endereco] => 
-                            [formatacao_telefone] => 1
-                            [formatacao_email] => 
-                            [email] => 
-                            [endereco] => 1
-                            [telefone] => 
-                            [botao_cta_whatsapp] => 1
-                            [faixa_cta] => 1
-                        )
-
-                    [resposta_servidor] => Array
-                        (
-                            [response_code_server_error] => 1
-                            [response_code_client_error] => 1
-                            [response_code_success] => 1
-                            [response_code_redirection] => 
-                        )
-
-                    [seguranca] => Array
-                        (
-                            [security_missing_secure_referrer_policy] => 1
-                            [security_missing_x_frame_options] => 
-                            [security_missing_x_content_type_options] => 1
-                            [security_missing_content_security_policy] => 1
-                            [popup_cookie] => 1
-                            [security_missing_hsts] => 
-                            [security_mixed_content] => 1
-                            [security_https_urls] => 
-                        )
-
-                    [publicacao] => Array
-                        (
-                            [spider] => 1
-                            [sensedata] => 1
-                            [searchconsole] => 
-                            [redirect_serp_404] => 
-                            [analytics] => 1
-                            [mpisistema] => 
-                            [redirect_www] => 1
-                            [gitignore] => 1
-                        )
-
-                )
-
-        )
-
-)
-
-[12-May-2025 21:54:12 Europe/Berlin] Inserção bem-sucedida
-[12-May-2025 21:54:12 Europe/Berlin] Inserção no BigQuery bem-sucedida
+[14-May-2025 04:34:03 Europe/Berlin] Inserção bem-sucedida
+[14-May-2025 04:34:03 Europe/Berlin] Inserção no BigQuery bem-sucedida

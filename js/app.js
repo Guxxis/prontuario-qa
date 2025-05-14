@@ -90,7 +90,6 @@ async function init() {
 
     //Evento de ativação dos campos escondidos quando reprovado
     document.addEventListener("change", (e) => {
-        console.log(e.target);
         if (e.target.matches('.btn-check')) {
             toggleAttach(e);
         }
