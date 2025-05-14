@@ -44,16 +44,16 @@ export function handleAspectRatio (base64Image, maxWidth, maxHeight) {
     });
 }
 
-export function compressImage(base64, quality = 1) {
+export function compressImage(base64, quality = 5) {
     return new Promise((resolve) => {
       const img = new Image();
       img.src = base64;
       img.onload = () => {
         const canvas = document.createElement('canvas');
-        const MAX_WIDTH = 100; // Largura máxima (ajuste conforme necessário)
-        const scale = MAX_WIDTH / img.width;
-        canvas.width = MAX_WIDTH;
-        canvas.height = img.height * scale;
+        // const MAX_WIDTH = 100; // Largura máxima (ajuste conforme necessário)
+        // const scale = MAX_WIDTH / img.width;
+        // canvas.width = MAX_WIDTH;
+        // canvas.height = img.height * scale;
         const ctx = canvas.getContext('2d');
         ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
         resolve(canvas.toDataURL('image/jpeg', quality)); // Converte para JPEG com qualidade reduzida

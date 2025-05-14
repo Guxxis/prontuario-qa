@@ -35,11 +35,14 @@ export async function generatePDF() {
     let formDataQA = formData['dataValidacao'];
     let formNameProd = formData['analistaProducao'];
     let formDataProd = formData['dataProducao'];
+    let formComment = formData['comentarioGeral'];
+    let formType = formData['opTipo'];
 
     let pontuacaoFinal = formData.resultado['pontuacao'];
     let pontuacaoPorcento = formData.resultado['porcentagem'];
-    let pontuacaoMax = formData.resultado['pontuacaoMaxima'];
     let pontuacaoStatus = formData.resultado['status'];
+
+    const maxLenght = 550;
 
     //Criar array de itens reprovados
     let reprovedItems = new Array();
@@ -147,6 +150,19 @@ export async function generatePDF() {
         doc.text(`Site sem erros `, 15, y);
     }
 
+    doc.setFont('helvetica', 'bold');
+    doc.setTextColor('#000000');
+    doc.setFontSize(16);
+    y += 25;
+    doc.text(`Comentarios Gerais:  `, 15, y);
+
+    const textWrap = doc.splitTextToSize(formComment, maxLenght);
+    doc.setFont('helvetica', 'normal');
+    doc.setTextColor('#000000');
+    doc.setFontSize(12);
+    y += 16;
+    doc.text(textWrap, 20, y);
+
     //Rodapé
     doc.setFont('courier', 'bold');
     doc.setTextColor('#525252')
@@ -194,23 +210,33 @@ export async function generatePDF() {
             doc.text(`- ${reprovedItem["item"]}`, 20, py);
 
             //Caso tenha comentario
-            if (reprovedItem["comment"]) {
+            if (reprovedItem["comment"] != null) {
+
+                const textMaxLength = 430;
+                const textCommentWrap = doc.splitTextToSize(reprovedItem["comment"], textMaxLength);
+                const textArrayLength = textCommentWrap.length;
+                // py += 12;
+                // doc.text(`teste.: ${reprovedItem["comment"].length}`, 30, py);
+
                 py += 12;
                 doc.setFont('times', 'normal');
                 doc.setFontSize(12);
-                doc.text(`obs.: ${reprovedItem["comment"]}`, 30, py);
+                doc.text("obs: ", 25, py);
+                doc.text(textCommentWrap, 40, py);
+
+                py += textArrayLength * 12;
             }
 
             //Caso tenha imagem
-            py += 10;
-            if (reprovedItem["image"]) {
+            // py += 10;
+            if (reprovedItem["image"].length > 0) {
                 let px = 25
                 for (let i = 0; i < reprovedItem["image"].length; i++) {
                     const imageBase64 = reprovedItem["image"][i].base64;
                     const imageWight = reprovedItem["image"][i].width;
                     const imageHeigth = reprovedItem["image"][i].height;
                     //caso ultrapasse tamanho da pagina
-                    if((px + imageHeigth) >= 435) {
+                    if ((px + imageHeigth) >= 435) {
                         py += 10 + imageHeigth;
                         px = 25;
                         doc.addImage(imageBase64, px, py, imageWight, imageHeigth);

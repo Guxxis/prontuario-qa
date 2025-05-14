@@ -5,11 +5,12 @@ import { getJson } from "./module/get-json.js";
 import { toggleAttach } from "./module/form-render.js";
 import { formValidation } from "./module/form-validation.js";
 import { DataManager } from "./module/data-manager.js";
+import { postData } from "./module/save-form.js";
 
 function formInit(itemList) {
     const dataJSON = DataManager.load();
     if (dataJSON) {
-        return dataJSON ;
+        return dataJSON;
     } else {
         const itensIniciais = itemList;
         const formItems = itensIniciais.map(item => ({
@@ -20,12 +21,14 @@ function formInit(itemList) {
         }));
         const formJson = [{
             "dominio": null,
+            "opTipo": null,
             "idCliente": null,
             "idTicket": null,
             "analistaQa": null,
             "dataValidacao": null,
             "analistaProducao": null,
             "dataProducao": null,
+            "comentarioGeral": null,
             "items": formItems,
             "resultado": []
         }]
@@ -67,15 +70,16 @@ async function init() {
     const orderSelect = document.getElementById("orderSelect");
 
     orderSelect.addEventListener("change", (e) => {
-        renderForm(formInputs,  e.target.value);
+        renderForm(formInputs, e.target.value);
     });
 
-    //Botao de Gerar PDF
+    // Botao de Gerar PDF
     document.getElementById("btnGerarPDF").addEventListener("click", (e) => {
         if (!formValidation(e)) {
             // e.preventDefault(); // Impede o envio se houver erro
         } else {
             generatePDF();
+            postData();
         }
     });
 
@@ -89,7 +93,17 @@ async function init() {
         if (e.target.matches('.btn-check')) {
             toggleAttach(e);
         }
+        // if (e.target.matches('#opCorrecao')) {
+        //     const inputAnalistaProd = document.getElementById(`analistaProducao`);
+        //     inputAnalistaProd.setAttribute("disabled", "");
+        //     inputAnalistaProd.removeAttribute("required");
+        // }
     });
+
+    // document.getElementById("btnGerarPDF").addEventListener("click", async function (e) {
+    //     e.preventDefault();
+    //     postData();
+    // });
 
 }
 

@@ -88,7 +88,7 @@ export function attachField() {
 
                 let imageUrl64 = await handleFiles(file);
                 let imageCompressed = await compressImage(imageUrl64);
-                let imageAspectRatio = await handleAspectRatio(imageCompressed, maxWidth, maxHeight);
+                let imageAspectRatio = await handleAspectRatio(imageUrl64, maxWidth, maxHeight);
                 const dataImage = {
                     "name": "Clipboard Image",
                     "base64": imageCompressed,
@@ -113,7 +113,7 @@ export function attachField() {
 
                 let imageUrl64 = await handleFiles(imgfile);
                 let imageCompressed = await compressImage(imageUrl64);
-                let imageAspectRatio = await handleAspectRatio(imageCompressed, maxWidth, maxHeight);
+                let imageAspectRatio = await handleAspectRatio(imageUrl64, maxWidth, maxHeight);
                 const dataImage = {
                     "name": "Clipboard Image",
                     "base64": imageCompressed,
