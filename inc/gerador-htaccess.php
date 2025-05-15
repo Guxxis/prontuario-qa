@@ -127,6 +127,9 @@ $htaccess = <<<HTACCESS
     Require all denied
   </FilesMatch>
 
+  # Bloquear acesso direto à pasta config, auth, inc, vendor
+  RedirectMatch 403 ^/(config|auth|inc|vendor)/
+
 #Fazendo cache de recursos
 
   <IfModule mod_expires.c>
