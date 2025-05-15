@@ -99,7 +99,9 @@ class ServiceAccountJwtAccessCredentials extends CredentialsLoader implements
             'scope' => $scope,
         ]);
 
-        $this->projectId = $jsonKey['project_id'] ?? null;
+        $this->projectId = isset($jsonKey['project_id'])
+            ? $jsonKey['project_id']
+            : null;
     }
 
     /**
@@ -113,7 +115,7 @@ class ServiceAccountJwtAccessCredentials extends CredentialsLoader implements
     public function updateMetadata(
         $metadata,
         $authUri = null,
-        ?callable $httpHandler = null
+        callable $httpHandler = null
     ) {
         $scope = $this->auth->getScope();
         if (empty($authUri) && empty($scope)) {
@@ -132,7 +134,7 @@ class ServiceAccountJwtAccessCredentials extends CredentialsLoader implements
      *
      * @return null|array{access_token:string} A set of auth related metadata
      */
-    public function fetchAuthToken(?callable $httpHandler = null)
+    public function fetchAuthToken(callable $httpHandler = null)
     {
         $audience = $this->auth->getAudience();
         $scope = $this->auth->getScope();
@@ -151,11 +153,7 @@ class ServiceAccountJwtAccessCredentials extends CredentialsLoader implements
         // Set the self-signed access token in OAuth2 for getLastReceivedToken
         $this->auth->setAccessToken($access_token);
 
-        return [
-            'access_token' => $access_token,
-            'expires_in' => $this->auth->getExpiry(),
-            'token_type' => 'Bearer'
-        ];
+        return ['access_token' => $access_token];
     }
 
     /**
@@ -182,7 +180,7 @@ class ServiceAccountJwtAccessCredentials extends CredentialsLoader implements
      * @param callable $httpHandler Not used by this credentials type.
      * @return string|null
      */
-    public function getProjectId(?callable $httpHandler = null)
+    public function getProjectId(callable $httpHandler = null)
     {
         return $this->projectId;
     }
@@ -195,7 +193,7 @@ class ServiceAccountJwtAccessCredentials extends CredentialsLoader implements
      * @param callable $httpHandler Not used by this credentials type.
      * @return string
      */
-    public function getClientName(?callable $httpHandler = null)
+    public function getClientName(callable $httpHandler = null)
     {
         return $this->auth->getIssuer();
     }

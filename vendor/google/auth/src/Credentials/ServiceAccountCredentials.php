@@ -100,11 +100,6 @@ class ServiceAccountCredentials extends CredentialsLoader implements
     private $jwtAccessCredentials;
 
     /**
-     * @var string
-     */
-    private string $universeDomain;
-
-    /**
      * Create a new ServiceAccountCredentials.
      *
      * @param string|string[]|null $scope the scope of the access request, expressed
@@ -163,8 +158,9 @@ class ServiceAccountCredentials extends CredentialsLoader implements
             'additionalClaims' => $additionalClaims,
         ]);
 
-        $this->projectId = $jsonKey['project_id'] ?? null;
-        $this->universeDomain = $jsonKey['universe_domain'] ?? self::DEFAULT_UNIVERSE_DOMAIN;
+        $this->projectId = isset($jsonKey['project_id'])
+            ? $jsonKey['project_id']
+            : null;
     }
 
     /**
@@ -192,7 +188,7 @@ class ServiceAccountCredentials extends CredentialsLoader implements
      *     @type string $token_type
      * }
      */
-    public function fetchAuthToken(?callable $httpHandler = null)
+    public function fetchAuthToken(callable $httpHandler = null)
     {
         if ($this->useSelfSignedJwt()) {
             $jwtCreds = $this->createJwtAccessCredentials();
@@ -242,7 +238,7 @@ class ServiceAccountCredentials extends CredentialsLoader implements
      * @param callable $httpHandler Not used by this credentials type.
      * @return string|null
      */
-    public function getProjectId(?callable $httpHandler = null)
+    public function getProjectId(callable $httpHandler = null)
     {
         return $this->projectId;
     }
@@ -258,7 +254,7 @@ class ServiceAccountCredentials extends CredentialsLoader implements
     public function updateMetadata(
         $metadata,
         $authUri = null,
-        ?callable $httpHandler = null
+        callable $httpHandler = null
     ) {
         // scope exists. use oauth implementation
         if (!$this->useSelfSignedJwt()) {
@@ -319,7 +315,7 @@ class ServiceAccountCredentials extends CredentialsLoader implements
      * @param callable $httpHandler Not used by this credentials type.
      * @return string
      */
-    public function getClientName(?callable $httpHandler = null)
+    public function getClientName(callable $httpHandler = null)
     {
         return $this->auth->getIssuer();
     }
@@ -335,34 +331,10 @@ class ServiceAccountCredentials extends CredentialsLoader implements
     }
 
     /**
-     * Get the universe domain configured in the JSON credential.
-     *
-     * @return string
-     */
-    public function getUniverseDomain(): string
-    {
-        return $this->universeDomain;
-    }
-
-    /**
      * @return bool
      */
     private function useSelfSignedJwt()
     {
-        // When a sub is supplied, the user is using domain-wide delegation, which not available
-        // with self-signed JWTs
-        if (null !== $this->auth->getSub()) {
-            // If we are outside the GDU, we can't use domain-wide delegation
-            if ($this->getUniverseDomain() !== self::DEFAULT_UNIVERSE_DOMAIN) {
-                throw new \LogicException(sprintf(
-                    'Service Account subject is configured for the credential. Domain-wide ' .
-                    'delegation is not supported in universes other than %s.',
-                    self::DEFAULT_UNIVERSE_DOMAIN
-                ));
-            }
-            return false;
-        }
-
         // If claims are set, this call is for "id_tokens"
         if ($this->auth->getAdditionalClaims()) {
             return false;
@@ -372,12 +344,6 @@ class ServiceAccountCredentials extends CredentialsLoader implements
         if ($this->useJwtAccessWithScope) {
             return true;
         }
-
-        // If the universe domain is outside the GDU, use JwtAccess for access tokens
-        if ($this->getUniverseDomain() !== self::DEFAULT_UNIVERSE_DOMAIN) {
-            return true;
-        }
-
         return is_null($this->auth->getScope());
     }
 }

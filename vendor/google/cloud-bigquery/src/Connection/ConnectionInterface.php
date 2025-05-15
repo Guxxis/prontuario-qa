@@ -22,8 +22,6 @@ use Google\Cloud\Core\Upload\AbstractUploader;
 /**
  * Represents a connection to
  * [BigQuery](https://cloud.google.com/bigquery/).
- *
- * @internal
  */
 interface ConnectionInterface
 {

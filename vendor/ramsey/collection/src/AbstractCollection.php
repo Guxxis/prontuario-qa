@@ -32,10 +32,7 @@ use function array_uintersect;
 use function current;
 use function end;
 use function in_array;
-use function is_int;
-use function is_object;
 use function reset;
-use function spl_object_id;
 use function sprintf;
 use function unserialize;
 use function usort;
@@ -45,8 +42,8 @@ use function usort;
  * minimize the effort required to implement this interface
  *
  * @template T
- * @extends AbstractArray<T>
- * @implements CollectionInterface<T>
+ * @template-extends AbstractArray<T>
+ * @template-implements CollectionInterface<T>
  */
 abstract class AbstractCollection extends AbstractArray implements CollectionInterface
 {
@@ -80,7 +77,7 @@ abstract class AbstractCollection extends AbstractArray implements CollectionInt
         if ($this->checkType($this->getType(), $value) === false) {
             throw new InvalidArgumentException(
                 'Value must be of type ' . $this->getType() . '; value is '
-                . $this->toolValueToString($value),
+                . $this->toolValueToString($value)
             );
         }
 
@@ -97,7 +94,7 @@ abstract class AbstractCollection extends AbstractArray implements CollectionInt
     public function remove($element): bool
     {
         if (($position = array_search($element, $this->data, true)) !== false) {
-            unset($this[$position]);
+            unset($this->data[$position]);
 
             return true;
         }
@@ -178,7 +175,7 @@ abstract class AbstractCollection extends AbstractArray implements CollectionInt
                 $bValue = $this->extractValue($b, $propertyOrMethod);
 
                 return ($aValue <=> $bValue) * ($order === self::SORT_DESC ? -1 : 1);
-            },
+            }
         );
 
         return $collection;
@@ -241,37 +238,32 @@ abstract class AbstractCollection extends AbstractArray implements CollectionInt
 
     public function merge(CollectionInterface ...$collections): CollectionInterface
     {
-        $mergedCollection = clone $this;
+        $temp = [$this->data];
 
         foreach ($collections as $index => $collection) {
             if (!$collection instanceof static) {
                 throw new CollectionMismatchException(
-                    sprintf('Collection with index %d must be of type %s', $index, static::class),
+                    sprintf('Collection with index %d must be of type %s', $index, static::class)
                 );
             }
 
             // When using generics (Collection.php, Set.php, etc),
             // we also need to make sure that the internal types match each other
-            if ($this->getUniformType($collection) !== $this->getUniformType($this)) {
+            if ($collection->getType() !== $this->getType()) {
                 throw new CollectionMismatchException(
-                    sprintf(
-                        'Collection items in collection with index %d must be of type %s',
-                        $index,
-                        $this->getType(),
-                    ),
+                    sprintf('Collection items in collection with index %d must be of type %s', $index, $this->getType())
                 );
             }
 
-            foreach ($collection as $key => $value) {
-                if (is_int($key)) {
-                    $mergedCollection[] = $value;
-                } else {
-                    $mergedCollection[$key] = $value;
-                }
-            }
+            $temp[] = $collection->toArray();
         }
 
-        return $mergedCollection;
+        $merge = array_merge(...$temp);
+
+        $collection = clone $this;
+        $collection->data = $merge;
+
+        return $collection;
     }
 
     /**
@@ -296,7 +288,7 @@ abstract class AbstractCollection extends AbstractArray implements CollectionInt
 
         // When using generics (Collection.php, Set.php, etc),
         // we also need to make sure that the internal types match each other
-        if ($this->getUniformType($other) !== $this->getUniformType($this)) {
+        if ($other->getType() !== $this->getType()) {
             throw new CollectionMismatchException('Collection items must be of type ' . $this->getType());
         }
     }
@@ -320,22 +312,5 @@ abstract class AbstractCollection extends AbstractArray implements CollectionInt
 
                 return $a === $b ? 0 : ($a < $b ? 1 : -1);
             };
-    }
-
-    /**
-     * @param CollectionInterface<mixed> $collection
-     */
-    private function getUniformType(CollectionInterface $collection): string
-    {
-        switch ($collection->getType()) {
-            case 'integer':
-                return 'int';
-            case 'boolean':
-                return 'bool';
-            case 'double':
-                return 'float';
-            default:
-                return $collection->getType();
-        }
     }
 }

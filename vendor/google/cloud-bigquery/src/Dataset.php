@@ -35,7 +35,6 @@ class Dataset
 
     /**
      * @var ConnectionInterface Represents a connection to BigQuery.
-     * @internal
      */
     private $connection;
 
@@ -61,8 +60,7 @@ class Dataset
 
     /**
      * @param ConnectionInterface $connection Represents a connection to
-     *        BigQuery. This object is created by BigQueryClient,
-     *        and should not be instantiated outside of this client.
+     *        BigQuery.
      * @param string $id The dataset's ID.
      * @param string $projectId The project's ID.
      * @param array $info [optional] The dataset's metadata.
@@ -179,10 +177,9 @@ class Dataset
     }
 
     /**
-     * Lazily instantiates a table.
-     *
-     * There are no network requests made at this point. To see the operations
-     * that can be performed on a dataset please see {@see Table}.
+     * Lazily instantiates a table. There are no network requests made at this
+     * point. To see the operations that can be performed on a dataset please
+     * see {@see Table}.
      *
      * Example:
      * ```
@@ -308,10 +305,9 @@ class Dataset
     }
 
     /**
-     * Lazily instantiates a machine learning model in the dataset.
-     *
-     * There are no network requests made at this point. To see the operations
-     * that can be performed on a model, please see {@see Model}.
+     * Lazily instantiates a machine learning model in the dataset. There are no
+     * network requests made at this point. To see the operations that can be performed on a
+     * model, please see {@see Model}.
      *
      * Example:
      * ```

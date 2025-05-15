@@ -42,7 +42,6 @@ class Routine
 
     /**
      * @var ConnectionInterface
-     * @internal
      */
     private $connection;
 
@@ -58,8 +57,6 @@ class Routine
 
     /**
      * @param ConnectionInterface $connection A connection to the BigQuery API.
-     *        This object is created by BigQueryClient,
-     *        and should not be instantiated outside of this client.
      * @param string $id The routine ID.
      * @param string $datasetId The dataset ID.
      * @param string $projectId The project ID.

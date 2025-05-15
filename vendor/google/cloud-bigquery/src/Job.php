@@ -36,7 +36,6 @@ class Job
 
     /**
      * @var ConnectionInterface Represents a connection to BigQuery.
-     * @internal
      */
     private $connection;
 
@@ -57,8 +56,7 @@ class Job
 
     /**
      * @param ConnectionInterface $connection Represents a connection to
-     *        BigQuery. This object is created by BigQueryClient,
-     *        and should not be instantiated outside of this client.
+     *        BigQuery.
      * @param string $id The job's ID.
      * @param string $projectId The project's ID.
      * @param ValueMapper $mapper Maps values between PHP and BigQuery.
@@ -239,9 +237,8 @@ class Job
     }
 
     /**
-     * Checks the job's completeness.
-     *
-     * Useful in combination with {@see Job::reload()} to poll for job status.
+     * Checks the job's completeness. Useful in combination with
+     * {@see Job::reload()} to poll for job status.
      *
      * Example:
      * ```
