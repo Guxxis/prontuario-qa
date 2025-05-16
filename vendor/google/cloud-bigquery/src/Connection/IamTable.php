@@ -21,8 +21,6 @@ use Google\Cloud\Core\Iam\IamConnectionInterface;
 
 /**
  * Class Description
- *
- * @internal
  */
 class IamTable implements IamConnectionInterface
 {

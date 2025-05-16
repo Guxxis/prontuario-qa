@@ -131,7 +131,7 @@ class TestHelpers
      */
     public static function perfBootstrap()
     {
-        $bootstraps = glob(self::projectRoot() .'/*tests/Perf/bootstrap.php');
+        $bootstraps = glob(self::projectRoot() .'/*/tests/Perf/bootstrap.php');
         foreach ($bootstraps as $bootstrap) {
             require_once $bootstrap;
         }
@@ -186,9 +186,7 @@ class TestHelpers
 
         SystemTestCase::setupQueue();
 
-        // also set up the generated system tests
-        self::generatedSystemTestBootstrap();
-        $bootstraps = glob(self::projectRoot() .'/*tests/System/bootstrap.php');
+        $bootstraps = glob(self::projectRoot() .'/*/tests/System/bootstrap.php');
         foreach ($bootstraps as $bootstrap) {
             require_once $bootstrap;
         }
@@ -214,7 +212,7 @@ class TestHelpers
         putenv("GOOGLE_APPLICATION_CREDENTIALS=$keyFilePath");
         $keyFileData = json_decode(file_get_contents($keyFilePath), true);
         putenv('PROJECT_ID=' . $keyFileData['project_id']);
-        putenv('GOOGLE_PROJECT_ID=' . $keyFileData['project_id']);
+
     }
 
     /**

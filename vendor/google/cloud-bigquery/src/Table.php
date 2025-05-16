@@ -47,7 +47,6 @@ class Table
 
     /**
      * @var ConnectionInterface Represents a connection to BigQuery.
-     * @internal
      */
     protected $connection;
 
@@ -78,8 +77,7 @@ class Table
 
     /**
      * @param ConnectionInterface $connection Represents a connection to
-     *        BigQuery. This object is created by BigQueryClient,
-     *        and should not be instantiated outside of this client.
+     *        BigQuery.
      * @param string $id The table's id.
      * @param string $datasetId The dataset's id.
      * @param string $projectId The project's id.
@@ -332,9 +330,7 @@ class Table
     }
 
     /**
-     * Returns a BigQuery copy job configuration.
-     *
-     * The copy job configuration is passed to either
+     * Returns a copy job configuration to be passed to either
      * {@see BigQueryClient::runJob()} or
      * {@see BigQueryClient::startJob()}. A
      * configuration can be built using fluent setters or by providing a full
@@ -389,9 +385,7 @@ class Table
     }
 
     /**
-     * Returns a BigQuery extract job configuration.
-     *
-     * The extract job configuration is passed to either
+     * Returns an extract job configuration to be passed to either
      * {@see BigQueryClient::runJob()} or
      * {@see BigQueryClient::startJob()}. A
      * configuration can be built using fluent setters or by providing a full
@@ -439,9 +433,7 @@ class Table
     }
 
     /**
-     * Returns a BigQuery load job configuration.
-     *
-     * The load job configuration is passed to either
+     * Returns a load job configuration to be passed to either
      * {@see BigQueryClient::runJob()} or
      * {@see BigQueryClient::startJob()}. A
      * configuration can be built using fluent setters or by providing a full
@@ -486,9 +478,7 @@ class Table
     }
 
     /**
-     * Returns a BigQuery load job configuration.
-     *
-     * The load job configuration is passed to either
+     * Returns a load job configuration to be passed to either
      * {@see BigQueryClient::runJob()} or
      * {@see BigQueryClient::startJob()}. A
      * configuration can be built using fluent setters or by providing a full

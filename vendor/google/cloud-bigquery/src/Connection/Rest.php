@@ -17,7 +17,6 @@
 
 namespace Google\Cloud\BigQuery\Connection;
 
-use Google\Auth\GetUniverseDomainInterface;
 use Google\Cloud\BigQuery\BigQueryClient;
 use Google\Cloud\BigQuery\Connection\ConnectionInterface;
 use Google\Cloud\Core\RequestBuilder;
@@ -44,12 +43,7 @@ class Rest implements ConnectionInterface
      */
     const BASE_URI = 'https://www.googleapis.com/bigquery/v2/';
 
-    /**
-     * @deprecated
-     */
     const DEFAULT_API_ENDPOINT = 'https://bigquery.googleapis.com';
-
-    private const DEFAULT_API_ENDPOINT_TEMPLATE = 'https://bigquery.UNIVERSE_DOMAIN';
 
     /**
      * @deprecated
@@ -71,14 +65,10 @@ class Rest implements ConnectionInterface
         $config += [
             'serviceDefinitionPath' => __DIR__ . '/ServiceDefinition/bigquery-v2.json',
             'componentVersion' => BigQueryClient::VERSION,
-            'apiEndpoint' => null,
-            // If the user has not supplied a universe domain, use the environment variable if set.
-            // Otherwise, use the default ("googleapis.com").
-            'universeDomain' => getenv('GOOGLE_CLOUD_UNIVERSE_DOMAIN')
-                ?: GetUniverseDomainInterface::DEFAULT_UNIVERSE_DOMAIN,
+            'apiEndpoint' => self::DEFAULT_API_ENDPOINT
         ];
 
-        $apiEndpoint = $this->getApiEndpoint(null, $config, self::DEFAULT_API_ENDPOINT_TEMPLATE);
+        $apiEndpoint = $this->getApiEndpoint(self::DEFAULT_API_ENDPOINT, $config);
 
         $this->setRequestWrapper(new RequestWrapper($config));
         $this->setRequestBuilder(new RequestBuilder(
