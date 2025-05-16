@@ -24,7 +24,7 @@ echo $_SESSION['user'];
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="shortcut icon" href="./image/prontuario-icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
@@ -58,11 +58,11 @@ echo $_SESSION['user'];
 
                     <label class="form-label" for="opTipo">Tipo de Prontuario</label><br>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="opTipo" id="opValidacao" value="Validação">
+                        <input class="form-check-input" type="radio" name="opTipo" id="opValidacao" value="Validação" required>
                         <label class="form-check-label" for="opValidacao">Validação</label>
                     </div>
                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="opTipo" id="opCorrecao" value="Correção">
+                        <input class="form-check-input" type="radio" name="opTipo" id="opCorrecao" value="Correção" required>
                         <label class="form-check-label" for="opCorrecao">Correção</label>
                     </div><br>
 

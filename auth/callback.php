@@ -38,8 +38,8 @@ if (isset($_GET['code'])) {
         curl_close($chead);
 
         $userData = json_decode($userResponse, true);
-        $email = $userData['mail'] ?? $userData['userPrincipalName']; // depende da conta
-        $user = $userData['displayName'] ?? $userData['userPrincipalName']; // depende da conta
+        $email = $userData['mail'] ?? $userData['userPrincipalName'];
+        $user = $userData['displayName'] ?? $userData['userPrincipalName'];
 
         // $allowedEmails = ['gustavo.goncalves@doutoresdaweb.com.br'];
 

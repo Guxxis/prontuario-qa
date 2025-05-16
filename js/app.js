@@ -44,19 +44,19 @@ async function init() {
 
     //Lista de Itens
     let jsonItens = await getJson(ItensPath);
-    let jsonDomains = await getJson('./data/dominios.json');
+    // let jsonDomains = await getJson('./data/dominios.json');
     let jsonAnalist = await getJson('./data/analistas.json');
 
     //Construção do Storage
     const formInputs = formInit(jsonItens);
 
     //dataset Lista dos dominios
-    const dataListDominios = document.getElementById("list-dominios");
-    jsonDomains.forEach(dominio => {
-        let option = document.createElement("option");
-        option.value = dominio.dominio;
-        dataListDominios.appendChild(option);
-    });
+    // const dataListDominios = document.getElementById("list-dominios");
+    // jsonDomains.forEach(dominio => {
+    //     let option = document.createElement("option");
+    //     option.value = dominio.dominio;
+    //     dataListDominios.appendChild(option);
+    // });
 
     //dataset Lista dos Analistas
     const dataListAnalista = document.getElementById("list-analistas");

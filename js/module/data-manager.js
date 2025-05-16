@@ -1,6 +1,4 @@
-// Gerenciador central de dados  
 export const DataManager = {
-  // Carrega dados do sessionStorage  
   load() {
     const savedData = sessionStorage.getItem('prontuarioValidacao');
     return savedData ? JSON.parse(savedData) : null;
@@ -10,14 +8,11 @@ export const DataManager = {
     sessionStorage.removeItem('prontuarioValidacao');
   },
 
-  // Salva dados no sessionStorage  
   save(data) {
     try {
       sessionStorage.setItem('prontuarioValidacao', JSON.stringify(data));
-      // console.log("Dados salvos:", data);
     } catch (error) {
-      // console.error("Erro ao salvar:", error);
-      // Aqui você pode chamar a função de compressão de imagens  
+      console.error("Erro ao salvar:", error);
     }
   },
 

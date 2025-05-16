@@ -1,28 +1,5 @@
 import { DataManager } from "./data-manager.js";
 
-function marginPdf(doc) {
-    //margin x
-    let mx = 0;
-    let xLine = 5
-    for (let i = 0; i < xLine; i++) {
-        doc.setLineWidth(0.5);
-        doc.line(mx, 10, (mx += 99), 10);
-        // mx += 99;
-        doc.setLineWidth(3);
-        doc.line(mx, 10, (mx += 1), 10);
-    }
-    //margin y
-    let my = 0;
-    let yLine = 7
-    for (let i = 0; i < yLine; i++) {
-        doc.setLineWidth(0.5);
-        doc.line(10, my, 10, my += 99);
-        // my += 99;
-        doc.setLineWidth(3);
-        doc.line(10, my, 10, my += 1);
-    }
-}
-
 export async function generatePDF() {
 
     const formData = DataManager.load()[0];
@@ -218,8 +195,6 @@ export async function generatePDF() {
                 const textMaxLength = 430;
                 const textCommentWrap = doc.splitTextToSize(reprovedItem["comment"], textMaxLength);
                 const textArrayLength = textCommentWrap.length;
-                // py += 12;
-                // doc.text(`teste.: ${reprovedItem["comment"].length}`, 30, py);
 
                 py += 12;
                 doc.setFont('times', 'normal');
@@ -231,7 +206,7 @@ export async function generatePDF() {
             }
 
             //Caso tenha imagem
-            // py += 10;
+            py += 10;
             if (reprovedItem["image"].length > 0) {
                 let px = 25
                 for (let i = 0; i < reprovedItem["image"].length; i++) {
@@ -253,7 +228,6 @@ export async function generatePDF() {
         })
 
         //Rodapé
-
         doc.setFont('courier', 'bold');
         doc.setTextColor('#525252')
         doc.setFontSize(12);
@@ -263,4 +237,28 @@ export async function generatePDF() {
 
     // Salva o PDF
     doc.save(`prontuario-${formDomain}.pdf`);
+}
+
+//margen a4 jsPDF
+function marginPdf(doc) {
+    //margin x
+    let mx = 0;
+    let xLine = 5
+    for (let i = 0; i < xLine; i++) {
+        doc.setLineWidth(0.5);
+        doc.line(mx, 10, (mx += 99), 10);
+        // mx += 99;
+        doc.setLineWidth(3);
+        doc.line(mx, 10, (mx += 1), 10);
+    }
+    //margin y
+    let my = 0;
+    let yLine = 7
+    for (let i = 0; i < yLine; i++) {
+        doc.setLineWidth(0.5);
+        doc.line(10, my, 10, my += 99);
+        // my += 99;
+        doc.setLineWidth(3);
+        doc.line(10, my, 10, my += 1);
+    }
 }

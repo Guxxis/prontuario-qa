@@ -83,15 +83,15 @@ export async function renderForm(jsonItens, orderBy = 'tool') {
 }
 
 export function toggleAttach(event) {
-    const itemId = event.target.name.split("--")[1]; // Pega o ID do item
+    const itemId = event.target.name.split("--")[1];
     const attachContainer = document.getElementById(`image-container--${itemId}`);
     const commentContainer = document.getElementById(`text-container--${itemId}`);
 
     if (event.target.value === "nao") {
-        attachContainer.style.display = "block"; // Mostra o campo de anexo
-        commentContainer.style.display = "block"; // Mostra o campo de anexo
+        attachContainer.style.display = "block";
+        commentContainer.style.display = "block";
     } else {
-        attachContainer.style.display = "none"; // Esconde o campo de anexo
-        commentContainer.style.display = "none"; // Esconde o campo de anexo
+        attachContainer.style.display = "none";
+        commentContainer.style.display = "none";
     }
 }

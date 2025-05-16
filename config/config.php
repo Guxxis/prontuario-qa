@@ -1,6 +1,4 @@
 <?php
-
-// Função para carregar o arquivo .env
 function loadEnv($path = '../.env')
 {
     if (!file_exists($path)) {
@@ -11,17 +9,15 @@ function loadEnv($path = '../.env')
 
     foreach ($lines as $line) {
         if (strpos($line, '#') === 0) {
-            continue; // Ignorar comentários
+            continue;
         }
         list($key, $value) = explode('=', $line, 2);
         putenv(trim($key) . '=' . trim($value));
     }
 }
 
-// Carregar as variáveis de ambiente
 loadEnv();
 
-// Agora você pode acessar as variáveis de ambiente
 $azureClientId = getenv('AZURE_CLIENT_ID');
 $azureClientSecret = getenv('AZURE_CLIENT_SECRET');
 $azureTenantId = getenv('AZURE_TENANT_ID');
