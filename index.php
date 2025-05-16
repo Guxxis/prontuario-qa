@@ -26,11 +26,11 @@ echo $_SESSION['user'];
     <link rel="stylesheet" href="./css/style.css">
 
     <script>
-        const path = window.location.pathname.split('/');
-        const base = '/' + path[1]; // 'prontuario-qa'
+        const path = window.location.pathname;
+        const href = `${path}image/favicon.ico`
         const link = document.createElement('link');
         link.rel = 'shortcut icon';
-        link.href = `${base}/image/favicon.ico`;
+        link.href = href;
         document.head.appendChild(link);
     </script>
 
