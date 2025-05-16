@@ -39,8 +39,9 @@ function formInit(itemList) {
 
 async function init() {
 
-    const hostDev = ['localhost', '127.0.0.1'].includes(window.location.hostname) || window.location.hostname.includes('homologacao');
+    const hostDev = ['localhost', '127.0.0.1'].includes(window.location.hostname) || window.location.pathname.includes('homologacao');
     const ItensPath = hostDev ? './data/itens-test.json' : './data/itens.json';
+    console.log(hostDev ? "Ambiente de Desenvolvimento" : "Ambiente de Produção");
 
     //Lista de Itens
     let jsonItens = await getJson(ItensPath);
