@@ -150,18 +150,22 @@ export async function generatePDF() {
         doc.text(`Site sem erros `, 15, y);
     }
 
-    doc.setFont('helvetica', 'bold');
-    doc.setTextColor('#000000');
-    doc.setFontSize(16);
-    y += 25;
-    doc.text(`Comentarios Gerais:  `, 15, y);
+    if(formComment != ""){
 
-    const textWrap = doc.splitTextToSize(formComment, maxLenght);
-    doc.setFont('helvetica', 'normal');
-    doc.setTextColor('#000000');
-    doc.setFontSize(12);
-    y += 16;
-    doc.text(textWrap, 20, y);
+        doc.setFont('helvetica', 'bold');
+        doc.setTextColor('#000000');
+        doc.setFontSize(16);
+        y += 25;
+        doc.text(`Comentarios Gerais:  `, 15, y);
+    
+        const textWrap = doc.splitTextToSize(formComment, maxLenght);
+        doc.setFont('helvetica', 'normal');
+        doc.setTextColor('#000000');
+        doc.setFontSize(12);
+        y += 16;
+        doc.text(textWrap, 20, y);
+    }
+
 
     //Rodapé
     doc.setFont('courier', 'bold');
