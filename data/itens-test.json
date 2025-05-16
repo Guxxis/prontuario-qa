@@ -2,37 +2,109 @@
     {
         "cat": "core_web_vitals",
         "catLabel": "Core Web Vitals",
-        "item": "performance",
-        "itemLabel": "Performance",
+        "item": "accessibility",
+        "itemLabel": "Accessibility",
         "tool": "lighthouse",
         "toolLabel": "LightHouse",
-        "info": "Pontuação minima 60 na Home e MPIs Mobile"
+        "info": "Pontuação minima 90 na Home e MPIs Mobile"
     },
     {
         "cat": "metadados_seo",
         "catLabel": "Metadados e SEO",
-        "item": "paginas_mpis",
-        "itemLabel": "Páginas MPIs ",
+        "item": "banners_link_mpis",
+        "itemLabel": "Banner com links para MPIs",
         "tool": "manual",
-        "toolLabel": "Manual ",
-        "info": "Quantidade Igual ou maior que descrito no senseData Todas as palavras MPIs acessíveis Thumb Regioes"
-    },
-    {
-        "cat": "metadados_seo",
-        "catLabel": "Metadados e SEO",
-        "item": "links_externos",
-        "itemLabel": "Links Externos - Outlinks",
-        "tool": "screamingfrog",
-        "toolLabel": "ScreamingFrog",
-        "info": "Todos os links externos com os atributos target=”_blank” rel=”nofollow”"
+        "toolLabel": "Manual",
+        "info": "Pelo menos 3 banners com links direcionando para alguma pagina MPIs"
     },
     {
         "cat": "validacao_codigo",
         "catLabel": "Validação de Código",
-        "item": "sem_arquivos_old",
-        "itemLabel": "Arquivos Old",
+        "item": "backup_bd",
+        "itemLabel": "Backup banco SIG",
         "tool": "manual",
-        "toolLabel": "Manual ",
-        "info": "Sem arquivos antigos ou inutilizaveis no repositorio arquivos old ou com ! na frente"
+        "toolLabel": "Manual",
+        "info": "Salvar o backup do Banco de Dados do sig dentro da pasta /doutor/backup."
+    },
+    {
+        "cat": "estrutura_semantica",
+        "catLabel": "Estrutura Semântica",
+        "item": "h1_duplicate",
+        "itemLabel": "H1 Duplicate",
+        "tool": "screamingfrog",
+        "toolLabel": "ScreamingFrog",
+        "info": "Resultado total 0% na Home e MPIs"
+    },
+    {
+        "cat": "urls",
+        "catLabel": "URLs",
+        "item": "redirect_serp_404",
+        "itemLabel": "URLs Redirect SERP 404",
+        "tool": "manual",
+        "toolLabel": "Manual",
+        "info": "Configuração .htaccess para redirecionar paginas indexadas retornando 404"
+    },
+    {
+        "cat": "contato",
+        "catLabel": "Contato",
+        "item": "cta_container",
+        "itemLabel": "CTA Faixa Contato",
+        "tool": "manual",
+        "toolLabel": "Manual",
+        "info": "Todas as faixas CTAs Home e MPIs\nTodos devem por padrao levar para pagina de Contato"
+    },
+    {
+        "cat": "formulario",
+        "catLabel": "Formulário",
+        "item": "form_leads",
+        "itemLabel": "Captação de Leads nos Formulário",
+        "tool": "manual",
+        "toolLabel": "Manual",
+        "info": "Ter o Formulario na aba Contato\nLeads deve chegar no destinatario e nas ferramentas de captação"
+    },
+    {
+        "cat": "imagens",
+        "catLabel": "Imagens",
+        "item": "image_broke",
+        "itemLabel": "Imagem quebrada",
+        "tool": "manual",
+        "toolLabel": "Manual",
+        "info": "Validação em todas as paginas"
+    },
+    {
+        "cat": "layout_usabilidade",
+        "catLabel": "Layout e Usabilidade",
+        "item": "buttons_active_menu",
+        "itemLabel": "Botão Active Menu",
+        "tool": "manual",
+        "toolLabel": "Manual",
+        "info": "Validação em todas as paginas\nMenu topo e Coluna lateral"
+    },
+    {
+        "cat": "resposta_servidor",
+        "catLabel": "Respota do Servidor",
+        "item": "response_code_client_error",
+        "itemLabel": "Client Error",
+        "tool": "screamingfrog",
+        "toolLabel": "ScreamingFrog",
+        "info": "Resultado total 0%"
+    },
+    {
+        "cat": "seguranca",
+        "catLabel": "Segurança",
+        "item": "security_https_urls",
+        "itemLabel": "HTTPS URL’s",
+        "tool": "screamingfrog",
+        "toolLabel": "ScreamingFrog",
+        "info": "Resultado total 100%"
+    },
+    {
+        "cat": "publicacao",
+        "catLabel": "Publicação",
+        "item": "config_analytics",
+        "itemLabel": "Configuração Analytics",
+        "tool": "manual",
+        "toolLabel": "Manual",
+        "info": "Metrificação do analytics"
     }
 ]
