@@ -150,14 +150,13 @@ export async function generatePDF() {
         doc.text(`Site sem erros `, 15, y);
     }
 
-    if(formComment != ""){
-
+    if (formComment) {
         doc.setFont('helvetica', 'bold');
         doc.setTextColor('#000000');
         doc.setFontSize(16);
         y += 25;
         doc.text(`Comentarios Gerais:  `, 15, y);
-    
+
         const textWrap = doc.splitTextToSize(formComment, maxLenght);
         doc.setFont('helvetica', 'normal');
         doc.setTextColor('#000000');
@@ -214,7 +213,7 @@ export async function generatePDF() {
             doc.text(`- ${reprovedItem["item"]}`, 20, py);
 
             //Caso tenha comentario
-            if (reprovedItem["comment"] != null) {
+            if (reprovedItem["comment"]) {
 
                 const textMaxLength = 430;
                 const textCommentWrap = doc.splitTextToSize(reprovedItem["comment"], textMaxLength);

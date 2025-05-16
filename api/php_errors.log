@@ -3766,3 +3766,1416 @@
 
 [16-May-2025 02:00:41 Europe/Berlin] Inserção bem-sucedida
 [16-May-2025 02:00:41 Europe/Berlin] Inserção no BigQuery bem-sucedida
+[16-May-2025 16:12:47 Europe/Berlin] Dados recebidos: Array
+(
+    [id] => maqvojsq8docpuo5ifb
+    [dominio] => teste.com.br
+    [op_tipo] => Validação
+    [id_cliente] => 165462
+    [id_ticket] => 1231
+    [analista_qa] => 123
+    [data_validacao] => 2025-05-16
+    [analista_producao] => 123123
+    [data_producao] => 2025-05-15
+    [pontuacao] => 20
+    [porcentagem] => 100
+    [pontuacao_maxima] => 20
+    [status] => Aprovado
+    [core_web_vitals] => Array
+        (
+            [performance] => 1
+        )
+
+    [metadados_seo] => Array
+        (
+        )
+
+    [validacao_codigo] => Array
+        (
+        )
+
+    [estrutura_semantica] => Array
+        (
+        )
+
+    [urls] => Array
+        (
+        )
+
+    [contato] => Array
+        (
+        )
+
+    [formulario] => Array
+        (
+        )
+
+    [imagens] => Array
+        (
+        )
+
+    [layout_usabilidade] => Array
+        (
+        )
+
+    [resposta_servidor] => Array
+        (
+        )
+
+    [seguranca] => Array
+        (
+        )
+
+    [publicacao] => Array
+        (
+        )
+
+)
+
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "accessibility" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 57
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "best_pratices" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 58
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "seo" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 60
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "footer_lazy_load" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 61
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "smartphone_banner" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 62
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "banners_link_mpis" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 65
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "breadcrumbs" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 66
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "enterprise_name_h1_home" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 67
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "featured_products" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 68
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "menu_header_footer" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 69
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "mpis_pages" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 70
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "side_column" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 71
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "sitemap_links" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 72
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "url_match_h1_page" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 73
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "links_internal_nofollow" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 74
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "meta_discriptions_duplicate" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 75
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "meta_discriptions_missing" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 76
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "meta_discriptions_over_caracters" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 77
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "page_titles_duplicate" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 78
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "page_titles_missing" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 79
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "page_titles_multiple" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 80
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "page_titles_over_caracteres" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 81
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "backup_bd" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 84
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "buttons_clickable" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 85
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "config_gitignore" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 86
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "old_archives" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 87
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "popup_cookie" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 88
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "content_lorem_ipsum_placeholder" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 89
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "font_awesome" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 90
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "w3c_css" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 91
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "w3c_html" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 92
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "h1_duplicate" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 95
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "h1_missing" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 96
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "h1_multiple" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 97
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "h2_missing" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 98
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "redirect_serp_404" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 101
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "redirect_www" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 102
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "urls_contains_space" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 103
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "urls_multiple_slashes" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 104
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "urls_non_ascii_caracters" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 105
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "urls_over_caracters" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 106
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "urls_uppercase" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 107
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "cta_container" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 110
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "cta_whatsapp" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 111
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "formatting_address" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 112
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "formatting_fone" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 113
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "formatting_mail" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 114
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "text_address" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 115
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "text_fone" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 116
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "text_mail" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 117
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "form_leads" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 120
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "form_mask" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 121
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "form_recaptcha" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 122
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "image_broke" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 125
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "image_favicon" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 126
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "image_banner_over" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 127
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "image_over" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 128
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "buttons_active_menu" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 131
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "buttons_back_top" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 132
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "desktop_disproportionate_elements" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 133
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "elements_contrast" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 134
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "horizontal_scroll" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 135
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "smartphone_disproportionate_elements" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 136
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "smartphone_footer" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 137
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "smartphone_google_map" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 138
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "smartphone_mobile_menu" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 139
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "tablet_disproportionate_elements" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 140
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "tablet_footer" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 141
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "tablet_google_map" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 142
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "tablet_mobile_menu" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 143
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "response_code_client_error" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 146
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "response_code_redirection" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 147
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "response_code_server_error" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 148
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "response_code_success" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 149
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "security_https_urls" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 152
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "security_missing_content_security_policy" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 153
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "security_missing_hsts" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 154
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "security_missing_secure_referrer_policy" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 155
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "security_missing_x_content_type_options" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 156
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "security_missing_x_frame_options" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 157
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "security_mixed_content" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 158
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "config_analytics" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 161
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "config_crm" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 162
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "config_mpisistema" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 163
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "config_searchconsole" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 164
+[16-May-2025 16:12:47 Europe/Berlin] PHP Warning:  Undefined array key "config_spider" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 165
+[16-May-2025 16:12:47 Europe/Berlin] Dados recebidos para inserção: Array
+(
+    [id] => maqvojsq8docpuo5ifb
+    [dominio] => teste.com.br
+    [op_tipo] => Validação
+    [id_cliente] => 165462
+    [id_ticket] => 1231
+    [analista_qa] => 123
+    [data_validacao] => 2025-05-16
+    [analista_producao] => 123123
+    [data_producao] => 2025-05-15
+    [pontuacao] => 20
+    [porcentagem] => 100
+    [pontuacao_maxima] => 20
+    [status] => Aprovado
+    [core_web_vitals] => Array
+        (
+            [accessibility] => 
+            [best_pratices] => 
+            [performance] => 1
+            [seo] => 
+            [footer_lazy_load] => 
+            [smartphone_banner] => 
+        )
+
+    [metadados_seo] => Array
+        (
+            [banners_link_mpis] => 
+            [breadcrumbs] => 
+            [enterprise_name_h1_home] => 
+            [featured_products] => 
+            [menu_header_footer] => 
+            [mpis_pages] => 
+            [side_column] => 
+            [sitemap_links] => 
+            [url_match_h1_page] => 
+            [links_internal_nofollow] => 
+            [meta_discriptions_duplicate] => 
+            [meta_discriptions_missing] => 
+            [meta_discriptions_over_caracters] => 
+            [page_titles_duplicate] => 
+            [page_titles_missing] => 
+            [page_titles_multiple] => 
+            [page_titles_over_caracteres] => 
+        )
+
+    [validacao_codigo] => Array
+        (
+            [backup_bd] => 
+            [buttons_clickable] => 
+            [config_gitignore] => 
+            [old_archives] => 
+            [popup_cookie] => 
+            [content_lorem_ipsum_placeholder] => 
+            [font_awesome] => 
+            [w3c_css] => 
+            [w3c_html] => 
+        )
+
+    [estrutura_semantica] => Array
+        (
+            [h1_duplicate] => 
+            [h1_missing] => 
+            [h1_multiple] => 
+            [h2_missing] => 
+        )
+
+    [urls] => Array
+        (
+            [redirect_serp_404] => 
+            [redirect_www] => 
+            [urls_contains_space] => 
+            [urls_multiple_slashes] => 
+            [urls_non_ascii_caracters] => 
+            [urls_over_caracters] => 
+            [urls_uppercase] => 
+        )
+
+    [contato] => Array
+        (
+            [cta_container] => 
+            [cta_whatsapp] => 
+            [formatting_address] => 
+            [formatting_fone] => 
+            [formatting_mail] => 
+            [text_address] => 
+            [text_fone] => 
+            [text_mail] => 
+        )
+
+    [formulario] => Array
+        (
+            [form_leads] => 
+            [form_mask] => 
+            [form_recaptcha] => 
+        )
+
+    [imagens] => Array
+        (
+            [image_broke] => 
+            [image_favicon] => 
+            [image_banner_over] => 
+            [image_over] => 
+        )
+
+    [layout_usabilidade] => Array
+        (
+            [buttons_active_menu] => 
+            [buttons_back_top] => 
+            [desktop_disproportionate_elements] => 
+            [elements_contrast] => 
+            [horizontal_scroll] => 
+            [smartphone_disproportionate_elements] => 
+            [smartphone_footer] => 
+            [smartphone_google_map] => 
+            [smartphone_mobile_menu] => 
+            [tablet_disproportionate_elements] => 
+            [tablet_footer] => 
+            [tablet_google_map] => 
+            [tablet_mobile_menu] => 
+        )
+
+    [resposta_servidor] => Array
+        (
+            [response_code_client_error] => 
+            [response_code_redirection] => 
+            [response_code_server_error] => 
+            [response_code_success] => 
+        )
+
+    [seguranca] => Array
+        (
+            [security_https_urls] => 
+            [security_missing_content_security_policy] => 
+            [security_missing_hsts] => 
+            [security_missing_secure_referrer_policy] => 
+            [security_missing_x_content_type_options] => 
+            [security_missing_x_frame_options] => 
+            [security_mixed_content] => 
+        )
+
+    [publicacao] => Array
+        (
+            [config_analytics] => 
+            [config_crm] => 
+            [config_mpisistema] => 
+            [config_searchconsole] => 
+            [config_spider] => 
+        )
+
+)
+
+[16-May-2025 16:12:47 Europe/Berlin] Configuração BigQuery:
+        Project: data-analytics-d-1669130019479
+        Dataset: qa_validacao_dw
+        Table: prontuario_resposta
+        KeyPath: C:\xampp\htdocs\prontuario-qa\config\bigquery-key.json
+[16-May-2025 16:12:47 Europe/Berlin] Dados formatados para inserção: Array
+(
+    [0] => Array
+        (
+            [data] => Array
+                (
+                    [id] => maqvojsq8docpuo5ifb
+                    [dominio] => teste.com.br
+                    [op_tipo] => Validação
+                    [id_cliente] => 165462
+                    [id_ticket] => 1231
+                    [analista_qa] => 123
+                    [data_validacao] => 2025-05-16
+                    [analista_producao] => 123123
+                    [data_producao] => 2025-05-15
+                    [pontuacao] => 20
+                    [porcentagem] => 100
+                    [pontuacao_maxima] => 20
+                    [status] => Aprovado
+                    [core_web_vitals] => Array
+                        (
+                            [accessibility] => 
+                            [best_pratices] => 
+                            [performance] => 1
+                            [seo] => 
+                            [footer_lazy_load] => 
+                            [smartphone_banner] => 
+                        )
+
+                    [metadados_seo] => Array
+                        (
+                            [banners_link_mpis] => 
+                            [breadcrumbs] => 
+                            [enterprise_name_h1_home] => 
+                            [featured_products] => 
+                            [menu_header_footer] => 
+                            [mpis_pages] => 
+                            [side_column] => 
+                            [sitemap_links] => 
+                            [url_match_h1_page] => 
+                            [links_internal_nofollow] => 
+                            [meta_discriptions_duplicate] => 
+                            [meta_discriptions_missing] => 
+                            [meta_discriptions_over_caracters] => 
+                            [page_titles_duplicate] => 
+                            [page_titles_missing] => 
+                            [page_titles_multiple] => 
+                            [page_titles_over_caracteres] => 
+                        )
+
+                    [validacao_codigo] => Array
+                        (
+                            [backup_bd] => 
+                            [buttons_clickable] => 
+                            [config_gitignore] => 
+                            [old_archives] => 
+                            [popup_cookie] => 
+                            [content_lorem_ipsum_placeholder] => 
+                            [font_awesome] => 
+                            [w3c_css] => 
+                            [w3c_html] => 
+                        )
+
+                    [estrutura_semantica] => Array
+                        (
+                            [h1_duplicate] => 
+                            [h1_missing] => 
+                            [h1_multiple] => 
+                            [h2_missing] => 
+                        )
+
+                    [urls] => Array
+                        (
+                            [redirect_serp_404] => 
+                            [redirect_www] => 
+                            [urls_contains_space] => 
+                            [urls_multiple_slashes] => 
+                            [urls_non_ascii_caracters] => 
+                            [urls_over_caracters] => 
+                            [urls_uppercase] => 
+                        )
+
+                    [contato] => Array
+                        (
+                            [cta_container] => 
+                            [cta_whatsapp] => 
+                            [formatting_address] => 
+                            [formatting_fone] => 
+                            [formatting_mail] => 
+                            [text_address] => 
+                            [text_fone] => 
+                            [text_mail] => 
+                        )
+
+                    [formulario] => Array
+                        (
+                            [form_leads] => 
+                            [form_mask] => 
+                            [form_recaptcha] => 
+                        )
+
+                    [imagens] => Array
+                        (
+                            [image_broke] => 
+                            [image_favicon] => 
+                            [image_banner_over] => 
+                            [image_over] => 
+                        )
+
+                    [layout_usabilidade] => Array
+                        (
+                            [buttons_active_menu] => 
+                            [buttons_back_top] => 
+                            [desktop_disproportionate_elements] => 
+                            [elements_contrast] => 
+                            [horizontal_scroll] => 
+                            [smartphone_disproportionate_elements] => 
+                            [smartphone_footer] => 
+                            [smartphone_google_map] => 
+                            [smartphone_mobile_menu] => 
+                            [tablet_disproportionate_elements] => 
+                            [tablet_footer] => 
+                            [tablet_google_map] => 
+                            [tablet_mobile_menu] => 
+                        )
+
+                    [resposta_servidor] => Array
+                        (
+                            [response_code_client_error] => 
+                            [response_code_redirection] => 
+                            [response_code_server_error] => 
+                            [response_code_success] => 
+                        )
+
+                    [seguranca] => Array
+                        (
+                            [security_https_urls] => 
+                            [security_missing_content_security_policy] => 
+                            [security_missing_hsts] => 
+                            [security_missing_secure_referrer_policy] => 
+                            [security_missing_x_content_type_options] => 
+                            [security_missing_x_frame_options] => 
+                            [security_mixed_content] => 
+                        )
+
+                    [publicacao] => Array
+                        (
+                            [config_analytics] => 
+                            [config_crm] => 
+                            [config_mpisistema] => 
+                            [config_searchconsole] => 
+                            [config_spider] => 
+                        )
+
+                )
+
+        )
+
+)
+
+[16-May-2025 16:12:49 Europe/Berlin] Inserção bem-sucedida
+[16-May-2025 16:12:49 Europe/Berlin] Inserção no BigQuery bem-sucedida
+[16-May-2025 16:14:37 Europe/Berlin] Dados recebidos: Array
+(
+    [id] => maqvqwozpnvrw5so9yd
+    [dominio] => teste
+    [op_tipo] => Validação
+    [id_cliente] => 165462
+    [id_ticket] => 4141
+    [analista_qa] => Adler Santos
+    [data_validacao] => 2025-05-15
+    [analista_producao] => Adler Santos
+    [data_producao] => 2025-05-15
+    [pontuacao] => 20
+    [porcentagem] => 100
+    [pontuacao_maxima] => 20
+    [status] => Aprovado
+    [core_web_vitals] => Array
+        (
+            [performance] => 1
+        )
+
+    [metadados_seo] => Array
+        (
+        )
+
+    [validacao_codigo] => Array
+        (
+        )
+
+    [estrutura_semantica] => Array
+        (
+        )
+
+    [urls] => Array
+        (
+        )
+
+    [contato] => Array
+        (
+        )
+
+    [formulario] => Array
+        (
+        )
+
+    [imagens] => Array
+        (
+        )
+
+    [layout_usabilidade] => Array
+        (
+        )
+
+    [resposta_servidor] => Array
+        (
+        )
+
+    [seguranca] => Array
+        (
+        )
+
+    [publicacao] => Array
+        (
+        )
+
+)
+
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "accessibility" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 57
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "best_pratices" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 58
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "seo" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 60
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "footer_lazy_load" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 61
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "smartphone_banner" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 62
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "banners_link_mpis" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 65
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "breadcrumbs" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 66
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "enterprise_name_h1_home" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 67
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "featured_products" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 68
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "menu_header_footer" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 69
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "mpis_pages" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 70
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "side_column" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 71
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "sitemap_links" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 72
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "url_match_h1_page" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 73
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "links_internal_nofollow" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 74
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "meta_discriptions_duplicate" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 75
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "meta_discriptions_missing" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 76
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "meta_discriptions_over_caracters" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 77
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "page_titles_duplicate" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 78
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "page_titles_missing" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 79
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "page_titles_multiple" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 80
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "page_titles_over_caracteres" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 81
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "backup_bd" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 84
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "buttons_clickable" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 85
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "config_gitignore" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 86
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "old_archives" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 87
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "popup_cookie" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 88
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "content_lorem_ipsum_placeholder" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 89
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "font_awesome" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 90
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "w3c_css" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 91
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "w3c_html" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 92
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "h1_duplicate" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 95
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "h1_missing" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 96
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "h1_multiple" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 97
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "h2_missing" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 98
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "redirect_serp_404" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 101
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "redirect_www" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 102
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "urls_contains_space" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 103
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "urls_multiple_slashes" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 104
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "urls_non_ascii_caracters" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 105
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "urls_over_caracters" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 106
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "urls_uppercase" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 107
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "cta_container" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 110
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "cta_whatsapp" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 111
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "formatting_address" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 112
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "formatting_fone" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 113
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "formatting_mail" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 114
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "text_address" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 115
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "text_fone" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 116
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "text_mail" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 117
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "form_leads" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 120
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "form_mask" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 121
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "form_recaptcha" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 122
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "image_broke" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 125
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "image_favicon" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 126
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "image_banner_over" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 127
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "image_over" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 128
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "buttons_active_menu" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 131
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "buttons_back_top" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 132
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "desktop_disproportionate_elements" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 133
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "elements_contrast" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 134
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "horizontal_scroll" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 135
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "smartphone_disproportionate_elements" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 136
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "smartphone_footer" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 137
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "smartphone_google_map" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 138
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "smartphone_mobile_menu" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 139
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "tablet_disproportionate_elements" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 140
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "tablet_footer" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 141
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "tablet_google_map" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 142
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "tablet_mobile_menu" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 143
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "response_code_client_error" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 146
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "response_code_redirection" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 147
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "response_code_server_error" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 148
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "response_code_success" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 149
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "security_https_urls" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 152
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "security_missing_content_security_policy" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 153
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "security_missing_hsts" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 154
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "security_missing_secure_referrer_policy" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 155
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "security_missing_x_content_type_options" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 156
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "security_missing_x_frame_options" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 157
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "security_mixed_content" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 158
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "config_analytics" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 161
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "config_crm" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 162
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "config_mpisistema" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 163
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "config_searchconsole" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 164
+[16-May-2025 16:14:37 Europe/Berlin] PHP Warning:  Undefined array key "config_spider" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 165
+[16-May-2025 16:14:37 Europe/Berlin] Dados recebidos para inserção: Array
+(
+    [id] => maqvqwozpnvrw5so9yd
+    [dominio] => teste
+    [op_tipo] => Validação
+    [id_cliente] => 165462
+    [id_ticket] => 4141
+    [analista_qa] => Adler Santos
+    [data_validacao] => 2025-05-15
+    [analista_producao] => Adler Santos
+    [data_producao] => 2025-05-15
+    [pontuacao] => 20
+    [porcentagem] => 100
+    [pontuacao_maxima] => 20
+    [status] => Aprovado
+    [core_web_vitals] => Array
+        (
+            [accessibility] => 
+            [best_pratices] => 
+            [performance] => 1
+            [seo] => 
+            [footer_lazy_load] => 
+            [smartphone_banner] => 
+        )
+
+    [metadados_seo] => Array
+        (
+            [banners_link_mpis] => 
+            [breadcrumbs] => 
+            [enterprise_name_h1_home] => 
+            [featured_products] => 
+            [menu_header_footer] => 
+            [mpis_pages] => 
+            [side_column] => 
+            [sitemap_links] => 
+            [url_match_h1_page] => 
+            [links_internal_nofollow] => 
+            [meta_discriptions_duplicate] => 
+            [meta_discriptions_missing] => 
+            [meta_discriptions_over_caracters] => 
+            [page_titles_duplicate] => 
+            [page_titles_missing] => 
+            [page_titles_multiple] => 
+            [page_titles_over_caracteres] => 
+        )
+
+    [validacao_codigo] => Array
+        (
+            [backup_bd] => 
+            [buttons_clickable] => 
+            [config_gitignore] => 
+            [old_archives] => 
+            [popup_cookie] => 
+            [content_lorem_ipsum_placeholder] => 
+            [font_awesome] => 
+            [w3c_css] => 
+            [w3c_html] => 
+        )
+
+    [estrutura_semantica] => Array
+        (
+            [h1_duplicate] => 
+            [h1_missing] => 
+            [h1_multiple] => 
+            [h2_missing] => 
+        )
+
+    [urls] => Array
+        (
+            [redirect_serp_404] => 
+            [redirect_www] => 
+            [urls_contains_space] => 
+            [urls_multiple_slashes] => 
+            [urls_non_ascii_caracters] => 
+            [urls_over_caracters] => 
+            [urls_uppercase] => 
+        )
+
+    [contato] => Array
+        (
+            [cta_container] => 
+            [cta_whatsapp] => 
+            [formatting_address] => 
+            [formatting_fone] => 
+            [formatting_mail] => 
+            [text_address] => 
+            [text_fone] => 
+            [text_mail] => 
+        )
+
+    [formulario] => Array
+        (
+            [form_leads] => 
+            [form_mask] => 
+            [form_recaptcha] => 
+        )
+
+    [imagens] => Array
+        (
+            [image_broke] => 
+            [image_favicon] => 
+            [image_banner_over] => 
+            [image_over] => 
+        )
+
+    [layout_usabilidade] => Array
+        (
+            [buttons_active_menu] => 
+            [buttons_back_top] => 
+            [desktop_disproportionate_elements] => 
+            [elements_contrast] => 
+            [horizontal_scroll] => 
+            [smartphone_disproportionate_elements] => 
+            [smartphone_footer] => 
+            [smartphone_google_map] => 
+            [smartphone_mobile_menu] => 
+            [tablet_disproportionate_elements] => 
+            [tablet_footer] => 
+            [tablet_google_map] => 
+            [tablet_mobile_menu] => 
+        )
+
+    [resposta_servidor] => Array
+        (
+            [response_code_client_error] => 
+            [response_code_redirection] => 
+            [response_code_server_error] => 
+            [response_code_success] => 
+        )
+
+    [seguranca] => Array
+        (
+            [security_https_urls] => 
+            [security_missing_content_security_policy] => 
+            [security_missing_hsts] => 
+            [security_missing_secure_referrer_policy] => 
+            [security_missing_x_content_type_options] => 
+            [security_missing_x_frame_options] => 
+            [security_mixed_content] => 
+        )
+
+    [publicacao] => Array
+        (
+            [config_analytics] => 
+            [config_crm] => 
+            [config_mpisistema] => 
+            [config_searchconsole] => 
+            [config_spider] => 
+        )
+
+)
+
+[16-May-2025 16:14:37 Europe/Berlin] Configuração BigQuery:
+        Project: data-analytics-d-1669130019479
+        Dataset: qa_validacao_dw
+        Table: prontuario_resposta
+        KeyPath: C:\xampp\htdocs\prontuario-qa\config\bigquery-key.json
+[16-May-2025 16:14:37 Europe/Berlin] Dados formatados para inserção: Array
+(
+    [0] => Array
+        (
+            [data] => Array
+                (
+                    [id] => maqvqwozpnvrw5so9yd
+                    [dominio] => teste
+                    [op_tipo] => Validação
+                    [id_cliente] => 165462
+                    [id_ticket] => 4141
+                    [analista_qa] => Adler Santos
+                    [data_validacao] => 2025-05-15
+                    [analista_producao] => Adler Santos
+                    [data_producao] => 2025-05-15
+                    [pontuacao] => 20
+                    [porcentagem] => 100
+                    [pontuacao_maxima] => 20
+                    [status] => Aprovado
+                    [core_web_vitals] => Array
+                        (
+                            [accessibility] => 
+                            [best_pratices] => 
+                            [performance] => 1
+                            [seo] => 
+                            [footer_lazy_load] => 
+                            [smartphone_banner] => 
+                        )
+
+                    [metadados_seo] => Array
+                        (
+                            [banners_link_mpis] => 
+                            [breadcrumbs] => 
+                            [enterprise_name_h1_home] => 
+                            [featured_products] => 
+                            [menu_header_footer] => 
+                            [mpis_pages] => 
+                            [side_column] => 
+                            [sitemap_links] => 
+                            [url_match_h1_page] => 
+                            [links_internal_nofollow] => 
+                            [meta_discriptions_duplicate] => 
+                            [meta_discriptions_missing] => 
+                            [meta_discriptions_over_caracters] => 
+                            [page_titles_duplicate] => 
+                            [page_titles_missing] => 
+                            [page_titles_multiple] => 
+                            [page_titles_over_caracteres] => 
+                        )
+
+                    [validacao_codigo] => Array
+                        (
+                            [backup_bd] => 
+                            [buttons_clickable] => 
+                            [config_gitignore] => 
+                            [old_archives] => 
+                            [popup_cookie] => 
+                            [content_lorem_ipsum_placeholder] => 
+                            [font_awesome] => 
+                            [w3c_css] => 
+                            [w3c_html] => 
+                        )
+
+                    [estrutura_semantica] => Array
+                        (
+                            [h1_duplicate] => 
+                            [h1_missing] => 
+                            [h1_multiple] => 
+                            [h2_missing] => 
+                        )
+
+                    [urls] => Array
+                        (
+                            [redirect_serp_404] => 
+                            [redirect_www] => 
+                            [urls_contains_space] => 
+                            [urls_multiple_slashes] => 
+                            [urls_non_ascii_caracters] => 
+                            [urls_over_caracters] => 
+                            [urls_uppercase] => 
+                        )
+
+                    [contato] => Array
+                        (
+                            [cta_container] => 
+                            [cta_whatsapp] => 
+                            [formatting_address] => 
+                            [formatting_fone] => 
+                            [formatting_mail] => 
+                            [text_address] => 
+                            [text_fone] => 
+                            [text_mail] => 
+                        )
+
+                    [formulario] => Array
+                        (
+                            [form_leads] => 
+                            [form_mask] => 
+                            [form_recaptcha] => 
+                        )
+
+                    [imagens] => Array
+                        (
+                            [image_broke] => 
+                            [image_favicon] => 
+                            [image_banner_over] => 
+                            [image_over] => 
+                        )
+
+                    [layout_usabilidade] => Array
+                        (
+                            [buttons_active_menu] => 
+                            [buttons_back_top] => 
+                            [desktop_disproportionate_elements] => 
+                            [elements_contrast] => 
+                            [horizontal_scroll] => 
+                            [smartphone_disproportionate_elements] => 
+                            [smartphone_footer] => 
+                            [smartphone_google_map] => 
+                            [smartphone_mobile_menu] => 
+                            [tablet_disproportionate_elements] => 
+                            [tablet_footer] => 
+                            [tablet_google_map] => 
+                            [tablet_mobile_menu] => 
+                        )
+
+                    [resposta_servidor] => Array
+                        (
+                            [response_code_client_error] => 
+                            [response_code_redirection] => 
+                            [response_code_server_error] => 
+                            [response_code_success] => 
+                        )
+
+                    [seguranca] => Array
+                        (
+                            [security_https_urls] => 
+                            [security_missing_content_security_policy] => 
+                            [security_missing_hsts] => 
+                            [security_missing_secure_referrer_policy] => 
+                            [security_missing_x_content_type_options] => 
+                            [security_missing_x_frame_options] => 
+                            [security_mixed_content] => 
+                        )
+
+                    [publicacao] => Array
+                        (
+                            [config_analytics] => 
+                            [config_crm] => 
+                            [config_mpisistema] => 
+                            [config_searchconsole] => 
+                            [config_spider] => 
+                        )
+
+                )
+
+        )
+
+)
+
+[16-May-2025 16:14:38 Europe/Berlin] Inserção bem-sucedida
+[16-May-2025 16:14:38 Europe/Berlin] Inserção no BigQuery bem-sucedida
+[16-May-2025 16:19:39 Europe/Berlin] Dados recebidos: Array
+(
+    [id] => maqvxds8p28bf3e3w9
+    [dominio] => teste
+    [op_tipo] => Validação
+    [id_cliente] => 165462
+    [id_ticket] => 2
+    [analista_qa] => Adler Santos
+    [data_validacao] => 2025-05-09
+    [analista_producao] => Adler Santos
+    [data_producao] => 2025-05-15
+    [pontuacao] => 15
+    [porcentagem] => 75
+    [pontuacao_maxima] => 20
+    [status] => Reprovado
+    [core_web_vitals] => Array
+        (
+            [performance] => 1
+        )
+
+    [metadados_seo] => Array
+        (
+        )
+
+    [validacao_codigo] => Array
+        (
+        )
+
+    [estrutura_semantica] => Array
+        (
+        )
+
+    [urls] => Array
+        (
+        )
+
+    [contato] => Array
+        (
+        )
+
+    [formulario] => Array
+        (
+        )
+
+    [imagens] => Array
+        (
+        )
+
+    [layout_usabilidade] => Array
+        (
+        )
+
+    [resposta_servidor] => Array
+        (
+        )
+
+    [seguranca] => Array
+        (
+        )
+
+    [publicacao] => Array
+        (
+        )
+
+)
+
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "accessibility" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 57
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "best_pratices" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 58
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "seo" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 60
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "footer_lazy_load" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 61
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "smartphone_banner" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 62
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "banners_link_mpis" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 65
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "breadcrumbs" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 66
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "enterprise_name_h1_home" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 67
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "featured_products" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 68
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "menu_header_footer" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 69
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "mpis_pages" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 70
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "side_column" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 71
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "sitemap_links" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 72
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "url_match_h1_page" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 73
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "links_internal_nofollow" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 74
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "meta_discriptions_duplicate" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 75
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "meta_discriptions_missing" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 76
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "meta_discriptions_over_caracters" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 77
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "page_titles_duplicate" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 78
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "page_titles_missing" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 79
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "page_titles_multiple" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 80
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "page_titles_over_caracteres" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 81
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "backup_bd" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 84
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "buttons_clickable" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 85
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "config_gitignore" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 86
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "old_archives" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 87
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "popup_cookie" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 88
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "content_lorem_ipsum_placeholder" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 89
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "font_awesome" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 90
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "w3c_css" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 91
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "w3c_html" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 92
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "h1_duplicate" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 95
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "h1_missing" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 96
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "h1_multiple" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 97
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "h2_missing" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 98
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "redirect_serp_404" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 101
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "redirect_www" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 102
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "urls_contains_space" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 103
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "urls_multiple_slashes" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 104
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "urls_non_ascii_caracters" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 105
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "urls_over_caracters" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 106
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "urls_uppercase" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 107
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "cta_container" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 110
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "cta_whatsapp" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 111
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "formatting_address" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 112
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "formatting_fone" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 113
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "formatting_mail" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 114
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "text_address" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 115
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "text_fone" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 116
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "text_mail" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 117
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "form_leads" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 120
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "form_mask" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 121
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "form_recaptcha" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 122
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "image_broke" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 125
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "image_favicon" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 126
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "image_banner_over" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 127
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "image_over" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 128
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "buttons_active_menu" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 131
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "buttons_back_top" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 132
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "desktop_disproportionate_elements" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 133
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "elements_contrast" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 134
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "horizontal_scroll" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 135
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "smartphone_disproportionate_elements" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 136
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "smartphone_footer" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 137
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "smartphone_google_map" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 138
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "smartphone_mobile_menu" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 139
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "tablet_disproportionate_elements" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 140
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "tablet_footer" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 141
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "tablet_google_map" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 142
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "tablet_mobile_menu" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 143
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "response_code_client_error" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 146
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "response_code_redirection" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 147
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "response_code_server_error" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 148
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "response_code_success" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 149
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "security_https_urls" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 152
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "security_missing_content_security_policy" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 153
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "security_missing_hsts" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 154
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "security_missing_secure_referrer_policy" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 155
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "security_missing_x_content_type_options" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 156
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "security_missing_x_frame_options" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 157
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "security_mixed_content" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 158
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "config_analytics" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 161
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "config_crm" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 162
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "config_mpisistema" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 163
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "config_searchconsole" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 164
+[16-May-2025 16:19:39 Europe/Berlin] PHP Warning:  Undefined array key "config_spider" in C:\xampp\htdocs\prontuario-qa\api\salvar.php on line 165
+[16-May-2025 16:19:39 Europe/Berlin] Dados recebidos para inserção: Array
+(
+    [id] => maqvxds8p28bf3e3w9
+    [dominio] => teste
+    [op_tipo] => Validação
+    [id_cliente] => 165462
+    [id_ticket] => 2
+    [analista_qa] => Adler Santos
+    [data_validacao] => 2025-05-09
+    [analista_producao] => Adler Santos
+    [data_producao] => 2025-05-15
+    [pontuacao] => 15
+    [porcentagem] => 75
+    [pontuacao_maxima] => 20
+    [status] => Reprovado
+    [core_web_vitals] => Array
+        (
+            [accessibility] => 
+            [best_pratices] => 
+            [performance] => 1
+            [seo] => 
+            [footer_lazy_load] => 
+            [smartphone_banner] => 
+        )
+
+    [metadados_seo] => Array
+        (
+            [banners_link_mpis] => 
+            [breadcrumbs] => 
+            [enterprise_name_h1_home] => 
+            [featured_products] => 
+            [menu_header_footer] => 
+            [mpis_pages] => 
+            [side_column] => 
+            [sitemap_links] => 
+            [url_match_h1_page] => 
+            [links_internal_nofollow] => 
+            [meta_discriptions_duplicate] => 
+            [meta_discriptions_missing] => 
+            [meta_discriptions_over_caracters] => 
+            [page_titles_duplicate] => 
+            [page_titles_missing] => 
+            [page_titles_multiple] => 
+            [page_titles_over_caracteres] => 
+        )
+
+    [validacao_codigo] => Array
+        (
+            [backup_bd] => 
+            [buttons_clickable] => 
+            [config_gitignore] => 
+            [old_archives] => 
+            [popup_cookie] => 
+            [content_lorem_ipsum_placeholder] => 
+            [font_awesome] => 
+            [w3c_css] => 
+            [w3c_html] => 
+        )
+
+    [estrutura_semantica] => Array
+        (
+            [h1_duplicate] => 
+            [h1_missing] => 
+            [h1_multiple] => 
+            [h2_missing] => 
+        )
+
+    [urls] => Array
+        (
+            [redirect_serp_404] => 
+            [redirect_www] => 
+            [urls_contains_space] => 
+            [urls_multiple_slashes] => 
+            [urls_non_ascii_caracters] => 
+            [urls_over_caracters] => 
+            [urls_uppercase] => 
+        )
+
+    [contato] => Array
+        (
+            [cta_container] => 
+            [cta_whatsapp] => 
+            [formatting_address] => 
+            [formatting_fone] => 
+            [formatting_mail] => 
+            [text_address] => 
+            [text_fone] => 
+            [text_mail] => 
+        )
+
+    [formulario] => Array
+        (
+            [form_leads] => 
+            [form_mask] => 
+            [form_recaptcha] => 
+        )
+
+    [imagens] => Array
+        (
+            [image_broke] => 
+            [image_favicon] => 
+            [image_banner_over] => 
+            [image_over] => 
+        )
+
+    [layout_usabilidade] => Array
+        (
+            [buttons_active_menu] => 
+            [buttons_back_top] => 
+            [desktop_disproportionate_elements] => 
+            [elements_contrast] => 
+            [horizontal_scroll] => 
+            [smartphone_disproportionate_elements] => 
+            [smartphone_footer] => 
+            [smartphone_google_map] => 
+            [smartphone_mobile_menu] => 
+            [tablet_disproportionate_elements] => 
+            [tablet_footer] => 
+            [tablet_google_map] => 
+            [tablet_mobile_menu] => 
+        )
+
+    [resposta_servidor] => Array
+        (
+            [response_code_client_error] => 
+            [response_code_redirection] => 
+            [response_code_server_error] => 
+            [response_code_success] => 
+        )
+
+    [seguranca] => Array
+        (
+            [security_https_urls] => 
+            [security_missing_content_security_policy] => 
+            [security_missing_hsts] => 
+            [security_missing_secure_referrer_policy] => 
+            [security_missing_x_content_type_options] => 
+            [security_missing_x_frame_options] => 
+            [security_mixed_content] => 
+        )
+
+    [publicacao] => Array
+        (
+            [config_analytics] => 
+            [config_crm] => 
+            [config_mpisistema] => 
+            [config_searchconsole] => 
+            [config_spider] => 
+        )
+
+)
+
+[16-May-2025 16:19:39 Europe/Berlin] Configuração BigQuery:
+        Project: data-analytics-d-1669130019479
+        Dataset: qa_validacao_dw
+        Table: prontuario_resposta
+        KeyPath: C:\xampp\htdocs\prontuario-qa\config\bigquery-key.json
+[16-May-2025 16:19:39 Europe/Berlin] Dados formatados para inserção: Array
+(
+    [0] => Array
+        (
+            [data] => Array
+                (
+                    [id] => maqvxds8p28bf3e3w9
+                    [dominio] => teste
+                    [op_tipo] => Validação
+                    [id_cliente] => 165462
+                    [id_ticket] => 2
+                    [analista_qa] => Adler Santos
+                    [data_validacao] => 2025-05-09
+                    [analista_producao] => Adler Santos
+                    [data_producao] => 2025-05-15
+                    [pontuacao] => 15
+                    [porcentagem] => 75
+                    [pontuacao_maxima] => 20
+                    [status] => Reprovado
+                    [core_web_vitals] => Array
+                        (
+                            [accessibility] => 
+                            [best_pratices] => 
+                            [performance] => 1
+                            [seo] => 
+                            [footer_lazy_load] => 
+                            [smartphone_banner] => 
+                        )
+
+                    [metadados_seo] => Array
+                        (
+                            [banners_link_mpis] => 
+                            [breadcrumbs] => 
+                            [enterprise_name_h1_home] => 
+                            [featured_products] => 
+                            [menu_header_footer] => 
+                            [mpis_pages] => 
+                            [side_column] => 
+                            [sitemap_links] => 
+                            [url_match_h1_page] => 
+                            [links_internal_nofollow] => 
+                            [meta_discriptions_duplicate] => 
+                            [meta_discriptions_missing] => 
+                            [meta_discriptions_over_caracters] => 
+                            [page_titles_duplicate] => 
+                            [page_titles_missing] => 
+                            [page_titles_multiple] => 
+                            [page_titles_over_caracteres] => 
+                        )
+
+                    [validacao_codigo] => Array
+                        (
+                            [backup_bd] => 
+                            [buttons_clickable] => 
+                            [config_gitignore] => 
+                            [old_archives] => 
+                            [popup_cookie] => 
+                            [content_lorem_ipsum_placeholder] => 
+                            [font_awesome] => 
+                            [w3c_css] => 
+                            [w3c_html] => 
+                        )
+
+                    [estrutura_semantica] => Array
+                        (
+                            [h1_duplicate] => 
+                            [h1_missing] => 
+                            [h1_multiple] => 
+                            [h2_missing] => 
+                        )
+
+                    [urls] => Array
+                        (
+                            [redirect_serp_404] => 
+                            [redirect_www] => 
+                            [urls_contains_space] => 
+                            [urls_multiple_slashes] => 
+                            [urls_non_ascii_caracters] => 
+                            [urls_over_caracters] => 
+                            [urls_uppercase] => 
+                        )
+
+                    [contato] => Array
+                        (
+                            [cta_container] => 
+                            [cta_whatsapp] => 
+                            [formatting_address] => 
+                            [formatting_fone] => 
+                            [formatting_mail] => 
+                            [text_address] => 
+                            [text_fone] => 
+                            [text_mail] => 
+                        )
+
+                    [formulario] => Array
+                        (
+                            [form_leads] => 
+                            [form_mask] => 
+                            [form_recaptcha] => 
+                        )
+
+                    [imagens] => Array
+                        (
+                            [image_broke] => 
+                            [image_favicon] => 
+                            [image_banner_over] => 
+                            [image_over] => 
+                        )
+
+                    [layout_usabilidade] => Array
+                        (
+                            [buttons_active_menu] => 
+                            [buttons_back_top] => 
+                            [desktop_disproportionate_elements] => 
+                            [elements_contrast] => 
+                            [horizontal_scroll] => 
+                            [smartphone_disproportionate_elements] => 
+                            [smartphone_footer] => 
+                            [smartphone_google_map] => 
+                            [smartphone_mobile_menu] => 
+                            [tablet_disproportionate_elements] => 
+                            [tablet_footer] => 
+                            [tablet_google_map] => 
+                            [tablet_mobile_menu] => 
+                        )
+
+                    [resposta_servidor] => Array
+                        (
+                            [response_code_client_error] => 
+                            [response_code_redirection] => 
+                            [response_code_server_error] => 
+                            [response_code_success] => 
+                        )
+
+                    [seguranca] => Array
+                        (
+                            [security_https_urls] => 
+                            [security_missing_content_security_policy] => 
+                            [security_missing_hsts] => 
+                            [security_missing_secure_referrer_policy] => 
+                            [security_missing_x_content_type_options] => 
+                            [security_missing_x_frame_options] => 
+                            [security_mixed_content] => 
+                        )
+
+                    [publicacao] => Array
+                        (
+                            [config_analytics] => 
+                            [config_crm] => 
+                            [config_mpisistema] => 
+                            [config_searchconsole] => 
+                            [config_spider] => 
+                        )
+
+                )
+
+        )
+
+)
+
+[16-May-2025 16:19:40 Europe/Berlin] Inserção bem-sucedida
+[16-May-2025 16:19:40 Europe/Berlin] Inserção no BigQuery bem-sucedida

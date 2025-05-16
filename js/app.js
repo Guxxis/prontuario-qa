@@ -39,9 +39,11 @@ function formInit(itemList) {
 
 async function init() {
 
+    const hostDev = ['localhost', '127.0.0.1'].includes(window.location.hostname) || window.location.hostname.includes('homologacao');
+    const ItensPath = hostDev ? './data/itens-test.json' : './data/itens.json';
+
     //Lista de Itens
-    let jsonItens = await getJson('./data/itens.json');
-    // let jsonItens = await getJson('./data/itens-test.json');
+    let jsonItens = await getJson(ItensPath);
     let jsonDomains = await getJson('./data/dominios.json');
     let jsonAnalist = await getJson('./data/analistas.json');
 
@@ -93,17 +95,7 @@ async function init() {
         if (e.target.matches('.btn-check')) {
             toggleAttach(e);
         }
-        // if (e.target.matches('#opCorrecao')) {
-        //     const inputAnalistaProd = document.getElementById(`analistaProducao`);
-        //     inputAnalistaProd.setAttribute("disabled", "");
-        //     inputAnalistaProd.removeAttribute("required");
-        // }
     });
-
-    // document.getElementById("btnGerarPDF").addEventListener("click", async function (e) {
-    //     e.preventDefault();
-    //     postData();
-    // });
 
 }
 
