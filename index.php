@@ -24,7 +24,15 @@ echo $_SESSION['user'];
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+
+    <script>
+        const path = window.location.pathname.split('/');
+        const base = '/' + path[1]; // 'prontuario-qa'
+        const link = document.createElement('link');
+        link.rel = 'shortcut icon';
+        link.href = `${base}/image/favicon.ico`;
+        document.head.appendChild(link);
+    </script>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
