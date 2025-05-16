@@ -41,12 +41,14 @@ if (isset($_GET['code'])) {
         $email = $userData['mail'] ?? $userData['userPrincipalName'];
         $user = $userData['displayName'] ?? $userData['userPrincipalName'];
 
-        // $allowedEmails = ['gustavo.goncalves@doutoresdaweb.com.br'];
+        $allowedEmails = ['gustavo.goncalves@doutoresdaweb.com.br', 'carlos.severiano@doutoresdaweb.com.br', 'gustavo.wustemberg@doutoresdaweb.com.br', 'hiago.silva@doutoresdaweb.com.br', 'thaynara.silva@doutoresdaweb.com.br', 'gustavo.chagas@doutoresdaweb.com.br'];
 
-        // if (!in_array($email, $allowedEmails)) {
-        //     die('Acesso não autorizado!');
-        // }
-
+        $host = $_SERVER['HTTP_HOST'];
+        if ($host !== 'localhost' && strpos($host, 'homologacao') === false) {
+            if (!in_array($email, $allowedEmails)) {
+                die('Acesso não autorizado!');
+            }
+        }
 
         $_SESSION['access_token'] = $data['access_token'];
         $_SESSION['email'] = $email;

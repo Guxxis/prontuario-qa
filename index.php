@@ -5,12 +5,12 @@ if (!isset($_SESSION['access_token'])) {
     exit;
 }
 require('./inc/gerador-htaccess.php');
+echo $_SESSION['user'] . " - ";
 echo "Você está autenticado! <br>";
-echo $_SESSION['user'];
 ?>
 
 <?php if (isset($_SESSION['access_token'])): ?>
-    <a href="auth/logout.php">Sair</a>
+    <a href="auth/logout.php">Logout</a>
 <?php endif; ?>
 
 <!DOCTYPE html>
