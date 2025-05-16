@@ -55,7 +55,7 @@ export async function postData() {
             .then(response => response.json())
             .then(data => {
                 if (data.sucesso) {
-                    // DataManager.drop();
+                    DataManager.drop();
                     alert('Enviado com sucesso!');
                 } else {
                     alert('Erro ao enviar!');
