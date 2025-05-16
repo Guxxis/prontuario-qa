@@ -6,7 +6,8 @@ $auth_url = $config['authority'] . "/oauth2/v2.0/authorize?" . http_build_query(
     'redirect_uri' => $config['redirect_uri'],
     'response_mode' => 'query',
     'scope' => $config['scopes'],
-    'state' => '12345' // Pode usar algo dinâmico para segurança
+    'state' => '12345',
+    'prompt' => 'select_account'
 ]);
 header('Location: ' . $auth_url);
 exit;
