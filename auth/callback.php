@@ -44,7 +44,7 @@ if (isset($_GET['code'])) {
         $allowedEmails = ['gustavo.goncalves@doutoresdaweb.com.br', 'carlos.severiano@doutoresdaweb.com.br', 'gustavo.wustemberg@doutoresdaweb.com.br', 'hiago.silva@doutoresdaweb.com.br', 'thaynara.silva@doutoresdaweb.com.br', 'gustavo.chagas@doutoresdaweb.com.br'];
 
         $host = $_SERVER['HTTP_HOST'];
-        if ($host == 'localhost' && strpos($host, 'homologacao') === false) {
+        if ($host !== 'localhost' && strpos($host, 'homologacao') === false) {
             if (!in_array($email, $allowedEmails)) {
                 echo "<p>Acesso não autorizado.</p>";
                 echo "<a href='logout.php'>Tentar com outra conta</a><br>";
