@@ -1,22 +1,12 @@
 <?php
-// Detecta o protocolo (http ou https)
 $scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
-
-// Host (ex: localhost, meu-dominio.com)
 $host = $_SERVER['HTTP_HOST'];
-
-// Caminho base do script (sem o nome do arquivo)
 $scriptDir = rtrim(str_replace(basename($_SERVER['SCRIPT_NAME']), '', $_SERVER['SCRIPT_NAME']), '/');
 
-// Monta as URLs
-define('SYSROOT', $scriptDir); // Ex: /meu-sistema ou vazio
-define('RAIZ', $scheme . '://' . $host . $scriptDir); // Ex: http://localhost/meu-sistema
-define('BASE', RAIZ . '/doutor'); // Ex: http://localhost/meu-sistema/doutor
+define('SYSROOT', $scriptDir);
+define('RAIZ', $scheme . '://' . $host . $scriptDir);
+define('BASE', RAIZ . '/doutor'); 
 define('HTACCESS', str_replace('www.', '', $host) . $scriptDir);
-
-// Se quiser gerar .htaccess ou outra configuração
-$RAIZHTACCESS = RAIZ . "/";
-
 
 //Gera o .htaccess
 $RAIZHTACCESS = RAIZ . "/";
@@ -130,6 +120,10 @@ $htaccess = <<<HTACCESS
   # Bloquear acesso direto à pasta config, auth, inc, vendor
   RedirectMatch 403 ^/(config|auth|inc|vendor)/
 
+#Redirecionamento do Favicon
+  <Files "favicon.ico">
+      Redirect 302 /favicon.ico /image/favicon.ico
+  </Files>
 #Fazendo cache de recursos
 
   <IfModule mod_expires.c>

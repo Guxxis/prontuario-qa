@@ -2,8 +2,7 @@ export function formValidation(event) {
     let formOk = true;
 
     const forms = document.querySelectorAll('.needs-validation');
-
-    // const progressContainer = document.getElementById('progress-container');
+    
     const progresBar = document.querySelector('#barraProgresso');
     const progressFeedback = document.querySelector('#progress-container .invalid-feedback');
     const progressNow = progresBar.getAttribute("aria-valuenow");

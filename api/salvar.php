@@ -3,23 +3,16 @@ header('Content-Type: application/json');
 require __DIR__ . '/bigquery.php';
 
 // Ativa logs detalhados
-ini_set('display_errors', 0);
-ini_set('log_errors', 1);
-ini_set('error_log', __DIR__ . '/php_errors.log');
-
+// ini_set('display_errors', 0);
+// ini_set('log_errors', 1);
+// ini_set('error_log', __DIR__ . '/php_errors.log');
 
 try {
-
-    // $json = file_get_contents('php://input');
-    // $data = json_decode($json, true);
-
-    // Verifica método HTTP
     if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
         http_response_code(405);
         exit(json_encode(['erro' => 'Método não permitido']));
     }
 
-    // Obtém dados brutos e decodifica
     $json = file_get_contents('php://input');
     if (empty($json)) {
         throw new Exception('Payload JSON vazio');
@@ -31,13 +24,6 @@ try {
     }
 
     error_log('Dados recebidos: ' . print_r($data, true));
-
-
-    // $dados = [
-    //     'nome' => $data['dominio'] ?? '',
-    //     'email' => $data['dominio'] ?? '',
-    //     'mensagem' => $data['dominio'] ?? '',
-    // ];
 
     $dados = [
         "id" => $data["id"],
@@ -166,8 +152,6 @@ try {
         ]
     ];
 
-
-    // Insere e aguarda resposta explícita
     $resultado = inserirNoBigQuery($dados);
 
     if ($resultado === true) {
@@ -179,7 +163,6 @@ try {
         exit;
     }
 
-    // Se chegou aqui, a inserção falhou
     error_log('Falha na inserção no BigQuery');
     http_response_code(500);
     echo json_encode([
@@ -188,7 +171,6 @@ try {
     ]);
 } catch (Exception $e) {
     http_response_code(500);
-    // echo json_encode(['erro' => 'Falha ao inserir no BigQuery']);
     echo json_encode([
         'erro' => 'Exceção capturada',
         'mensagem' => $e->getMessage()
