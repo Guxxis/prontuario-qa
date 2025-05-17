@@ -41,7 +41,7 @@ export function construcInputForm(jsonItens, orderBy) {
 
         // Progresso da Categoria
         const progressDiv = document.createElement("div");
-        progressDiv.classList.add("col-2");
+        progressDiv.classList.add("col-auto");
         progressDiv.innerHTML = `<p class="contadorProgresso">0 / 0</p>`
 
 

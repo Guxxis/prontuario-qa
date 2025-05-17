@@ -58,14 +58,9 @@ require('./inc/gerador-htaccess.php');
     </div>
     <div class="container-fluid">
 
-        <form class="mt-3 needs-validation" id="formValidacao" novalidate>
+        <form class="needs-validation" id="formValidacao" novalidate>
             <div class="row">
                 <div class="col">
-                    <label for="orderSelect">Organizar por:</label>
-                    <select id="orderSelect">
-                        <option value="tool">Ferramenta</option>
-                        <option value="cat">Categoria</option>
-                    </select>
 
                     <label class="form-label" for="opTipo">Tipo de Prontuario</label><br>
                     <div class="form-check form-check-inline">
@@ -103,6 +98,19 @@ require('./inc/gerador-htaccess.php');
 
                 </div>
                 <div class="col-6 right-panel">
+                    <div class="row">
+                        <div class="col">
+                            <h2>Itens para Validação</h2>
+                        </div>
+
+                        <div class="col">
+                            <label for="orderSelect">Organizar por:</label>
+                            <select id="orderSelect">
+                                <option value="tool">Ferramenta</option>
+                                <option value="cat">Categoria</option>
+                            </select>
+                        </div>
+                    </div>
                     <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-smooth-scroll="true" class="scrollspy-example-2" tabindex="0">
                         <div class="accordion accordion-flush" id="accordionFlushExample">
                             <div id="form-container"></div>
