@@ -34,36 +34,38 @@ require('./inc/gerador-htaccess.php');
 
 </head>
 
-<body>
-    <div class="container py-4 px-2">
-        <div class="row justify-content-md-center">
-            <div class="col">
-                <h1>Formulário de Validação de QA</h1>
+<body class="bg-body">
+    <div class="bg-body-secondary">
+        <div class="container py-4">
+            <div class="row ">
+                <div class="col">
+                    <h1>Quality Assurance Checklist</h1>
 
-            </div>
-            <div class="col">
-                <div class="row text-end">
-                    <div class="col">
-                        <p><?php echo $_SESSION['user']; ?></p>
-                        <a href="auth/logout.php">Logout</a>
-                    </div>
-                    <div class="col-auto">
-                        <img src="<?php echo $_SESSION['photo']; ?>" onerror="this.src='./image/prontuario-icon.png'" alt="Foto de Perfil" title="Foto de Perfil" />
+                </div>
+                <div class="col md-auto">
+                    <div class="row text-end">
+                        <div class="col">
+                            <p><?php echo $_SESSION['user']; ?></p>
+                            <a href="auth/logout.php">Logout</a>
+                        </div>
+                        <div class="col-auto" style="max-width: 80px;">
+                            <img class="object-fit-cover w-100 rounded-circle " src="<?php echo $_SESSION['photo']; ?>" onerror="this.src='./image/prontuario-icon.png'" alt="Foto de Perfil" title="Foto de Perfil" />
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container aling-center">
-        <label for="orderSelect">Organizar por:</label>
-        <select id="orderSelect">
-            <option value="tool">Ferramenta</option>
-            <option value="cat">Categoria</option>
-        </select>
+    <div class="container-fluid">
 
         <form class="mt-3 needs-validation" id="formValidacao" novalidate>
             <div class="row">
-                <div class="col-3 left-panel">
+                <div class="col">
+                    <label for="orderSelect">Organizar por:</label>
+                    <select id="orderSelect">
+                        <option value="tool">Ferramenta</option>
+                        <option value="cat">Categoria</option>
+                    </select>
 
                     <label class="form-label" for="opTipo">Tipo de Prontuario</label><br>
                     <div class="form-check form-check-inline">
@@ -107,7 +109,7 @@ require('./inc/gerador-htaccess.php');
                         </div>
                     </div>
                 </div>
-                <div class="col-3">
+                <div class="col">
 
                     <div id="progress-container">
                         <p>Progresso</p>
@@ -150,9 +152,6 @@ require('./inc/gerador-htaccess.php');
     <script type="module" src="js/app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script>
-
-    </script>
 </body>
 
 </html>

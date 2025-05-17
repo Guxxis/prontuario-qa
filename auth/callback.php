@@ -55,12 +55,13 @@ if (isset($_GET['code'])) {
         curl_close($ch);
 
         if ($httpCode === 200 && !empty($response)) {
-        $base64 = base64_encode($response);
-        $mime = $contentType;
-        $photo = 'data:'.$mime.";base64,".$base64;
-        } else{
+            $base64 = base64_encode($response);
+            $mime = $contentType;
+            $photo = 'data:' . $mime . ";base64," . $base64;
+        } else {
             $photo = './image/prontuario-icon.png';
         }
+
         $allowedEmails = ['gustavo.goncalves@doutoresdaweb.com.br', 'carlos.severiano@doutoresdaweb.com.br', 'gustavo.wustemberg@doutoresdaweb.com.br', 'hiago.silva@doutoresdaweb.com.br', 'thaynara.silva@doutoresdaweb.com.br', 'gustavo.chagas@doutoresdaweb.com.br'];
 
         $host = $_SERVER['HTTP_HOST'];
@@ -74,6 +75,7 @@ if (isset($_GET['code'])) {
         $_SESSION['email'] = $email;
         $_SESSION['user'] = $user;
         $_SESSION['photo'] = $photo;
+        $_SESSION['http'] = $httpCode;
         header('Location: /prontuario-qa/index.php');
         exit;
     }
