@@ -32,14 +32,15 @@ export function formCalculator() {
             document.getElementById("pontuacaoMaximo").value = data.pontuacaoMax;
             document.getElementById("pontuacaoStatus").value = data.pontuacaoStatus;
 
-            const formResultDiv = document.getElementById("formResult");
-            formResultDiv.innerHTML = `
-                <p>Pontuação: ${data.pontuacao}</p>
-                <p>Porcentagem: ${data.pontuacaoPorcento}</p>
-                <p>Situação: ${data.pontuacaoStatus}</p>
-            `;
+            // const formResultDiv = document.getElementById("formResult");
+            // formResultDiv.innerHTML = `
+            //     <p>Pontuação: ${data.pontuacao}</p>
+            //     <p>Porcentagem: ${data.pontuacaoPorcento}</p>
+            //     <p>Situação: ${data.pontuacaoStatus}</p>
+            // `;
 
-            document.getElementById("btnGerarPDF").style.display = "inline-block";
+            const buttonPdf = document.getElementById("btnGerarPDF");
+            buttonPdf.removeAttribute('disabled');
         })
         .catch(error => {
             console.error("Erro ao calcular pontuação:", error);

@@ -114,7 +114,7 @@ export function construcInputForm(jsonItens, orderBy) {
 
             // Botões de Aprovação
             const radioContainer = document.createElement("div");
-            radioContainer.classList.add("col-4");
+            radioContainer.classList.add("col");
             radioContainer.innerHTML = `
                 <input type="radio" class="btn-check" id="success-${valueIten.item}" name="${valueIten.cat}--${valueIten.item}" value="sim" required>
                 <label class="btn btn-outline-success" for="success-${valueIten.item}">Aprovado</label>
@@ -126,7 +126,7 @@ export function construcInputForm(jsonItens, orderBy) {
 
             // Campo de comentario
             const commentContainer = document.createElement("div");
-            commentContainer.classList.add("col-8");
+            commentContainer.classList.add("col");
             commentContainer.style.display = "none";
             commentContainer.id = (`text-container--${valueIten.item}`);
             commentContainer.innerHTML = `
