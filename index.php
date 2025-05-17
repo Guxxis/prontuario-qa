@@ -36,17 +36,19 @@ require('./inc/gerador-htaccess.php');
 
 <body class="bg-body">
     <div class="bg-body-secondary">
-        <div class="container py-4">
-            <div class="row ">
+        <div class="container-fluid py-4">
+            <div class="row">
                 <div class="col">
-                    <h1>Quality Assurance Checklist</h1>
-
+                    <h1 class="display-6 fw-semibold">QUALITY ASSURANCE CHECKLIST</h1>
+                    <figcaption class="blockquote-footer">
+                        Prontuario de Validação Doutores da Web
+                    </figcaption>
                 </div>
                 <div class="col md-auto">
                     <div class="row text-end">
-                        <div class="col">
-                            <p><?php echo $_SESSION['user']; ?></p>
-                            <a href="auth/logout.php">Logout</a>
+                        <div class="col ">
+                            <p class="lh-sm fw-light align-middle"><?php echo $_SESSION['user']; ?><br>
+                            <a  class="text-decoration-none" href="auth/logout.php">Logout</a></p>
                         </div>
                         <div class="col-auto" style="max-width: 80px;">
                             <img class="object-fit-cover w-100 rounded-circle " src="<?php echo $_SESSION['photo']; ?>" onerror="this.src='./image/prontuario-icon.png'" alt="Foto de Perfil" title="Foto de Perfil" />
