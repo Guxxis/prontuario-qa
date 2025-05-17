@@ -34,7 +34,7 @@ require('./inc/gerador-htaccess.php');
 
 </head>
 
-<body class="bg-body">
+<body class="bg-body overflow-hidden">
     <div class="bg-body-secondary">
         <div class="container-fluid py-4">
             <div class="row">
@@ -61,8 +61,8 @@ require('./inc/gerador-htaccess.php');
     <div class="container-fluid">
 
         <form class="needs-validation" id="formValidacao" novalidate>
-            <div class="row">
-                <div class="col">
+            <div class="row vh-100">
+                <div class="col bg-body-tertiary py-3">
 
                     <label class="form-label" for="opTipo">Tipo de Prontuario</label><br>
                     <div class="form-check form-check-inline">
@@ -99,7 +99,7 @@ require('./inc/gerador-htaccess.php');
                     <datalist id="list-analistas"></datalist>
 
                 </div>
-                <div class="col-6 right-panel">
+                <div class="col-6 right-panel py-3">
                     <div class="row">
                         <div class="col">
                             <h2>Itens para Validação</h2>
@@ -119,7 +119,7 @@ require('./inc/gerador-htaccess.php');
                         </div>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col bg-body-tertiary py-3">
 
                     <div id="progress-container">
                         <p>Progresso</p>
